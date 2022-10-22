@@ -30,6 +30,7 @@ packages=(
 	pavucontrol
 	sxhkd
     brightnessctl
+    rofi 
 )
 
 # ┌────────────────────────────┐
