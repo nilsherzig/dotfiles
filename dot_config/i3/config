@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 # ┌─────────┐
 # │ borders │
 # └─────────┘
-default_border pixel 0
+default_border pixel 1
 
 bar {
         status_command i3status
