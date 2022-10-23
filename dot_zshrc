@@ -3972,3 +3972,9 @@ source /usr/share/fzf/completion.zsh
 # │ alias for block comments like this one │
 # └────────────────────────────────────────┘
 alias blc="python ~/scripts/blockcomment/run.py"
+
+
+# ┌────────────────────────────┐
+# │ use nvim as default editor │
+# └────────────────────────────┘
+export EDITOR="nvim"
