@@ -3958,7 +3958,6 @@ unfunction grml_status_feature
 # Local variables:
 # mode: sh
 # End:
-#
 # ┌─────────────┐
 # │ custom part │
 # └─────────────┘
