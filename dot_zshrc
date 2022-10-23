@@ -3978,4 +3978,4 @@ alias blc="python ~/scripts/blockcomment/run.py"
 # └────────────────────────────┘
 export EDITOR="nvim"
 
-alias ssh="export TERM=xterm ssh"
+alias ssh="TERM=xterm ssh"
