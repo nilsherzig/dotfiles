@@ -3977,3 +3977,5 @@ alias blc="python ~/scripts/blockcomment/run.py"
 # │ use nvim as default editor │
 # └────────────────────────────┘
 export EDITOR="nvim"
+
+alias ssh="export TERM=xterm ssh"

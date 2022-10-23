@@ -52,6 +52,7 @@ packages=(
 	sxhkd
     brightnessctl
     rofi 
+    qalculate-gtk
 )
 
 # ┌────────────────────────────┐
