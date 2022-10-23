@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# ┌────────────────────────────────────┐
+# │ chezmoi apply scripts are starting │
+# └────────────────────────────────────┘
+
 Color_Off='\033[0m'       # Text Reset
 
 # Regular Colors
