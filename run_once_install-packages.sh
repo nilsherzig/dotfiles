@@ -53,6 +53,8 @@ packages=(
     brightnessctl
     rofi 
     qalculate-gtk
+    nitrogen
+    flameshot
 )
 
 # ┌────────────────────────────┐
