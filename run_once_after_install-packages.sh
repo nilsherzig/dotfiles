@@ -28,7 +28,7 @@ echo    "└──────────────────────�
 if pacman -Q "yay" > /dev/null 2>&1; then 
 	echo -e "${Green}yay${Color_Off}" 
 else
- 	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si -y 
+ 	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
 fi
 
 # ┌───────────────────┐
@@ -55,6 +55,7 @@ packages=(
     qalculate-gtk
     nitrogen
     flameshot
+    ttf-iosevka-nerd
 )
 
 # ┌────────────────────────────┐
@@ -70,3 +71,22 @@ for package in ${packages[@]}; do
 		yay -S "$package" --noconfirm
 	fi
 done
+
+echo "┌──────────────────┐"
+echo "│ check icon theme │"
+echo "└──────────────────┘"
+cd ~/.icons
+
+DIRECTORY="Tela-grey-dark"
+if [[ -d "$DIRECTORY" ]]
+then
+    echo -e "${Green}${DIRECTORY} exists on your filesystem.${Color_Off}"
+else
+    echo -e "${Red}${DIRECTORY} doesn't exist on your filesystem.${Color_Off}"
+    tar xf "./Tela-grey.tar.xz" && echo "unpacking worked, icons should be loaded"
+fi
+
+echo "┌───────────┐"
+echo "│ reload i3 │"
+echo "└───────────┘"
+i3 reload
