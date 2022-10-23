@@ -75,6 +75,8 @@ done
 echo "┌──────────────────┐"
 echo "│ check icon theme │"
 echo "└──────────────────┘"
+
+# asd
 cd ~/.icons
 
 DIRECTORY="Tela-grey-dark"
