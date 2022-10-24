@@ -43,7 +43,6 @@ packages=(
 	firefox
 	kitty
 	hyprland-bin
-	python
 	ranger
 	wl-clipboard
 	#lxappearance
@@ -57,6 +56,8 @@ packages=(
     flameshot
     ttf-iosevka-nerd
     blueman
+	python
+    python-pip
 )
 
 # ┌────────────────────────────┐
