@@ -130,5 +130,6 @@ fi
 echo "┌───────────────────────────────────────────────────────────────┐"
 echo "│ change chezmoi repo remote origin to use ssh instead of https │"
 echo "└───────────────────────────────────────────────────────────────┘"
+
 cd ~/.local/share/chezmoi
 git remote set-url origin "git@github.com:nilsdev/dotfiles.git"
