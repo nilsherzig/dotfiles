@@ -100,3 +100,8 @@ then
 else 
     chsh -s $(which zsh)
 fi
+
+echo "┌───────────────────────────────────────────────────────────────┐"
+echo "│ change chezmoi repo remote origin to use ssh instead of https │"
+echo "└───────────────────────────────────────────────────────────────┘"
+cd "~/.local/share/chezmoi"
