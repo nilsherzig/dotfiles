@@ -63,6 +63,8 @@ packages=(
     blueman
 	python
     python-pip
+
+    slurp
     wireplumber
     pipewire
 )
