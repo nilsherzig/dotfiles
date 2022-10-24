@@ -76,11 +76,15 @@ packages=(
     
     discord
     obs-studio
+
+    radeontop
 )
 
 # ┌────────────────────────────┐
 # │ check and install packages │
 # └────────────────────────────┘
+
+toBeInstalled=()
 
 for package in ${packages[@]}; do 
 	if pacman -Q "$package" > /dev/null 2>&1; then 
@@ -88,9 +92,12 @@ for package in ${packages[@]}; do
 		echo -e "${Green}${package}${Color_Off}" 
 	else 
 		echo -e "${Red}${package}${Color_Off}" 
-		yay -S "$package" --noconfirm
+        toBeInstalled+="${package} "
 	fi
 done
+
+echo "installing: $toBeInstalled"
+yay -S $toBeInstalled --noconfirm
 
 echo "┌──────────────────┐"
 echo "│ check icon theme │"
