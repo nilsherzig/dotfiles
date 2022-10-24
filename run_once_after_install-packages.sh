@@ -6,6 +6,7 @@
 packages=(
     openssh
     neovim
+    neofetch
     htop
     fzf
     zsh
