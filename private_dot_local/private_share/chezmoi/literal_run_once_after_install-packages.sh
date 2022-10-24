@@ -28,7 +28,9 @@ packages=(
     wofi 
     qalculate-gtk
     flameshot
+
     mpv
+    feh 
     ttf-iosevka-nerd
     blueman
     python
