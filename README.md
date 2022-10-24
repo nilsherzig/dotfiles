@@ -12,6 +12,7 @@ Download and bootstrap my settings via `chezmoi init --apply nilsdev`.
 - loads dotfiles for these packages
 - downloads and enables / installs gtk themes, icons, fonts and cursors
 - changes shell to zsh
+- installs hyprland as a window manager and changes some env vars to make everything run under wayland
 
 # doesn't: 
 - preserve your current settings, make a backup before running the bootstrap script / chezmoi init
