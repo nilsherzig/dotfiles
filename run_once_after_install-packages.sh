@@ -69,6 +69,9 @@ packages=(
     wireplumber
     pipewire
     xdg-desktop-portal-wlr
+
+    webcord
+    obs-studio
 )
 
 # ┌────────────────────────────┐
