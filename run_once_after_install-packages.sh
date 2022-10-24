@@ -53,7 +53,10 @@ packages=(
 
 	ranger
 	wl-clipboard
-	lxappearance-gtk3
+
+	lxappearance
+    gtk-engine-murrine
+
 	pavucontrol
     brightnessctl
     wofi 
