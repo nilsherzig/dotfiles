@@ -64,9 +64,11 @@ packages=(
 	python
     python-pip
 
+    grim
     slurp
     wireplumber
     pipewire
+    xdg-desktop-portal-wlr
 )
 
 # ┌────────────────────────────┐
