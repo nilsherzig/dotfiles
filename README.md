@@ -5,7 +5,7 @@
 ``` 
 The current install script expects a minimal arch install.
 
-Download and bootstrap my settings via `chezmoi init --apply nilsdev`. 
+Open tty, run `sudo pacman -S chezmoi && chezmoi init --apply nilsdev`, wait for my scripts to finish and now you can run `~/launch.sh` to get a beautiful and working hyprland env. 
 
 ### does:
 - installs packages defined in [install-packages.sh](https://github.com/nilsdev/dotfiles/blob/main/run_once_after_install-packages.sh)
