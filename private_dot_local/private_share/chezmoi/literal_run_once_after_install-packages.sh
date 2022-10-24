@@ -71,6 +71,7 @@ packages=(
     xdg-desktop-portal-wlr
 
     webcord
+    obs-studio
 )
 
 # ┌────────────────────────────┐
