@@ -56,6 +56,7 @@ packages=(
     nitrogen
     flameshot
     ttf-iosevka-nerd
+    blueman-manager
 )
 
 # ┌────────────────────────────┐
@@ -76,7 +77,6 @@ echo "┌──────────────────┐"
 echo "│ check icon theme │"
 echo "└──────────────────┘"
 
-# asd
 cd ~/.icons
 
 DIRECTORY="Tela-grey-dark"
