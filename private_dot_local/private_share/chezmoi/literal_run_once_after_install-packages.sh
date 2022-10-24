@@ -72,6 +72,8 @@ packages=(
     slurp
     wireplumber
     pipewire
+
+    xdg-desktop-portal
     xdg-desktop-portal-wlr
 
     
