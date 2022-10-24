@@ -56,6 +56,7 @@ packages=(
     nitrogen
     flameshot
     ttf-iosevka-nerd
+    blueman-manager
 )
 
 # ┌────────────────────────────┐
