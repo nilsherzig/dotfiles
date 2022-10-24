@@ -64,6 +64,7 @@ packages=(
 	python
     python-pip
 
+    grim
     slurp
     wireplumber
     pipewire
