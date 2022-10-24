@@ -49,7 +49,7 @@ packages=(
 
 	hyprland-git
 	wlroots-git
-    hyprpaper-git
+    swaybg
 
 	ranger
 	wl-clipboard
