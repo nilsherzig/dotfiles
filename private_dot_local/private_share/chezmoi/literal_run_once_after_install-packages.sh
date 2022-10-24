@@ -29,6 +29,7 @@ if pacman -Q "yay" > /dev/null 2>&1; then
 	echo -e "${Green}yay${Color_Off}" 
 else
  	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
+    yay
 fi
 
 # ┌───────────────────┐
