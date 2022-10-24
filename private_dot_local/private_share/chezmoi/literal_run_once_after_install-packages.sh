@@ -58,6 +58,8 @@ packages=(
     blueman
 	python
     python-pip
+    picom-jonaburg-git
+    i3-gaps
 )
 
 # ┌────────────────────────────┐
