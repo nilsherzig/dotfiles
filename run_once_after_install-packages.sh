@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 # ┌───────────────────┐
 # │ required packages │
 # └───────────────────┘
@@ -47,8 +48,6 @@ packages=(
     radeontop
 )
 
-#!/usr/bin/bash
-#
 # this config assumes a minimal archinstall
 
 # ┌────────────────────────────────────┐
