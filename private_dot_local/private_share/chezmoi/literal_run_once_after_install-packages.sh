@@ -43,7 +43,8 @@ packages=(
 	zsh
 	firefox
 	kitty
-	hyprland-bin
+	hyprland-git
+	wlroots-git
 	ranger
 	wl-clipboard
 	#lxappearance
