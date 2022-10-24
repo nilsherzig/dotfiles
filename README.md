@@ -7,4 +7,11 @@ The current install script expects a minimal arch install.
 
 Download and bootstrap my settings via `chezmoi init --apply nilsdev`. 
 
-### currently does: 
+# does:
+- installs packages in [install-packages.sh](https://github.com/nilsdev/dotfiles/blob/main/run_once_after_install-packages.sh)
+- loads dotfiles for these packages
+- downloads and enables / installs gtk themes, icons, fonts and cursors
+- changes shell to zsh
+
+# doesn't: 
+- preserve your current settings, make a backup before running the bootstrap script / chezmoi init
