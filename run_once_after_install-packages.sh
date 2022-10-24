@@ -5,24 +5,24 @@
 
 packages=(
     openssh
-	neovim
-	htop
-	fzf
-	zsh
-	firefox
-	kitty
+    neovim
+    htop
+    fzf
+    zsh
+    firefox
+    kitty
 
-	hyprland-git
-	wlroots-git
+    hyprland-git
+    wlroots-git
     swaybg
 
-	ranger
-	wl-clipboard
+    ranger
+    wl-clipboard
 
-	lxappearance
+    lxappearance
     gtk-engine-murrine
 
-	pavucontrol
+    pavucontrol
     brightnessctl
     wofi 
     qalculate-gtk
@@ -30,7 +30,7 @@ packages=(
     mpv
     ttf-iosevka-nerd
     blueman
-	python
+    python
     python-pip
 
     grim
@@ -41,15 +41,13 @@ packages=(
     xdg-desktop-portal
     xdg-desktop-portal-wlr
 
-    
+
     discord
     obs-studio
 
     radeontop
     obsidian
 )
-
-# this config assumes a minimal archinstall
 
 # ┌────────────────────────────────────┐
 # │ chezmoi apply scripts are starting │
