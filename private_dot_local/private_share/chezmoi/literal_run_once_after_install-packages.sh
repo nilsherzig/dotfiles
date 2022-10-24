@@ -53,7 +53,7 @@ packages=(
 
 	ranger
 	wl-clipboard
-	lxappearance-gtk3
+	lxappearance
 	pavucontrol
     brightnessctl
     wofi 
