@@ -48,7 +48,6 @@ packages=(
     radeontop
     obsidian
 )
-#
 
 # ┌────────────────────────────────────┐
 # │ chezmoi apply scripts are starting │
