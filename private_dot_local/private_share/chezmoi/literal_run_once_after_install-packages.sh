@@ -47,7 +47,6 @@ packages=(
 	wlroots-git
 	ranger
 	wl-clipboard
-	#lxappearance
 	lxappearance-gtk3
 	pavucontrol
 	sxhkd
@@ -60,8 +59,6 @@ packages=(
     blueman
 	python
     python-pip
-    # picom-jonaburg-git
-    # i3-gaps
 )
 
 # ┌────────────────────────────┐
@@ -92,8 +89,3 @@ else
     echo -e "${Red}${DIRECTORY} doesn't exist on your filesystem.${Color_Off}"
     tar xf "./Tela-grey.tar.xz" && echo "unpacking worked, icons should be loaded"
 fi
-
-echo "┌───────────┐"
-echo "│ reload i3 │"
-echo "└───────────┘"
-i3 reload
