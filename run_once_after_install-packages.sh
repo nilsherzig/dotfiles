@@ -70,7 +70,8 @@ packages=(
     pipewire
     xdg-desktop-portal-wlr
 
-    webcord
+    
+    discord
     obs-studio
 )
 
