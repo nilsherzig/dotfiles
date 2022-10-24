@@ -46,6 +46,7 @@ packages=(
     obs-studio
 
     radeontop
+    obsidian
 )
 
 # this config assumes a minimal archinstall
