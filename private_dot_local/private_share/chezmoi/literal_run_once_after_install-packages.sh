@@ -1,4 +1,6 @@
 #!/usr/bin/bash
+#
+# this config assumes a minimal archinstall
 
 # ┌────────────────────────────────────┐
 # │ chezmoi apply scripts are starting │
@@ -37,6 +39,7 @@ fi
 # └───────────────────┘
 
 packages=(
+    openssh
 	neovim
 	htop
 	fzf
@@ -49,11 +52,9 @@ packages=(
 	wl-clipboard
 	lxappearance-gtk3
 	pavucontrol
-	sxhkd
     brightnessctl
-    rofi 
+    wofi 
     qalculate-gtk
-    nitrogen
     flameshot
     ttf-iosevka-nerd
     blueman
@@ -88,4 +89,14 @@ then
 else
     echo -e "${Red}${DIRECTORY} doesn't exist on your filesystem.${Color_Off}"
     tar xf "./Tela-grey.tar.xz" && echo "unpacking worked, icons should be loaded"
+fi
+
+echo "┌─────────────┐"
+echo "│ chsh to zsh │"
+echo "└─────────────┘"
+if grep nils /etc/passwd | grep zsh > /dev/null
+then
+    echo "shell is already set to zsh" 
+else 
+    chsh -s $(which zsh)
 fi
