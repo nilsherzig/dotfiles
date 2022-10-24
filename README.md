@@ -13,6 +13,7 @@ Open tty, run `sudo pacman -S chezmoi && chezmoi init --apply nilsdev`, wait for
 - downloads and enables / installs gtk themes, icons, fonts and cursors
 - changes shell to zsh
 - installs hyprland as a window manager and changes some env vars to make everything run under wayland
+- downloads some wallpapers
 
 ### doesn't: 
 - preserve your current settings, make a backup before running the bootstrap script / chezmoi init
