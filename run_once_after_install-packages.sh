@@ -62,6 +62,7 @@ packages=(
     wofi 
     qalculate-gtk
     flameshot
+    mpv
     ttf-iosevka-nerd
     blueman
 	python
