@@ -46,8 +46,11 @@ packages=(
 	zsh
 	firefox
 	kitty
+
 	hyprland-git
 	wlroots-git
+    hyprpaper-git
+
 	ranger
 	wl-clipboard
 	lxappearance-gtk3
