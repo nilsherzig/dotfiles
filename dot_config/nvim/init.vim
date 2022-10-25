@@ -26,6 +26,8 @@ Plug 'hrsh7th/nvim-cmp'
 
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 luafile $HOME/.config/nvim/lua/init.lua
