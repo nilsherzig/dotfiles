@@ -1,9 +1,8 @@
 " ┌──────────────────────────────────────────────┐
 " │ vim init, just loads lua and the color theme │
 " └──────────────────────────────────────────────┘
-source $HOME/.config/nvim/themes/mountain.vim
-luafile $HOME/.config/nvim/lua/init.lua
 
+source $HOME/.config/nvim/themes/mountain.vim
 " autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
 
 " Bootstrap Plug
@@ -28,3 +27,5 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+luafile $HOME/.config/nvim/lua/init.lua
