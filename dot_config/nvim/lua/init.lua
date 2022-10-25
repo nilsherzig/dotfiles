@@ -41,6 +41,7 @@ vim.o.relativenumber = true
 -- └────────────────────────────────────────────────────────┘
 
 -- require'lspconfig'.clangd.setup{}
+require'lspconfig'.eslint.setup{}
 -- 
 -- -- autocomplete with lsp
 -- require'compe'.setup{
