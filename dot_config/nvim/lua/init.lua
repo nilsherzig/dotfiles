@@ -1,3 +1,5 @@
+vim.api.nvim_set_keymap("n", "<Space>", ":NERDTreeToggle<CR>", { silent = true })
+
 local opt = vim.opt
 local g = vim.g
 -- ┌──────────────────┐
@@ -106,4 +108,3 @@ require'lspconfig'.tsserver.setup{}
 -- vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })
 -- 
 -- 
- vim.api.nvim_set_keymap("n", "<Space>", ":NERDTreeToggle<CR>", { silent = true })
