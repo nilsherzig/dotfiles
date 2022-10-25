@@ -5,7 +5,6 @@
 
 packages=(
     openssh
-    neovim
     neofetch
     htop
     fzf
@@ -51,6 +50,11 @@ packages=(
 
     radeontop
     obsidian
+
+    # neovim setup incl linters and lsp servers
+    neovim
+    eslint
+    typescript-language-server
 )
 
 # ┌────────────────────────────────────┐
