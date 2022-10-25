@@ -30,7 +30,7 @@ vim.o.relativenumber = true
 -- │ plugin settings │
 -- └─────────────────┘
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "rust", "js", "html", "css", "python" },
+  ensure_installed = { "c", "lua", "rust", "javascript", "html", "css", "python" },
   auto_install = true,
   highlight = {
     enable = true,
