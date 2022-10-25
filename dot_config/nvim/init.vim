@@ -18,9 +18,6 @@ unlet autoload_plug_path
 call plug#begin()
 Plug 'nvim-treesitter/nvim-treesitter'
 
-
-" lsp stuff
-Plug 'williamboman/mason.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
