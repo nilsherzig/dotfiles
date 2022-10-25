@@ -40,6 +40,7 @@ vim.o.relativenumber = true
 -- │ extra lsp settings (TODO move to async file in future) │
 -- └────────────────────────────────────────────────────────┘
 
+require'lspconfig' 
 -- require'lspconfig'.clangd.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.tsserver.setup{}
