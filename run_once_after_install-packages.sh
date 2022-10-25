@@ -55,6 +55,7 @@ packages=(
     neovim
     typescript-language-server
     vscode-eslint-language-server
+    clang
 )
 
 # ┌────────────────────────────────────┐
