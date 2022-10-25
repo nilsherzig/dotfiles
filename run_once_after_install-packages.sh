@@ -53,8 +53,8 @@ packages=(
 
     # neovim setup incl linters and lsp servers
     neovim
-    eslint
     typescript-language-server
+    vscode-eslint-language-server
 )
 
 # ┌────────────────────────────────────┐
