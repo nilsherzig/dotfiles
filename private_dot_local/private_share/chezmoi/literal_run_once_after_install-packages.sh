@@ -11,6 +11,7 @@ packages=(
     fzf
     zsh
     firefox
+    thunderbird
     kitty
 
     hyprland-git
