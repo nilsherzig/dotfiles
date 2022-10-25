@@ -42,10 +42,10 @@ vim.o.relativenumber = true
 -- │ extra lsp settings (TODO move to async file in future) │
 -- └────────────────────────────────────────────────────────┘
 
---  require'lspconfig' 
+require'lspconfig' 
 --  
---  require'lspconfig'.eslint.setup{}
---  require'lspconfig'.tsserver.setup{}
+require'lspconfig'.eslint.setup{}
+require'lspconfig'.tsserver.setup{}
 
 -- -- autocomplete with lsp
 -- require'compe'.setup{
