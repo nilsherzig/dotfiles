@@ -126,6 +126,10 @@ require('lspconfig')['pyright'].setup {
     capabilities = capabilities
 }
 
+require('lspconfig')['html'].setup {
+    capabilities = capabilities
+}
+
 
 vim.api.nvim_set_keymap("n", "<Space>", ":NERDTreeToggle<CR>", { silent = true })
 
