@@ -29,12 +29,14 @@ vim.o.relativenumber = true
 -- ┌─────────────────┐
 -- │ plugin settings │
 -- └─────────────────┘
--- require'nvim-treesitter.configs'.setup {
---   highlight = {
---     enable = true,
---     additional_vim_regex_highlighting = false,
---   },
--- }
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "c", "lua", "rust", "js", "html", "css", "python" },
+  auto_install = true,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
 
 -- ┌────────────────────────────────────────────────────────┐
 -- │ extra lsp settings (TODO move to async file in future) │
