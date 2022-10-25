@@ -41,10 +41,10 @@ vim.o.relativenumber = true
 -- └────────────────────────────────────────────────────────┘
 
 require'lspconfig' 
--- require'lspconfig'.clangd.setup{}
+
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.tsserver.setup{}
--- 
+
 -- -- autocomplete with lsp
 -- require'compe'.setup{
 --     enabled = true; 
@@ -106,4 +106,4 @@ require'lspconfig'.tsserver.setup{}
 -- vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })
 -- 
 -- 
--- vim.api.nvim_set_keymap("n", "<Space>", ":NERDTreeToggle<CR>", { silent = true })
+ vim.api.nvim_set_keymap("n", "<Space>", ":NERDTreeToggle<CR>", { silent = true })
