@@ -4,6 +4,23 @@
 # └───────────────────┘
 
 packages=(
+    # wm / compositor 
+    hyprland-git
+    wlroots-git
+    swaybg
+
+    # themes
+    lxappearance
+    gtk-engine-murrine
+
+    # misc
+    pavucontrol
+    brightnessctl
+    qalculate-gtk
+    wofi 
+    blueman
+    ranger
+    wl-clipboard
     openssh
     neofetch
     htop
@@ -13,49 +30,41 @@ packages=(
     thunderbird
     kitty
 
-    hyprland-git
-    wlroots-git
-    swaybg
-
-    ranger
-    wl-clipboard
-
-    lxappearance
-    gtk-engine-murrine
-
-    pavucontrol
-    brightnessctl
-    wofi 
-    qalculate-gtk
-    flameshot
-
-    mpv
-    feh 
+    # fonts
     ttf-iosevka-nerd
-    blueman
+    
+    # programming / languages 
     python
     python-pip
 
+
+    # media / recording
+    flameshot
+    mpv
+    feh 
+    obs-studio
     grim
     slurp
     wireplumber
     pipewire
 
+    # portals
     xdg-desktop-portal
     xdg-desktop-portal-wlr
 
-
+    # social 
     discord
-    obs-studio
 
+    # amd tools
     radeontop
-    obsidian
 
     # neovim setup incl linters and lsp servers
     neovim
     typescript-language-server
     vscode-eslint-language-server
     clang
+
+    obsidian
 )
 
 # ┌────────────────────────────────────┐
