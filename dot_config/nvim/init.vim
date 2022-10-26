@@ -35,8 +35,8 @@ call plug#end()
 
 lua << EOF
 require("catppuccin").setup {
-    flavour = "latte" -- mocha, macchiato, frappe, latte
-    transparent_background = true,
+    flavour = "latte", -- mocha, macchiato, frappe, latte
+    transparent_background = true
 }
 EOF
 
