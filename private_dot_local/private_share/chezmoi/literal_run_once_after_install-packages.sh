@@ -61,7 +61,8 @@ packages=(
     # neovim setup incl linters and lsp servers
     neovim
     typescript-language-server
-    vscode-eslint-language-server
+    vscode-langservers-extracted
+    # vscode-eslint-language-server
     clang
 
     obsidian
