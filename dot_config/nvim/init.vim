@@ -29,6 +29,7 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'lukas-reineke/indent-blankline.nvim'
 " themes
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
@@ -37,6 +38,12 @@ lua << EOF
 require("catppuccin").setup {
     flavour = "latte", -- mocha, macchiato, frappe, latte
     transparent_background = true
+}
+
+require("indent_blankline").setup {
+    -- for example, context is off by default, use this to turn it on
+    show_current_context = true,
+    show_current_context_start = true,
 }
 EOF
 
