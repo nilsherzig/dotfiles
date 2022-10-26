@@ -14,6 +14,7 @@ packages=(
     gtk-engine-murrine
 
     # misc
+    gammastep
     unzip
     age
     pavucontrol
