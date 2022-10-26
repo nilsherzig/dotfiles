@@ -14,6 +14,7 @@ packages=(
     gtk-engine-murrine
 
     # misc
+    unzip
     age
     pavucontrol
     brightnessctl
