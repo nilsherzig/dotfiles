@@ -2,7 +2,7 @@
 " │ vim init, just loads lua and the color theme │
 " └──────────────────────────────────────────────┘
 
-source $HOME/.config/nvim/themes/mountain.vim
+" source $HOME/.config/nvim/themes/mountain.vim
 " autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
 
 " Bootstrap Plug
@@ -32,5 +32,13 @@ Plug 'jiangmiao/auto-pairs'
 " themes
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
+
+lua << EOF
+require("catppuccin").setup {
+    flavour = "macchiato" -- mocha, macchiato, frappe, latte
+}
+EOF
+
+colorscheme catppuccin
 
 luafile $HOME/.config/nvim/lua/init.lua
