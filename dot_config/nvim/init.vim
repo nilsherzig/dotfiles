@@ -35,7 +35,7 @@ call plug#end()
 
 lua << EOF
 require("catppuccin").setup {
-    flavour = "latte" -- mocha, macchiato, frappe, latte
+    flavour = "mocha" -- mocha, macchiato, frappe, latte
 }
 EOF
 
