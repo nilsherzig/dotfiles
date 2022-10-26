@@ -30,6 +30,7 @@ packages=(
     firefox
     thunderbird
     kitty
+    dust
 
     # fonts
     ttf-iosevka-nerd
