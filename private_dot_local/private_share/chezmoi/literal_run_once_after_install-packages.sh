@@ -66,6 +66,7 @@ packages=(
     # vscode-eslint-language-server
     clang
 
+    # notes
     obsidian
 )
 
