@@ -3970,7 +3970,7 @@ source /usr/share/fzf/completion.zsh
 # ┌────────────────────────────────────────┐
 # │ alias for block comments like this one │
 # └────────────────────────────────────────┘
-alias blc="python ~/scripts/blockcomment/run.py"
+alias blc="python ~/Documents/scripts/blockcomment/run.py"
 
 
 # ┌────────────────────────────┐
