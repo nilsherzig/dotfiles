@@ -14,6 +14,7 @@ packages=(
     gtk-engine-murrine
 
     # misc
+    age
     pavucontrol
     brightnessctl
     qalculate-gtk
