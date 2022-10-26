@@ -28,6 +28,9 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'jiangmiao/auto-pairs'
+
+" themes
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 luafile $HOME/.config/nvim/lua/init.lua
