@@ -30,6 +30,7 @@ packages=(
     firefox
     thunderbird
     kitty
+    dust
 
     # fonts
     ttf-iosevka-nerd
@@ -66,6 +67,7 @@ packages=(
     # vscode-eslint-language-server
     clang
 
+    # notes
     obsidian
 )
 
