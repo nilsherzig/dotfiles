@@ -35,6 +35,9 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " code runner
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
+
+" term 
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 call plug#end()
 
 lua << EOF
