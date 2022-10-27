@@ -32,6 +32,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lukas-reineke/indent-blankline.nvim'
 " themes
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+" code runner
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 call plug#end()
 
 lua << EOF
@@ -50,3 +53,4 @@ EOF
 colorscheme catppuccin
 
 luafile $HOME/.config/nvim/lua/init.lua
+

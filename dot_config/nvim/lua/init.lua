@@ -131,8 +131,7 @@ require('lspconfig')['html'].setup {
 }
 
 
-vim.api.nvim_set_keymap("n", "<Space>", ":NERDTreeToggle<CR>", { silent = true })
-
+vim.api.nvim_set_keymap("n", "<tab>", ":NERDTreeFocus<CR>", { silent = true })
 
 -- lsp config 
 -- Mappings.
