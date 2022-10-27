@@ -168,6 +168,4 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
-vim.api.nvim\_set\_keymap('v', 'f', '<Plug>SnipRun', {silent = true})
-vim.api.nvim\_set\_keymap('n', '<leader>f', '<Plug>SnipRunOperator', {silent = true})
-vim.api.nvim\_set\_keymap('n', '<leader>ff', '<Plug>SnipRun', {silent = true})
+vim.api.nvim_set_keymap('v', 'f', '<Plug>SnipRun', {silent = true})
