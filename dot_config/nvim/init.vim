@@ -39,6 +39,9 @@ Plug 'rcarriga/nvim-notify'
 
 " term 
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+
+" bar 
+Plug 'feline-nvim/feline.nvim'
 call plug#end()
 
 lua << EOF
