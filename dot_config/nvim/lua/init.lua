@@ -169,3 +169,5 @@ local on_attach = function(client, bufnr)
 end
 
 vim.api.nvim_set_keymap('v', 'f', '<Plug>SnipRun', {silent = true})
+
+require("toggleterm").setup{}
