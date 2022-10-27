@@ -173,3 +173,10 @@ vim.api.nvim_set_keymap('v', 'f', '<Plug>SnipRun', {silent = true})
 require("toggleterm").setup{
 	open_mapping = [[<c-t>]],
 }
+
+require'sniprun'.setup({
+   display = {"NvimNotify"},
+   display_options = {
+       notification_timeout = 5   -- in seconds
+   },
+})
