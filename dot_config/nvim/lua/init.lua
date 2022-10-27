@@ -183,7 +183,7 @@ require'sniprun'.setup({
    display_options = {
        notification_timeout = 5   -- in seconds
    },
-   repl_disable = {'bash'}
+   repl_disable = {'Bash_original'}
 })
 
 local ctp_feline = require('catppuccin.groups.integrations.feline')
