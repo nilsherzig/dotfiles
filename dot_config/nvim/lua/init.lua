@@ -174,6 +174,10 @@ require("toggleterm").setup{
 	open_mapping = [[<c-t>]],
 }
 
+require("notify").setup({
+  background_colour = "#000000",
+})
+
 require'sniprun'.setup({
    display = {"NvimNotify"},
    display_options = {
