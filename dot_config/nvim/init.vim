@@ -35,6 +35,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " code runner
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
+Plug 'rcarriga/nvim-notify'
 
 " term 
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
