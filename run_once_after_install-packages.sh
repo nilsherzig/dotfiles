@@ -4,6 +4,7 @@
 # └───────────────────┘
 
 packages=(
+    mullvad-vpn-bin
     # wm / compositor 
     hyprland-git
     wlroots-git
