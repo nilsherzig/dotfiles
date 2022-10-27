@@ -184,3 +184,5 @@ require'sniprun'.setup({
        notification_timeout = 5   -- in seconds
    },
 })
+
+require('feline').setup()
