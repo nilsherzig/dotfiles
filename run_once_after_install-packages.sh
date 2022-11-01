@@ -70,6 +70,7 @@ packages=(
     vscode-langservers-extracted
     # vscode-eslint-language-server
     clang
+    rust-analyzer
 
     # notes
     obsidian
