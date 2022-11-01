@@ -136,7 +136,7 @@ require('lspconfig')['rust_analyzer'].setup {
         ['rust-analyzer'] = {
             checkOnSave = {
                 allFeatures = true,
-                all-targets = true, 
+                allTargets = true, 
                 command = "clippy",
                 -- overrideCommand = {
                 --     'cargo', 'clippy', '--workspace', '--message-format=json',
@@ -151,6 +151,7 @@ require('lspconfig')['rust_analyzer'].setup {
 
 vim.api.nvim_set_keymap("n", "<tab>", ":NERDTreeFocus<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<space>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { silent = true })
 
 -- lsp config 
 -- Mappings.
