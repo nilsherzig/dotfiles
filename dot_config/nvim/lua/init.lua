@@ -131,12 +131,26 @@ require('lspconfig')['html'].setup {
 }
 
 require('lspconfig')['rust_analyzer'].setup {
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        ['rust-analyzer'] = {
+            checkOnSave = {
+                allFeatures = true,
+                all-targets = true, 
+                command = "clippy",
+                -- overrideCommand = {
+                --     'cargo', 'clippy', '--workspace', '--message-format=json',
+                --     '--all-targets', '--all-features'
+                -- }
+            }
+        }
+    }
 }
 
 
 
 vim.api.nvim_set_keymap("n", "<tab>", ":NERDTreeFocus<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<space>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", { silent = true })
 
 -- lsp config 
 -- Mappings.
@@ -198,16 +212,4 @@ require("feline").setup({
     components = ctp_feline.get(),
 })
 
-vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
-vim.api.nvim_create_autocmd("LspAttach", {
-  group = "LspAttach_inlayhints",
-  callback = function(args)
-    if not (args.data and args.data.client_id) then
-      return
-    end
-
-    local bufnr = args.buf
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    require("lsp-inlayhints").on_attach(client, bufnr)
-  end,
-})
+require("lsp-inlayhints").setup()
