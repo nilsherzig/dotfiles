@@ -15,6 +15,7 @@ packages=(
     gtk-engine-murrine
 
     # misc
+    netdata
     jq
     gammastep
     unzip
