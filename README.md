@@ -12,14 +12,9 @@ TODOs:
 - [ ] get discord / webcord screenshare working
 - [x] fix obs 
 - [x] fix firefox context menus
+- [x] install packages list
+- [x] download & enable gtk themes, icons and fonts
+- [x] install hyprland as wm / compositor 
+- [x] create hyprland launch script and env vars
+- [x] download and set wallpapers
 
-### does:
-- installs packages defined in [install-packages.sh](https://github.com/nilsdev/dotfiles/blob/main/run_once_after_install-packages.sh)
-- loads dotfiles for these packages
-- downloads and enables / installs gtk themes, icons, fonts and cursors
-- changes shell to zsh
-- installs hyprland as a window manager and changes some env vars to make everything run under wayland
-- downloads some wallpapers
-
-### doesn't: 
-- preserve your current settings, make a backup before running the bootstrap script / chezmoi init
