@@ -9,7 +9,7 @@ Open tty, run `sudo pacman -S chezmoi && chezmoi init --apply nilsdev`, wait for
 
 
 TODOs: 
-- [] get discord / webcord screenshare working
+- [ ] get discord / webcord screenshare working
 - [x] fix obs 
 - [x] fix firefox context menus
 
