@@ -49,6 +49,9 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 " bar 
 Plug 'feline-nvim/feline.nvim'
+"
+" chezmoi auto save
+Plug 'Lilja/vim-chezmoi'
 call plug#end()
 
 lua << EOF
