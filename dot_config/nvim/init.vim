@@ -54,6 +54,8 @@ Plug 'feline-nvim/feline.nvim'
 Plug 'Lilja/vim-chezmoi'
 call plug#end()
 
+let g:chezmoi = "enabled"
+
 lua << EOF
 require("catppuccin").setup {
     flavour = "mocha", -- mocha, macchiato, frappe, latte
