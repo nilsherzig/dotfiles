@@ -199,12 +199,12 @@ require("notify").setup({
 })
 
 require'sniprun'.setup({
-   display = {
---       "NvimNotify", 
-       "VirtualText",
-       "VirtualTextOk",
-        "VirtualTextErr"
-   },
+   -- display = {
+-- --       "NvimNotify", 
+   --     "VirtualText",
+   --     "VirtualTextOk",
+   --      "VirtualTextErr"
+   -- },
    display_options = {
        notification_timeout = 5   -- in seconds
    },
