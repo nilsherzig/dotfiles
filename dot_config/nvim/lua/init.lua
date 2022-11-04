@@ -201,6 +201,7 @@ require("notify").setup({
 require'sniprun'.setup({
    display = {
 --       "NvimNotify", 
+       "VirtualText",
        "VirtualTextOk",
         "VirtualTextErr"
    },
