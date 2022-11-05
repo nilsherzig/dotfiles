@@ -46,7 +46,7 @@ packages=(
 
 
     # media / recording
-    flameshot
+    swappy
     mpv
     feh 
     obs-studio
