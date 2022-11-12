@@ -15,7 +15,6 @@ endif
 unlet autoload_plug_path
 
 call plug#begin()
-Plug 'karb94/neoscroll.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'neovim/nvim-lspconfig'
@@ -68,8 +67,6 @@ require("indent_blankline").setup {
     show_current_context = true,
     show_current_context_start = false,
 }
-
-require('neoscroll').setup()
 EOF
 
 colorscheme catppuccin
