@@ -118,7 +118,6 @@ toBeInstalled=()
 
 for package in ${packages[@]}; do 
 	if pacman -Q "$package" > /dev/null 2>&1; then 
-		# echo -e "$package \t-> is installed" 
 		echo -e "${Green}${package}${Color_Off}" 
 	else 
 		echo -e "${Red}${package}${Color_Off}" 
