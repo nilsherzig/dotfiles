@@ -74,4 +74,5 @@ require("indent_blankline").setup {
 EOF
 
 " colorscheme catppuccin
+colorscheme mountain
 luafile $HOME/.config/nvim/lua/init.lua
