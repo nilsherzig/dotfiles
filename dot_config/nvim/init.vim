@@ -59,6 +59,7 @@ call plug#end()
 let g:chezmoi = "enabled"
 
 lua << EOF
+
 -- require("catppuccin").setup {
 --     flavour = "mocha", -- mocha, macchiato, frappe, latte
 --     transparent_background = true
@@ -69,9 +70,8 @@ require("indent_blankline").setup {
     show_current_context = true,
     show_current_context_start = false,
 }
+
 EOF
 
 " colorscheme catppuccin
-
 luafile $HOME/.config/nvim/lua/init.lua
-
