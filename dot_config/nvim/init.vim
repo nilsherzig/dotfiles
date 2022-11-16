@@ -15,6 +15,7 @@ endif
 unlet autoload_plug_path
 
 call plug#begin()
+Plug 'pradyungn/Mountain', {'rtp': 'vim'}
 Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'neovim/nvim-lspconfig'
@@ -38,7 +39,7 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 " themes
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+" Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " code runner
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
@@ -57,10 +58,10 @@ call plug#end()
 let g:chezmoi = "enabled"
 
 lua << EOF
-require("catppuccin").setup {
-    flavour = "mocha", -- mocha, macchiato, frappe, latte
-    transparent_background = true
-}
+-- require("catppuccin").setup {
+--     flavour = "mocha", -- mocha, macchiato, frappe, latte
+--     transparent_background = true
+-- }
 
 require("indent_blankline").setup {
     -- for example, context is off by default, use this to turn it on
@@ -69,7 +70,7 @@ require("indent_blankline").setup {
 }
 EOF
 
-colorscheme catppuccin
+" colorscheme catppuccin
 
 luafile $HOME/.config/nvim/lua/init.lua
 
