@@ -40,6 +40,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lukas-reineke/indent-blankline.nvim'
 " themes
 " Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'pradyungn/Mountain', {'rtp': 'vim'}
 
 " code runner
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
