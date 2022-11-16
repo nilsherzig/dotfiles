@@ -6,6 +6,7 @@ local g = vim.g
 opt.undofile = true 
 opt.undodir = "/home/nils/.cache"
 vim.api.nvim_command('set signcolumn=number')
+g.enable_mountain_statusline = 1
 
 -- ┌────────────────┐
 -- │ tabs vs spaces │
@@ -209,11 +210,11 @@ require'sniprun'.setup({
    repl_disable = {'Bash_original'}
 })
 
-local ctp_feline = require('catppuccin.groups.integrations.feline')
+-- local ctp_feline = require('catppuccin.groups.integrations.feline')
 -- ctp_feline.setup()
 
-require("feline").setup({
-    components = ctp_feline.get(),
-})
+-- require("feline").setup({
+--     components = ctp_feline.get(),
+-- })
 
 require("lsp-inlayhints").setup()
