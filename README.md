@@ -17,4 +17,3 @@ TODOs:
 - [x] install hyprland as wm / compositor 
 - [x] create hyprland launch script and env vars
 - [x] download and set wallpapers
-
