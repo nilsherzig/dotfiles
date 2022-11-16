@@ -32,7 +32,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 
 
 Plug 'preservim/nerdtree'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 
 Plug 'jiangmiao/auto-pairs'
