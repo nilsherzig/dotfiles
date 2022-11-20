@@ -54,9 +54,15 @@ Plug 'feline-nvim/feline.nvim'
 "
 " chezmoi auto save
 Plug 'Lilja/vim-chezmoi'
+
+" latex
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 let g:chezmoi = "enabled"
+
+let g:vimtex_view_method = 'zathura'
 
 lua << EOF
 
