@@ -3984,15 +3984,15 @@ eval "$(zoxide init zsh)"
 
 alias ls="ls -hA --color=auto --group-directories-first"
 
-alias cd="mycd"
-mycd() {
-    if [ -z "$@" ]; then 
-        builtin cd
-    else
-        if [ "$@" = ".." ]; then 
-            builtin cd "$@"
-        else
-            zi "$@" || builtin cd "$@"
-        fi
-    fi
-}
+# alias cd="mycd"
+# mycd() {
+#     if [ -z "$@" ]; then 
+#         builtin cd
+#     else
+#         if [ "$@" = ".." ]; then 
+#             builtin cd "$@"
+#         else
+#             zi "$@" || builtin cd "$@"
+#         fi
+#     fi
+# }
