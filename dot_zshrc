@@ -3985,5 +3985,6 @@ eval "$(zoxide init zsh)"
 alias ls="ls -hA --color=auto --group-directories-first"
 alias cd="mycd"
 mycd() {
-  z "$@" && ls
+  # z "$@" && ls
+  z "$@"
 }
