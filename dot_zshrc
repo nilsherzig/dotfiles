@@ -3979,3 +3979,4 @@ alias blc="python ~/Documents/scripts/blockcomment/run.py"
 export EDITOR="nvim"
 
 alias ssh="TERM=xterm ssh"
+eval "$(zoxide init zsh)"
