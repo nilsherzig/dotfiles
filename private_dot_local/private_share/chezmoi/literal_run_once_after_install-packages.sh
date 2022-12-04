@@ -7,6 +7,7 @@ packages=(
     bluetuith
     zoxide
     mullvad-vpn-bin
+    zoxide
     # wm / compositor 
     hyprland-git
     wlroots-git
@@ -77,6 +78,7 @@ packages=(
 
     # notes
     obsidian
+    kodi
 )
 
 # ┌────────────────────────────────────┐
