@@ -4,6 +4,8 @@
 # └───────────────────┘
 
 packages=(
+    bluetuith
+    zoxide
     mullvad-vpn-bin
     # wm / compositor 
     hyprland-git
