@@ -3977,6 +3977,7 @@ alias blc="python ~/Documents/scripts/blockcomment/run.py"
 # │ use nvim as default editor │
 # └────────────────────────────┘
 export EDITOR="nvim"
+# export EDITOR="emacs" # trying doom-emacs for a month
 
 alias ssh="TERM=xterm ssh"
 
