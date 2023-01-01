@@ -4,6 +4,9 @@
 # └───────────────────┘
 
 packages=(
+    qt5-wayland
+    sshfs
+    rclone
     bluetuith
     zoxide
     mullvad-vpn-bin
@@ -79,6 +82,7 @@ packages=(
     # notes
     obsidian
     kodi
+    visual-studio-code-bin
 )
 
 # ┌────────────────────────────────────┐
