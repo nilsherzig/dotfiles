@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
 
     use{'windwp/nvim-autopairs'}
-    use{'lukas-reineke/indent-blankline.nvim'}
+    -- use{'lukas-reineke/indent-blankline.nvim'}
 
     use {
         'VonHeikemen/lsp-zero.nvim',
