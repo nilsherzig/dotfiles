@@ -1,7 +1,7 @@
-require("indent_blankline").setup {
-    show_current_context = false,
-    show_current_context_start = false,
-}
+-- require("indent_blankline").setup {
+--     show_current_context = false,
+--     show_current_context_start = false,
+-- }
 
 -- vim.opt.termguicolors = true
 -- vim.cmd [[highlight IndentBlanklineIndent1 guibg=#1a1a1a gui=nocombine]]
