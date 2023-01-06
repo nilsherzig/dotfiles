@@ -3998,4 +3998,4 @@ alias ls="ls -hA --color=auto --group-directories-first"
 #     fi
 # }
 #
-cat ~/Documents/scripts/shellstart/out
+sleep 0.1 && cat ~/Documents/scripts/shellstart/out
