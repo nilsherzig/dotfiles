@@ -3974,10 +3974,12 @@ alias blc="python ~/Documents/scripts/blockcomment/run.py"
 
 
 # ┌────────────────────────────┐
-# │ use nvim as default editor │
+# │ use lvim as default editor │
 # └────────────────────────────┘
-export EDITOR="nvim"
-# export EDITOR="emacs" # trying doom-emacs for a month
+export EDITOR="~/.local/bin/lvim"
+alias nvim="~/.local/bin/lvim"
+alias lvim="~/.local/bin/lvim"
+alias vim="~/.local/bin/lvim"
 
 alias ssh="TERM=xterm ssh"
 
@@ -3999,6 +4001,3 @@ alias ls="ls -hA --color=auto --group-directories-first"
 # }
 #
 # /usr/bin/bash ~/Documents/scripts/shellstart/display.sh
-alias nvim="~/.local/bin/lvim"
-alias lvim="~/.local/bin/lvim"
-alias vim="~/.local/bin/lvim"
