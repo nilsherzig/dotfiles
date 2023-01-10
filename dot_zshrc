@@ -3999,3 +3999,6 @@ alias ls="ls -hA --color=auto --group-directories-first"
 # }
 #
 # /usr/bin/bash ~/Documents/scripts/shellstart/display.sh
+alias nvim="~/.local/bin/lvim"
+alias lvim="~/.local/bin/lvim"
+alias vim="~/.local/bin/lvim"
