@@ -1,0 +1,8 @@
+game:
+  exe: /home/nils/Downloads/dwarfs/Dwarf.Fortress.v1.0/Dwarf.Fortress/Dwarf Fortress.exe
+system: {}
+wine:
+  battleye: false
+  eac: false
+  esync: false
+  fsync: false
