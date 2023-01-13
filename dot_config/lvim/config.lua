@@ -74,10 +74,9 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- autocmd BufWritePost  ! chezmoi apply --source-path "%"
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "~/.local/share/chezmoi/*",
   callback = function()
-    vim.fn.system("ls")
+    vim.fn.system('chezmoi apply --source-path "%"')
   end
 })
