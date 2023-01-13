@@ -74,6 +74,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- TODO is supposed to run chezmoi apply command on safe in chezmoi folder
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "~/.local/share/chezmoi/*",
   callback = function()
