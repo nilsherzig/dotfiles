@@ -73,3 +73,11 @@ vim.api.nvim_create_autocmd("FileType", {
     require("nvim-treesitter.highlight").attach(0, "bash")
   end,
 })
+
+-- autocmd BufWritePost  ! chezmoi apply --source-path "%"
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "~/.local/share/chezmoi/*",
+  callback = function()
+    vim.fn.system(ls)
+  end
+})
