@@ -78,6 +78,6 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "~/.local/share/chezmoi/*",
   callback = function()
-    vim.fn.system(ls)
+    vim.fn.system("ls")
   end
 })
