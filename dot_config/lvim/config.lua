@@ -39,6 +39,7 @@ lvim.plugins = {
       vim.api.nvim_set_hl(0, "TelescopeBorder", { bold = true })
       vim.api.nvim_set_hl(0, "CursorLineNr", { italic = true })
       vim.api.nvim_set_hl(0, "LineNr", { italic = true, fg = "#45475a" })
+      vim.api.nvim_set_hl(0, "CursorLine", { italic = true, fg = "#45475a" })
     end,
   },
   {
