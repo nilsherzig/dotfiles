@@ -60,6 +60,12 @@ lvim.plugins = {
         }
       )
     end,
+  },
+  {
+    "nvim-orgmode/orgmode",
+    config = function()
+      require('orgmode').setup {}
+    end,
   }
 }
 
