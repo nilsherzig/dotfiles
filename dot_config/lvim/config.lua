@@ -71,6 +71,9 @@ lvim.plugins = {
         require('orgmode').setup_ts_grammar()
       )
     end,
+  },
+  {
+    "vigoux/LanguageTool.nvim"
   }
 }
 
