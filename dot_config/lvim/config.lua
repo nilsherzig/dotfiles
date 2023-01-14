@@ -73,10 +73,7 @@ lvim.plugins = {
     end,
   },
   {
-    "vigoux/LanguageTool.nvim",
-    config = function()
-      vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
-    end,
+    "vigoux/LanguageTool.nvim"
   }
 }
 
@@ -84,6 +81,7 @@ lvim.plugins = {
 lvim.builtin.indentlines.active = false
 
 vim.wo.relativenumber = true
+vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "zsh",
