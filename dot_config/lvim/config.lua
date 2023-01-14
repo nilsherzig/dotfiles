@@ -73,9 +73,13 @@ lvim.plugins = {
     end,
   },
   {
-    "vigoux/LanguageTool.nvim"
+    "vigoux/LanguageTool.nvim",
+    config = function()
+      vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
+    end,
   }
 }
+
 
 lvim.builtin.indentlines.active = false
 
