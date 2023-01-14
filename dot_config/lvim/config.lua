@@ -60,18 +60,18 @@ lvim.plugins = {
       )
     end,
   },
-  {
-    "nvim-orgmode/orgmode",
-    config = function()
-      require('orgmode').setup(
-        {
-          org_agenda_files = { '~/org/*' },
-          org_default_notes_file = '~/org/refile.org',
-        },
-        require('orgmode').setup_ts_grammar()
-      )
-    end,
-  }
+  -- {
+  --   "nvim-orgmode/orgmode",
+  --   config = function()
+  --     require('orgmode').setup(
+  --       {
+  --         org_agenda_files = { '~/org/*' },
+  --         org_default_notes_file = '~/org/refile.org',
+  --       },
+  --       -- require('orgmode').setup_ts_grammar()
+  --     )
+  --   end,
+  -- }
 }
 
 lvim.builtin.indentlines.active = false
@@ -86,9 +86,9 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- TODO is supposed to run chezmoi apply command on safe in chezmoi folder
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "~/.local/share/chezmoi/*",
-  callback = function()
-    vim.fn.system('chezmoi apply --source-path "%"')
-  end
-})
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   pattern = "~/.local/share/chezmoi/*",
+--   callback = function()
+--     vim.fn.system('chezmoi apply --source-path "%"')
+--   end
+-- })
