@@ -72,9 +72,9 @@ lvim.plugins = {
       )
     end,
   },
-  {
-    "vigoux/LanguageTool.nvim"
-  }
+  --   {
+  --     "vigoux/LanguageTool.nvim"
+  --   }
 }
 
 
