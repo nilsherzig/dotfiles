@@ -7,7 +7,6 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
@@ -64,8 +63,12 @@ lvim.plugins = {
   {
     "nvim-orgmode/orgmode",
     config = function()
-      require('orgmode').setup()
-      require('orgmode').setup_ts_grammar()
+      require('orgmode').setup(
+        {
+          org_agenda_files = { '~/org/*' },
+          org_default_notes_file = '~/org/refile.org',
+        }
+      )
     end,
   }
 }
