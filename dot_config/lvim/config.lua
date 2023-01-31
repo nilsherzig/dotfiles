@@ -48,6 +48,12 @@ lvim.plugins = {
     "airblade/vim-gitgutter"
   },
   {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require('colorizer').setup()
+    end,
+  },
+  {
     'echasnovski/mini.nvim',
     config = function()
       require('mini.indentscope').setup(
