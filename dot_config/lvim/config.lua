@@ -87,6 +87,7 @@ lvim.plugins = {
 lvim.builtin.indentlines.active = false
 
 vim.wo.relativenumber = true
+vim.wo.spell = false
 vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
 
 vim.api.nvim_create_autocmd("FileType", {
