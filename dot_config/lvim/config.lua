@@ -48,6 +48,9 @@ lvim.plugins = {
     "airblade/vim-gitgutter"
   },
   {
+    "rhysd/vim-grammarous"
+  },
+  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       require('colorizer').setup()
