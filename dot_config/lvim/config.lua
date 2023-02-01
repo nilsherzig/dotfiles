@@ -87,7 +87,6 @@ lvim.plugins = {
 lvim.builtin.indentlines.active = false
 
 vim.wo.relativenumber = true
-vim.wo.spell = false
 vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -96,11 +95,9 @@ vim.api.nvim_create_autocmd("FileType", {
     require("nvim-treesitter.highlight").attach(0, "bash")
   end,
 })
-
--- TODO is supposed to run chezmoi apply command on safe in chezmoi folder
--- vim.api.nvim_create_autocmd("BufWritePost", {
---   pattern = "~/.local/share/chezmoi/*",
---   callback = function()
---     vim.fn.system('chezmoi apply --source-path "%"')
---   end
--- })
+-- i fucking hate this solution
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    vim.wo.spell = false
+  end
+})
