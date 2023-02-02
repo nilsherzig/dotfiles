@@ -47,6 +47,9 @@ lvim.plugins = {
   {
     "airblade/vim-gitgutter"
   },
+  {
+    "dhruvasagar/vim-table-mode"
+  },
   -- {
   --   "rhysd/vim-grammarous"
   -- },
