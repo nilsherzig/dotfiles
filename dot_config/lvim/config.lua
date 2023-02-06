@@ -1,7 +1,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
--- lvim.colorscheme = "catppuccin_mocha"
-lvim.colorscheme = "rose-pine"
+lvim.colorscheme = "catppuccin_mocha"
+-- lvim.colorscheme = "rose-pine"
 lvim.transparent_window = true
 
 lvim.leader = "space"
@@ -42,12 +42,12 @@ lvim.plugins = {
       -- vim.api.nvim_set_hl(0, "CursorLine", { italic = true, fg = "#45475a" })
     end,
   },
-  {
-    "rose-pine/neovim",
-    config = function()
-      require("rose-pine").setup()
-    end,
-  },
+  -- {
+  --   "rose-pine/neovim",
+  --   config = function()
+  --     require("rose-pine").setup()
+  --   end,
+  -- },
   {
     "tpope/vim-fugitive"
   },
