@@ -1,6 +1,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "catppuccin_mocha"
+-- lvim.colorscheme = "catppuccin_mocha"
+lvim.colorscheme = "wal"
 -- lvim.colorscheme = "rose-pine"
 lvim.transparent_window = true
 
@@ -78,6 +79,9 @@ lvim.plugins = {
         }
       )
     end,
+  },
+  {
+    "dylanaraps/wal.vim"
   },
   {
     "nvim-orgmode/orgmode",
