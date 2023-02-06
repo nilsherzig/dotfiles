@@ -1,7 +1,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
--- lvim.colorscheme = "catppuccin_mocha"
-lvim.colorscheme = "wal"
+lvim.colorscheme = "catppuccin_mocha"
+-- lvim.colorscheme = "wal"
 -- lvim.colorscheme = "rose-pine"
 lvim.transparent_window = true
 
@@ -116,6 +116,6 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     vim.wo.spell = false
-    vim.opt.termguicolors = false
+    -- vim.opt.termguicolors = false
   end
 })
