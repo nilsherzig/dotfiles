@@ -84,6 +84,9 @@ lvim.plugins = {
     "dylanaraps/wal.vim"
   },
   {
+    'projekt0n/github-nvim-theme',
+  },
+  {
     "nvim-orgmode/orgmode",
     config = function()
       require('orgmode').setup(
