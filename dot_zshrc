@@ -3983,6 +3983,8 @@ alias vim="/home/nils/.local/bin/lvim"
 
 alias ssh="TERM=xterm ssh"
 
+alias feh="feh -Z"
+
 eval "$(zoxide init zsh)"
 
 alias ls="ls -hA --color=auto --group-directories-first"
