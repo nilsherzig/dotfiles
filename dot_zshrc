@@ -3977,29 +3977,14 @@ alias blc="python ~/Documents/scripts/blockcomment/run.py"
 # │ use lvim as default editor │
 # └────────────────────────────┘
 export EDITOR="/home/nils/.local/bin/lvim"
-alias nvim="/home/nils/.local/bin/lvim"
-alias lvim="/home/nils/.local/bin/lvim"
-alias vim="/home/nils/.local/bin/lvim"
-
+# alias nvim="/home/nils/.local/bin/lvim"
+# alias lvim="/home/nils/.local/bin/lvim"
+# alias vim="/home/nils/.local/bin/lvim"
+# 
 alias ssh="TERM=xterm ssh"
-
+# 
 alias feh="feh -Z"
 
 eval "$(zoxide init zsh)"
 
 alias ls="ls -hA --color=auto --group-directories-first"
-
-# alias cd="mycd"
-# mycd() {
-#     if [ -z "$@" ]; then
-#         builtin cd
-#     else
-#         if [ "$@" = ".." ]; then
-#             builtin cd "$@"
-#         else
-#             zi "$@" || builtin cd "$@"
-#         fi
-#     fi
-# }
-#
-# /usr/bin/bash ~/Documents/scripts/shellstart/display.sh
