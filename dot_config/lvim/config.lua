@@ -128,7 +128,7 @@ lvim.builtin.indentlines.active = false
 
 vim.wo.relativenumber = true
 vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
-vim.g:mkdp_theme = 'light'
+vim.g.mkdp_theme = 'light'
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "zsh",
