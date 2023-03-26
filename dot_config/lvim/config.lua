@@ -98,6 +98,9 @@ lvim.plugins = {
       )
     end,
   },
+  {
+    "iamcco/markdown-preview.nvim"
+  }
   --   {
   --     "vigoux/LanguageTool.nvim"
   --   }
