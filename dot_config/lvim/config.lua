@@ -1,15 +1,3 @@
-if vim.g.neovide then
-  vim.opt.guifont = { "Iosevka Nerd Font", "h14" }
-  vim.g.neovide_transparency = 0.95
-  vim.g.transparency = 0.95
-  vim.g.neovide_background_color = "#0f0f0f"
-  vim.g.neovide_scroll_animation_length = 1
-  vim.g.neovide_profiler = false
-  vim.g.neovide_refresh_rate = 144
-  vim.g.neovide_cursor_animation_length = 0.13
-  vim.g.neovide_cursor_trail_size = 0
-end
-
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "catppuccin_mocha"
