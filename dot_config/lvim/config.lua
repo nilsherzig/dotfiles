@@ -116,7 +116,7 @@ lvim.plugins = {
     'lervag/vimtex'
   },
   {
-    'Vonr/align.nvim'
+    'junegunn/vim-easy-align'
   }
   --   {
   --     "vigoux/LanguageTool.nvim"
