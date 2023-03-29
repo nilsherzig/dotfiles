@@ -11,6 +11,7 @@ packages=(
     zoxide
     mullvad-vpn-bin
     zoxide
+    
     # wm / compositor 
     hyprland-git
     wlroots-git
@@ -30,7 +31,6 @@ packages=(
     brightnessctl
     qalculate-gtk
     wofi 
-    blueman
     ranger
     wl-clipboard
     openssh
@@ -71,11 +71,7 @@ packages=(
     # amd tools
     radeontop
 
-    # neovim setup incl linters and lsp servers
-    neovim
-    typescript-language-server
-    vscode-langservers-extracted
-    # vscode-eslint-language-server
+    neovim-git
     clang
     rust-analyzer
 
