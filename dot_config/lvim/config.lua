@@ -15,7 +15,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
-lvim.keys.visual_mode["aa"] = ":EasyAlign"
+lvim.keys.visual_mode["aa"] = ":EasyAlign<CR>"
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
