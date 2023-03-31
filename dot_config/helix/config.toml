@@ -4,9 +4,10 @@ theme = "github_dark"
 [editor]
 line-number = "relative"
 mouse = false
+bufferline = "always"
 
 [editor.lsp]
-# display-inlay-hints = true
+# display-inl"always-hints = true
 
 [editor.file-picker]
 hidden = false
