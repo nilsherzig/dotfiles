@@ -5,6 +5,7 @@ theme = "github_dark"
 line-number = "relative"
 mouse = false
 bufferline = "always"
+cursorline = true
 
 [editor.indent-guides]
 render = true
