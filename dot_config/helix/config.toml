@@ -1,0 +1,11 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.lsp]
+# display-inlay-hints = true
+
+[editor.file-picker]
+hidden = false
