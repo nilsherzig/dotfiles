@@ -6,6 +6,11 @@ line-number = "relative"
 mouse = false
 bufferline = "always"
 
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
 [editor.lsp]
 # display-inl"always-hints = true
 
