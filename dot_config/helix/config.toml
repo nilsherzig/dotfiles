@@ -1,5 +1,5 @@
 # theme = "catppuccin_mocha"
-theme = "github-dark"
+theme = "github_dark"
 
 [editor]
 line-number = "relative"
