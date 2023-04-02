@@ -123,7 +123,7 @@ lvim.builtin.indentlines.active = false
 vim.wo.relativenumber = true
 vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.jar"
 vim.g.mkdp_theme = 'light'
-vim.g.mkdp_auto_start = 1
+vim.g.mkdp_auto_start = 0
 vim.g.mkdp_page_title = "Notes: ${name}"
 
 vim.api.nvim_create_autocmd("FileType", {
