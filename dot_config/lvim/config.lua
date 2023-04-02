@@ -112,9 +112,9 @@ lvim.plugins = {
   {
     'junegunn/vim-easy-align'
   }, 
-  {
-    'wellle/context.vim'
-  }
+  -- {
+  --   'wellle/context.vim'
+  -- }
   --   {
   --     "vigoux/LanguageTool.nvim"
   --   }
