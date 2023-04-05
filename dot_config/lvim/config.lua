@@ -1,7 +1,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
--- lvim.colorscheme = "catppuccin_mocha"
-lvim.colorscheme = "github_dark"
+lvim.colorscheme = "catppuccin_mocha"
+-- lvim.colorscheme = "github_dark"
 -- lvim.colorscheme = "wal"
 -- lvim.colorscheme = "rose-pine"
 lvim.transparent_window = true
