@@ -18,6 +18,15 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 lvim.keys.visual_mode["aa"] = ":EasyAlign<CR>"
 
+lvim.builtin.gitsigns.signs = {
+    add          = { text = '│' },
+    change       = { text = '│' },
+    delete       = { text = '_' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '~' },
+    untracked    = { text = '┆' },
+}
+
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
@@ -55,15 +64,9 @@ lvim.plugins = {
   {
     "tpope/vim-fugitive"
   },
-  -- {
-  --   "airblade/vim-gitgutter"
-  -- },
   {
     "dhruvasagar/vim-table-mode"
   },
-  -- {
-  --   "rhysd/vim-grammarous"
-  -- },
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
@@ -81,6 +84,28 @@ lvim.plugins = {
           symbol = '│',
         }
       )
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require"lsp_signature".on_attach() end,
+  },
+  {
+  'wfxr/minimap.vim',
+    build = "cargo install --locked code-minimap",
+    -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
+    config = function ()
+      vim.cmd ("let g:minimap_width = 10")
+      vim.cmd ("let g:minimap_auto_start = 1")
+      vim.cmd ("let g:minimap_auto_start_win_enter = 1")
     end,
   },
   {
