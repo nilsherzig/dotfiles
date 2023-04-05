@@ -10,7 +10,8 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.builtin.alpha.active = true
+
+lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard" lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
@@ -25,6 +26,14 @@ lvim.builtin.gitsigns.signs = {
     changedelete = { text = '~' },
     untracked    = { text = '┆' },
 }
+lvim.builtin.gitsigns.preview_config = {
+    -- Options passed to nvim_open_win
+    border = 'single',
+    style = 'minimal',
+    relative = 'cursor',
+    row = 0,
+    col = 1
+  },
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
