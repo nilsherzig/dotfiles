@@ -2,7 +2,7 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 -- lvim.colorscheme = "catppuccin_mocha"
 lvim.colorscheme = "rose-pine"
-lvim.transparent_window = false
+lvim.transparent_window = true
 
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
