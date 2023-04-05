@@ -55,9 +55,9 @@ lvim.plugins = {
   {
     "tpope/vim-fugitive"
   },
-  {
-    "airblade/vim-gitgutter"
-  },
+  -- {
+  --   "airblade/vim-gitgutter"
+  -- },
   {
     "dhruvasagar/vim-table-mode"
   },
