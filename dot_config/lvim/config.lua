@@ -145,7 +145,6 @@ lvim.plugins = {
   -- }
 }
 
-
 lvim.builtin.indentlines.active = false
 
 vim.wo.relativenumber = true
