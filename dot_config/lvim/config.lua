@@ -1,9 +1,6 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "catppuccin_mocha"
--- lvim.colorscheme = "github_dark"
--- lvim.colorscheme = "wal"
--- lvim.colorscheme = "rose-pine"
 lvim.transparent_window = true
 
 lvim.leader = "space"
@@ -14,26 +11,12 @@ lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard" lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+
+lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text = true
+lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text_pos = "right_align"
 
 lvim.keys.visual_mode["aa"] = ":EasyAlign<CR>"
-
-lvim.builtin.gitsigns.signs = {
-    add          = { text = '│' },
-    change       = { text = '│' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
-    changedelete = { text = '~' },
-    untracked    = { text = '┆' },
-}
-lvim.builtin.gitsigns.preview_config = {
-    -- Options passed to nvim_open_win
-    border = 'single',
-    style = 'minimal',
-    relative = 'cursor',
-    row = 0,
-    col = 1
-  },
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -50,8 +33,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enable = true
+-- lvim.builtin.treesitter.highlight.enable = true
 
 lvim.plugins = {
   {
@@ -60,7 +42,6 @@ lvim.plugins = {
       vim.api.nvim_set_hl(0, "TelescopeBorder", { bold = true })
       vim.api.nvim_set_hl(0, "CursorLineNr", { italic = true })
       vim.api.nvim_set_hl(0, "LineNr", { italic = true, fg = "#45475a" })
-      -- vim.api.nvim_set_hl(0, "CursorLine", { italic = true, fg = "#45475a" })
     end,
   },
   -- {
@@ -117,22 +98,7 @@ lvim.plugins = {
     end,
   },
   {
-    "dylanaraps/wal.vim"
-  },
-  {
     'projekt0n/github-nvim-theme',
-  },
-  {
-    "nvim-orgmode/orgmode",
-    config = function()
-      require('orgmode').setup(
-        {
-          org_agenda_files = { '~/org/*' },
-          org_default_notes_file = '~/org/refile.org',
-        },
-        require('orgmode').setup_ts_grammar()
-      )
-    end,
   },
   {
     "iamcco/markdown-preview.nvim",
@@ -146,12 +112,6 @@ lvim.plugins = {
   {
     'junegunn/vim-easy-align'
   }, 
-  -- {
-  --   'wellle/context.vim'
-  -- }
-  -- {
-  --   "vigoux/LanguageTool.nvim"
-  -- }
 }
 
 lvim.builtin.indentlines.active = false
@@ -161,6 +121,7 @@ vim.g.languagetool_server = "/usr/share/java/languagetool/languagetool-server.ja
 vim.g.mkdp_theme = 'light'
 vim.g.mkdp_auto_start = 0
 vim.g.mkdp_page_title = "Notes: ${name}"
+vim.opt.termguicolors = true
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "zsh",
@@ -168,10 +129,9 @@ vim.api.nvim_create_autocmd("FileType", {
     require("nvim-treesitter.highlight").attach(0, "bash")
   end,
 })
--- i fucking hate this solution
+
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     vim.wo.spell = false
-    -- vim.opt.termguicolors = false
   end
 })
