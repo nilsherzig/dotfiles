@@ -16,6 +16,8 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text = true
 lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text_pos = "right_align"
 
+-- asdasd
+
 lvim.keys.visual_mode["aa"] = ":EasyAlign<CR>"
 
 lvim.builtin.treesitter.ensure_installed = {
@@ -44,12 +46,12 @@ lvim.plugins = {
       vim.api.nvim_set_hl(0, "LineNr", { italic = true, fg = "#45475a" })
     end,
   },
-  -- {
-  --   "rose-pine/neovim",
-  --   config = function()
-  --     require("rose-pine").setup()
-  --   end,
-  -- },
+  {
+    "rose-pine/neovim",
+    config = function()
+      require("rose-pine").setup()
+    end,
+  },
   {
     "tpope/vim-fugitive"
   },
