@@ -1,7 +1,8 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "catppuccin_mocha"
-lvim.transparent_window = true
+-- lvim.colorscheme = "catppuccin_mocha"
+lvim.colorscheme = "rose-pine"
+lvim.transparent_window = false
 
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
@@ -15,8 +16,6 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text = true
 lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text_pos = "right_align"
-
--- asdasd
 
 lvim.keys.visual_mode["aa"] = ":EasyAlign<CR>"
 
