@@ -3980,8 +3980,8 @@ alias blc="python ~/Documents/scripts/blockcomment/run.py"
 export EDITOR="/home/nils/.local/bin/lvim"
 
 alias lvim="/home/nils/.local/bin/lvim"
-# alias nvim="/home/nils/.local/bin/lvim"
-# alias vim="/home/nils/.local/bin/lvim"
+alias nvim="/home/nils/.local/bin/lvim"
+alias vim="/home/nils/.local/bin/lvim"
 # export EDITOR="/usr/bin/nvim"
 # 
 alias ssh="TERM=xterm ssh"
