@@ -116,9 +116,9 @@ lvim.plugins = {
   -- {
   --   'wellle/context.vim'
   -- }
-  --   {
-  --     "vigoux/LanguageTool.nvim"
-  --   }
+  -- {
+  --   "vigoux/LanguageTool.nvim"
+  -- }
 }
 
 
