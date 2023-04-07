@@ -1,3 +1,1 @@
-my dotfiles :) 
-
-mainly lunarvim, hyprland and kitty settings
+main reason for my green github days :) 
