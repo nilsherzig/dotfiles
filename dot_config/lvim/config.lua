@@ -115,6 +115,9 @@ lvim.plugins = {
   {
     'junegunn/vim-easy-align'
   }, 
+  {
+    'mfussenegger/nvim-jdtls'
+  },
 }
 
 lvim.builtin.indentlines.active = false
