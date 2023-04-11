@@ -2,8 +2,9 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 
 -- lvim.colorscheme = "catppuccin_mocha"
-
 lvim.colorscheme = "rose-pine"
+
+
 lvim.transparent_window = true
 
 lvim.leader = "space"
@@ -11,13 +12,29 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 
+function open_vsplit()
+  -- Save the current window ID
+  -- local current_win = vim.api.nvim_get_current_win()
+
+  -- Open a new vsplit
+  vim.cmd('vsplit term://make')
+
+  -- Switch to the previous window
+  -- vim.api.nvim_set_current_win(current_win)
+end
+
+lvim.keys.normal_mode["<S-m>"] = ":lua open_vsplit()<CR>"
+
+lvim.keys.normal_mode["<S-s>"] = ":lua require('tsht').nodes()<CR>"
+
 lvim.builtin.alpha.active = false
-lvim.builtin.alpha.mode = "dashboard" lvim.builtin.terminal.active = true
+lvim.builtin.alpha.mode = "dashboard" 
+lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
-lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text = true
-lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text_pos = "right_align"
+-- lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text = true
+-- lvim.builtin.gitsigns.opts.current_line_blame_opts.virt_text_pos = "right_align"
 
 lvim.keys.visual_mode["aa"] = ":EasyAlign<CR>"
 
@@ -34,6 +51,8 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "lua",
+  "svelte"
 }
 
 -- lvim.builtin.treesitter.highlight.enable = true
@@ -115,10 +134,54 @@ lvim.plugins = {
   {
     'junegunn/vim-easy-align'
   }, 
+  -- {
+  --   'nvim-lua/plenary.nvim'
+  -- },
+  -- {
+  --   'mfussenegger/nvim-dap'
+  -- },
   {
     'mfussenegger/nvim-jdtls'
   },
+  {
+    'nvim-telescope/telescope-ui-select.nvim'
+  },
+  {
+    'mfussenegger/nvim-treehopper'
+  }
 }
+
+
+lvim.builtin.telescope.on_config_done = function(telescope)
+  pcall(telescope.load_extension, "ui-select")
+end
+
+-- local config = {
+--     cmd = {'/usr/bin/jdtls'},
+--     root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+-- }
+
+-- config['init_options'] = {
+--   bundles = {
+--     vim.fn.glob("/tmp/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.44.0.jar", 1)
+--   };
+-- }
+
+-- config['on_attach'] = function(client, bufnr)
+--   -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
+--   -- you make during a debug session immediately.
+--   -- Remove the option if you do not want that.
+--   -- You can use the `JdtHotcodeReplace` command to trigger it manually
+--   require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+-- end
+
+-- require('jdtls').start_or_attach(config)
+
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
+--- check the lspconfig documentation for a list of all possible options
+-- local opts = {}
+-- require("lvim.lsp.manager").setup("jdtls", config)
+
 
 lvim.builtin.indentlines.active = false
 
