@@ -3991,3 +3991,5 @@ alias feh="feh -Z"
 eval "$(zoxide init zsh)"
 
 alias ls="ls -hA --color=auto --group-directories-first"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
