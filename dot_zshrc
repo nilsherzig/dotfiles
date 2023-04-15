@@ -3977,7 +3977,8 @@ alias blc="python ~/Documents/scripts/blockcomment/run.py"
 # │ use lvim as default editor │
 # └────────────────────────────┘
 # export EDITOR="/usr/bin/hx"
-export EDITOR="/home/nils/.local/bin/lvim"
+# export EDITOR="/home/nils/.local/bin/lvim"
+export EDITOR="/usr/bin/code"
 
 alias lvim="/home/nils/.local/bin/lvim"
 alias nvim="/home/nils/.local/bin/lvim"
