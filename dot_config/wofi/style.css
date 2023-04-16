@@ -43,5 +43,6 @@ window {
 
 #entry:selected {
   background-color: rgb(82, 157, 255);
+  color: white;
   border-radius: 4px;
 }
