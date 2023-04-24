@@ -7,7 +7,6 @@
   ],
   "modules-center": [],
   "modules-right": [
-    "wireplumber",
     "battery",
     "clock"
   ],
@@ -24,16 +23,6 @@
       "",
       "",
       ""
-    ]
-  },
-  "wireplumber": {
-    "format": "{volume}% {icon}",
-    "format-muted": "",
-    "on-click": "helvum",
-    "format-icons": [
-      "",
-      "",
-      ""
     ]
   },
   "clock": {
