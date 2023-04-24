@@ -10,7 +10,7 @@ window {
 #input {
   padding: 10px;
   margin: 5px;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   border: none;
   background-color: rgba(0, 0, 0, 0.7);
   border: none; 
@@ -40,8 +40,13 @@ window {
   border: none;
 }
 
+#entry {
+  color: rgba(255, 255, 255,  0.7)
+}
+
 #entry:selected {
   font-weight: bold;
   background-color: rgb(82, 157, 255);
   border-radius: 4px;
+  font-size: 1.3rem;
 }

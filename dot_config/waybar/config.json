@@ -1,19 +1,42 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "modules-left": ["wlr/workspaces", "hyprland/window"],
-    "modules-center": [],
-    "modules-right": ["battery", "clock"],
-    "height": 48,
-    "hyprland/window": {
-        "format": "{}",
-        "separate-outputs": true
-    },
-    "battery": {
-        "format": "{icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "clock": {
-        "format": "{:%a, %d. %b  %H:%M}"
-    }
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": [
+    "wlr/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "wireplumber",
+    "battery",
+    "clock"
+  ],
+  "height": 48,
+  "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true
+  },
+  "battery": {
+    "format": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "clock": {
+    "format": "{:%a, %d. %b  %H:%M}"
+  }
 }
