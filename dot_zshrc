@@ -3994,3 +3994,5 @@ eval "$(zoxide init zsh)"
 alias ls="ls -hA --color=auto --group-directories-first"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# export OPENAI_API_KEY=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
+# [ -f ~/.lazyshell.zsh ] && source ~/.lazyshell.zsh
