@@ -10,7 +10,7 @@ outer-margin=20
 group-by=summary
 
 markup=1
-progress-color=source #ffffff
+progress-color=source #529DFF
 
 anchor=bottom-right
 
