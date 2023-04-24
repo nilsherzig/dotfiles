@@ -1,0 +1,14 @@
+background-color=#000000b3
+border-radius=4
+border-size=0
+font=Iosevka
+width=300
+height=100
+padding=12
+margin=10
+group-by=summary
+
+markup=1
+progress-color=source #ffffff
+
+format=<b>%s</b>\n%b
