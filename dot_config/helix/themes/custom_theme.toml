@@ -1,5 +1,0 @@
-# inherits = "github_dark"
-inherits = "catppuccin_mocha"
-
-# Override the theming for "keyword"s:
-"ui.background" = { bg = "#11111b" }
