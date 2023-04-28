@@ -90,11 +90,13 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+  users.mutableUsers = false;
 
   users.users.nils = {
     isNormalUser = true;
     description = "nils";
     extraGroups = [ "networkmanager" "wheel" "docker"];
+    hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     packages = with pkgs; [
       # internet
       firefox 
