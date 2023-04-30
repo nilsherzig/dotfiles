@@ -100,6 +100,7 @@
     packages = with pkgs; [
       # internet
       firefox 
+      google-chrome
       qbittorrent
       # notes
       obsidian
@@ -146,6 +147,10 @@
       gnomeExtensions.blur-my-shell
       gnomeExtensions.mullvad-indicator
       gnomeExtensions.tray-icons-reloaded
+      # misc
+      wtype # does not work on gnome
+      ydotool
+      wl-clipboard
     ];
   };
 
