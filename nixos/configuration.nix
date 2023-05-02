@@ -56,11 +56,18 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+
+  # because via and keyboard configs # doesnt work rn 
+  # the via and vial packages already do these in their install scripts, idk why they dont work
+  services.udev.extraRules = ''
+  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  '';
 
   # Configure keymap in X11
   services.xserver = {
@@ -132,6 +139,8 @@
       gradience
       adw-gtk3
       # hardware / stats
+      via       # somehow doesnt work, appimage in repo works on arch tho
+      vial      # more udev testing
       netdata
       radeontop
       liquidctl
@@ -151,6 +160,17 @@
       wtype # does not work on gnome
       ydotool
       wl-clipboard
+
+      # gnome tools 
+      gnome.nautilus
+      gnome.sushi
+      gnome.gnome-disk-utility
+      gnome.gnome-font-viewer
+
+      # window manager tools
+      wofi
+      gammastep
+      swaybg
     ];
   };
 
@@ -161,6 +181,9 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
+
+  # hyprland / wm configs 
+  programs.hyprland.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -175,6 +198,7 @@
 
   fonts.fonts = with pkgs; [
     iosevka
+    cantarell-fonts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
