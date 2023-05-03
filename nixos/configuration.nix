@@ -95,6 +95,9 @@
   # services.xserver.libinput.enable = true;
   users.mutableUsers = false;
 
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   users.users.nils = {
     isNormalUser = true;
     description = "nils";
@@ -208,4 +211,14 @@
   system.autoUpgrade.allowReboot = false;
   # todos:
   # curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+
+  # environment.sessionVariables = rec {
+  #   # Not officially in the specification
+  #   XDG_BIN_HOME    = "$HOME/.local/bin";
+  #   DOTFILE_SCRIPTS    = "$HOME/Documents/dotfiles/scripts";
+  #   PATH = [ 
+  #     "${XDG_BIN_HOME}"
+  #     "${DOTFILE_SCRIPTS}"
+  #   ];
+  # };
 }
