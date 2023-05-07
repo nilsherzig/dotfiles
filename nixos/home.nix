@@ -12,7 +12,7 @@ in
     # home.homeDirectory = "/home/nils";
     home.stateVersion = "22.11";
 
-    home.file."/home/nils/.config/" = {
+    home.file.".config/" = {
     # home.file."${config.xdg.configHome}" = {
         source = ../configs;
         recursive = true;
