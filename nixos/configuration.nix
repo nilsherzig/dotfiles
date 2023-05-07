@@ -103,6 +103,19 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+
+  services = {
+    syncthing = {
+        enable = true;
+        user = "nils";
+        dataDir = "/home/nils/syncthing";    # Default folder for new synced folders
+        configDir = "/home/nils/.config/syncthing";   # Folder for Syncthing's settings and keys
+    };
+  };
+
+
   users.users.nils = {
     shell = pkgs.zsh;
     isNormalUser = true;
@@ -222,6 +235,7 @@
     # remotePlay.openFirewall = true; 
     # dedicatedServer.openFirewall = true; 
   };
+
 
   programs.hyprland.enable = true;
 
