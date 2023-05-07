@@ -74,6 +74,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # security.polkit.enable = true;
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -170,9 +171,12 @@
       wl-clipboard
       libqalculate
 
-      # gnome tools 
+      # desktop things / using gnome in this case
+      # polkit_gnome
+      # polkit
       gnome.nautilus
       gnome.sushi
+      # udisks # gnome disks backend
       gnome.gnome-disk-utility
       gnome.gnome-font-viewer
       gnome.eog
@@ -236,6 +240,7 @@
     "x-scheme-handler/unknown" = "firefox.desktop";
   };
 
+  services.udisks2.enable = true;
   services.netdata.enable = true;
   services.mullvad-vpn.enable = true; 
   system.stateVersion = "22.11"; # Did you read the comment? # na i didnt, going to change this anyways
@@ -254,5 +259,21 @@
   #     "${DOTFILE_SCRIPTS}"
   #   ];
   # };
+  # systemd = {
+  #   user.services.polkit-gnome-authentication-agent-1 = {
+  #     description = "polkit-gnome-authentication-agent-1";
+  #     wantedBy = [ "graphical-session.target" ];
+  #     wants = [ "graphical-session.target" ];
+  #     after = [ "graphical-session.target" ];
+  #     serviceConfig = {
+  #         Type = "simple";
+  #         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+  #         Restart = "on-failure";
+  #         RestartSec = 1;
+  #         TimeoutStopSec = 10;
+  #       };
+  #   };
+  # };
+
 
 }
