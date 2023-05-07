@@ -17,6 +17,13 @@ in
         source = ../configs;
         recursive = true;
     };
+    gtk = {
+        enable = true;
+        theme = {
+            name = "adw-gtk3";
+            package = pkgs.adw-gtk3;
+        };
+    };
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
   };
 }
