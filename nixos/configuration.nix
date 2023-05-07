@@ -4,7 +4,7 @@
   imports =
     [ 
       /etc/nixos/hardware-configuration.nix  # Include the results of the hardware scan.
-      ./luks.nix
+      ./devices.nix
     ];
 
   # Bootloader.
@@ -24,7 +24,7 @@
   # boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".device = "/dev/disk/by-uuid/c9eb19e3-05fa-4057-a251-60d49d38de4c";
   # boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -108,6 +108,7 @@
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     packages = with pkgs; [
       # internet
+      syncthing
       firefox 
       google-chrome
       qbittorrent
@@ -276,5 +277,12 @@
   #   };
   # };
 
+  services.openssh = {
+    enable = true;
+    # require public key authentication for better security
+    passwordAuthentication = true;
+    kbdInteractiveAuthentication = false;
+    #permitRootLogin = "yes";
+  };
 
 }
