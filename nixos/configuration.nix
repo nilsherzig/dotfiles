@@ -3,6 +3,7 @@
 {
   imports =
     [ 
+      <home-manager/nixos>
       /etc/nixos/hardware-configuration.nix  # Include the results of the hardware scan.
       ./desktop.nix
       ./laptop.nix
