@@ -4,7 +4,8 @@
   imports =
     [ 
       /etc/nixos/hardware-configuration.nix  # Include the results of the hardware scan.
-      ./devices.nix
+      ./desktop.nix
+      ./laptop.nix
       ./hostname.nix
     ];
 
