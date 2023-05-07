@@ -99,6 +99,7 @@
   services.blueman.enable = true;
 
   users.users.nils = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
     extraGroups = [ "networkmanager" "wheel" "docker"];
@@ -111,14 +112,17 @@
       # notes
       obsidian
       # code / terminal
+      zoxide
       git
       neovim
       vscode
-      zsh
       fzf
       ripgrep
       kitty
       zsh-syntax-highlighting
+      xdg-desktop-portal-hyprland
+      xdg-utils
+      atuin
       # container
       docker
       docker-compose
@@ -137,17 +141,22 @@
       #theme
       gradience
       adw-gtk3
+      lxappearance
       # hardware / stats
       via       # somehow doesnt work, appimage in repo works on arch tho
       netdata
       radeontop
       liquidctl
       lm_sensors
+      openrgb
       # video 
       celluloid
       kodi-wayland
+      mpv
+      yt-dlp
       # images
       gimp
+      feh
       # gnome shell 
       gnome.gnome-tweaks
       gnome-extension-manager
@@ -158,13 +167,20 @@
       wtype # does not work on gnome
       ydotool
       wl-clipboard
+      libqalculate
 
       # gnome tools 
       gnome.nautilus
       gnome.sushi
       gnome.gnome-disk-utility
       gnome.gnome-font-viewer
+      gnome.eog
+      gnome.simple-scan
+      gnome.adwaita-icon-theme
       # gnome.gnome-control-center
+
+      # libs
+      imlib2Full
 
       # window manager tools
       wofi
@@ -180,7 +196,15 @@
     ];
   };
 
-  programs.zsh.syntaxHighlighting.enable = true; 
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    ohMyZsh.enable = true;
+    ohMyZsh.plugins = [ "git" "zoxide" "vi-mode"];
+    ohMyZsh.theme = "linuxonly";
+    syntaxHighlighting.enable = true;
+  };
+
 
   programs.steam = {
     enable = true;
@@ -203,6 +227,14 @@
     cantarell-fonts
   ];
 
+  xdg.mime.defaultApplications = {
+    "text/html" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/about" = "firefox.desktop";
+    "x-scheme-handler/unknown" = "firefox.desktop";
+  };
+
   services.netdata.enable = true;
   services.mullvad-vpn.enable = true; 
   system.stateVersion = "22.11"; # Did you read the comment? # na i didnt, going to change this anyways
@@ -221,4 +253,5 @@
   #     "${DOTFILE_SCRIPTS}"
   #   ];
   # };
+
 }
