@@ -130,7 +130,7 @@
       zsh-syntax-highlighting
       xdg-desktop-portal-hyprland
       xdg-utils
-      atuin
+      # atuin
       # container
       docker
       docker-compose
