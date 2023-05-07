@@ -211,7 +211,7 @@
     enable = true;
     autosuggestions.enable = true;
     ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "git" "zoxide" "vi-mode"];
+    ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf"];
     ohMyZsh.theme = "linuxonly";
     syntaxHighlighting.enable = true;
   };
