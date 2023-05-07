@@ -6,6 +6,6 @@ currently booth my laptop and desktop are using this config at the same time
 - [ ] do something about this git size
 - [ ] manage dotfiles via nix (homemanager (?))
   - [ ] wofi 
-  - [ ] hyprland
+  - [x] hyprland
   - [ ] neovim 
-  - [ ] kitty
+  - [x] kitty
