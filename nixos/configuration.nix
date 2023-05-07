@@ -280,11 +280,9 @@
   # };
 
   services.openssh = {
-    enable = true;
-    # require public key authentication for better security
-    passwordAuthentication = true;
+    enable = false;
+    passwordAuthentication = false;
     kbdInteractiveAuthentication = false;
-    #permitRootLogin = "yes";
   };
 
 }
