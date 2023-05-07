@@ -109,6 +109,7 @@
     description = "nils";
     extraGroups = [ "networkmanager" "wheel" "docker"];
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
+    home = "/home/nils/";
     packages = with pkgs; [
       # internet
       syncthing
@@ -279,11 +280,4 @@
   #       };
   #   };
   # };
-
-  services.openssh = {
-    enable = false;
-    passwordAuthentication = false;
-    kbdInteractiveAuthentication = false;
-  };
-
 }
