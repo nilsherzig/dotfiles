@@ -8,15 +8,13 @@ in
   ];
 
   home-manager.users.nils = {
-    /* The home.stateVersion option does not have a default and must be set */
-    # home.homeDirectory = "/home/nils";
     home.stateVersion = "22.11";
 
     home.file.".config/" = {
-    # home.file."${config.xdg.configHome}" = {
         source = ../configs;
         recursive = true;
     };
+
     gtk = {
         enable = true;
         theme = {
