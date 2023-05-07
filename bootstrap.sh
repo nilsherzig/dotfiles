@@ -5,6 +5,9 @@ sudo nixos-rebuild switch --upgrade
 
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home
 sudo nix-channel --update
+sudo nixos-rebuild switch
+
+nix-shell '<home-manager>' -A install
 
 # sudo cp "/etc/nixos/configuration.nix" "/etc/nixos/configuration.nix.bak"
 # sudo rm "/etc/nixos/configuration.nix"
