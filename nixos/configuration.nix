@@ -60,10 +60,10 @@
 
   # because via and keyboard configs # doesnt work rn 
   # the via and vial packages already do these in their install scripts, idk why they dont work
-  services.udev.extraRules = ''
-  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-  '';
+  # services.udev.extraRules = ''
+  # KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  # KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  # '';
 
   # Configure keymap in X11
   services.xserver = {
@@ -112,6 +112,7 @@
       # notes
       obsidian
       # code / terminal
+      du-dust
       zoxide
       git
       neovim
