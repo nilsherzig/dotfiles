@@ -228,6 +228,10 @@
     ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf"];
     ohMyZsh.theme = "linuxonly";
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      ip="ip --color=always"; # ip show colors 
+      cd="z";                 # use zoxide as cd
+    };
   };
 
 
