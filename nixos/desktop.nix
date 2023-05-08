@@ -4,9 +4,19 @@ lib.mkIf (config.networking.hostName == "desktop") {
   boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".device = "/dev/disk/by-uuid/c9eb19e3-05fa-4057-a251-60d49d38de4c";
   boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".keyFile = "/crypto_keyfile.bin";
 
+  # jellyfin docker ports
+  networking.firewall.allowedTCPPorts = [ 8096 8920 ];
+  networking.firewall.allowedUDPPorts = [ 7359 1900 ];
+
   fileSystems."/data" =
   {
     device = "/dev/disk/by-label/ssd1tb";
     fsType = "ext4";
   };
+
+  # fileSystems."/bigdata" =
+  # {
+  #   device = "/dev/disk/by-label/hdd12tb";
+  #   fsType = "ext4";
+  # };
  }
