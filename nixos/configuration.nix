@@ -126,6 +126,8 @@
     home = "/home/nils/";
     packages = with pkgs; [
       # internet
+      deja-dup
+      rsync
       syncthing
       firefox 
       google-chrome
@@ -172,6 +174,7 @@
       lm_sensors
       openrgb
       # video 
+      jellyfin-media-player
       celluloid
       kodi-wayland
       mpv
@@ -272,6 +275,7 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
+
   # todos:
   # curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
 
