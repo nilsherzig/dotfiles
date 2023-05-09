@@ -120,9 +120,17 @@
           "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
         };
         folders = {
-          "Wallpaper" = {        # Name of folder in Syncthing, also the folder ID
-            path = "/home/nils/Pictures/wallpaper";    # Which folder to add to Syncthing
-            devices = [ "desktop" "laptop" ];      # Which devices to share the folder with
+          "Wallpaper" = {        
+            path = "/home/nils/Pictures/wallpaper";    
+            devices = [ "desktop" "laptop" ];      
+          };
+          "Downloads" = {
+            path = "/home/nils/Downloads";
+            devices = [ "desktop" "laptop" ];
+          };
+          "Notes" = {
+            path = "/home/nils/Notes";
+            devices = [ "desktop" "laptop" ];
           };
       };
     };
