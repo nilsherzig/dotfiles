@@ -256,6 +256,7 @@
       ip="ip --color=always"; # ip show colors 
       cd="z";                 # use zoxide as cd
       rclone="rclone -P";     # always show rclone progress
+      ssh="TERM=xterm ssh";   # because of kitty
     };
   };
 
