@@ -117,11 +117,12 @@
         overrideFolders = true;     # overrides any folders added or deleted through the WebUI
         devices = {
           "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
+          "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
         };
         folders = {
           "Wallpaper" = {        # Name of folder in Syncthing, also the folder ID
             path = "/home/nils/Pictures/wallpaper";    # Which folder to add to Syncthing
-            devices = [ "desktop" ];      # Which devices to share the folder with
+            devices = [ "desktop" "laptop" ];      # Which devices to share the folder with
           };
       };
     };
