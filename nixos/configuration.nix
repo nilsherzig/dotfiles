@@ -113,6 +113,17 @@
         user = "nils";
         dataDir = "/home/nils/syncthing";    # Default folder for new synced folders
         configDir = "/home/nils/.config/syncthing";   # Folder for Syncthing's settings and keys
+        overrideDevices = true;     # overrides any devices added or deleted through the WebUI
+        overrideFolders = true;     # overrides any folders added or deleted through the WebUI
+        devices = {
+          "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
+        };
+        folders = {
+          "Wallpaper" = {        # Name of folder in Syncthing, also the folder ID
+            path = "/home/nils/Pictures/wallpaper";    # Which folder to add to Syncthing
+            devices = [ "desktop" ];      # Which devices to share the folder with
+          };
+      };
     };
   };
 
@@ -126,7 +137,8 @@
     home = "/home/nils/";
     packages = with pkgs; [
       # internet
-      deja-dup
+      rclone
+      
       rsync
       syncthing
       firefox 
@@ -234,6 +246,7 @@
     shellAliases = {
       ip="ip --color=always"; # ip show colors 
       cd="z";                 # use zoxide as cd
+      rclone="rclone -P";     # always show rclone progress
     };
   };
 
