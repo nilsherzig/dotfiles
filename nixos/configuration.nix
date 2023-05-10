@@ -2,8 +2,8 @@
 
 {
   imports =
-    [ 
-      /etc/nixos/hardware-configuration.nix  # Include the results of the hardware scan.
+    [
+      /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
       ./desktop.nix
       ./laptop.nix
       ./hostname.nix
@@ -16,7 +16,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # virtual 
-  virtualisation.docker.enable = true; 
+  virtualisation.docker.enable = true;
 
   # Setup keyfile
   boot.initrd.secrets = {
@@ -109,29 +109,29 @@
 
   services = {
     syncthing = {
-        enable = true;
-        user = "nils";
-        dataDir = "/home/nils/syncthing";    # Default folder for new synced folders
-        configDir = "/home/nils/.config/syncthing";   # Folder for Syncthing's settings and keys
-        overrideDevices = true;     # overrides any devices added or deleted through the WebUI
-        overrideFolders = true;     # overrides any folders added or deleted through the WebUI
-        devices = {
-          "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
-          "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
+      enable = true;
+      user = "nils";
+      dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
+      configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
+      overrideDevices = true; # overrides any devices added or deleted through the WebUI
+      overrideFolders = true; # overrides any folders added or deleted through the WebUI
+      devices = {
+        "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
+        "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
+      };
+      folders = {
+        "Wallpaper" = {
+          path = "/home/nils/Pictures/wallpaper";
+          devices = [ "desktop" "laptop" ];
         };
-        folders = {
-          "Wallpaper" = {        
-            path = "/home/nils/Pictures/wallpaper";    
-            devices = [ "desktop" "laptop" ];      
-          };
-          "Downloads" = {
-            path = "/home/nils/Downloads";
-            devices = [ "desktop" "laptop" ];
-          };
-          "Notes" = {
-            path = "/home/nils/Notes";
-            devices = [ "desktop" "laptop" ];
-          };
+        "Downloads" = {
+          path = "/home/nils/Downloads";
+          devices = [ "desktop" "laptop" ];
+        };
+        "Notes" = {
+          path = "/home/nils/Notes";
+          devices = [ "desktop" "laptop" ];
+        };
       };
     };
   };
@@ -141,16 +141,17 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
-    extraGroups = [ "networkmanager" "wheel" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
       # internet
+      nixpkgs-fmt
       rclone
-      
+
       rsync
       syncthing
-      firefox 
+      firefox
       google-chrome
       qbittorrent
       # notes
@@ -188,7 +189,7 @@
       adw-gtk3
       lxappearance
       # hardware / stats
-      via       # somehow doesnt work, appimage in repo works on arch tho
+      via # somehow doesnt work, appimage in repo works on arch tho
       netdata
       radeontop
       liquidctl
@@ -240,7 +241,7 @@
       libnotify
       # screenshot stack lel
       grim
-      slurp  
+      slurp
       swappy
     ];
   };
@@ -249,14 +250,14 @@
     enable = true;
     autosuggestions.enable = true;
     ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf"];
+    ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf" ];
     ohMyZsh.theme = "linuxonly";
     syntaxHighlighting.enable = true;
     shellAliases = {
-      ip="ip --color=always"; # ip show colors 
-      cd="z";                 # use zoxide as cd
-      rclone="rclone -P";     # always show rclone progress
-      ssh="TERM=xterm ssh";   # because of kitty
+      ip = "ip --color=always"; # ip show colors 
+      cd = "z"; # use zoxide as cd
+      rclone = "rclone -P"; # always show rclone progress
+      ssh = "TERM=xterm ssh"; # because of kitty
     };
   };
 
@@ -274,7 +275,7 @@
 
   environment.systemPackages = with pkgs; [
     htop
-    neovim 
+    neovim
     mullvad-vpn
   ];
 
@@ -293,7 +294,7 @@
 
   services.udisks2.enable = true;
   services.netdata.enable = true;
-  services.mullvad-vpn.enable = true; 
+  services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11"; # Did you read the comment? # na i didnt, going to change this anyways
 
   system.autoUpgrade.enable = true;
