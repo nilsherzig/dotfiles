@@ -145,6 +145,7 @@
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
+      kubectl
       # internet
       nixpkgs-fmt
       rclone
@@ -255,7 +256,7 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       ip = "ip --color=always"; # ip show colors 
-      cd = "z"; # use zoxide as cd
+      # cd = "z"; # use zoxide as cd
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
     };
