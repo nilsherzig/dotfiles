@@ -24,4 +24,13 @@ lib.mkIf (config.networking.hostName == "desktop") {
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [ virt-manager ];
   users.users.nils.extraGroups = [ "libvirtd" ];
+
+  # local k3s without proper firewall / ingress load balancer
+  networking.extraHosts =
+    ''
+      192.168.122.27 local.nilsherzig.com
+      192.168.122.28 local.nilsherzig.com
+      192.168.122.78 local.nilsherzig.com
+    '';
+
 }
