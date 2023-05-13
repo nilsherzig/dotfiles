@@ -15,8 +15,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
-  # virtual 
-  virtualisation.docker.enable = true;
+  boot.kernelParams = [
+    "amd_iommu=on"
+  ]
+
+    # virtual 
+    virtualisation.docker.enable = true;
 
   # Setup keyfile
   boot.initrd.secrets = {
@@ -173,6 +177,9 @@
       # container
       docker
       docker-compose
+      evince
+      cdrtools
+      terraform
       #chat
       whatsapp-for-linux
       discord
