@@ -153,6 +153,7 @@
       # internet
       nixpkgs-fmt
       rclone
+      spaceship-prompt
 
       rsync
       syncthing
@@ -261,7 +262,7 @@
     autosuggestions.enable = true;
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf" ];
-    ohMyZsh.theme = "";
+    # ohMyZsh.theme = "";
     syntaxHighlighting.enable = true;
     shellAliases = {
       ip = "ip --color=always"; # ip show colors 
