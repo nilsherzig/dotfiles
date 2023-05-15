@@ -211,6 +211,7 @@
       gnomeExtensions.blur-my-shell
       gnomeExtensions.mullvad-indicator
       gnomeExtensions.tray-icons-reloaded
+      libwebp
       # misc
       wtype # does not work on gnome
       ydotool
