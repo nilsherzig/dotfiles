@@ -17,10 +17,10 @@
 
   boot.kernelParams = [
     "amd_iommu=on"
-  ]
+  ];
 
-    # virtual 
-    virtualisation.docker.enable = true;
+  # virtual 
+  virtualisation.docker.enable = true;
 
   # Setup keyfile
   boot.initrd.secrets = {
