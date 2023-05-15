@@ -171,6 +171,7 @@
       ripgrep
       kitty
       zsh-syntax-highlighting
+      pure-prompt
       xdg-desktop-portal-hyprland
       xdg-utils
       # atuin
@@ -260,7 +261,7 @@
     autosuggestions.enable = true;
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf" ];
-    ohMyZsh.theme = "linuxonly";
+    ohMyZsh.theme = "";
     syntaxHighlighting.enable = true;
     shellAliases = {
       ip = "ip --color=always"; # ip show colors 
@@ -268,6 +269,10 @@
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
     };
+    promptInit = ''
+      autoload - U promptinit; promptinit
+      prompt pure
+    '';
   };
 
 
