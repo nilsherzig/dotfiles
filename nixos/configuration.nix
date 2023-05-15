@@ -213,11 +213,11 @@
       gimp
       feh
       # gnome shell 
-      gnome.gnome-tweaks
-      gnome-extension-manager
-      gnomeExtensions.blur-my-shell
-      gnomeExtensions.mullvad-indicator
-      gnomeExtensions.tray-icons-reloaded
+      # gnome.gnome-tweaks
+      # gnome-extension-manager
+      # gnomeExtensions.blur-my-shell
+      # gnomeExtensions.mullvad-indicator
+      # gnomeExtensions.tray-icons-reloaded
       libwebp
       # misc
       wtype # does not work on gnome
