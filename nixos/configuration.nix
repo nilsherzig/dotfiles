@@ -128,6 +128,10 @@
           path = "/home/nils/Pictures/wallpaper";
           devices = [ "desktop" "laptop" ];
         };
+        "Documents" = {
+          path = "/home/nils/Documents";
+          devices = [ "desktop" "laptop" ];
+        };
         "Downloads" = {
           path = "/home/nils/Downloads";
           devices = [ "desktop" "laptop" ];
@@ -158,6 +162,8 @@
       rsync
       syncthing
       firefox
+      helix
+      nil
       google-chrome
       qbittorrent
       # notes
@@ -167,6 +173,8 @@
       zoxide
       git
       neovim
+      clang-tools
+      gcc
       vscode
       fzf
       ripgrep
