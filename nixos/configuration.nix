@@ -163,6 +163,7 @@
       syncthing
       firefox
       helix
+      lazygit
       nil
       google-chrome
       qbittorrent
