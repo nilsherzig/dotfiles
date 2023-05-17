@@ -158,7 +158,7 @@
       nixpkgs-fmt
       rclone
       spaceship-prompt
-
+      gnumake
       rsync
       syncthing
       firefox
