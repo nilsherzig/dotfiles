@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
 in
@@ -50,6 +50,19 @@ in
         '';
       };
     };
-    /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
+
+    # nixpkgs.config.allowUnfree = true;
+    # programs.vscode = {
+    #   enable = true;
+    #   extensions = with pkgs.vscode-extensions; [
+    #     bbenoist.nix
+    #     ms-python.python
+    #     ms-azuretools.vscode-docker
+    #     ms-vscode-remote.remote-ssh
+    #     ms-vscode.cpptools            # because something about linking and determinism
+    #     vscodevim.vim
+    #     catppuccin.catppuccin-vsc
+    #   ];
+    # };
   };
 }
