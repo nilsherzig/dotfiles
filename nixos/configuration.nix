@@ -145,6 +145,9 @@
   };
 
 
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
+
   users.users.nils = {
     shell = pkgs.zsh;
     isNormalUser = true;
@@ -153,6 +156,7 @@
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
+      distrobox
       kubectl
       # internet
       nixpkgs-fmt
@@ -165,8 +169,13 @@
       helix
       lazygit
       nil
+      nodePackages_latest.pyright
+      nodePackages_latest.bash-language-server
+      usbutils
       google-chrome
       qbittorrent
+      python311
+      python311Packages.python-lsp-server
       # notes
       obsidian
       # code / terminal
@@ -263,6 +272,7 @@
       grim
       slurp
       swappy
+      # vscode
     ];
   };
 
@@ -295,7 +305,6 @@
 
   programs.hyprland.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     htop
@@ -351,4 +360,5 @@
   #       };
   #   };
   # };
+
 }
