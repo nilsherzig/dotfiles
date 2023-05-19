@@ -14,4 +14,4 @@ distrobox enter dev
 ```
 
 ## todo
-- [  ] automate `ln -s` config files - im to lazy for homemanager switch etc
+- [ ] automate `ln -s` config files - im to lazy for homemanager switch etc
