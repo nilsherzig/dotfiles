@@ -13,3 +13,5 @@ sudo dnf install -y msp430-elf-gcc msp430-elf-binutils msp430-elf-gdb mspds msp4
 cd /tmp
 git clone https://github.com/dlbeer/mspdebug
 cd /tmp/mspdebug
+
+distrobox-export --bin /usr/bin/nvim --export-path ~/.local/bin
