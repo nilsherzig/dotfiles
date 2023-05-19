@@ -10,10 +10,10 @@ in
   home-manager.users.nils = {
     home.stateVersion = "22.11";
 
-    home.file.".config/" = {
-      source = ../configs;
-      recursive = true;
-    };
+    ## home.file.".config/" = {
+    ##   source = ../configs;
+    ##   recursive = true;
+    ## };
 
     gtk = {
       enable = true;
