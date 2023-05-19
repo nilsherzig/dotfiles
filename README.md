@@ -8,7 +8,7 @@ Nixos doesnt link auto installing lsp servers and things like that.
 
 setup: 
 
-```
+```bash
 distrobox create -i fedora:latest -n dev 
 distrobox enter dev
 ./setup_fedora.sh
