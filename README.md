@@ -15,3 +15,4 @@ distrobox enter dev
 
 ## todo
 - [ ] automate `ln -s` config files - im to lazy for homemanager switch etc
+- [ ] switch to distrobox assemble for dev container
