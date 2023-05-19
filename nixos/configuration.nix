@@ -156,8 +156,8 @@
         hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
         home = "/home/nils/";
         packages = with pkgs; [
-                # lanauge server
-                lua-language-server
+# lanauge server
+            lua-language-server
                 rust-analyzer
                 nodePackages_latest.bash-language-server
                 nodePackages_latest.pyright
@@ -166,7 +166,7 @@
 # other things
                 distrobox
                 kubectl
-                # internet
+# internet
                 nixpkgs-fmt
                 rclone
                 spaceship-prompt
@@ -189,7 +189,7 @@
                 du-dust
                 zoxide
                 git
-                # neovim
+# neovim
                 clang-tools
                 unzip
                 gcc
@@ -317,8 +317,8 @@
 
     environment.systemPackages = with pkgs; [
         htop
-        # neovim
-        mullvad-vpn
+# neovim
+            mullvad-vpn
     ];
 
     fonts.fonts = with pkgs; [
