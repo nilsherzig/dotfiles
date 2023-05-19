@@ -10,6 +10,7 @@ lsp.ensure_installed({
     'rust_analyzer',
     'lua_ls',
     'nil_ls',
+    'marksman',
 })
 
 -- Fix Undefined global 'vim'
