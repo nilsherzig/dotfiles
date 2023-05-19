@@ -189,7 +189,7 @@
                 du-dust
                 zoxide
                 git
-                neovim
+                # neovim
                 clang-tools
                 unzip
                 gcc
@@ -296,6 +296,7 @@
 # cd = "z"; # use zoxide as cd
                 rclone = "rclone -P"; # always show rclone progress
                 ssh = "TERM=xterm ssh"; # because of kitty
+                nvim = "~/.local/bin/nvim";
         };
         promptInit = ''
             autoload - U promptinit; promptinit
@@ -316,8 +317,8 @@
 
     environment.systemPackages = with pkgs; [
         htop
-            neovim
-            mullvad-vpn
+        # neovim
+        mullvad-vpn
     ];
 
     fonts.fonts = with pkgs; [
