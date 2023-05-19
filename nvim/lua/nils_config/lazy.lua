@@ -14,7 +14,18 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { "lukas-reineke/indent-blankline.nvim" },
 
-    "folke/which-key.nvim",
+    {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup({
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            })
+        end,
+    },
 
     "gelguy/wilder.nvim",
 
