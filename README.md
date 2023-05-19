@@ -1,4 +1,3 @@
-nixos branch of my configs
 currently booth my laptop and desktop are using this config at the same time
 
 ## neovim setup 
@@ -13,3 +12,6 @@ distrobox create -i fedora:latest -n dev
 distrobox enter dev
 ./setup_fedora.sh
 ```
+
+## todo
+- [  ] automate `ln -s` config files - im to lazy for homemanager switch etc
