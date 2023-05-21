@@ -187,6 +187,7 @@
                 obsidian
 # code / terminal
                 du-dust
+                screen
                 zoxide
                 git
 # neovim
