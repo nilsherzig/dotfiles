@@ -31,7 +31,7 @@ require("lazy").setup({
 
     "folke/neodev.nvim",
 
-    "jiangmiao/auto-pairs",
+    -- "jiangmiao/auto-pairs",
 
     {
         "lewis6991/gitsigns.nvim",
@@ -61,12 +61,17 @@ require("lazy").setup({
         end,
     },
 
-    -- {
-    --     "iamcco/markdown-preview.nvim",
-    --     config = function()
-    --         vim.fn["mkdp#util#install"]()
-    --     end,
-    -- },
+    {
+        "iamcco/markdown-preview.nvim",
+        config = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    },
+
+    {
+        'preservim/vim-markdown',
+        require = { 'godlygeek/tabular' },
+    },
 
     {
         'nvim-telescope/telescope.nvim',
@@ -78,8 +83,16 @@ require("lazy").setup({
         build = ":TSUpdate"
     },
 
-    "mbbill/undotree",
+    -- "mbbill/undotree",
+
     "tpope/vim-fugitive",
+
+    {
+        "andrewferrier/wrapping.nvim",
+        config = function()
+            require("wrapping").setup()
+        end
+    },
 
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -103,12 +116,6 @@ require("lazy").setup({
             { 'L3MON4D3/LuaSnip' },     -- Required
         },
 
-        -- {
-        --     "andrewferrier/wrapping.nvim",
-        --     config = function()
-        --         require("wrapping").setup()
-        --     end
-        -- },
     }
 
 })
