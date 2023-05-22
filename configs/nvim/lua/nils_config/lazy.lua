@@ -32,7 +32,7 @@ require("lazy").setup({
         config = function()
             require('nvim-cursorline').setup {
                 cursorline = {
-                    enable = true,
+                    enable = false,
                     timeout = 1000,
                     number = false,
                 },
@@ -89,20 +89,20 @@ require("lazy").setup({
             require("catppuccin").setup({
                 flavour = "mocha", -- latte, frappe, macchiato, mocha
                 background = {
-                       -- :h background
+                    -- :h background
                     light = "latte",
                     dark = "mocha",
                 },
-                transparent_background = false,
-                show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+                transparent_background = true,
+                show_end_of_buffer = true, -- show the '~' characters after the end of buffers
                 term_colors = false,
                 dim_inactive = {
                     enabled = false,
                     shade = "dark",
                     percentage = 0.15,
                 },
-                no_italic = false, -- Force no italic
-                no_bold = false, -- Force no bold
+                no_italic = false,    -- Force no italic
+                no_bold = false,      -- Force no bold
                 no_underline = false, -- Force no underline
                 styles = {
                     comments = { "italic" },
