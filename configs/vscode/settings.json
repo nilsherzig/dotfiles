@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "editor.fontFamily": "Iosevka Term SS18",
+    "window.zoomLevel": 2,
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.formatOnSave": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "git.autofetch": true,
+    "vim.useSystemClipboard": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "git.confirmSync": false,
+    "editor.minimap.enabled": false,
+    "nix.enableLanguageServer": true, // Enable LSP.
+    "nix.serverPath": "nil",
+    "window.menuBarVisibility": "toggle",
+    "redhat.telemetry.enabled": false // The path to the LSP server executable.
+}

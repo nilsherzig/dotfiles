@@ -238,6 +238,7 @@
                 kodi-wayland
                 mpv
                 yt-dlp
+                gradle_7
 # images
                 gimp
                 feh

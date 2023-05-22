@@ -31,7 +31,8 @@ require("lazy").setup({
 
     "folke/neodev.nvim",
 
-    -- "jiangmiao/auto-pairs",
+    "jiangmiao/auto-pairs",
+
 
     {
         "lewis6991/gitsigns.nvim",
@@ -48,18 +49,20 @@ require("lazy").setup({
 
     },
 
-    {
-        "projekt0n/github-nvim-theme",
-        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-        config = function()
-            require('github-theme').setup({
-                -- ...
-            })
+    "sainnhe/sonokai",
 
-            vim.cmd('colorscheme github_dark_high_contrast')
-        end,
-    },
+    -- {
+    --     "projekt0n/github-nvim-theme",
+    --     lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    --     priority = 1000, -- make sure to load this before all the other start plugins
+    --     config = function()
+    --         require('github-theme').setup({
+    --             -- ...
+    --         })
+    --
+    --         vim.cmd('colorscheme github_dark_high_contrast')
+    --     end,
+    -- },
 
     {
         "iamcco/markdown-preview.nvim",
