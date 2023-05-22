@@ -26,4 +26,3 @@ else
     sudo liquidctl --match Commander set fan4 speed 40
     sudo liquidctl --match Commander set fan5 speed 40
 fi
-
