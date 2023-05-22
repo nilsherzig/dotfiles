@@ -290,7 +290,7 @@
         enable = true;
         autosuggestions.enable = true;
         ohMyZsh.enable = true;
-        ohMyZsh.plugins = [ "git" "zoxide" "vi-mode" "fzf" ];
+        ohMyZsh.plugins = [ "git" "zoxide" "fzf" ];
 # ohMyZsh.theme = "";
         syntaxHighlighting.enable = true;
         shellAliases = {
