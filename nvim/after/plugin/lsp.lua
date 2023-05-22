@@ -13,7 +13,7 @@ lsp.ensure_installed({
     'marksman',
     'jdtls',
     'gradle_ls',
-    "shellcheck",
+    'bashls',
 })
 
 -- Fix Undefined global 'vim'
