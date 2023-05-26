@@ -152,7 +152,7 @@
         shell = pkgs.zsh;
         isNormalUser = true;
         description = "nils";
-        extraGroups = [ "networkmanager" "wheel" "docker" ];
+        extraGroups = [ "networkmanager" "wheel" "docker" "dialout"];
         hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
         home = "/home/nils/";
         packages = with pkgs; [
@@ -199,6 +199,7 @@
                 ripgrep
                 kitty
                 zsh-syntax-highlighting
+                gh
                 pure-prompt
                 xdg-desktop-portal-hyprland
                 xdg-utils
@@ -248,6 +249,7 @@
 # gnomeExtensions.blur-my-shell
 # gnomeExtensions.mullvad-indicator
 # gnomeExtensions.tray-icons-reloaded
+                obs-studio
                 libwebp
 # misc
                 wtype # does not work on gnome
