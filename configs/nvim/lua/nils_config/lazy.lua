@@ -12,7 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{
+		"nvim-lualine/lualine.nvim",
+	},
 	{ "lukas-reineke/indent-blankline.nvim" },
+    {'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons'},
+
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			-- your configuration comes here
+		},
+	},
 
 	{
 		"jose-elias-alvarez/null-ls.nvim",
