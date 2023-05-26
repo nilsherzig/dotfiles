@@ -327,7 +327,8 @@
 
     fonts.fonts = with pkgs; [
         iosevka
-            cantarell-fonts
+        cantarell-fonts
+        nerdfonts
     ];
 
     xdg.mime.defaultApplications = {
