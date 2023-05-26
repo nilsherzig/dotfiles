@@ -42,3 +42,6 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("n", "<C-c>", "<cmd>CommentToggle<CR>")
+
+vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
