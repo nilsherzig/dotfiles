@@ -239,6 +239,7 @@
       radeontop
       liquidctl
       lm_sensors
+      ranger
       openrgb
       # video 
       jellyfin-media-player
