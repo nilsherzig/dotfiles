@@ -313,6 +313,10 @@
             autoload - U promptinit; promptinit
             prompt pure
             '';
+
+        shellInit = ''
+            eval "$(direnv hook zsh)"
+        '';
     };
 
 
