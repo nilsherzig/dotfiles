@@ -152,12 +152,12 @@ require("lazy").setup({
 		end,
 	},
 
-	{
-		"iamcco/markdown-preview.nvim",
-		config = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	},
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	config = function()
+	-- 		vim.fn["mkdp#util#install"]()
+	-- 	end,
+	-- },
 
 	{
 		"preservim/vim-markdown",
