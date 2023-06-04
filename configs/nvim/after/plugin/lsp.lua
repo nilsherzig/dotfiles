@@ -16,7 +16,8 @@ lsp.ensure_installed({
 	"bashls",
 	"docker_compose_language_service",
 	"dockerls",
-    "ruff_lsp"
+    "ruff_lsp",
+    "gopls"
 })
 
 -- Fix Undefined global 'vim'
