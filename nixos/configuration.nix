@@ -27,6 +27,8 @@
         "/crypto_keyfile.bin" = null;
     };
 
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
 # Enable swap on luks
 # boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".device = "/dev/disk/by-uuid/c9eb19e3-05fa-4057-a251-60d49d38de4c";
 # boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".keyFile = "/crypto_keyfile.bin";
@@ -176,6 +178,7 @@
                 firefox
                 helix
                 nodejs
+                neovim
                 luarocks
                 lazygit
                 nil
@@ -184,7 +187,10 @@
                 qbittorrent
                 python311
 # notes
+                ltrace
+                nil
                 obsidian
+                direnv
 # code / terminal
                 du-dust
                 screen
@@ -243,6 +249,7 @@
 # images
                 gimp
                 feh
+                speedtest-cli
 # gnome shell 
 # gnome.gnome-tweaks
 # gnome-extension-manager
@@ -296,11 +303,11 @@
 # ohMyZsh.theme = "";
         syntaxHighlighting.enable = true;
         shellAliases = {
-            ip = "ip --color=always"; # ip show colors 
+            # ip = "ip --color=always"; # ip show colors 
 # cd = "z"; # use zoxide as cd
                 rclone = "rclone -P"; # always show rclone progress
                 ssh = "TERM=xterm ssh"; # because of kitty
-                nvim = "~/.local/bin/nvim";
+                # nvim = "~/.local/bin/nvim";
         };
         promptInit = ''
             autoload - U promptinit; promptinit

@@ -4,16 +4,17 @@ lib.mkIf (config.networking.hostName == "desktop") {
     boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".device = "/dev/disk/by-uuid/c9eb19e3-05fa-4057-a251-60d49d38de4c";
     boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".keyFile = "/crypto_keyfile.bin";
 
-# jellyfin docker ports
+# jellyfin and homeassistant ports
     networking.firewall.allowedTCPPorts = [ 8096 8920 8123 ];
     networking.firewall.allowedUDPPorts = [ 7359 1900 ];
 
 # home assistant vm bride
     networking.bridges = {
       "br0" = {
-        interfaces = [ "enp34s0" ];
+        interfaces = [ "wlo1" ];
       };
     };
+
     networking.interfaces.enp34s0.useDHCP = true;
     networking.interfaces.br0.useDHCP = true;
 
