@@ -113,38 +113,38 @@
     networking.firewall.allowedTCPPorts = [ 8384 22000 ];
     networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
-    services = {
-        syncthing = {
-            enable = true;
-            user = "nils";
-            dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
-                configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
-                overrideDevices = true; # overrides any devices added or deleted through the WebUI
-                overrideFolders = true; # overrides any folders added or deleted through the WebUI
-                devices = {
-                    "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
-                    "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
-                };
-            folders = {
-                "Wallpaper" = {
-                    path = "/home/nils/Pictures/wallpaper";
-                    devices = [ "desktop" "laptop" ];
-                };
-                "Documents" = {
-                    path = "/home/nils/Documents";
-                    devices = [ "desktop" "laptop" ];
-                };
-                "Downloads" = {
-                    path = "/home/nils/Downloads";
-                    devices = [ "desktop" "laptop" ];
-                };
-                "Notes" = {
-                    path = "/home/nils/Notes";
-                    devices = [ "desktop" "laptop" ];
-                };
-            };
-        };
-    };
+    # services = {
+    #     syncthing = {
+    #         enable = true;
+    #         user = "nils";
+    #         dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
+    #             configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
+    #             overrideDevices = true; # overrides any devices added or deleted through the WebUI
+    #             overrideFolders = true; # overrides any folders added or deleted through the WebUI
+    #             devices = {
+    #                 "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
+    #                 "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
+    #             };
+    #         folders = {
+    #             "Wallpaper" = {
+    #                 path = "/home/nils/Pictures/wallpaper";
+    #                 devices = [ "desktop" "laptop" ];
+    #             };
+    #             "Documents" = {
+    #                 path = "/home/nils/Documents";
+    #                 devices = [ "desktop" "laptop" ];
+    #             };
+    #             "Downloads" = {
+    #                 path = "/home/nils/Downloads";
+    #                 devices = [ "desktop" "laptop" ];
+    #             };
+    #             "Notes" = {
+    #                 path = "/home/nils/Notes";
+    #                 devices = [ "desktop" "laptop" ];
+    #             };
+    #         };
+    #     };
+    # };
 
 
     nixpkgs.config.allowUnfree = true;
