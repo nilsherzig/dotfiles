@@ -10,11 +10,6 @@ in
   home-manager.users.nils = {
     home.stateVersion = "22.11";
 
-    ## home.file.".config/" = {
-    ##   source = ../configs;
-    ##   recursive = true;
-    ## };
-
     gtk = {
       enable = true;
       theme = {
@@ -51,18 +46,5 @@ in
       };
     };
 
-    # nixpkgs.config.allowUnfree = true;
-    # programs.vscode = {
-    #   enable = true;
-    #   extensions = with pkgs.vscode-extensions; [
-    #     bbenoist.nix
-    #     ms-python.python
-    #     ms-azuretools.vscode-docker
-    #     ms-vscode-remote.remote-ssh
-    #     ms-vscode.cpptools            # because something about linking and determinism
-    #     vscodevim.vim
-    #     catppuccin.catppuccin-vsc
-    #   ];
-    # };
   };
 }
