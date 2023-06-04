@@ -299,20 +299,17 @@
         enable = true;
         autosuggestions.enable = true;
         ohMyZsh.enable = true;
-        ohMyZsh.plugins = [ "git" "zoxide" "fzf" ];
-# ohMyZsh.theme = "";
+        ohMyZsh.plugins = [ "git" "fzf" ];
         syntaxHighlighting.enable = true;
         shellAliases = {
-            # ip = "ip --color=always"; # ip show colors 
-# cd = "z"; # use zoxide as cd
-                rclone = "rclone -P"; # always show rclone progress
-                ssh = "TERM=xterm ssh"; # because of kitty
-                # nvim = "~/.local/bin/nvim";
+            ip = "ip --color=always"; # ip show colors 
+            rclone = "rclone -P"; # always show rclone progress
+            ssh = "TERM=xterm ssh"; # because of kitty
         };
         promptInit = ''
             autoload - U promptinit; promptinit
             prompt pure
-            '';
+        '';
 
         shellInit = ''
             eval "$(direnv hook zsh)"
