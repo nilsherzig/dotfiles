@@ -382,4 +382,5 @@
 #   };
 # };
 
+  services.passSecretService.enable = true;
 }
