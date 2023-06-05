@@ -45,3 +45,6 @@ vim.keymap.set("n", "<C-c>", "<cmd>CommentToggle<CR>")
 
 vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
+
+vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<CR>")
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")

@@ -3,22 +3,28 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 -- uncomment this, if you're not on nixos
+-- install via nixpkgs if youre using nixos
 lsp.ensure_installed({
-	"pyright",
-	"clangd",
-	"tsserver",
-	"rust_analyzer",
-	"lua_ls",
-	"nil_ls",
-	"marksman",
-	"jdtls",
-	"gradle_ls",
-	"bashls",
-	"docker_compose_language_service",
-	"dockerls",
-    "ruff_lsp",
-    "gopls"
+	-- "pyright",
+	-- "clangd",
+	-- "tsserver",
+	-- "rust_analyzer",
+	-- "lua_ls", -- installed via nixpkgs
+	-- "nil_ls",
+	-- "marksman",
+	-- "jdtls",
+	-- "gradle_ls",
+	-- "bashls",
+	-- "docker_compose_language_service",
+	-- "dockerls",
+	--  "ruff_lsp",
+    -- "gopls" -- installed via nixpkgs
 })
+
+require('lspconfig').gopls.setup{}
+require('lspconfig').bashls.setup{}
+require('lspconfig').lua_ls.setup{}
+require('lspconfig').nil_ls.setup{}
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
