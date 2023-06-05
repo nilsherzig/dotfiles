@@ -149,17 +149,20 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
+  virtualisation.libvirtd.enable = true;
 
   users.users.nils = {
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
-    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" ];
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
+        virt-manager
       # lanauge server
       lua-language-server
+      java-language-server
       rust-analyzer
       nodePackages_latest.bash-language-server
       nodePackages_latest.pyright
@@ -174,6 +177,7 @@
       spaceship-prompt
       gnumake
       rsync
+      nodePackages_latest.bash-language-server
       syncthing
       firefox
       helix
@@ -357,34 +361,6 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-
-  # todos:
-  # curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
-
-  # environment.sessionVariables = rec {
-  #   # Not officially in the specification
-  #   XDG_BIN_HOME    = "$HOME/.local/bin";
-  #   DOTFILE_SCRIPTS    = "$HOME/Documents/dotfiles/scripts";
-  #   PATH = [ 
-  #     "${XDG_BIN_HOME}"
-  #     "${DOTFILE_SCRIPTS}"
-  #   ];
-  # };
-  # systemd = {
-  #   user.services.polkit-gnome-authentication-agent-1 = {
-  #     description = "polkit-gnome-authentication-agent-1";
-  #     wantedBy = [ "graphical-session.target" ];
-  #     wants = [ "graphical-session.target" ];
-  #     after = [ "graphical-session.target" ];
-  #     serviceConfig = {
-  #         Type = "simple";
-  #         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-  #         Restart = "on-failure";
-  #         RestartSec = 1;
-  #         TimeoutStopSec = 10;
-  #       };
-  #   };
-  # };
 
   services.passSecretService.enable = true;
 }
