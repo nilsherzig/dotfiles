@@ -164,6 +164,28 @@ require("lazy").setup({
 		require = { "godlygeek/tabular" },
 	},
 
+    {
+        'mfussenegger/nvim-dap'
+    },
+
+    {
+        'rcarriga/nvim-dap-ui',
+        config = function()
+            require('dapui').setup()
+        end,
+    },
+
+    {
+        'leoluz/nvim-dap-go',
+        config = function()
+            require('dap-go').setup()
+        end,
+    },
+
+    {
+        'mfussenegger/nvim-jdtls'
+    },
+
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
