@@ -301,7 +301,7 @@
     enable = true;
     autosuggestions.enable = true;
     ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "git" "fzf" ];
+    ohMyZsh.plugins = [ "git" "fzf" "zoxide" ];
     syntaxHighlighting.enable = true;
     shellAliases = {
       ip = "ip --color=always"; # ip show colors 
