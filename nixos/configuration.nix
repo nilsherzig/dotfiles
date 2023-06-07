@@ -48,6 +48,9 @@
   time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
+
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -110,7 +113,7 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
   # services = {
@@ -159,10 +162,11 @@
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
-        virt-manager
+      virt-manager
       # lanauge server
       lua-language-server
-      java-language-server
+      # java-language-server
+      jdt-language-server
       rust-analyzer
       nodePackages_latest.bash-language-server
       nodePackages_latest.pyright
@@ -173,6 +177,7 @@
       kubectl
       # internet
       nixpkgs-fmt
+      bluetuith
       rclone
       spaceship-prompt
       gnumake
@@ -306,9 +311,10 @@
     enable = true;
     autosuggestions.enable = true;
     ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "git" "fzf" "zoxide"];
+    ohMyZsh.plugins = [ "git" "fzf" "zoxide" ];
     syntaxHighlighting.enable = true;
     shellAliases = {
+      code = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
       ip = "ip --color=always"; # ip show colors 
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
@@ -336,6 +342,7 @@
 
   environment.systemPackages = with pkgs; [
     htop
+    powertop
     # neovim
     mullvad-vpn
   ];
