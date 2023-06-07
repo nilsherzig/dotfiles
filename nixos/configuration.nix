@@ -48,6 +48,9 @@
   time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
+
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -110,7 +113,7 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
   # services = {
@@ -149,17 +152,21 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
+  virtualisation.libvirtd.enable = true;
 
   users.users.nils = {
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
-    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" ];
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
+      virt-manager
       # lanauge server
       lua-language-server
+      # java-language-server
+      jdt-language-server
       rust-analyzer
       nodePackages_latest.bash-language-server
       nodePackages_latest.pyright
@@ -170,10 +177,12 @@
       kubectl
       # internet
       nixpkgs-fmt
+      bluetuith
       rclone
       spaceship-prompt
       gnumake
       rsync
+      nodePackages_latest.bash-language-server
       syncthing
       firefox
       helix
@@ -205,6 +214,7 @@
       fzf
       ripgrep
       kitty
+      lua-language-server
       zsh-syntax-highlighting
       gh
       pure-prompt
@@ -304,6 +314,7 @@
     ohMyZsh.plugins = [ "git" "fzf" "zoxide" ];
     syntaxHighlighting.enable = true;
     shellAliases = {
+      code = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
       ip = "ip --color=always"; # ip show colors 
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
@@ -331,6 +342,7 @@
 
   environment.systemPackages = with pkgs; [
     htop
+    powertop
     # neovim
     mullvad-vpn
   ];
@@ -356,34 +368,6 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-
-  # todos:
-  # curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
-
-  # environment.sessionVariables = rec {
-  #   # Not officially in the specification
-  #   XDG_BIN_HOME    = "$HOME/.local/bin";
-  #   DOTFILE_SCRIPTS    = "$HOME/Documents/dotfiles/scripts";
-  #   PATH = [ 
-  #     "${XDG_BIN_HOME}"
-  #     "${DOTFILE_SCRIPTS}"
-  #   ];
-  # };
-  # systemd = {
-  #   user.services.polkit-gnome-authentication-agent-1 = {
-  #     description = "polkit-gnome-authentication-agent-1";
-  #     wantedBy = [ "graphical-session.target" ];
-  #     wants = [ "graphical-session.target" ];
-  #     after = [ "graphical-session.target" ];
-  #     serviceConfig = {
-  #         Type = "simple";
-  #         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-  #         Restart = "on-failure";
-  #         RestartSec = 1;
-  #         TimeoutStopSec = 10;
-  #       };
-  #   };
-  # };
 
   services.passSecretService.enable = true;
 }
