@@ -12,7 +12,7 @@ lsp.ensure_installed({
 	-- "lua_ls",
 	-- "nil_ls",
 	-- "marksman",
-	-- "jdtls",
+        "jdtls",
 	-- "gradle_ls",
 	-- "bashls",
 	-- "docker_compose_language_service",
@@ -25,7 +25,7 @@ require('lspconfig').gopls.setup{}  -- installed via nixpkgs
 require('lspconfig').bashls.setup{} -- installed via nixpkgs
 require('lspconfig').lua_ls.setup{} -- installed via nixpkgs
 require('lspconfig').nil_ls.setup{} -- installed via nixpkgs
-require('lspconfig').jdtls.setup{}  -- installed via nixpkgs
+-- require('lspconfig').jdtls.setup{}  -- installed via nixpkgs
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
@@ -35,12 +35,12 @@ local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
 	["<tab>"] = cmp.mapping.select_next_item(cmp_select),
-	-- ["<CR>"] = cmp.mapping.confirm({ select = true }),
-	-- ["<C-Space>"] = cmp.mapping.complete(),
+	["<CR>"] = cmp.mapping.confirm({ select = true }),
+	["<C-Space>"] = cmp.mapping.complete(),
 })
 
--- cmp_mappings["<Tab>"] = nil
--- cmp_mappings["<S-Tab>"] = nil
+cmp_mappings["<Tab>"] = nil
+cmp_mappings["<S-Tab>"] = nil
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings,
