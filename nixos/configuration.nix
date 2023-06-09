@@ -152,7 +152,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
-  virtualisation.libvirtd.enable = true;
+  # virtualisation.libvirtd.enable = true;
 
   users.users.nils = {
     shell = pkgs.zsh;
@@ -173,7 +173,7 @@
       python311Packages.python-lsp-server
       clang-tools
       # other things
-      distrobox
+      # distrobox
       kubectl
       # internet
       nixpkgs-fmt
@@ -187,7 +187,7 @@
       firefox
       helix
       nodejs
-      neovim
+      # neovim
       luarocks
       lazygit
       nil
@@ -318,6 +318,7 @@
       ip = "ip --color=always"; # ip show colors 
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
+      # nvim = "docker run -it --env UID=$UID --env GUI=$GID -v $HOME/.nvim-container/cache:/home/nvim/.local/share/nvim -v $HOME/.nvim-container/config:/home/nvim/.config/nvim -v $PWD:/home/nvim/workdir -v $HOME/.gitconfig:/home/nvim/.gitconfig -v $HOME/.ssh/id_rsa:/home/nvim/.ssh/id_rsa -v $HOME/.ssh/known_hosts:/home/nvim/.ssh/known_hosts nilsherzig/nvim-container nvim";
     };
     promptInit = ''
       autoload - U promptinit; promptinit

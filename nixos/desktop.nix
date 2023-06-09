@@ -9,14 +9,14 @@ lib.mkIf (config.networking.hostName == "desktop") {
   networking.firewall.allowedUDPPorts = [ 7359 1900 ];
 
   # home assistant vm bride
-  networking.bridges = {
-    "br0" = {
-      interfaces = [ "wlo1" ];
-    };
-  };
+  # networking.bridges = {
+  #   "br0" = {
+  #     interfaces = [ "wlo1" ];
+  #   };
+  # };
 
-  networking.interfaces.enp34s0.useDHCP = true;
-  networking.interfaces.br0.useDHCP = true;
+  # networking.interfaces.enp34s0.useDHCP = true;
+  # networking.interfaces.br0.useDHCP = true;
 
 
   fileSystems."/data" =
@@ -31,17 +31,17 @@ lib.mkIf (config.networking.hostName == "desktop") {
   #   fsType = "ext4";
   # };
 
-  virtualisation.libvirtd.enable = true;
-  programs.dconf.enable = true;
-  environment.systemPackages = with pkgs; [ virt-manager zigbee2mqtt mosquitto ];
-  users.users.nils.extraGroups = [ "libvirtd" ];
+  # virtualisation.libvirtd.enable = true;
+  # programs.dconf.enable = true;
+  # environment.systemPackages = with pkgs; [ virt-manager zigbee2mqtt mosquitto ];
+  # users.users.nils.extraGroups = [ "libvirtd" ];
 
   # local k3s without proper firewall / ingress load balancer
-  networking.extraHosts =
-    ''
-      192.168.122.27 local.nilsherzig.com
-      192.168.122.28 local.nilsherzig.com
-      192.168.122.78 local.nilsherzig.com
-    '';
+  # networking.extraHosts =
+  #   ''
+  #     192.168.122.27 local.nilsherzig.com
+  #     192.168.122.28 local.nilsherzig.com
+  #     192.168.122.78 local.nilsherzig.com
+  #   '';
 
 }
