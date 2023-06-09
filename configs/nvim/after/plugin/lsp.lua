@@ -56,8 +56,9 @@ lsp.set_preferences({
     },
 })
 
-lsp.on_attach(function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false }
+-- lsp.on_attach(function(client, bufnr)
+--     local opts = { buffer = bufnr, remap = false }
+    local opts = { remap = false }
 
     vim.keymap.set("n", "gd", function()
         vim.lsp.buf.definition()
@@ -92,14 +93,12 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function()
         vim.lsp.buf.signature_help()
     end, opts)
-end)
+-- end)
 
 lsp.setup()
 
-local lspkind = require('lspkind')
 cmp.setup({
     preselect = "item",
-
     snippet = {
         expand = function(args)
             require("luasnip").lsp_expand(args.body)
