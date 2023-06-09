@@ -1,20 +1,26 @@
 { pkgs, lib, ... }:
 let
-    home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
 in
 
 let
-    fromGitHub = ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
-        pname = "${lib.strings.sanitizeDerivationName repo}";
-        version = ref;
-        src = builtins.fetchGit {
-            url = "https://github.com/${repo}.git";
-            ref = ref;
-        };
+fromGitHub = ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
+    pname = "${lib.strings.sanitizeDerivationName repo}";
+    version = ref;
+    src = builtins.fetchGit {
+        url = "https://github.com/${repo}.git";
+        ref = ref;
     };
+};
 in
 
 {
+    # nixpkgs.overlays = [
+    #     (import (builtins.fetchTarball {
+    #              url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+    #              }))
+    # ];
+
     imports = [
         (import "${home-manager}/nixos")
     ];
@@ -79,7 +85,7 @@ in
                     null-ls-nvim
                     which-key-nvim
                     nvim-cursorline
-                    auto-pairs
+                    nvim-autopairs
                     neodev-nvim
                     wilder-nvim
                     gitsigns-nvim
