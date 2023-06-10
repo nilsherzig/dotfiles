@@ -107,6 +107,7 @@ in
                     lspkind-nvim
                     cmp_luasnip
 # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
+                    (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
                     ];
         };
     };
