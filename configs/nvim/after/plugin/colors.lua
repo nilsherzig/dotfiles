@@ -1,10 +1,14 @@
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--falsefalse vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- vim.opt.termguicolors = true
 -- vim.g.sonokai_style = 'shusia'
 -- vim.g.sonokai_better_performance = 1
 -- vim.cmd('colorscheme sonokai')
+--
+require('github-theme').setup({
+})
+
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = {
@@ -55,7 +59,5 @@ require("catppuccin").setup({
         -- },
     },
 })
-
 vim.cmd.colorscheme("catppuccin")
-
-
+-- vim.cmd('colorscheme github_light')
