@@ -295,6 +295,7 @@
       imlib2Full
 
       # window manager tools
+      opensnitch-ui
       wofi
       gammastep
       swaybg
@@ -373,4 +374,5 @@
   system.autoUpgrade.allowReboot = false;
 
   services.passSecretService.enable = true;
+  services.opensnitch.enable = true;
 }

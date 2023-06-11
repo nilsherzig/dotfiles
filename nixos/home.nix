@@ -14,7 +14,11 @@ fromGitHub = ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
 };
 in
 
+
 {
+    home-manager.users.nils = {
+      services.opensnitch-ui.enable = true;
+    };
     # nixpkgs.overlays = [
     #     (import (builtins.fetchTarball {
     #              url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
@@ -105,6 +109,7 @@ in
                     cmp-path
                     cmp-cmdline
                     lspkind-nvim
+                    nvim-jdtls
                     cmp_luasnip
                     # neorg
                     markdown-preview-nvim
