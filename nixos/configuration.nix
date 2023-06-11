@@ -163,8 +163,10 @@
     home = "/home/nils/";
     packages = with pkgs; [
       virt-manager
-      # lanauge server
+      # language server
+      nodePackages_latest.vscode-langservers-extracted
       lua-language-server
+      marksman
       # java-language-server
       jdt-language-server
       rust-analyzer

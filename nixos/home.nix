@@ -106,8 +106,11 @@ in
                     cmp-cmdline
                     lspkind-nvim
                     cmp_luasnip
+                    # neorg
+                    markdown-preview-nvim
 # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
                     (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
+                    (fromGitHub "HEAD" "jmbuhr/otter.nvim")
                     ];
         };
     };
