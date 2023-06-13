@@ -152,7 +152,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
-  # virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   users.users.nils = {
     shell = pkgs.zsh;
@@ -164,6 +164,8 @@
     packages = with pkgs; [
       virt-manager
       # language server
+      nodePackages_latest.typescript-language-server
+      typescript
       nodePackages_latest.vscode-langservers-extracted
       lua-language-server
       marksman
@@ -178,6 +180,7 @@
       # distrobox
       kubectl
       # internet
+      pandoc
       nixpkgs-fmt
       bluetuith
       rclone
@@ -194,6 +197,7 @@
       lazygit
       nil
       nixpkgs-fmt
+      radare2
       usbutils
       google-chrome
       qbittorrent
@@ -307,6 +311,18 @@
       slurp
       swappy
       # vscode
+      emacs
+      fd
+
+      go
+      gomodifytags
+      gotests
+      gore
+      gotools
+      shellcheck
+      nodePackages_latest.stylelint
+      html-tidy
+      nodePackages.js-beautify
     ];
   };
 

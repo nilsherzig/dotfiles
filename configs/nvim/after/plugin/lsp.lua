@@ -31,6 +31,11 @@ require('lspconfig').rust_analyzer.setup {} -- installed via nixpkgs
 require('lspconfig').marksman.setup {}      -- installed via nixpkgs
 require('lspconfig').html.setup {}          -- installed via nixpkgs
 require('lspconfig').jdtls.setup {}          -- installed via nixpkgs
+require('lspconfig').tsserver.setup {}          -- installed via nixpkgs
+
+require('lspconfig').cssls.setup {
+  capabilities = capabilities,
+}
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
