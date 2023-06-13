@@ -35,3 +35,5 @@ vim.opt.updatetime = 0 -- might harm your ssd - something about swap files
 -- vim.opt.colorcolumn = "80"
 
 require("nils_config.autocommands")
+
+require('colorizer').setup()

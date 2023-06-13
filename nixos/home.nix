@@ -17,13 +17,13 @@ in
 
 {
     home-manager.users.nils = {
-      services.opensnitch-ui.enable = true;
+        services.opensnitch-ui.enable = true;
     };
-    # nixpkgs.overlays = [
-    #     (import (builtins.fetchTarball {
-    #              url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    #              }))
-    # ];
+# nixpkgs.overlays = [
+#     (import (builtins.fetchTarball {
+#              url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+#              }))
+# ];
 
     imports = [
         (import "${home-manager}/nixos")
@@ -111,8 +111,9 @@ in
                     lspkind-nvim
                     nvim-jdtls
                     cmp_luasnip
-                    # neorg
+# neorg
                     markdown-preview-nvim
+                    nvim-colorizer-lua
 # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
                     (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
                     (fromGitHub "HEAD" "jmbuhr/otter.nvim")
