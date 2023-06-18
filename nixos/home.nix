@@ -114,9 +114,14 @@ in
 # neorg
                     markdown-preview-nvim
                     nvim-colorizer-lua
+                    # orgmode
+                    vim-table-mode
 # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
                     (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
                     (fromGitHub "HEAD" "jmbuhr/otter.nvim")
+                    # (fromGitHub "HEAD" "akinsho/org-bullets.nvim")
+                    (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
+                    (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
                     ];
         };
     };

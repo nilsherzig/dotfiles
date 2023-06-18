@@ -116,38 +116,30 @@
   networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
-  # services = {
-  #     syncthing = {
-  #         enable = true;
-  #         user = "nils";
-  #         dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
-  #             configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
-  #             overrideDevices = true; # overrides any devices added or deleted through the WebUI
-  #             overrideFolders = true; # overrides any folders added or deleted through the WebUI
-  #             devices = {
-  #                 "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
-  #                 "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
-  #             };
-  #         folders = {
-  #             "Wallpaper" = {
-  #                 path = "/home/nils/Pictures/wallpaper";
-  #                 devices = [ "desktop" "laptop" ];
-  #             };
-  #             "Documents" = {
-  #                 path = "/home/nils/Documents";
-  #                 devices = [ "desktop" "laptop" ];
-  #             };
-  #             "Downloads" = {
-  #                 path = "/home/nils/Downloads";
-  #                 devices = [ "desktop" "laptop" ];
-  #             };
-  #             "Notes" = {
-  #                 path = "/home/nils/Notes";
-  #                 devices = [ "desktop" "laptop" ];
-  #             };
-  #         };
-  #     };
-  # };
+  services = {
+      syncthing = {
+          enable = true;
+          user = "nils";
+          dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
+              configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
+              overrideDevices = true; # overrides any devices added or deleted through the WebUI
+              overrideFolders = true; # overrides any folders added or deleted through the WebUI
+              devices = {
+                  "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
+                  "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
+              };
+          folders = {
+              "Documents" = {
+                  path = "/home/nils/Documents";
+                  devices = [ "desktop" "laptop" ];
+              };
+              "ZugMedien" = {
+                  path = "/home/nils/Videos/Zug/";
+                  devices = [ "desktop" "laptop" ];
+              };
+          };
+      };
+  };
 
 
   nixpkgs.config.allowUnfree = true;
@@ -158,7 +150,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
-    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" "wireshark" ];
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
@@ -186,7 +178,10 @@
       rclone
       spaceship-prompt
       gnumake
+      python311Packages.bpython
+      ansible
       rsync
+      texlive.combined.scheme-small
       nodePackages_latest.bash-language-server
       syncthing
       firefox
@@ -201,6 +196,7 @@
       usbutils
       google-chrome
       qbittorrent
+      ffmpeg
       python311
       # notes
       ltrace
@@ -233,6 +229,7 @@
       evince
       cdrtools
       terraform
+      terraform-ls
       #chat
       whatsapp-for-linux
       discord
@@ -251,7 +248,6 @@
       lxappearance
       # hardware / stats
       via # somehow doesnt work, appimage in repo works on arch tho
-      netdata
       radeontop
       liquidctl
       lm_sensors
@@ -299,12 +295,18 @@
       imlib2Full
 
       # window manager tools
-      opensnitch-ui
+      # opensnitch-ui
       wofi
+      tree
       gammastep
       swaybg
       pavucontrol
       brightnessctl
+      ghidra-bin
+      cutter
+      rizin
+      wireshark
+      distrobox
       libnotify
       # screenshot stack lel
       grim
@@ -382,13 +384,14 @@
   };
 
   services.udisks2.enable = true;
-  services.netdata.enable = true;
+  # services.netdata.enable = true; # broken rn 
   services.mullvad-vpn.enable = true;
-  system.stateVersion = "22.11"; # Did you read the comment? # na i didnt, going to change this anyways
+  system.stateVersion = "22.11";
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-
+  services.tailscale.enable = true; 
   services.passSecretService.enable = true;
-  services.opensnitch.enable = true;
+    # services.opensnitch.enable = true;
+    # services.emacs.enable = true;
 }
