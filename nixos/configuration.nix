@@ -127,6 +127,7 @@
               devices = {
                   "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
                   "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
+                  "handy" = { id = "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7"; };
               };
           folders = {
               "Documents" = {
@@ -135,7 +136,7 @@
               };
               "ZugMedien" = {
                   path = "/home/nils/Videos/Zug/";
-                  devices = [ "desktop" "laptop" ];
+                  devices = [ "desktop" "laptop" "handy" ];
               };
           };
       };
