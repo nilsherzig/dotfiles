@@ -14,7 +14,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -37,3 +37,21 @@ vim.opt.updatetime = 0 -- might harm your ssd - something about swap files
 require("nils_config.autocommands")
 
 require('colorizer').setup()
+-- require('orgmode').setup_ts_grammar()
+--
+-- require('orgmode').setup({
+--   org_agenda_files = {'~/org/*'},
+--   org_default_notes_file = '~/org/refile.org',
+-- })
+-- require('org-bullets').setup()
+require('mkdnflow').setup()
+
+
+require'clipboard-image'.setup {
+  -- Default configuration for all filetype
+  default = {
+    img_dir = "img",
+    img_name = function() return os.date('%Y-%m-%d-%H-%M-%S') end, -- Example result: "2021-04-13-10-04-18"
+    affix = "<\n  %s\n>" -- Multi lines affix
+  },
+}

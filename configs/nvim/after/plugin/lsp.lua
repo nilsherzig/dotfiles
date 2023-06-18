@@ -32,6 +32,7 @@ require('lspconfig').marksman.setup {}      -- installed via nixpkgs
 require('lspconfig').html.setup {}          -- installed via nixpkgs
 require('lspconfig').jdtls.setup {}          -- installed via nixpkgs
 require('lspconfig').tsserver.setup {}          -- installed via nixpkgs
+require('lspconfig').terraformls.setup {}          -- installed via nixpkgs
 
 require('lspconfig').cssls.setup {
   capabilities = capabilities,
@@ -148,6 +149,7 @@ cmp.setup({
         { name = "luasnip", keyword_length = 2 },
         { name = "path" },
         { name = "nvim_lsp" },
+        { name = "orgmode" },
         { name = "buffer",  keyword_length = 3 },
     },
 })
