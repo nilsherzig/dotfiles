@@ -117,29 +117,29 @@
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
   services = {
-      syncthing = {
-          enable = true;
-          user = "nils";
-          dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
-              configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
-              overrideDevices = true; # overrides any devices added or deleted through the WebUI
-              overrideFolders = true; # overrides any folders added or deleted through the WebUI
-              devices = {
-                  "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
-                  "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
-                  "handy" = { id = "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7"; };
-              };
-          folders = {
-              "Documents" = {
-                  path = "/home/nils/Documents";
-                  devices = [ "desktop" "laptop" ];
-              };
-              "ZugMedien" = {
-                  path = "/home/nils/Videos/Zug/";
-                  devices = [ "desktop" "laptop" "handy" ];
-              };
-          };
+    syncthing = {
+      enable = true;
+      user = "nils";
+      dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
+      configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
+      overrideDevices = true; # overrides any devices added or deleted through the WebUI
+      overrideFolders = true; # overrides any folders added or deleted through the WebUI
+      devices = {
+        "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
+        "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
+        "handy" = { id = "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7"; };
       };
+      folders = {
+        "Documents" = {
+          path = "/home/nils/Documents";
+          devices = [ "desktop" "laptop" ];
+        };
+        "ZugMedien" = {
+          path = "/home/nils/Videos/Zug/";
+          devices = [ "desktop" "laptop" "handy" ];
+        };
+      };
+    };
   };
 
 
@@ -158,6 +158,7 @@
       virt-manager
       # language server
       nodePackages_latest.typescript-language-server
+      nodePackages_latest.svelte-language-server
       typescript
       nodePackages_latest.vscode-langservers-extracted
       lua-language-server
@@ -172,6 +173,8 @@
       # other things
       # distrobox
       kubectl
+      pciutils
+      popeye
       # internet
       pandoc
       nixpkgs-fmt
@@ -179,12 +182,14 @@
       rclone
       spaceship-prompt
       gnumake
+      dig
       python311Packages.bpython
       ansible
       rsync
       texlive.combined.scheme-small
       nodePackages_latest.bash-language-server
       syncthing
+      kubernetes-helm
       firefox
       helix
       nodejs
@@ -201,6 +206,7 @@
       python311
       # notes
       ltrace
+      jdk17
       nil
       obsidian
       direnv
@@ -238,6 +244,8 @@
       #games
       steam
       # prismlauncher-qt5
+      k9s
+      kubectx
       wine
       bottles
       #mail 
@@ -263,6 +271,7 @@
       gradle_7
       # images
       gimp
+      lens
       feh
       speedtest-cli
       # gnome shell 
@@ -309,6 +318,7 @@
       wireshark
       distrobox
       libnotify
+      go-tools
       # screenshot stack lel
       grim
       slurp
@@ -318,6 +328,8 @@
       fd
 
       go
+      delve
+      gopls
       gomodifytags
       gotests
       gore
@@ -326,6 +338,7 @@
       nodePackages_latest.stylelint
       html-tidy
       nodePackages.js-beautify
+      prismlauncher
     ];
   };
 
@@ -340,6 +353,7 @@
       ip = "ip --color=always"; # ip show colors 
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
+      k = "kubectl";
       # nvim = "docker run -it --env UID=$UID --env GUI=$GID -v $HOME/.nvim-container/cache:/home/nvim/.local/share/nvim -v $HOME/.nvim-container/config:/home/nvim/.config/nvim -v $PWD:/home/nvim/workdir -v $HOME/.gitconfig:/home/nvim/.gitconfig -v $HOME/.ssh/id_rsa:/home/nvim/.ssh/id_rsa -v $HOME/.ssh/known_hosts:/home/nvim/.ssh/known_hosts nilsherzig/nvim-container nvim";
     };
     promptInit = ''
@@ -349,6 +363,7 @@
 
     shellInit = ''
       eval "$(direnv hook zsh)"
+      export EDITOR=nvim
     '';
   };
 
@@ -385,14 +400,14 @@
   };
 
   services.udisks2.enable = true;
-  # services.netdata.enable = true; # broken rn 
+  #services.netdata.enable = true; # broken rn 
   services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-  services.tailscale.enable = true; 
+  services.tailscale.enable = true;
   services.passSecretService.enable = true;
-    # services.opensnitch.enable = true;
-    # services.emacs.enable = true;
+
+  # services.emacs.enable = true;
 }

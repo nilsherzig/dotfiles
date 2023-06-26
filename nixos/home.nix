@@ -80,6 +80,7 @@ in
                     telescope-nvim
                     nvim-lspconfig
                     nvim-treesitter.withAllGrammars
+                    nvim-tree-lua
                     plenary-nvim
                     mini-nvim
                     bufferline-nvim

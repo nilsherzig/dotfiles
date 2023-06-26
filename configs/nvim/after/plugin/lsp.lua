@@ -33,6 +33,9 @@ require('lspconfig').html.setup {}          -- installed via nixpkgs
 require('lspconfig').jdtls.setup {}          -- installed via nixpkgs
 require('lspconfig').tsserver.setup {}          -- installed via nixpkgs
 require('lspconfig').terraformls.setup {}          -- installed via nixpkgs
+require('lspconfig').svelte.setup {}          -- installed via nixpkgs
+require('lspconfig').svelte.setup {}          -- installed via nixpkgs
+require('lspconfig').tailwindcss.setup {}          -- installed via nixpkgs
 
 require('lspconfig').cssls.setup {
   capabilities = capabilities,

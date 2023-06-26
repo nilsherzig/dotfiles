@@ -51,3 +51,5 @@ vim.keymap.set("n", "<C-c>", "<cmd>:bd<CR>")
 vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<CR>")
 vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")
 
+vim.keymap.set("n", "<S-tab>", "<cmd>NvimTreeToggle<CR>")
+
