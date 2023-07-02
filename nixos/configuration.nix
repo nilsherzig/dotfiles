@@ -183,6 +183,7 @@
       bluetuith
       minikube
       cilium-cli
+      jq
       rclone
       spaceship-prompt
       gnumake
