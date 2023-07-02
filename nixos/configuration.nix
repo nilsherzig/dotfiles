@@ -171,6 +171,7 @@
       nodePackages_latest.pyright
       python311Packages.python-lsp-server
       clang-tools
+      nodePackages_latest.yaml-language-server
       # other things
       # distrobox
       kubectl

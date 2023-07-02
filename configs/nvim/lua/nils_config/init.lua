@@ -79,4 +79,5 @@ require("nvim-tree").setup {
     },
 }
 
+require("yaml-companion")
 require("telescope").load_extension("yaml_schema")

@@ -30,15 +30,23 @@ require('lspconfig').nil_ls.setup {}        -- installed via nixpkgs
 require('lspconfig').rust_analyzer.setup {} -- installed via nixpkgs
 require('lspconfig').marksman.setup {}      -- installed via nixpkgs
 require('lspconfig').html.setup {}          -- installed via nixpkgs
--- require('lspconfig').jdtls.setup {}          -- installed via nixpkgs
-require('lspconfig').tsserver.setup {}          -- installed via nixpkgs
-require('lspconfig').terraformls.setup {}          -- installed via nixpkgs
-require('lspconfig').svelte.setup {}          -- installed via nixpkgs
-require('lspconfig').svelte.setup {}          -- installed via nixpkgs
-require('lspconfig').tailwindcss.setup {}          -- installed via nixpkgs
+require('lspconfig').tsserver.setup {}      -- installed via nixpkgs
+require('lspconfig').terraformls.setup {}   -- installed via nixpkgs
+require('lspconfig').svelte.setup {}        -- installed via nixpkgs
+require('lspconfig').svelte.setup {}        -- installed via nixpkgs
+require('lspconfig').tailwindcss.setup {}   -- installed via nixpkgs
+-- require('lspconfig').jdtls.setup {}          -- using the jdtls neovim plugin atm
+
+
+-- yaml things
+local cfg = require("yaml-companion").setup({
+})
+require("lspconfig").yamlls.setup(cfg)
+-- 
+
 
 require('lspconfig').cssls.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 -- Fix Undefined global 'vim'
