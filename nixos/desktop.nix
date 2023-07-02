@@ -30,22 +30,4 @@ lib.mkIf (config.networking.hostName == "desktop") {
   #   device = "/dev/disk/by-label/hdd12tb";
   #   fsType = "ext4";
   # };
-
-  # virtualisation.libvirtd.enable = true;
-  # programs.dconf.enable = true;
-  # environment.systemPackages = with pkgs; [ virt-manager zigbee2mqtt mosquitto ];
-  # users.users.nils.extraGroups = [ "libvirtd" ];
-
-  # local k3s without proper firewall / ingress load balancer
-  # networking.extraHosts =
-  #   ''
-  #     192.168.122.27 local.nilsherzig.com
-  #     192.168.122.28 local.nilsherzig.com
-  #     192.168.122.78 local.nilsherzig.com
-  #   '';
-  services.openssh = {
-    enable = true;
-    passwordAuthentication = false;
-    kbdInteractiveAuthentication = false;
-  };
 }

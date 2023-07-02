@@ -49,7 +49,7 @@
 
   # Select internationalisation properties.
 
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.nameservers = [ "172.0.0.1" "1.1.1.1" "9.9.9.9" ];
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -78,6 +78,9 @@
   # KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   # KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   # '';
+
+
+    services.udev.packages = [ pkgs.dolphinEmu ];
 
   # Configure keymap in X11
   services.xserver = {
@@ -163,8 +166,6 @@
       nodePackages_latest.vscode-langservers-extracted
       lua-language-server
       marksman
-      # java-language-server
-      jdt-language-server
       rust-analyzer
       nodePackages_latest.bash-language-server
       nodePackages_latest.pyright
@@ -179,15 +180,21 @@
       pandoc
       nixpkgs-fmt
       bluetuith
+      minikube
+      cilium-cli
       rclone
       spaceship-prompt
       gnumake
       dig
+
       python311Packages.bpython
+      k3d
       ansible
       rsync
       texlive.combined.scheme-small
+      dolphin-emu
       nodePackages_latest.bash-language-server
+      jdt-language-server
       syncthing
       kubernetes-helm
       firefox
@@ -263,9 +270,10 @@
       ranger
       openrgb
       # video 
+      hubble
       jellyfin-media-player
       celluloid
-      kodi-wayland
+      # kodi-wayland
       mpv
       yt-dlp
       gradle_7
@@ -364,6 +372,8 @@
     shellInit = ''
       eval "$(direnv hook zsh)"
       export EDITOR=nvim
+      export PATH=~/.npm-packages/bin:$PATH
+      export NODE_PATH=~/.npm-packages/lib/node_modules
     '';
   };
 
@@ -376,7 +386,6 @@
 
 
   programs.hyprland.enable = true;
-
 
   environment.systemPackages = with pkgs; [
     htop

@@ -123,6 +123,7 @@ in
                     # (fromGitHub "HEAD" "akinsho/org-bullets.nvim")
                     (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
                     (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
+                    (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
                     ];
         };
     };
