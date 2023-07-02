@@ -1,28 +1,24 @@
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
--- uncomment this, if you're not on nixos
--- install via nixpkgs if youre using nixos
 -- lsp.ensure_installed({
--- 	-- "pyright",
--- 	-- "clangd",
--- 	-- "tsserver",
--- 	-- "rust_analyzer",
--- 	-- "lua_ls",
--- 	-- "nil_ls",
--- 	-- "marksman",
---     -- "jdtls",
--- 	-- "gradle_ls",
--- 	-- "bashls",
--- 	-- "docker_compose_language_service",
--- 	-- "dockerls",
--- 	-- "ruff_lsp",
---     -- "gopls"
+-- 	"pyright",
+-- 	"clangd",
+-- 	"tsserver",
+-- 	"rust_analyzer",
+-- 	"lua_ls",
+-- 	"nil_ls",
+-- 	"marksman",
+--     "jdtls",
+-- 	"gradle_ls",
+-- 	"bashls",
+-- 	"docker_compose_language_service",
+-- 	"dockerls",
+-- 	"ruff_lsp",
+--     "gopls"
 -- })
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
+-- default settings lsp server
 require('lspconfig').gopls.setup {}         -- installed via nixpkgs
 require('lspconfig').bashls.setup {}        -- installed via nixpkgs
 require('lspconfig').lua_ls.setup {}        -- installed via nixpkgs
@@ -35,23 +31,25 @@ require('lspconfig').terraformls.setup {}   -- installed via nixpkgs
 require('lspconfig').svelte.setup {}        -- installed via nixpkgs
 require('lspconfig').svelte.setup {}        -- installed via nixpkgs
 require('lspconfig').tailwindcss.setup {}   -- installed via nixpkgs
--- require('lspconfig').jdtls.setup {}          -- using the jdtls neovim plugin atm
+--
 
+-- require('lspconfig').jdtls.setup {} -- using the jdtls plugin atm
 
 -- yaml things
 local cfg = require("yaml-companion").setup({
 })
 require("lspconfig").yamlls.setup(cfg)
--- 
+--
 
-
+-- css things?
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 require('lspconfig').cssls.setup {
     capabilities = capabilities,
 }
+--
 
--- Fix Undefined global 'vim'
 lsp.nvim_workspace()
-
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
