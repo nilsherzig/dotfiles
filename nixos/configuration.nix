@@ -164,6 +164,7 @@
       nodePackages_latest.svelte-language-server
       typescript
       nodePackages_latest.vscode-langservers-extracted
+      gping
       lua-language-server
       marksman
       rust-analyzer
@@ -364,6 +365,8 @@
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
+      update = "sudo nixos-rebuild switch";
+      bat = "cat /sys/class/power_supply/*/capacity";
       # nvim = "docker run -it --env UID=$UID --env GUI=$GID -v $HOME/.nvim-container/cache:/home/nvim/.local/share/nvim -v $HOME/.nvim-container/config:/home/nvim/.config/nvim -v $PWD:/home/nvim/workdir -v $HOME/.gitconfig:/home/nvim/.gitconfig -v $HOME/.ssh/id_rsa:/home/nvim/.ssh/id_rsa -v $HOME/.ssh/known_hosts:/home/nvim/.ssh/known_hosts nilsherzig/nvim-container nvim";
     };
     promptInit = ''
@@ -411,7 +414,8 @@
   };
 
   services.udisks2.enable = true;
-  #services.netdata.enable = true; # broken rn 
+  services.netdata.enable = true;
+
   services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
