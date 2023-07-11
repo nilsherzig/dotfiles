@@ -38,6 +38,10 @@ in
                 name = "adw-gtk3";
                 package = pkgs.adw-gtk3;
             };
+            cursorTheme = {
+                name = "Capitaine Cursors (Gruvbox)";
+                package = pkgs.capitaine-cursors-themed;
+            };
         };
 
         home.sessionPath = [
@@ -117,6 +121,7 @@ in
                     nvim-colorizer-lua
                     # orgmode
                     vim-table-mode
+                    gruvbox-nvim
 # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
                     (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
                     (fromGitHub "HEAD" "jmbuhr/otter.nvim")
@@ -124,6 +129,7 @@ in
                     (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
                     (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
                     (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
+                    (fromGitHub "HEAD" "davidmh/cspell.nvim")
                     ];
         };
     };
