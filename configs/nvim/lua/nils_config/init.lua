@@ -1,9 +1,6 @@
 require("nils_config.remap")
 require("nils_config.lazy")
 
--- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
--- vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
