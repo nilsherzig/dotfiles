@@ -43,6 +43,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  systemd.network.wait-online.timeout = 0;
+  boot.initrd.systemd.network.wait-online.timeout = 0; 
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -171,6 +173,7 @@
       nodePackages_latest.bash-language-server
       nodePackages_latest.pyright
       python311Packages.python-lsp-server
+      python311Packages.diagrams
       clang-tools
       mako
       nodePackages_latest.yaml-language-server
@@ -206,11 +209,13 @@
       syncthing
       kubernetes-helm
       firefox
+      epiphany
       helix
       nodejs
       # neovim
       luarocks
       lazygit
+      lazydocker
       nil
       nixpkgs-fmt
       radare2
@@ -255,6 +260,7 @@
       #chat
       whatsapp-for-linux
       discord
+      discordo
       signal-desktop
       #games
       steam
@@ -264,8 +270,8 @@
       wine
       bottles
       #mail 
-      evolution
-      protonmail-bridge
+      # evolution
+      # protonmail-bridge
       #theme
       gradience
       adw-gtk3
@@ -279,15 +285,15 @@
       openrgb
       # video 
       hubble
-      jellyfin-media-player
-      celluloid
+      # jellyfin-media-player
+      # celluloid
       # kodi-wayland
       mpv
       yt-dlp
-      gradle_7
+      # gradle_7
       # images
-      gimp
-      lens
+      # gimp
+      # lens
       feh
       speedtest-cli
       # gnome shell 
@@ -328,9 +334,9 @@
       swaybg
       pavucontrol
       brightnessctl
-      ghidra-bin
-      cutter
-      rizin
+      # ghidra-bin
+      # cutter
+      # rizin
       wireshark
       distrobox
       libnotify
@@ -340,9 +346,10 @@
       slurp
       swappy
       # vscode
-      emacs
+      # emacs
       fd
 
+    gaphor
       go
       delve
       gopls
@@ -426,8 +433,8 @@
   services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = false;
+  # system.autoUpgrade.enable = true;
+  # system.autoUpgrade.allowReboot = false;
   services.tailscale.enable = true;
   services.passSecretService.enable = true;
 
@@ -437,4 +444,5 @@
           Experimental=true;
       };
   };
+  services.flatpak.enable = true;
 }
