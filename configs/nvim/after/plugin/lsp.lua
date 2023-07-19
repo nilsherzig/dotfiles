@@ -19,6 +19,7 @@ lsp.preset("recommended")
 -- })
 
 -- default settings lsp server
+require('lspconfig').pyright.setup {}         -- installed via nixpkgs
 require('lspconfig').gopls.setup {}         -- installed via nixpkgs
 require('lspconfig').bashls.setup {}        -- installed via nixpkgs
 require('lspconfig').lua_ls.setup {}        -- installed via nixpkgs
