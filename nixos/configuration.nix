@@ -263,10 +263,9 @@
       kubectx
       wine
       bottles
-      #mail 
-      evolution
-      protonmail-bridge
-      #theme
+      # mail 
+      # protonmail-bridge
+      # theme
       gradience
       adw-gtk3
       lxappearance
@@ -280,14 +279,14 @@
       # video 
       hubble
       jellyfin-media-player
-      celluloid
+      # celluloid
       # kodi-wayland
       mpv
       yt-dlp
-      gradle_7
+      # gradle_7
       # images
-      gimp
-      lens
+      # gimp
+      # lens
       feh
       speedtest-cli
       # gnome shell 
