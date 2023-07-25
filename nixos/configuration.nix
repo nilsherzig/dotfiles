@@ -133,11 +133,12 @@
         "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
         "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
         "handy" = { id = "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7"; };
+        "offside" = { id = "WIMGRMN-WJITSU2-MZM5S2F-GJE3HIA-O3OJ56Q-MDTINWX-A3IRXAF-IKYLNQC"; }; 
       };
       folders = {
         "Documents" = {
           path = "/home/nils/Documents";
-          devices = [ "desktop" "laptop" ];
+          devices = [ "desktop" "laptop" "offside" ];
         };
         "ZugMedien" = {
           path = "/home/nils/Videos/Zug/";
@@ -160,6 +161,7 @@
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
+    deja-dup
       virt-manager
       # language server
       nodePackages_latest.typescript-language-server
@@ -355,6 +357,7 @@
       gopls
       gomodifytags
       gotests
+      sshfs
       gore
       gotools
       shellcheck
@@ -444,5 +447,10 @@
           Experimental=true;
       };
   };
-  services.flatpak.enable = true;
+  services.flatpak.enable = false;
+  services.gvfs.enable = true;
+  programs.dconf.enable = true;
+  services.duplicity.enable = true; 
+  services.duplicity.frequency = null; 
+  services.duplicity.targetUrl = "";
 }
