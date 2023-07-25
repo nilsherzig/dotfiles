@@ -271,6 +271,9 @@
       kubectx
       wine
       bottles
+      # mail 
+      # protonmail-bridge
+      # theme
       #mail 
       # evolution
       # protonmail-bridge
@@ -287,6 +290,7 @@
       openrgb
       # video 
       hubble
+      jellyfin-media-player
       # jellyfin-media-player
       # celluloid
       # kodi-wayland
