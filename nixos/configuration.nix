@@ -187,6 +187,7 @@
       # other things
       # distrobox
       kubectl
+      clusterctl
       k3sup
       pciutils
       popeye
