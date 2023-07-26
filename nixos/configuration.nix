@@ -43,6 +43,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  systemd.network.wait-online.enable = false;
   systemd.network.wait-online.timeout = 0;
   boot.initrd.systemd.network.wait-online.timeout = 0; 
 
@@ -143,6 +144,10 @@
           path = "/home/nils/Videos/Zug/";
           devices = [ "desktop" "laptop" "handy" ];
         };
+        "Obsidian" = {
+          path = "/home/nils/Notes";
+          devices = [ "desktop" "laptop" "handy" ];
+        };
       };
     };
   };
@@ -186,6 +191,7 @@
       # internet
       pandoc
       nixpkgs-fmt
+      ginkgo
       bluetuith
       minikube
       kind
@@ -220,7 +226,7 @@
       nixpkgs-fmt
       radare2
       usbutils
-      google-chrome
+      # google-chrome
       qbittorrent
       ffmpeg
       python311
@@ -350,6 +356,7 @@
       slurp
       swappy
       # vscode
+      act
       # emacs
       fd
 
