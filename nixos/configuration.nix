@@ -139,7 +139,7 @@
       folders = {
         "Documents" = {
           path = "/home/nils/Documents";
-          devices = [ "desktop" "laptop" "offside" ];
+          devices = [ "desktop" "laptop" ];
         };
         "ZugMedien" = {
           path = "/home/nils/Videos/Zug/";
@@ -187,6 +187,7 @@
       # other things
       # distrobox
       kubectl
+      clusterctl
       k3sup
       pciutils
       popeye
