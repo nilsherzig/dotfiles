@@ -78,7 +78,7 @@
   };
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -197,6 +197,7 @@
       # distrobox
       kubectl
       clusterctl
+      tmux
       k3sup
       pciutils
       popeye
@@ -319,8 +320,8 @@
       feh
       speedtest-cli
       # gnome shell 
-      # gnome.gnome-tweaks
-      # gnome-extension-manager
+      gnome.gnome-tweaks
+      gnome-extension-manager
       # gnomeExtensions.blur-my-shell
       # gnomeExtensions.mullvad-indicator
       # gnomeExtensions.tray-icons-reloaded
