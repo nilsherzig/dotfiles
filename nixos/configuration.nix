@@ -205,6 +205,7 @@
       spaceship-prompt
       gnumake
       dig
+      clusterctl
 
       python311Packages.bpython
       k3d
