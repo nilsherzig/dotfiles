@@ -15,12 +15,20 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
+  boot.kernel.sysctl = {
+    "fs.inotify.max_user_watches" = "1048576"; # 128 times the default 8192
+    "fs.inotify.max_user_instances" = "8192";
+};
+
   boot.kernelParams = [
     "amd_iommu=on"
   ];
 
   # virtual 
   virtualisation.docker.enable = true;
+  virtualisation.docker.extraOptions = ''
+    --default-ulimit nofile=65535:65535
+  '';
 
   # Setup keyfile
   boot.initrd.secrets = {
