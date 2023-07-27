@@ -30,6 +30,10 @@
     --default-ulimit nofile=65535:65535
   '';
 
+  virtualisation.docker.extraOptions = ''
+  --default-ulimit nofile=65535:65535
+  '';
+
   # Setup keyfile
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
@@ -404,7 +408,7 @@
       bat = "cat /sys/class/power_supply/*/capacity";
       wifi = "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
       pixelbuds = "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/\(//; s/\)//'";
-      # nvim = "docker run -it --env UID=$UID --env GUI=$GID -v $HOME/.nvim-container/cache:/home/nvim/.local/share/nvim -v $HOME/.nvim-container/config:/home/nvim/.config/nvim -v $PWD:/home/nvim/workdir -v $HOME/.gitconfig:/home/nvim/.gitconfig -v $HOME/.ssh/id_rsa:/home/nvim/.ssh/id_rsa -v $HOME/.ssh/known_hosts:/home/nvim/.ssh/known_hosts nilsherzig/nvim-container nvim";
+      lg = "lazygit";
     };
     promptInit = ''
       autoload - U promptinit; promptinit
