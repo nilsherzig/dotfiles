@@ -22,6 +22,10 @@
   # virtual 
   virtualisation.docker.enable = true;
 
+  virtualisation.docker.extraOptions = ''
+  --default-ulimit nofile=65535:65535
+  '';
+
   # Setup keyfile
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
