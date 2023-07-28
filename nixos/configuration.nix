@@ -78,11 +78,11 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # because via and keyboard configs # doesnt work rn 
   # the via and vial packages already do these in their install scripts, idk why they dont work
@@ -320,9 +320,9 @@
       feh
       speedtest-cli
       # gnome shell 
-      gnome.gnome-tweaks
-      gnome-extension-manager
-      gnomeExtensions.blur-my-shell
+      # gnome.gnome-tweaks
+      # gnome-extension-manager
+      # gnomeExtensions.blur-my-shell
       # gnomeExtensions.mullvad-indicator
       # gnomeExtensions.tray-icons-reloaded
       obs-studio
