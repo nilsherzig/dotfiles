@@ -1,4 +1,4 @@
-base: &base "#1e1e1e"
+base: &base "#11111b"
 blue: &blue "#89b4fa"
 crust: &crust "#11111b"
 flamingo: &flamingo "#f2cdcd"
