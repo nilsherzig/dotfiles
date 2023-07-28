@@ -322,7 +322,7 @@
       # gnome shell 
       gnome.gnome-tweaks
       gnome-extension-manager
-      # gnomeExtensions.blur-my-shell
+      gnomeExtensions.blur-my-shell
       # gnomeExtensions.mullvad-indicator
       # gnomeExtensions.tray-icons-reloaded
       obs-studio
