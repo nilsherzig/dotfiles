@@ -381,6 +381,7 @@
       gotests
       sshfs
       gore
+      bfg-repo-cleaner
       gotools
       shellcheck
       nodePackages_latest.stylelint
