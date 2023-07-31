@@ -13,6 +13,18 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+-- Enable line wrap for markdown files
+vim.cmd([[
+  augroup MarkdownSettings
+    autocmd!
+    autocmd FileType markdown setlocal wrap
+  augroup END
+]])
+
+-- Use j and k in line wrapped lines
+vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
+
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -30,6 +42,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 0 -- might harm your ssd - something about swap files
 
 -- vim.opt.colorcolumn = "80"
+vim.opt.textwidth = 80
 
 require("nils_config.autocommands")
 

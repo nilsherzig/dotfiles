@@ -18,7 +18,7 @@
   boot.kernel.sysctl = {
     "fs.inotify.max_user_watches" = "1048576"; # 128 times the default 8192
     "fs.inotify.max_user_instances" = "8192";
-};
+  };
 
   boot.kernelParams = [
     "amd_iommu=on"
@@ -187,6 +187,9 @@
       marksman
       rust-analyzer
       nodePackages_latest.bash-language-server
+      typst 
+      typst-lsp
+      typst-fmt
       nodePackages_latest.pyright
       python311Packages.python-lsp-server
       python311Packages.diagrams
@@ -202,6 +205,7 @@
       pciutils
       popeye
       # internet
+      websocat
       pandoc
       nixpkgs-fmt
       ginkgo
@@ -237,6 +241,7 @@
       lazydocker
       nil
       nixpkgs-fmt
+      traceroute
       radare2
       usbutils
       # google-chrome

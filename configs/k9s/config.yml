@@ -16,9 +16,30 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: kind-kind
-  currentCluster: kind-kind
+  currentContext: capitest2-admin@capitest2
+  currentCluster: capitest2
   clusters:
+    capitest2:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
     kind-kind:
       namespace:
         active: all
@@ -27,7 +48,7 @@ k9s:
         - all
         - default
       view:
-        active: context
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:
