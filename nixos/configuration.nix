@@ -217,10 +217,10 @@
       cilium-cli
       jq
       rclone
-      spaceship-prompt
+      google-chrome
+      firefox
       gnumake
       dig
-
       python311Packages.bpython
       k3d
       ansible
@@ -231,9 +231,6 @@
       jdt-language-server
       syncthing
       kubernetes-helm
-      firefox
-      epiphany
-      helix
       nodejs
       # neovim
       luarocks
@@ -244,22 +241,16 @@
       traceroute
       radare2
       usbutils
-      # google-chrome
-      qbittorrent
       ffmpeg
       python311
-      # notes
       ltrace
-      jdk17
+      # jdk17
       nil
       obsidian
       direnv
-      # code / terminal
       du-dust
-      screen
       zoxide
       git
-      # neovim
       clang-tools
       unzip
       gcc
@@ -269,22 +260,22 @@
       kitty
       lua-language-server
       zsh-syntax-highlighting
-      gh
-      pure-prompt
+      # gh
+      # pure-prompt
       xdg-desktop-portal-hyprland
       xdg-utils
       # atuin
       # container
       docker
       docker-compose
-      evince
-      cdrtools
+      # evince
+      # cdrtools
       terraform
       terraform-ls
       #chat
-      whatsapp-for-linux
+      # whatsapp-for-linux
       discord
-      discordo
+      # discordo
       signal-desktop
       #games
       steam
@@ -302,14 +293,14 @@
       #theme
       gradience
       adw-gtk3
-      lxappearance
+      # lxappearance
       # hardware / stats
       via # somehow doesnt work, appimage in repo works on arch tho
       radeontop
       liquidctl
       lm_sensors
       ranger
-      openrgb
+      # openrgb
       # video 
       hubble
       jellyfin-media-player
@@ -333,8 +324,8 @@
       obs-studio
       libwebp
       # misc
-      wtype # does not work on gnome
-      ydotool
+      wtype 
+      # ydotool
       wl-clipboard
       libqalculate
 
@@ -342,7 +333,7 @@
       # polkit_gnome
       # polkit
       gnome.nautilus
-      gnome.sushi
+      # gnome.sushi
       # udisks # gnome disks backend
       gnome.gnome-disk-utility
       gnome.gnome-font-viewer
@@ -363,30 +354,25 @@
       pavucontrol
       brightnessctl
       # ghidra-bin
-      # cutter
-      # rizin
       wireshark
-      distrobox
+      # distrobox
       libnotify
       go-tools
-      # screenshot stack lel
       grim
       slurp
       swappy
-      # vscode
       act
-      # emacs
       fd
-
-    gaphor
+      gaphor
       go
       delve
       gopls
+      grml-zsh-config
       gomodifytags
       gotests
       sshfs
       gore
-      bfg-repo-cleaner
+      # bfg-repo-cleaner
       gotools
       shellcheck
       nodePackages_latest.stylelint
@@ -414,10 +400,17 @@
       pixelbuds = "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/\(//; s/\)//'";
       lg = "lazygit";
     };
-    promptInit = ''
-      autoload - U promptinit; promptinit
-      prompt pure
+    # promptInit = ''
+    #   # autoload - U promptinit; promptinit
+    #   # prompt pure
+    #   source /etc/zshrc
+    # '';
+
+    interactiveShellInit = ''
+    source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
+    zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
     '';
+    promptInit = ""; # otherwise it'll override the grml prompt
 
     shellInit = ''
       eval "$(direnv hook zsh)"

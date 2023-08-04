@@ -16,15 +16,14 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: capitest2-admin@capitest2
-  currentCluster: capitest2
+  currentContext: ciliumtest-admin@ciliumtest
+  currentCluster: ciliumtest
   clusters:
-    capitest2:
+    ciliumtest:
       namespace:
         active: all
         lockFavorites: false
         favorites:
-        - all
         - default
       view:
         active: pods
