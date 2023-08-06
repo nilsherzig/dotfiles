@@ -407,10 +407,10 @@
     # '';
 
     interactiveShellInit = ''
-    source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
-    zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
+    # source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
+    # zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
     '';
-    promptInit = ""; # otherwise it'll override the grml prompt
+    promptInit = "source <(/home/nils//.nix-profile/bin/starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
 
     shellInit = ''
       eval "$(direnv hook zsh)"
@@ -431,8 +431,9 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
+    starship
     htop
-    powertop
+    # powertop
     # neovim
     mullvad-vpn
   ];
@@ -443,13 +444,13 @@
     nerdfonts
   ];
 
-  xdg.mime.defaultApplications = {
-    "text/html" = "firefox.desktop";
-    "x-scheme-handler/https" = "firefox.desktop";
-    "x-scheme-handler/http" = "firefox.desktop";
-    "x-scheme-handler/about" = "firefox.desktop";
-    "x-scheme-handler/unknown" = "firefox.desktop";
-  };
+  # xdg.mime.defaultApplications = {
+  #   "text/html" = "firefox.desktop";
+  #   "x-scheme-handler/https" = "firefox.desktop";
+  #   "x-scheme-handler/http" = "firefox.desktop";
+  #   "x-scheme-handler/about" = "firefox.desktop";
+  #   "x-scheme-handler/unknown" = "firefox.desktop";
+  # };
 
   services.udisks2.enable = true;
   services.netdata.enable = true;
