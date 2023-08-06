@@ -183,6 +183,7 @@
       typescript
       nodePackages_latest.vscode-langservers-extracted
       gping
+      yarn
       lua-language-server
       marksman
       rust-analyzer

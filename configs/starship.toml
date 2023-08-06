@@ -1,6 +1,6 @@
 format = '''
 $username$hostname$directory $git_status $kubernetes
-​''' # there has to be a another way #TODO
+[>](dimmed blue bold) ''' # there has to be a another way #TODO
 
 [kubernetes]
 format = ' [$context](blue) '
