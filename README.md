@@ -1,3 +1,17 @@
-currently booth my laptop and desktop are using this config at the same time
+nixos dotfiles 🐈
 
-dev setup using nix-flakes
+### ./configs
+- hypr(land)
+- k9s 
+- kitty 
+- neovim
+- ranger 
+- tmux 
+- zsh & starship 
+
+### ./nixos
+- shared configs 
+- laptop and desktop config
+
+### ./scripts 
+- random bash scripts
