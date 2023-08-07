@@ -17,7 +17,7 @@ in
 
 {
     home-manager.users.nils = {
-        services.opensnitch-ui.enable = true;
+        #services.opensnitch-ui.enable = true;
     };
 # nixpkgs.overlays = [
 #     (import (builtins.fetchTarball {

@@ -196,6 +196,7 @@
       python311Packages.diagrams
       clang-tools
       mako
+      
       nodePackages_latest.yaml-language-server
       # other things
       # distrobox
@@ -363,6 +364,7 @@
       slurp
       swappy
       act
+      mission-center
       fd
       gaphor
       go
