@@ -1,11 +1,11 @@
 format = '''
-$username$hostname$directory $git_status $kubernetes
+$username$hostname$directory $git_status $battery$kubernetes
 [>](dimmed blue bold) ''' # there has to be a another way #TODO
 
 [kubernetes]
-format = ' [$context](blue) '
+format = ' [$context](dimmed blue) '
 disabled = false
-detect_files = ['k8s']
+detect_files = ['.k8s']
 
 [username]
 style_user = 'dimmed blue bold'
@@ -25,3 +25,8 @@ style = 'dimmed green'
 format = ' [$path]($style)'
 truncation_length = 8
 truncation_symbol = '…/'
+
+[[battery.display]]
+threshold = 50
+style = 'dimmed yellow'
+

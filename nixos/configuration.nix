@@ -101,7 +101,6 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # security.polkit.enable = true;
   # Enable sound with pipewire.
@@ -171,7 +170,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
-    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" "wireshark" "adbusers" ];
     hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
@@ -206,6 +205,9 @@
       k3sup
       pciutils
       popeye
+      helix
+      bat
+      asciinema
       # internet
       websocat
       pandoc
@@ -220,7 +222,7 @@
       jq
       rclone
       google-chrome
-      firefox
+      # firefox
       gnumake
       dig
       python311Packages.bpython
@@ -398,7 +400,6 @@
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
       update = "sudo nixos-rebuild switch";
-      bat = "cat /sys/class/power_supply/*/capacity";
       wifi = "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
       pixelbuds = "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/\(//; s/\)//'";
       lg = "lazygit";
@@ -447,21 +448,21 @@
     nerdfonts
   ];
 
-  # xdg.mime.defaultApplications = {
-  #   "text/html" = "firefox.desktop";
-  #   "x-scheme-handler/https" = "firefox.desktop";
-  #   "x-scheme-handler/http" = "firefox.desktop";
-  #   "x-scheme-handler/about" = "firefox.desktop";
-  #   "x-scheme-handler/unknown" = "firefox.desktop";
-  # };
+  xdg.mime.defaultApplications = {
+    "text/html" = "google-chrome.desktop";                      # joining the dark side
+    "x-scheme-handler/https" = "google-chrome.desktop";
+    "x-scheme-handler/http" = "google-chrome.desktop";
+    "x-scheme-handler/about" = "google-chrome.desktop";
+    "x-scheme-handler/unknown" = "google-chrome.desktop";
+  };
 
   services.udisks2.enable = true;
-  services.netdata.enable = true;
+  services.netdata.enable = false;
 
   services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
-  # system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = true;
   # system.autoUpgrade.allowReboot = false;
   services.tailscale.enable = true;
   services.passSecretService.enable = true;
@@ -473,11 +474,9 @@
       };
   };
   services.flatpak.enable = false;
-  services.gvfs.enable = true;
   programs.dconf.enable = true;
-  services.duplicity.enable = true; 
-  services.duplicity.frequency = null; 
-  services.duplicity.targetUrl = "";
+    programs.adb.enable = true;
+
 
 environment.sessionVariables = rec {
     XDG_CACHE_HOME  = "$HOME/.cache";
@@ -491,4 +490,5 @@ environment.sessionVariables = rec {
       "${XDG_BIN_HOME}"
     ];
   };
+  networking.firewall.enable = false;
 }

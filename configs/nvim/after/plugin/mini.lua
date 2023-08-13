@@ -1,4 +1,4 @@
 -- require('mini.indentscope').setup({
 --     -- symbol = '│',
 -- })
-require('mini.starter').setup()
+-- require('mini.starter').setup()

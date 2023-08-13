@@ -42,7 +42,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 0 -- might harm your ssd - something about swap files
 
 -- vim.opt.colorcolumn = "80"
-vim.opt.textwidth = 80
+-- vim.opt.textwidth = 80
 
 require("nils_config.autocommands")
 

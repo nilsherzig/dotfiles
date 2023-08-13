@@ -16,38 +16,20 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ciliumtest-admin@ciliumtest
-  currentCluster: ciliumtest
+  currentContext: bgptest-admin@bgptest
+  currentCluster: bgptest
   clusters:
-    ciliumtest:
+    bgptest:
       namespace:
-        active: all
+        active: default
         lockFavorites: false
         favorites:
-        - default
-      view:
-        active: pods
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.35.0
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-        labels: {}
-      portForwardAddress: localhost
-    kind-kind:
-      namespace:
-        active: all
-        lockFavorites: false
-        favorites:
+        - metallb-system
+        - kube-system
         - all
         - default
       view:
-        active: pods
+        active: service
       featureGates:
         nodeShell: false
       shellPod:
