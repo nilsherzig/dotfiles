@@ -1,7 +1,8 @@
-theme = "catppuccin_mocha"
+theme = "custom_theme"
 
 [editor]
 line-number = "relative"
+rulers = [80]
 mouse = false
 
 [editor.cursor-shape]
