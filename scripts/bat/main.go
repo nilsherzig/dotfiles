@@ -44,7 +44,8 @@ func main() {
 		}
 		minutes := math.Round(sum / float64(len(numbers)))
 
-		timein := time.Now().Local().Add(time.Minute * time.Duration(minutes))
+		timein := time.Now().Local().Add(
+			time.Minute * time.Duration(minutes))
 		fmt.Printf("until %s or %.fmin\n", timein.Format("15:04"), minutes)
 		time.Sleep(time.Second)
 	}
@@ -58,7 +59,8 @@ func readFileToInt(filepath string) (value float64) {
 		return
 	}
 
-	fileContentInt, err := strconv.ParseFloat(strings.Trim(string(content), "\n"), 64)
+	fileContentInt, err := strconv.ParseFloat(
+		strings.Trim(string(content), "\n"), 64)
 	handleErr(err)
 	return fileContentInt
 }

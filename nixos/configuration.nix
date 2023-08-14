@@ -187,6 +187,7 @@
       marksman
       rust-analyzer
       nodePackages_latest.bash-language-server
+      ltex-ls
       typst 
       typst-lsp
       typst-fmt
