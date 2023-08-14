@@ -389,7 +389,7 @@
 
   programs.zsh = {
     enable = true;
-    autosuggestions.enable = true;
+    autosuggestions.enable = false;
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [ "git" "fzf" "zoxide" ];
     syntaxHighlighting.enable = true;
