@@ -403,6 +403,7 @@
       wifi = "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
       pixelbuds = "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/\(//; s/\)//'";
       lg = "lazygit";
+      k9s = "k9s --logoless";
     };
     # promptInit = ''
     #   # autoload - U promptinit; promptinit
