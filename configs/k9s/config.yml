@@ -16,17 +16,19 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: kind-kind
-  currentCluster: kind-kind
+  currentContext: bgptest-admin@bgptest
+  currentCluster: bgptest
   clusters:
-    kind-kind:
+    bgptest:
       namespace:
-        active: all
+        active: metallb-system
         lockFavorites: false
         favorites:
+        - metallb-system
+        - all
         - default
       view:
-        active: po
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:

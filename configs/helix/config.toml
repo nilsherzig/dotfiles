@@ -1,5 +1,6 @@
 theme = "custom_theme"
 
+
 [keys.normal]
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
 "C-r" = ":config-reload"
@@ -11,8 +12,10 @@ D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "ins
 "l" = ":buffer-next"
 "s" = ["move_next_word_end", "move_prev_word_start", "surround_add"]
 "a" = ["select_regex", "align_selections"]
+"m" = ":pipe /home/nils/dotfiles/scripts/helix-align-markdown-table.py"
 
 [editor]
+idle-timeout = 0
 line-number = "relative"
 bufferline = "multiple"
 rulers = [80]

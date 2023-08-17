@@ -360,7 +360,7 @@
       brightnessctl
       # ghidra-bin
       wireshark
-      # distrobox
+      distrobox
       libnotify
       go-tools
       grim
