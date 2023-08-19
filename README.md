@@ -21,3 +21,5 @@ A big thank you to everyone who has ever contributed to a package I use :).
 | editor                   | helix + kitty and custom scripts |
 | operating system         | nixos                            |
 | window manager / desktop | hyprland                         |
+| bluetooth manager        | bluetuith                        |
+| sync files               | syncthing                        |
