@@ -3,6 +3,9 @@ NixOS `dotfiles` 🐈
 ### Uses 
 I mainly use my machine to take nodes, write Golang code and manage / develop Kubernetes and networking related things.
 
+Everything including network settings, my screen res, vim plugins, fonts, installed packages and my wallpaper are configured in this repo. 
+A big thank you to everyone who has ever contributed to a package I use :).
+
 ### Current setup
 
 | usecase                  | program(s)                       |
