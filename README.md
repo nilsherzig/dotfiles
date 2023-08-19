@@ -1,17 +1,20 @@
-nixos dotfiles 🐈
+NixOS `dotfiles` 🐈
 
-### ./configs
-- hypr(land)
-- k9s 
-- kitty 
-- neovim
-- ranger 
-- tmux 
-- zsh & starship 
+### Uses 
+I mainly use my machine to take nodes, write Golang code and manage / develop Kubernetes and networking related things.
 
-### ./nixos
-- shared configs 
-- laptop and desktop config
+### Current setup
 
-### ./scripts 
-- random bash scripts
+| usecase                  | program(s)                       |
+|--------------------------|----------------------------------|
+| terminal emulator        | kitty                            |
+| shell                    | zsh                              |
+| shell history            | fzf                              |
+| shell navigation         | zoxide                           |
+| shell prompt             | starship                         |
+| docker                   | lazydocker                       |
+| git                      | lazygit                          |
+| Kubernetes               | k9s                              |
+| editor                   | helix + kitty and custom scripts |
+| operating system         | nixos                            |
+| window manager / desktop | hyprland                         |
