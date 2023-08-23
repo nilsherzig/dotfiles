@@ -52,9 +52,9 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  systemd.network.wait-online.enable = false;
   systemd.network.wait-online.timeout = 0;
   boot.initrd.systemd.network.wait-online.timeout = 0; 
+  systemd.network.wait-online.enable = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -416,7 +416,7 @@
     # source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
     # zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
     '';
-    promptInit = "source <(/home/nils//.nix-profile/bin/starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
+    promptInit = "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
 
     shellInit = ''
       eval "$(direnv hook zsh)"
@@ -444,7 +444,7 @@
     mullvad-vpn
   ];
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     iosevka
     cantarell-fonts
     nerdfonts
