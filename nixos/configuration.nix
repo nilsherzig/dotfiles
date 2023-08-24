@@ -136,13 +136,12 @@
       user = "nils";
       dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
       configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
-      overrideDevices = true; # overrides any devices added or deleted through the WebUI
-      overrideFolders = true; # overrides any folders added or deleted through the WebUI
+      overrideDevices = false; # overrides any devices added or deleted through the WebUI
+      overrideFolders = false; # overrides any folders added or deleted through the WebUI
       devices = {
         "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
         "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
         "handy" = { id = "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7"; };
-        "offside" = { id = "WIMGRMN-WJITSU2-MZM5S2F-GJE3HIA-O3OJ56Q-MDTINWX-A3IRXAF-IKYLNQC"; }; 
       };
       folders = {
         "Documents" = {
