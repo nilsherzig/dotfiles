@@ -7,6 +7,18 @@ D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "ins
 "H" = ":buffer-previous"
 "L" = ":buffer-next"
 
+[keys.normal."ü"]
+"f" = "goto_prev_function"
+"d" = "goto_prev_diag"
+"t" = "goto_prev_class"
+"e" = "goto_prev_parameter"
+
+[keys.normal."+"]
+"f" = "goto_next_function"
+"d" = "goto_next_diag"
+"t" = "goto_next_class"
+"e" = "goto_next_parameter"
+
 [keys.normal.tab]
 "p" = ":sh live-markdown-preview"
 "s" = ["move_next_word_end", "move_prev_word_start", "surround_add"]
