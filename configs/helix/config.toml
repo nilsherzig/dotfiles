@@ -4,12 +4,11 @@ theme = "custom_theme"
 [keys.normal]
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
 "C-r" = ":config-reload"
-"C-h" = ":buffer-previous"
-"C-l" = ":buffer-next"
+"H" = ":buffer-previous"
+"L" = ":buffer-next"
 
 [keys.normal.tab]
-"h" = ":buffer-previous"
-"l" = ":buffer-next"
+"p" = ":sh live-markdown-preview"
 "s" = ["move_next_word_end", "move_prev_word_start", "surround_add"]
 "a" = ["select_regex", "align_selections"]
 "m" = ":pipe /home/nils/dotfiles/scripts/helix-align-markdown-table.py"
