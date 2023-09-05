@@ -5,7 +5,7 @@ $username$hostname$directory $git_status $battery$kubernetes
 [kubernetes]
 format = ' [$context](dimmed blue) '
 disabled = false
-detect_files = ['.k8s']
+# detect_files = ['.k8s']
 
 [username]
 style_user = 'dimmed blue bold'

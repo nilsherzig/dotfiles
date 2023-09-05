@@ -4,5 +4,4 @@ lib.mkIf (config.networking.hostName == "laptop") {
   boot.initrd.luks.devices."luks-f01a4a17-fb5d-4c97-81c4-4968d987c0d7".device = "/dev/disk/by-uuid/f01a4a17-fb5d-4c97-81c4-4968d987c0d7";
   boot.initrd.luks.devices."luks-f01a4a17-fb5d-4c97-81c4-4968d987c0d7".keyFile = "/crypto_keyfile.bin";
   # services.k3s.enable = true;
-  networking.firewall.allowedTCPPorts = [ 4173 ]; # npm run preview -- --host
 }

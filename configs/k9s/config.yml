@@ -16,21 +16,17 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: bgptest-admin@bgptest
-  currentCluster: bgptest
+  currentContext: bcp-qa-boreus-qa-bgp
+  currentCluster: bcp-qa-boreus-qa-bgp
   clusters:
-    bgptest:
+    bcp-qa-boreus-qa-bgp:
       namespace:
-        active: metallb-system
+        active: all
         lockFavorites: false
         favorites:
-        - kube-public
-        - kube-system
-        - all
-        - metallb-system
         - default
       view:
-        active: pods
+        active: po
       featureGates:
         nodeShell: false
       shellPod:

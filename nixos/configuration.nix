@@ -55,13 +55,13 @@
   systemd.network.wait-online.timeout = 0;
   boot.initrd.systemd.network.wait-online.timeout = 0; 
   systemd.network.wait-online.enable = false;
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
-
-  networking.nameservers = [ "172.0.0.1" "1.1.1.1" "9.9.9.9" ];
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -127,8 +127,8 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
-  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+  # networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
+  # networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
   services = {
     syncthing = {
@@ -164,6 +164,8 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
   virtualisation.libvirtd.enable = true;
+  
+  programs.wireshark.enable = true;
 
   users.users.nils = {
     shell = pkgs.zsh;
@@ -196,6 +198,7 @@
       clang-tools
       mako
       
+      unrar-wrapper
       nodePackages_latest.yaml-language-server
       # other things
       # distrobox
@@ -212,6 +215,7 @@
       websocat
       pandoc
       nixpkgs-fmt
+      masscan
       ginkgo
       bluetuith
       minikube
@@ -304,6 +308,7 @@
       liquidctl
       lm_sensors
       ranger
+      openvpn
       # openrgb
       # video 
       hubble
@@ -358,7 +363,7 @@
       pavucontrol
       brightnessctl
       # ghidra-bin
-      wireshark
+      # wireshark
       distrobox
       libnotify
       go-tools
@@ -366,6 +371,8 @@
       slurp
       swappy
       act
+      yuzu-early-access
+      ryujinx
       mission-center
       fd
       gaphor
@@ -404,6 +411,7 @@
       pixelbuds = "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/\(//; s/\)//'";
       lg = "lazygit";
       k9s = "k9s --logoless";
+      vi = "nvim";
     };
     # promptInit = ''
     #   # autoload - U promptinit; promptinit
@@ -468,6 +476,7 @@
   services.tailscale.enable = true;
   services.passSecretService.enable = true;
 
+
   # services.emacs.enable = true;
   hardware.bluetooth.settings = {
       General = {
@@ -491,5 +500,6 @@ environment.sessionVariables = rec {
       "${XDG_BIN_HOME}"
     ];
   };
-  networking.firewall.enable = false;
+  nix.settings.auto-optimise-store = true;
+  services.joycond.enable = true;
 }
