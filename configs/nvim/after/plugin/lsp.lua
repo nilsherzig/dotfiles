@@ -37,8 +37,7 @@ require('lspconfig').tailwindcss.setup {}   -- installed via nixpkgs
 -- require('lspconfig').jdtls.setup {} -- using the jdtls plugin atm
 
 -- yaml things
-local cfg = require("yaml-companion").setup({
-})
+local cfg = require("yaml-companion").setup({})
 require("lspconfig").yamlls.setup(cfg)
 --
 

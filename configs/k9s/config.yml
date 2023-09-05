@@ -16,12 +16,12 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ""
-  currentCluster: ""
+  currentContext: bcp-qa-boreus-qa-bgp
+  currentCluster: bcp-qa-boreus-qa-bgp
   clusters:
-    "":
+    bcp-qa-boreus-qa-bgp:
       namespace:
-        active: default
+        active: all
         lockFavorites: false
         favorites:
         - default
