@@ -1,14 +1,13 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [
-      /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
-      ./desktop.nix
-      ./laptop.nix
-      ./hostname.nix
-      ./home.nix
-    ];
+  imports = [
+    /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
+    ./desktop.nix
+    ./laptop.nix
+    ./hostname.nix
+    ./home.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -20,9 +19,7 @@
     "fs.inotify.max_user_instances" = "8192";
   };
 
-  boot.kernelParams = [
-    "amd_iommu=on"
-  ];
+  boot.kernelParams = [ "amd_iommu=on" ];
 
   # virtual 
   virtualisation.docker.enable = true;
@@ -32,9 +29,7 @@
   # '';
 
   # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
+  boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -53,7 +48,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   systemd.network.wait-online.timeout = 0;
-  boot.initrd.systemd.network.wait-online.timeout = 0; 
+  boot.initrd.systemd.network.wait-online.timeout = 0;
   systemd.network.wait-online.enable = false;
   systemd.services.NetworkManager-wait-online.enable = false;
 
@@ -91,8 +86,7 @@
   # KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   # '';
 
-
-    services.udev.packages = [ pkgs.dolphinEmu ];
+  services.udev.packages = [ pkgs.dolphinEmu ];
 
   # Configure keymap in X11
   services.xserver = {
@@ -130,52 +124,72 @@
   # networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
   # networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
-  services = {
-    syncthing = {
-      enable = true;
-      user = "nils";
-      dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
-      configDir = "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
-      overrideDevices = false; # overrides any devices added or deleted through the WebUI
-      overrideFolders = false; # overrides any folders added or deleted through the WebUI
-      devices = {
-        "desktop" = { id = "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE"; };
-        "laptop" = { id = "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3"; };
-        "handy" = { id = "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7"; };
-      };
-      folders = {
-        "Documents" = {
-          path = "/home/nils/Documents";
-          devices = [ "desktop" "laptop" ];
-        };
-        "ZugMedien" = {
-          path = "/home/nils/Videos/Zug/";
-          devices = [ "desktop" "laptop" "handy" ];
-        };
-        "Obsidian" = {
-          path = "/home/nils/Notes";
-          devices = [ "desktop" "laptop" "handy" ];
-        };
-      };
-    };
-  };
-
+  # services = {
+  #   syncthing = {
+  #     enable = true;
+  #     user = "nils";
+  #     dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
+  #     configDir =
+  #       "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
+  #     overrideDevices =
+  #       false; # overrides any devices added or deleted through the WebUI
+  #     overrideFolders =
+  #       false; # overrides any folders added or deleted through the WebUI
+  #     devices = {
+  #       "desktop" = {
+  #         id =
+  #           "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE";
+  #       };
+  #       "laptop" = {
+  #         id =
+  #           "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3";
+  #       };
+  #       "handy" = {
+  #         id =
+  #           "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7";
+  #       };
+  #     };
+  #     folders = {
+  #       "Documents" = {
+  #         path = "/home/nils/Documents";
+  #         devices = [ "desktop" "laptop" ];
+  #       };
+  #       "ZugMedien" = {
+  #         path = "/home/nils/Videos/Zug/";
+  #         devices = [ "desktop" "laptop" "handy" ];
+  #       };
+  #       "Obsidian" = {
+  #         path = "/home/nils/Notes";
+  #         devices = [ "desktop" "laptop" "handy" ];
+  #       };
+  #     };
+  #   };
+  # };
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
   virtualisation.libvirtd.enable = true;
-  
+
   programs.wireshark.enable = true;
 
   users.users.nils = {
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "nils";
-    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "libvirtd" "wireshark" "adbusers" ];
-    hashedPassword = "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "dialout"
+      "libvirtd"
+      "wireshark"
+      "adbusers"
+    ];
+    hashedPassword =
+      "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
-    deja-dup
+      deja-dup
       virt-manager
       # language server
       nodePackages_latest.typescript-language-server
@@ -189,7 +203,7 @@
       rust-analyzer
       nodePackages_latest.bash-language-server
       ltex-ls
-      typst 
+      typst
       typst-lsp
       typst-fmt
       nodePackages_latest.pyright
@@ -197,7 +211,7 @@
       python311Packages.diagrams
       clang-tools
       mako
-      
+
       unrar-wrapper
       nodePackages_latest.yaml-language-server
       # other things
@@ -244,7 +258,7 @@
       luarocks
       lazygit
       lazydocker
-      nil
+      nixfmt
       nixpkgs-fmt
       traceroute
       radare2
@@ -333,7 +347,7 @@
       obs-studio
       libwebp
       # misc
-      wtype 
+      wtype
       # ydotool
       wl-clipboard
       libqalculate
@@ -402,13 +416,15 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       code = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
-      ip = "ip --color=always"; # ip show colors 
+      ip = "ip --color=always"; # ip show colors
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
       update = "sudo nixos-rebuild switch";
-      wifi = "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
-      pixelbuds = "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/\(//; s/\)//'";
+      wifi =
+        "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
+      pixelbuds =
+        "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/(//; s/)//'";
       lg = "lazygit";
       k9s = "k9s --logoless";
       vi = "nvim";
@@ -420,10 +436,11 @@
     # '';
 
     interactiveShellInit = ''
-    # source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
-    # zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
+      # source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
+      # zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
     '';
-    promptInit = "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
+    promptInit =
+      "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
 
     shellInit = ''
       eval "$(direnv hook zsh)"
@@ -433,13 +450,7 @@
     '';
   };
 
-
-  programs.steam = {
-    enable = true;
-    # remotePlay.openFirewall = true; 
-    # dedicatedServer.openFirewall = true; 
-  };
-
+  programs.steam = { enable = true; };
 
   programs.hyprland.enable = true;
 
@@ -451,14 +462,10 @@
     mullvad-vpn
   ];
 
-  fonts.packages = with pkgs; [
-    iosevka
-    cantarell-fonts
-    nerdfonts
-  ];
+  fonts.packages = with pkgs; [ iosevka cantarell-fonts nerdfonts ];
 
   xdg.mime.defaultApplications = {
-    "text/html" = "google-chrome.desktop";                      # joining the dark side
+    "text/html" = "google-chrome.desktop"; # joining the dark side
     "x-scheme-handler/https" = "google-chrome.desktop";
     "x-scheme-handler/http" = "google-chrome.desktop";
     "x-scheme-handler/about" = "google-chrome.desktop";
@@ -476,29 +483,21 @@
   services.tailscale.enable = true;
   services.passSecretService.enable = true;
 
-
   # services.emacs.enable = true;
-  hardware.bluetooth.settings = {
-      General = {
-          Experimental=true;
-      };
-  };
+  hardware.bluetooth.settings = { General = { Experimental = true; }; };
   services.flatpak.enable = false;
   programs.dconf.enable = true;
-    programs.adb.enable = true;
+  programs.adb.enable = true;
 
-
-environment.sessionVariables = rec {
-    XDG_CACHE_HOME  = "$HOME/.cache";
+  environment.sessionVariables = rec {
+    XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
-    XDG_DATA_HOME   = "$HOME/.local/share";
-    XDG_STATE_HOME  = "$HOME/.local/state";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
 
     # Not officially in the specification
-    XDG_BIN_HOME    = "$HOME/.local/bin";
-    PATH = [ 
-      "${XDG_BIN_HOME}"
-    ];
+    XDG_BIN_HOME = "$HOME/.local/bin";
+    PATH = [ "${XDG_BIN_HOME}" ];
   };
   nix.settings.auto-optimise-store = true;
   services.joycond.enable = true;

@@ -1,4 +1,4 @@
-# copy this file to ./hostname.nix and change the networking.hostName 
+# copy this file to ./hostname.nix and change the networking.hostName
 { ... }:
 
 {
