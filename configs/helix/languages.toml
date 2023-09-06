@@ -15,3 +15,8 @@ language-servers = [ "yaml-language-server" ]
 
 [language-server.yaml-language-server]
 config = { yaml = { schemas = { kubernetes = "/*.y{a,}ml" }, format = { enable = true } } }
+
+[[language]]
+name = "nix"
+file-types = [ "nix" ]
+formatter = { command = "nixfmt" }
