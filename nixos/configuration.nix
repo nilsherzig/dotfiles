@@ -246,6 +246,7 @@
       google-chrome
       # firefox
       gnumake
+      yamlfmt
       dig
       python311Packages.bpython
       k3d
