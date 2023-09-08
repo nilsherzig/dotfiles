@@ -9,9 +9,17 @@ lib.mkIf (config.networking.hostName == "desktop") {
   # jellyfin and homeassistant ports
   # networking.firewall.allowedTCPPorts = [ 53 8096 8920 8123 43177 ];
   # networking.firewall.allowedUDPPorts = [ 53 7359 1900 43177 ];
-  networking.firewall.allowedTCPPorts = [ 53 80 443 8123 ];
-  networking.firewall.allowedUDPPorts = [ 53 80 443 8123 ];
+  networking.firewall.allowedTCPPorts = [ 22 53 80 443 8123 ];
+  networking.firewall.allowedUDPPorts = [ 22 53 80 443 8123 ];
 
+  services.openssh = {
+    enable = true;
+    settings.PasswordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
+  };
+
+  users.users.nils.openssh.authorizedKeys.keyFiles =
+    [ /home/nils/dotfiles/nilsherzig.keys ];
   # home assistant vm bride
   # networking.bridges = {
   #   "br0" = {
