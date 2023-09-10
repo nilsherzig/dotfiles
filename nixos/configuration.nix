@@ -224,6 +224,7 @@
       clusterctl
       tmux
       k3sup
+      nodePackages_latest.prettier
       pciutils
       popeye
       helix
