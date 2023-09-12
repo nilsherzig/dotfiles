@@ -16,10 +16,10 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: bcp-qa-boreus-qa-bgp
-  currentCluster: bcp-qa-boreus-qa-bgp
+  currentContext: kind-test-r9laal
+  currentCluster: kind-test-r9laal
   clusters:
-    bcp-qa-boreus-qa-bgp:
+    kind-test-r9laal:
       namespace:
         active: all
         lockFavorites: false
