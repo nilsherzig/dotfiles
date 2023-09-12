@@ -223,6 +223,7 @@
       kubectl
       clusterctl
       tmux
+      litecli
       k3sup
       nodePackages_latest.prettier
       pciutils
