@@ -12,7 +12,8 @@ command = "ltex-ls"
 name = "yaml"
 file-types = ["yaml", "yml"]
 language-servers = [ "yaml-language-server" ]
-formatter = { command = "yamlfmt /dev/stdin" }
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
 [language-server.yaml-language-server]
 config = { yaml = { schemas = { kubernetes = "/*.y{a,}ml" }, format = { enable = true } } }

@@ -121,9 +121,6 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # networking.firewall.allowedTCPPorts = [ 8000 8384 22000 ];
-  # networking.firewall.allowedUDPPorts = [ 22000 21027 ];
-
   services = {
     syncthing = {
       enable = true;
@@ -211,6 +208,8 @@
       typst-lsp
       typst-fmt
       nodePackages_latest.pyright
+      nodePackages_latest.prettier
+      gitleaks
       python311Packages.python-lsp-server
       python311Packages.diagrams
       clang-tools
@@ -218,6 +217,7 @@
 
       unrar-wrapper
       nodePackages_latest.yaml-language-server
+      sqlite
       # other things
       # distrobox
       kubectl
@@ -229,8 +229,11 @@
       helix
       bat
       asciinema
+      python311Packages.recipe-scrapers
+      virtualenv
       # internet
       websocat
+      gitlab-runner
       pandoc
       nixpkgs-fmt
       masscan
@@ -330,6 +333,7 @@
       openvpn
       # openrgb
       # video 
+      golangci-lint
       hubble
       jellyfin-media-player
       # jellyfin-media-player

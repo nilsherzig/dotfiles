@@ -1,5 +1,4 @@
 theme = "custom_theme"
-
 [keys.normal]
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
 "C-r" = ":config-reload"
@@ -13,6 +12,7 @@ D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "ins
 "p" = ":sh live-markdown-preview"
 
 [editor]
+true-color = true
 idle-timeout = 0
 line-number = "relative"
 bufferline = "multiple"

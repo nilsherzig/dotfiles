@@ -1,5 +1,5 @@
 format = '''
-$username$hostname$directory $git_status $battery$kubernetes
+$username$hostname$directory $git_status$git_branch $battery$kubernetes
 [>](dimmed blue bold) ''' # there has to be a another way #TODO
 
 [kubernetes]
