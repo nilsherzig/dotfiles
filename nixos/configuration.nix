@@ -213,6 +213,7 @@
       python311Packages.python-lsp-server
       python311Packages.diagrams
       clang-tools
+      nb
       mako
 
       unrar-wrapper
