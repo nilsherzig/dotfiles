@@ -436,6 +436,7 @@
         "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/(//; s/)//'";
       lg = "lazygit";
       k9s = "k9s --logoless";
+      upload = "~/dotfiles/scripts/upload.sh";
       vi = "nvim";
     };
     # promptInit = ''
