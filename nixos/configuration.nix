@@ -190,232 +190,229 @@
       "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
     home = "/home/nils/";
     packages = with pkgs; [
-      deja-dup
-      virt-manager
-      # language server
-      nodePackages_latest.typescript-language-server
-      nodePackages_latest.svelte-language-server
-      typescript
-      nodePackages_latest.vscode-langservers-extracted
-      gping
-      yarn
-      lua-language-server
-      marksman
-      rust-analyzer
-      nodePackages_latest.bash-language-server
-      ltex-ls
-      typst
-      typst-lsp
-      typst-fmt
-      nodePackages_latest.pyright
-      nodePackages_latest.prettier
-      gitleaks
-      python311Packages.python-lsp-server
-      python311Packages.diagrams
-      clang-tools
-      mako
-
-      unrar-wrapper
-      nodePackages_latest.yaml-language-server
-      sqlite
-      # other things
-      # distrobox
-      kubectl
-      clusterctl
-      tmux
-      litecli
-      k3sup
-      nodePackages_latest.prettier
-      pciutils
-      popeye
-      helix
-      bat
-      asciinema
-      python311Packages.recipe-scrapers
-      virtualenv
-      # internet
-      websocat
-      gitlab-runner
-      pandoc
-      nixpkgs-fmt
-      masscan
-      ginkgo
-      bluetuith
-      minikube
-      kind
-      containerlab
-      nmap
-      cilium-cli
-      jq
-      rclone
-      google-chrome
-      # firefox
-      gnumake
-      yamlfmt
-      dig
-      python311Packages.bpython
-      k3d
+      act
+      adw-gtk3
       ansible
-      rsync
-      texlive.combined.scheme-small
-      dolphin-emu
-      nodePackages_latest.bash-language-server
-      jdt-language-server
-      syncthing
-      kubernetes-helm
-      nodejs
-      # neovim
-      luarocks
-      lazygit
-      lazydocker
-      nixfmt
-      nixpkgs-fmt
-      traceroute
-      radare2
-      usbutils
-      ffmpeg
-      python311
-      ltrace
-      # jdk17
-      nil
-      obsidian
-      direnv
-      du-dust
-      zoxide
-      git
-      clang-tools
-      unzip
-      gcc
-      vscode
-      fzf
-      ripgrep
-      kitty
-      lua-language-server
-      zsh-syntax-highlighting
-      # gh
-      # pure-prompt
-      xdg-desktop-portal-hyprland
-      xdg-utils
+      asciinema
       # atuin
-      # container
-      docker
-      docker-compose
-      # evince
+      bat
+      # bfg-repo-cleaner
+      bluetuith
+      bottles
+      brightnessctl
       # cdrtools
-      terraform
-      terraform-ls
+      # celluloid
       #chat
-      # whatsapp-for-linux
+      cilium-cli
+      clang-tools
+      clang-tools
+      clusterctl
+      # container
+      containerlab
+      deja-dup
+      delve
+      # desktop things / using gnome in this case
+      dig
+      direnv
       discord
       # discordo
-      signal-desktop
-      #games
-      steam
-      # prismlauncher-qt5
-      k9s
-      kubectx
-      wine
-      bottles
-      # mail 
-      # protonmail-bridge
-      # theme
-      #mail 
+      # distrobox
+      distrobox
+      docker
+      docker-compose
+      dolphin-emu
+      du-dust
+      # evince
       # evolution
-      # protonmail-bridge
-      #theme
-      gradience
-      adw-gtk3
-      # lxappearance
-      # hardware / stats
-      via # somehow doesnt work, appimage in repo works on arch tho
-      radeontop
-      liquidctl
-      lm_sensors
-      ranger
-      openvpn
-      # openrgb
-      # video 
-      golangci-lint
-      hubble
-      jellyfin-media-player
-      # jellyfin-media-player
-      # celluloid
-      # kodi-wayland
-      mpv
-      yt-dlp
-      # gradle_7
-      # images
-      # gimp
-      # lens
+      fd
       feh
-      speedtest-cli
-      # gnome shell 
-      # gnome.gnome-tweaks
+      ffmpeg
+      # firefox
+      fzf
+      #games
+      gammastep
+      gaphor
+      gcc
+      # gh
+      # ghidra-bin
+      # gimp
+      ginkgo
+      git
+      gitlab-runner
+      gitleaks
+      gnome.adwaita-icon-theme
+      gnome.eog
       # gnome-extension-manager
       # gnomeExtensions.blur-my-shell
       # gnomeExtensions.mullvad-indicator
       # gnomeExtensions.tray-icons-reloaded
-      obs-studio
-      libwebp
-      # misc
-      wtype
-      # ydotool
-      wl-clipboard
-      libqalculate
-
-      # desktop things / using gnome in this case
-      # polkit_gnome
-      # polkit
-      gnome.nautilus
-      # gnome.sushi
-      # udisks # gnome disks backend
+      gnome.gnome-clocks
+      # gnome.gnome-control-center
       gnome.gnome-disk-utility
       gnome.gnome-font-viewer
-      gnome.eog
+      # gnome.gnome-tweaks
+      gnome.nautilus
+      # gnome shell 
       gnome.simple-scan
-      gnome.adwaita-icon-theme
-      # gnome.gnome-control-center
-
-      # libs
-      imlib2Full
-
-      # window manager tools
-      # opensnitch-ui
-      wofi
-      tree
-      gammastep
-      swaybg
-      pavucontrol
-      brightnessctl
-      # ghidra-bin
-      # wireshark
-      distrobox
-      libnotify
-      go-tools
-      grim
-      slurp
-      swappy
-      act
-      yuzu-early-access
-      ryujinx
-      mission-center
-      fd
-      gaphor
+      # gnome.sushi
+      gnumake
       go
-      delve
-      gopls
-      grml-zsh-config
+      golangci-lint
       gomodifytags
-      gotests
-      sshfs
+      google-chrome
+      gopls
       gore
-      # bfg-repo-cleaner
+      gotests
+      go-tools
       gotools
-      shellcheck
-      nodePackages_latest.stylelint
+      gping
+      gradience
+      # gradle_7
+      grim
+      grml-zsh-config
+      # hardware / stats
+      helix
       html-tidy
+      hubble
+      # images
+      imlib2Full
+      # internet
+      # jdk17
+      jdt-language-server
+      # jellyfin-media-player
+      jellyfin-media-player
+      jq
+      k3d
+      k3sup
+      k9s
+      kind
+      kitty
+      # kodi-wayland
+      kubectl
+      kubectx
+      kubernetes-helm
+      # language server
+      lazydocker
+      lazygit
+      # lens
+      libnotify
+      libqalculate
+      # libs
+      libwebp
+      liquidctl
+      litecli
+      lm_sensors
+      ltex-ls
+      ltrace
+      lua-language-server
+      lua-language-server
+      luarocks
+      # lxappearance
+      # mail 
+      #mail 
+      mako
+      marksman
+      masscan
+      minikube
+      # misc
+      mission-center
+      mpv
+      # neovim
+      nil
+      nixfmt
+      nixpkgs-fmt
+      nixpkgs-fmt
+      nmap
+      nodejs
       nodePackages.js-beautify
+      nodePackages_latest.bash-language-server
+      nodePackages_latest.bash-language-server
+      nodePackages_latest.prettier
+      nodePackages_latest.prettier
+      nodePackages_latest.pyright
+      nodePackages_latest.stylelint
+      nodePackages_latest.svelte-language-server
+      nodePackages_latest.typescript-language-server
+      nodePackages_latest.vscode-langservers-extracted
+      nodePackages_latest.yaml-language-server
+      obsidian
+      obs-studio
+      # openrgb
+      # opensnitch-ui
+      openvpn
+      # other things
+      pandoc
+      pavucontrol
+      pciutils
+      # polkit
+      # polkit_gnome
+      popeye
       prismlauncher
+      # prismlauncher-qt5
+      # protonmail-bridge
+      # protonmail-bridge
+      # pure-prompt
+      python311
+      python311Packages.bpython
+      python311Packages.diagrams
+      python311Packages.python-lsp-server
+      python311Packages.recipe-scrapers
+      radare2
+      radeontop
+      ranger
+      rclone
+      ripgrep
+      rsync
+      rust-analyzer
+      ryujinx
+      shellcheck
+      signal-desktop
+      slurp
+      speedtest-cli
+      sqlite
+      sshfs
+      steam
+      swappy
+      swaybg
+      syncthing
+      terraform
+      terraform-ls
+      texlive.combined.scheme-small
+      # theme
+      #theme
+      tmux
+      traceroute
+      tree
+      typescript
+      typst
+      typst-fmt
+      typst-lsp
+      # udisks # gnome disks backend
+      unrar-wrapper
+      unzip
+      usbutils
+      via # somehow doesnt work, appimage in repo works on arch tho
+      # video 
+      virt-manager
+      virtualenv
+      vscode
+      websocat
+      # whatsapp-for-linux
+      # window manager tools
+      wine
+      # wireshark
+      wl-clipboard
+      wofi
+      wtype
+      xdg-desktop-portal-hyprland
+      xdg-utils
+      yamlfmt
+      yarn
+      # ydotool
+      yt-dlp
+      yuzu-early-access
+      zoxide
+      zsh-syntax-highlighting
     ];
   };
 
@@ -485,7 +482,6 @@
   };
 
   services.udisks2.enable = true;
-  services.netdata.enable = false;
 
   services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
