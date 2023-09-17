@@ -178,6 +178,7 @@
     isNormalUser = true;
     description = "nils";
     extraGroups = [
+      "keyd"
       "networkmanager"
       "wheel"
       "docker"
@@ -463,11 +464,7 @@
 
   programs.hyprland.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    htop
-    mullvad-vpn
-    starship
-  ];
+  environment.systemPackages = with pkgs; [ htop mullvad-vpn starship ];
 
   fonts.packages = with pkgs; [
     cantarell-fonts
@@ -512,4 +509,27 @@
   };
   nix.settings.auto-optimise-store = true;
   services.joycond.enable = true;
+
+  services.keyd = {
+    enable = true;
+    keyboards."*".settings = {
+      main = {
+        capslock = "layer(caps)";
+        # rightalt = "layer(rightalt)";
+      };
+      caps = {
+        h = "left";
+        j = "down";
+        k = "up";
+        l = "right";
+        a = "G-q";
+        o = "G-p";
+        u = "G-y";
+        s = "G-s";
+        e = "G-5";
+        "`" = "G-S-;";
+      };
+    };
+  };
+
 }
