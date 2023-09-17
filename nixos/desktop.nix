@@ -17,8 +17,8 @@ lib.mkIf (config.networking.hostName == "desktop") {
   #   };
   # };
 
-  networking.firewall.allowedTCPPorts = [ 22 53 80 443 8123 ];
-  networking.firewall.allowedUDPPorts = [ 22 53 80 443 8123 ];
+  networking.firewall.allowedTCPPorts = [ 22 53 80 443 8123 9090 ];
+  networking.firewall.allowedUDPPorts = [ 22 53 80 443 8123 9090 ];
 
   services.openssh = {
     enable = true;
