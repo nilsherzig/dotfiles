@@ -16,17 +16,17 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: kind-test-r9laal
-  currentCluster: kind-test-r9laal
+  currentContext: k3s-desktop
+  currentCluster: k3s-desktop
   clusters:
-    kind-test-r9laal:
+    k3s-desktop:
       namespace:
         active: all
         lockFavorites: false
         favorites:
         - default
       view:
-        active: po
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:

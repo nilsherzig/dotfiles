@@ -27,7 +27,7 @@
   # virtualisation.docker.extraOptions = ''
   # --default-ulimit nofile=65535:65535
   # '';
-
+  console.keyMap = "de";
   # Setup keyfile
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
@@ -464,20 +464,23 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
-    starship
     htop
-    # powertop
-    # neovim
     mullvad-vpn
+    starship
   ];
 
-  fonts.packages = with pkgs; [ iosevka cantarell-fonts nerdfonts ];
+  fonts.packages = with pkgs; [
+    cantarell-fonts
+    iosevka
+    jetbrains-mono
+    nerdfonts
+  ];
 
   xdg.mime.defaultApplications = {
     "text/html" = "google-chrome.desktop"; # joining the dark side
-    "x-scheme-handler/https" = "google-chrome.desktop";
-    "x-scheme-handler/http" = "google-chrome.desktop";
     "x-scheme-handler/about" = "google-chrome.desktop";
+    "x-scheme-handler/http" = "google-chrome.desktop";
+    "x-scheme-handler/https" = "google-chrome.desktop";
     "x-scheme-handler/unknown" = "google-chrome.desktop";
   };
 
