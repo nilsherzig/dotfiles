@@ -514,22 +514,28 @@
     enable = true;
     keyboards."*".settings = {
       main = {
-        capslock = "layer(caps)";
+        # capslock = "layer(caps)";
         # rightalt = "layer(rightalt)";
+        rightalt = "layer(altgr)";
+        capslock = "overload(caps, esc)";
+      };
+
+      altgr = {
+        "u" = "G-7";
+        "i" = "G-8";
+        "o" = "G-9";
+        "p" = "G-0";
       };
       caps = {
         h = "left";
         j = "down";
         k = "up";
         l = "right";
-        a = "G-q";
-        o = "G-p";
-        u = "G-y";
-        s = "G-s";
-        e = "G-5";
-        "`" = "G-S-;";
+        "u" = "G-7";
+        "i" = "G-8";
+        "o" = "G-9";
+        "p" = "G-0";
       };
     };
   };
-
 }
