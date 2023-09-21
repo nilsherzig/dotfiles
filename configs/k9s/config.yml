@@ -16,14 +16,18 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: k3s-desktop
-  currentCluster: k3s-desktop
+  currentContext: default
+  currentCluster: default
   clusters:
-    k3s-desktop:
+    default:
       namespace:
         active: all
         lockFavorites: false
         favorites:
+        - random-workloads
+        - argocd
+        - all
+        - whoami
         - default
       view:
         active: pods

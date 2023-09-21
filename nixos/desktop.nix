@@ -17,7 +17,7 @@ lib.mkIf (config.networking.hostName == "desktop") {
   #   };
   # };
 
-  networking.firewall.allowedTCPPorts = [ 22 53 80 443 8123 9090 8096 ];
+  networking.firewall.allowedTCPPorts = [ 22 53 80 443 2049 8123 9090 8096 6443 ];
   networking.firewall.allowedUDPPorts = [ 22 53 80 443 8123 9090 8096 ];
 
   services.openssh = {
@@ -64,5 +64,16 @@ lib.mkIf (config.networking.hostName == "desktop") {
     };
   };
 
-  #   services.k3s.enable = true; 
+  services.k3s.enable = true; 
+
+  services.nfs.server.enable = true;
+  services.nfs.server.exports = ''
+    /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
+  '';
+
+  fileSystems."/mnt/test" = {
+    device = "desktop:/bigdata/media/";
+    fsType = "nfs";
+  };
+
 }

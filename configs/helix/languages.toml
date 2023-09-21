@@ -14,8 +14,8 @@ language-servers = [ "yaml-language-server" ]
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
-[language-server.yaml-language-server]
-config = { yaml = { schemas = { kubernetes = "/*.y{a,}ml" }, format = { enable = true } } }
+# [language-server.yaml-language-server]
+# config = { yaml = { schemas = { kubernetes = "/*.y{a,}ml" }, format = { enable = true } } }
 
 [[language]]
 name = "nix"

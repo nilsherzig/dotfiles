@@ -40,6 +40,7 @@
   # networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.enableIPv6 = false;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -239,6 +240,7 @@
       # gimp
       ginkgo
       git
+      kubeseal
       gitlab-runner
       gitleaks
       gnome.adwaita-icon-theme
@@ -374,6 +376,7 @@
       sshfs
       steam
       swappy
+      nnn
       swaybg
       syncthing
       terraform
@@ -396,7 +399,8 @@
       # video 
       virt-manager
       virtualenv
-      vscode
+      # vscode
+      vscode.fhs
       websocat
       # whatsapp-for-linux
       # window manager tools
@@ -505,7 +509,7 @@
 
     # Not officially in the specification
     XDG_BIN_HOME = "$HOME/.local/bin";
-    PATH = [ "${XDG_BIN_HOME}" ];
+    # PATH = [ "${XDG_BIN_HOME}" ];
   };
   nix.settings.auto-optimise-store = true;
   services.joycond.enable = true;
