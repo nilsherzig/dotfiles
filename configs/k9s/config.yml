@@ -24,13 +24,16 @@ k9s:
         active: all
         lockFavorites: false
         favorites:
+        - work
+        - kube-system
+        - opencost
         - random-workloads
         - argocd
         - all
         - whoami
         - default
       view:
-        active: pods
+        active: services
       featureGates:
         nodeShell: false
       shellPod:

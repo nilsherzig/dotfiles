@@ -54,7 +54,8 @@ require('colorizer').setup()
 --   org_default_notes_file = '~/org/refile.org',
 -- })
 -- require('org-bullets').setup()
-require('mkdnflow').setup()
+require('mkdnflow').setup({
+})
 
 
 require 'clipboard-image'.setup {
