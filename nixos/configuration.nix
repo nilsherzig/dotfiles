@@ -39,7 +39,7 @@
 
   # networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.enableIPv6 = false;
+  networking.enableIPv6 = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Configure network proxy if necessary
@@ -232,6 +232,7 @@
       # firefox
       fzf
       #games
+      zathura
       gammastep
       gaphor
       gcc
