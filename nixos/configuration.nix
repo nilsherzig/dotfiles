@@ -413,8 +413,8 @@
       wine
       # wireshark
       wl-clipboard
-      wofi
-      tofi
+      # wofi
+      # tofi
       wtype
       xdg-desktop-portal-hyprland
       xdg-utils
