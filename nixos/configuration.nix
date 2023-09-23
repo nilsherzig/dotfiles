@@ -19,6 +19,11 @@
     "fs.inotify.max_user_instances" = "8192";
   };
 
+  boot.extraModprobeConfig = ''
+    options hid_apple fnmode=2
+    options hid_apple swap_opt_cmd=1
+  '';
+
   boot.kernelParams = [ "amd_iommu=on" ];
 
   # virtual 
@@ -409,6 +414,7 @@
       # wireshark
       wl-clipboard
       wofi
+      tofi
       wtype
       xdg-desktop-portal-hyprland
       xdg-utils
@@ -522,7 +528,8 @@
         # capslock = "layer(caps)";
         # rightalt = "layer(rightalt)";
         rightalt = "layer(altgr)";
-        capslock = "overload(caps, esc)";
+        # capslock = "overload(caps, esc)";
+        capslock = "overload(caps, macro(esc :))";
       };
 
       altgr = {
@@ -536,11 +543,16 @@
         j = "down";
         k = "up";
         l = "right";
-        "u" = "G-7";
-        "i" = "G-8";
-        "o" = "G-9";
-        "p" = "G-0";
       };
+      # caps = {
+      #   "j" = "kp4";
+      #   "k" = "kp2";
+      #   "l" = "kp6";
+      #   "i" = "kp8";
+      #   "f" = "leftmouse";
+      #   "s" = "rightmouse";
+      #   "d" = "middlemouse";
+      # };
     };
   };
 }
