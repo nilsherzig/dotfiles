@@ -428,7 +428,6 @@
     ohMyZsh.plugins = [ "git" "fzf" "zoxide" ];
     syntaxHighlighting.enable = true;
     shellAliases = {
-      code = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
       ip = "ip --color=always"; # ip show colors
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
