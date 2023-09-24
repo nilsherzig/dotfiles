@@ -17,8 +17,11 @@ lib.mkIf (config.networking.hostName == "desktop") {
   #   };
   # };
 
-  networking.firewall.allowedTCPPorts = [ 22 53 80 443 2049 8123 9090 8096 6443 ];
-  networking.firewall.allowedUDPPorts = [ 22 53 80 443 8123 9090 8096 ];
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 22 53 80 443 2049 8123 9090 8096 6443 ];
+    allowedUDPPorts = [ 22 53 80 443 8123 9090 8096 ];
+  };
 
   services.openssh = {
     enable = true;
@@ -64,7 +67,7 @@ lib.mkIf (config.networking.hostName == "desktop") {
     };
   };
 
-  services.k3s.enable = true; 
+  services.k3s.enable = true;
 
   services.nfs.server.enable = true;
   services.nfs.server.exports = ''

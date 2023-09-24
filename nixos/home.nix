@@ -124,6 +124,7 @@ in {
         (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
         (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
         (fromGitHub "HEAD" "davidmh/cspell.nvim")
+        (fromGitHub "HEAD" "dgagn/diagflow.nvim")
       ];
     };
   };

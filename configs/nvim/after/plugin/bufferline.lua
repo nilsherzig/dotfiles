@@ -1,16 +1,29 @@
 local bufferline = require("bufferline")
 bufferline.setup({
-	options = {
-		mode = "buffers", -- set to "tabs" to only show tabpages instead
-		style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
-		themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
-		-- indicator = {
-		-- 	-- icon = "-", -- this should be omitted if indicator style is not 'icon'
-		-- 	style = "underline",
-		-- },
+    highlights = {
+        -- fill = { bg = colors.bright_black },
+        buffer_selected = { bold = true, italic = false },
+        separator_selected = {
+            fg = "#ff0000",
+            bg = "#ff0000",
+        },
+        diagnostic_selected = { bold = true },
+        info_selected = { bold = true },
+        info_diagnostic_selected = { bold = true },
+        warning_selected = { bold = true },
+        warning_diagnostic_selected = { bold = true },
+        error_selected = { bold = true },
+        error_diagnostic_selected = { bold = true },
+    },
+
+    options = {
+        mode = "buffers",                         -- set to "tabs" to only show tabpages instead
+        style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
+        themable = false,                         -- allows highlight groups to be overriden i.e. sets highlights as default
         diagnostics = "nvim_lsp",
         show_buffer_close_icons = false,
         separator_style = "thin",
-        sort_by = "relative_directory"
-	},
+        sort_by = "relative_directory",
+        show_buffer_icons = false,
+    },
 })

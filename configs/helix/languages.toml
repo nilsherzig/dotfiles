@@ -7,6 +7,21 @@ language-servers = [ "marksman", "ltex-ls" ]
 [language-server.ltex-ls]
 command = "ltex-ls"
 
+[language-server.ltex-ls.config]
+ltex.disabledRules = { "en-US" = [
+  "PROFANITY",
+], "de-DE" = [
+  "PROFANITY",
+] }
+
+ltex.dictionary = { "en-US" = [
+  "builtin",
+], "de-DE" = [
+  "builtin",
+  "README",
+  "TODO",
+]} 
+
 [[language]]
 name = "yaml"
 file-types = ["yaml", "yml"]
