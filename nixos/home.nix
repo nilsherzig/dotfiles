@@ -67,10 +67,7 @@ in {
     # };
 
     programs.neovim = {
-      # extraLuaConfig = lib.fileContents ../configs/nvim/init.lua;
       enable = true;
-      viAlias = true;
-      vimAlias = true;
       defaultEditor = true;
       plugins = with pkgs.vimPlugins; [
         vim-fugitive
