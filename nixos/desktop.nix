@@ -42,7 +42,7 @@ lib.mkIf (config.networking.hostName == "desktop") {
     fsType = "ext4";
   };
 
-  services.netdata.enable = true;
+  services.netdata.enable = false;
 
   # boot.initrd.availableKernelModules = [ "iwlwifi" "r8169" ];
   # # boot.initrd.availableKernelModules = [ "r8169" ];
@@ -67,16 +67,16 @@ lib.mkIf (config.networking.hostName == "desktop") {
     };
   };
 
-  services.k3s.enable = true;
+  # services.k3s.enable = false;
 
-  services.nfs.server.enable = true;
-  services.nfs.server.exports = ''
-    /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
-  '';
+  # services.nfs.server.enable = true;
+  # services.nfs.server.exports = ''
+  #   /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
+  # '';
 
-  fileSystems."/mnt/test" = {
-    device = "desktop:/bigdata/media/";
-    fsType = "nfs";
-  };
+  # fileSystems."/mnt/test" = {
+  #   device = "desktop:/bigdata/media/";
+  #   fsType = "nfs";
+  # };
 
 }
