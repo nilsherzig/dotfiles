@@ -153,6 +153,10 @@
         };
       };
       folders = {
+        "Uni" = {
+          path = "/home/nils/uni";
+          devices = [ "desktop" "laptop" ];
+        };
         "Kubernetes" = {
           path = "/home/nils/kubernetes";
           devices = [ "desktop" "laptop" ];
