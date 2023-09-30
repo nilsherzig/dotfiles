@@ -10,6 +10,7 @@
     bluetuith
     bottles
     brightnessctl
+    taplo
     broot
     # cdrtools
     # celluloid
@@ -190,7 +191,8 @@
     syncthing
     terraform
     terraform-ls
-    texlive.combined.scheme-small
+    texlive.combined.scheme-medium
+    texlab
     # theme
     #theme
     tmux

@@ -1,16 +1,16 @@
-local null_ls = require("null-ls")
-local cspell = require('cspell')
+-- local null_ls = require("null-ls")
+-- local cspell = require('cspell')
 
-null_ls.setup({
-    sources = {
-        cspell.diagnostics,
-        cspell.code_actions,
-        cspell.diagnostics,
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.diagnostics.ruff,
-        null_ls.builtins.completion.spell,
-        null_ls.builtins.diagnostics.cspell,
-        null_ls.builtins.code_actions.cspell
-    },
-})
+-- null_ls.setup({
+--     sources = {
+--         cspell.diagnostics,
+--         cspell.code_actions,
+--         cspell.diagnostics,
+--         null_ls.builtins.formatting.stylua,
+--         null_ls.builtins.diagnostics.eslint,
+--         null_ls.builtins.diagnostics.ruff,
+--         null_ls.builtins.completion.spell,
+--         null_ls.builtins.diagnostics.cspell,
+--         null_ls.builtins.code_actions.cspell
+--     },
+-- })

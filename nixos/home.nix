@@ -112,15 +112,15 @@ in {
         nvim-colorizer-lua
         # orgmode
         vim-table-mode
-        gruvbox-nvim
+        # gruvbox-nvim
         # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
-        (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
-        (fromGitHub "HEAD" "jmbuhr/otter.nvim")
+        # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
+        # (fromGitHub "HEAD" "jmbuhr/otter.nvim")
         # (fromGitHub "HEAD" "akinsho/org-bullets.nvim")
         (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
-        (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
-        (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
-        (fromGitHub "HEAD" "davidmh/cspell.nvim")
+        # (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
+        # (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
+        # (fromGitHub "HEAD" "davidmh/cspell.nvim")
         (fromGitHub "HEAD" "dgagn/diagflow.nvim")
       ];
     };
