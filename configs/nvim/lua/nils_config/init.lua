@@ -1,6 +1,8 @@
 require("nils_config.remap")
 require("nils_config.lazy")
 
+vim.wo.fillchars='eob: '
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -68,28 +70,6 @@ require('colorizer').setup()
 --     },
 -- }
 
-require("nvim-tree").setup {
-    view = {
-        centralize_selection = true,
-        adaptive_size = false,
-        side = "right",
-        preserve_window_proportions = true,
-        float = {
-            enable = true,
-            quit_on_focus_loss = true,
-            open_win_config = function()
-                return {
-                    row = 0,
-                    width = 30,
-                    border = "rounded",
-                    relative = "editor",
-                    col = vim.o.columns,
-                    height = vim.o.lines - 3,
-                }
-            end,
-        },
-    },
-}
 
 -- require("yaml-companion")
 -- require("telescope").load_extension("yaml_schema")

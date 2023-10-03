@@ -122,6 +122,8 @@ in {
         # (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
         # (fromGitHub "HEAD" "davidmh/cspell.nvim")
         (fromGitHub "HEAD" "dgagn/diagflow.nvim")
+        # (fromGitHub "HEAD" "toppair/reach.nvim")
+        (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
       ];
     };
   };
