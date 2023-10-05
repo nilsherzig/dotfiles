@@ -24,8 +24,8 @@ require("catppuccin").setup({
         shade = "dark",
         percentage = 0.15,
     },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
+    no_italic = false,    -- Force no italic
+    no_bold = false,      -- Force no bold
     no_underline = false, -- Force no underline
     styles = {
         comments = { "italic" },
@@ -42,7 +42,18 @@ require("catppuccin").setup({
         operators = {},
     },
     color_overrides = {},
-    custom_highlights = {},
+    custom_highlights = function(colors)
+        return {
+            StatusLineNC = { 
+                fg = colors.surface1,
+                bg = colors.base,
+            },
+            StatusLine = { 
+                fg = colors.overlay3,
+                bg = colors.base,
+            },
+        }
+    end,
     integrations = {
         cmp = true,
         gitsigns = true,
@@ -85,6 +96,6 @@ require("catppuccin").setup({
 --   transparent_mode = true,
 -- })
 
--- vim.cmd('colorscheme gruvbox') -- load 1 
+-- vim.cmd('colorscheme gruvbox') -- load 1
 -- vim.cmd('colorscheme gruvbox') -- load 2 - not a error theme is kinda weird
 vim.cmd.colorscheme("catppuccin")

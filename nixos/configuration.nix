@@ -62,7 +62,7 @@
   time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  # networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
 
   i18n.defaultLocale = "en_US.UTF-8";
 

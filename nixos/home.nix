@@ -124,6 +124,7 @@ in {
         (fromGitHub "HEAD" "dgagn/diagflow.nvim")
         # (fromGitHub "HEAD" "toppair/reach.nvim")
         (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
+        (fromGitHub "HEAD" "Vonr/align.nvim")
       ];
     };
   };

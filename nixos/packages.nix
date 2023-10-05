@@ -34,6 +34,7 @@
     docker-compose
     dolphin-emu
     du-dust
+    etcd
     # evince
     # evolution
     fd
@@ -231,5 +232,7 @@
     zathura
     zoxide
     zsh-syntax-highlighting
+    ytfzf
+    ueberzugpp
   ];
 }

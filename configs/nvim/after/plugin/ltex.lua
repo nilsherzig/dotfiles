@@ -13,7 +13,7 @@ local FalsePositives_file = {
     ["de-DE"] = {vim.fn.getenv("XDG_CONFIG_HOME") .. "spell/false.txt"} -- there is another way to find ~/.config/nvim ?
 }
 
-print(Dictionary_file["de-DE"])
+-- print(Dictionary_file["de-DE"])
 local function readFiles(files)
     local dict = {}
     for _,file in ipairs(files) do
