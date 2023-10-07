@@ -69,18 +69,20 @@ require("lspconfig").yamlls.setup {
 -- css things?
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require('lspconfig').cssls.setup {
     capabilities = capabilities,
 }
 --
 
 lsp.nvim_workspace()
+
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
     ["<tab>"] = cmp.mapping.select_next_item(cmp_select),
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
     ["<C-Space>"] = cmp.mapping.complete(),
 })
 
@@ -94,15 +96,13 @@ lsp.setup_nvim_cmp({
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
-        error = "E",
-        warn = "W",
-        hint = "H",
-        info = "I",
+        error = "●",
+        warn = "●",
+        hint = "●",
+        info = "●",
     },
 })
 
--- lsp.on_attach(function(client, bufnr)
---     local opts = { buffer = bufnr, remap = false }
 local opts = { remap = false }
 
 vim.keymap.set("n", "gd", function()
@@ -139,8 +139,11 @@ end, opts)
 
 lsp.setup()
 
+vim.diagnostic.config({
+    virtual_text = true,
+})
+
 cmp.setup({
-    -- preselect = "item",
     snippet = {
         expand = function(args)
             require("luasnip").lsp_expand(args.body)
@@ -148,30 +151,47 @@ cmp.setup({
     },
 
     completion = {
+        -- completeopt = "menu,menuone,noselect",
         completeopt = "menu,menuone,noinsert",
     },
 
+    -- view = {
+    --     entities = "native"
+    -- },
+
+    experimental = {
+        ghost_text = false,
+    },
+
+
+    -- window = {
+    --     documentation = cmp.config.window.bordered(),
+    --     completion = cmp.config.window.bordered({
+    --         winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+    --     }),
+    -- },
     window = {
         documentation = {
-            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-            winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
-
+            border = nil,
+            -- border = { "x", "─", "╮", "│", "╯", "─", "╰", "│" },
+            -- winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
         },
         completion = {
             scrollbar = false,
             border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
             winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
-            col_offset = -3,
+            col_offset = 3,
             side_padding = 0,
         },
     },
+
     formatting = {
-        fields = { "kind", "abbr", "menu" },
+        fields = { "kind", "abbr" },
         format = function(entry, vim_item)
             local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = " " .. (strings[1] or "") .. " "
-            kind.menu = "    (" .. (strings[2] or "") .. ")"
+            kind.abbr = (fixStringLength(vim_item.abbr))
             return kind
         end,
     },
@@ -185,6 +205,23 @@ cmp.setup({
     },
 })
 
-vim.diagnostic.config({
-    virtual_text = true,
-})
+-- yea yea gpt4 generated functions 💀
+function fixStringLength(str)
+    local length = 20   -- The fixed length you want for the string
+    local strLen = #str -- Get the length of the input string
+
+    -- Step 1: Truncate the string if it's longer than 20 characters
+    if strLen > length - 3 then
+        return string.sub(str, 1, length - 3) .. "..."
+    end
+
+    -- Step 2: Pad the string with spaces if it's shorter than 20 characters
+    if strLen < length then
+        local numSpaces = length - strLen          -- Calculate the number of spaces needed
+        local padding = string.rep(" ", numSpaces) -- Generate a string of spaces
+        return str .. padding                      -- Concatenate the original string with the padding
+    end
+
+    -- Step 3: Return the string as-is if it's already 20 characters
+    return str
+end

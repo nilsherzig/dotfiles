@@ -125,6 +125,10 @@ in {
         # (fromGitHub "HEAD" "toppair/reach.nvim")
         (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
         (fromGitHub "HEAD" "Vonr/align.nvim")
+        (fromGitHub "HEAD" "stevearc/conform.nvim")
+        (fromGitHub "HEAD" "github/copilot.vim")
+        (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
+        # (fromGitHub "HEAD" "MunifTanjim/nui.nvim")
       ];
     };
   };

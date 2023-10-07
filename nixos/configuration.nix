@@ -258,6 +258,7 @@
     jetbrains-mono
     comic-mono
     nerdfonts
+    fantasque-sans-mono
   ];
 
   xdg.mime.defaultApplications = {

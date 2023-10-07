@@ -16,6 +16,7 @@
     # celluloid
     #chat
     cilium-cli
+    glow
     clang-tools
     clang-tools
     clusterctl
@@ -40,7 +41,7 @@
     fd
     feh
     ffmpeg
-    # firefox
+    firefox
     fzf
     #games
     gammastep
@@ -72,7 +73,7 @@
     go
     golangci-lint
     gomodifytags
-    google-chrome
+    # google-chrome
     gopls
     gore
     gotests
