@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
     ./desktop.nix
@@ -7,6 +6,7 @@
     ./hostname.nix
     ./home.nix
     ./packages.nix
+    ./sync.nix
   ];
 
   # Bootloader.
@@ -126,56 +126,6 @@
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
-
-  services = {
-    syncthing = {
-      enable = true;
-      user = "nils";
-      dataDir = "/home/nils/syncthing"; # Default folder for new synced folders
-      configDir =
-        "/home/nils/.config/syncthing"; # Folder for Syncthing's settings and keys
-      overrideDevices =
-        true; # overrides any devices added or deleted through the WebUI
-      overrideFolders =
-        true; # overrides any folders added or deleted through the WebUI
-      devices = {
-        "desktop" = {
-          id =
-            "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE";
-        };
-        "laptop" = {
-          id =
-            "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3";
-        };
-        "handy" = {
-          id =
-            "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7";
-        };
-      };
-      folders = {
-        "Uni" = {
-          path = "/home/nils/uni";
-          devices = [ "desktop" "laptop" ];
-        };
-        "Kubernetes" = {
-          path = "/home/nils/kubernetes";
-          devices = [ "desktop" "laptop" ];
-        };
-        "Wallpaper" = {
-          path = "/home/nils/Pictures/wallpaper";
-          devices = [ "desktop" "laptop" ];
-        };
-        "ZugMedien" = {
-          path = "/home/nils/Videos/Zug/";
-          devices = [ "desktop" "laptop" "handy" ];
-        };
-        "Obsidian" = {
-          path = "/home/nils/Notes";
-          devices = [ "desktop" "laptop" "handy" ];
-        };
-      };
-    };
-  };
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
@@ -306,7 +256,8 @@
         # rightalt = "layer(rightalt)";
         rightalt = "layer(altgr)";
         # capslock = "overload(caps, esc)";
-        capslock = "overload(caps, macro(esc :))";
+        # capslock = "overload(caps, macro(esc :))";
+        capslock = "esc";
       };
 
       altgr = {
@@ -315,6 +266,7 @@
         "o" = "G-9";
         "p" = "G-0";
       };
+
       caps = {
         h = "left";
         j = "down";

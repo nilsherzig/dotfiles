@@ -3,7 +3,8 @@ require("conform").setup({
         lua = { "stylua" },
         python = { "isort", "black" },
         javascript = { { "prettierd", "prettier" } },
-        go = { "gofmt" }
+        go = { "gofmt" },
+        nix = { "nixfmt" }
     },
 
     format_on_save = {

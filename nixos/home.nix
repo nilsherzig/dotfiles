@@ -128,7 +128,10 @@ in {
         (fromGitHub "HEAD" "stevearc/conform.nvim")
         (fromGitHub "HEAD" "github/copilot.vim")
         (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
+        (fromGitHub "HEAD" "stevearc/oil.nvim")
         # (fromGitHub "HEAD" "MunifTanjim/nui.nvim")
+        # (fromGitHub "HEAD" "SmiteshP/nvim-navbuddy")
+        # (fromGitHub "HEAD" "SmiteshP/nvim-navic")
       ];
     };
   };
