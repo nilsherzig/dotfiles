@@ -11,5 +11,4 @@ require("conform").setup({
         timeout_ms = 500,
         lsp_fallback = true,
     },
-
 })
