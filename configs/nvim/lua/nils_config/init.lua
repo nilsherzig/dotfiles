@@ -1,7 +1,7 @@
 require("nils_config.remap")
 require("nils_config.lazy")
 
-vim.wo.fillchars='eob: '
+vim.wo.fillchars = 'eob: '
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -34,6 +34,7 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 

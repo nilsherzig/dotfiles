@@ -17,9 +17,9 @@
             id =
               "B56X3FL-YZ564ID-APGMTTF-D6WERDK-RGYGZ2J-CYTCUMO-SBLRC5W-3VOCDA3";
           };
-          "handy" = {
+          "pixel" = {
             id =
-              "JVEVYPA-7YG7QWO-32G776N-AOYQQFN-OYSF7ZK-KSZW3BC-FOMMHPO-GDXHCA7";
+              "OLD6HI2-4TEWRD3-JPJVY75-EZ3AJVS-PYD6FSP-LC7JX44-4IKY5YW-RU522AU";
           };
           "server" = {
             id =
@@ -30,6 +30,10 @@
           "Uni" = {
             path = "/home/nils/uni";
             devices = [ "desktop" "laptop" "server" ];
+            versioning = {
+              type = "trashcan";
+              params.cleanoutDays = "1000";
+            };
           };
           "Kubernetes" = {
             path = "/home/nils/kubernetes";
@@ -39,17 +43,21 @@
               params.cleanoutDays = "1000";
             };
           };
-          "Wallpaper" = {
-            path = "/home/nils/Pictures/wallpaper";
-            devices = [ "desktop" "laptop" ];
-          };
-          "ZugMedien" = {
-            path = "/home/nils/Videos/Zug/";
-            devices = [ "desktop" "laptop" "handy" ];
-          };
           "Obsidian" = {
             path = "/home/nils/Notes";
-            devices = [ "desktop" "laptop" "handy" ];
+            devices = [ "desktop" "laptop" "pixel" "server" ];
+            versioning = {
+              type = "trashcan";
+              params.cleanoutDays = "1000";
+            };
+          };
+          "Wallpaper" = {
+            path = "/home/nils/Pictures/wallpaper";
+            devices = [ "desktop" "laptop" "server" ];
+          };
+          "Audiobooks" = {
+            path = "/home/nils/Documents/audiobooks";
+            devices = [ "desktop" "laptop" "pixel" "server" ];
           };
         };
       };

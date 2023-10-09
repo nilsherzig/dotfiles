@@ -1,0 +1,1 @@
+require('symbol-usage').setup()

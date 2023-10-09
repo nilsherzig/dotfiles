@@ -1,99 +1,78 @@
 { pkgs, ... }: {
   users.users.nils.packages = with pkgs; [
+    (python310.withPackages (ps:
+      with ps; [
+        python310Packages.bpython
+        python310Packages.diagrams
+        python310Packages.jupyter_client
+        python310Packages.pillow
+        python310Packages.pynvim
+        python310Packages.python-lsp-server
+        python310Packages.recipe-scrapers
+      ]))
     act
     adw-gtk3
     ansible
     asciinema
-    # atuin
     bat
-    # bfg-repo-cleaner
     bluetuith
     bottles
     brightnessctl
-    taplo
     broot
-    # cdrtools
-    # celluloid
-    #chat
     cilium-cli
-    glow
     clang-tools
     clang-tools
     clusterctl
-    # container
     containerlab
     deja-dup
     delve
-    # desktop things / using gnome in this case
     dig
     direnv
     discord
-    # discordo
-    # distrobox
     distrobox
     docker
     docker-compose
     dolphin-emu
     du-dust
     etcd
-    # evince
-    # evolution
     fd
     feh
     ffmpeg
     firefox
     fzf
-    #games
     gammastep
     gaphor
     gcc
-    # gh
-    # ghidra-bin
-    # gimp
     ginkgo
     git
     gitlab-runner
     gitleaks
+    glow
     gnome.adwaita-icon-theme
     gnome.eog
-    # gnome-extension-manager
-    # gnomeExtensions.blur-my-shell
-    # gnomeExtensions.mullvad-indicator
-    # gnomeExtensions.tray-icons-reloaded
     gnome.gnome-clocks
-    # gnome.gnome-control-center
     gnome.gnome-disk-utility
     gnome.gnome-font-viewer
-    # gnome.gnome-tweaks
     gnome.nautilus
-    # gnome shell 
     gnome.simple-scan
-    # gnome.sushi
     gnumake
     go
+    go-tools
     golangci-lint
     gomodifytags
-    # google-chrome
     gopls
     gore
     gotests
-    go-tools
     gotools
     gping
     gradience
-    # gradle_7
     grim
     grml-zsh-config
-    # hardware / stats
     helix
     html-tidy
     hubble
-    # images
     imlib2Full
-    # internet
-    # jdk17
     jdt-language-server
-    # jellyfin-media-player
     jellyfin-media-player
     jq
     k3d
@@ -101,18 +80,14 @@
     k9s
     kind
     kitty
-    # kodi-wayland
     kubectl
     kubectx
     kubernetes-helm
     kubeseal
-    # language server
     lazydocker
     lazygit
-    # lens
     libnotify
     libqalculate
-    # libs
     libwebp
     liquidctl
     litecli
@@ -122,24 +97,18 @@
     lua-language-server
     lua-language-server
     luarocks
-    # lxappearance
-    # mail 
-    #mail 
     mako
     marksman
     masscan
     minikube
-    # misc
     mission-center
     mpv
-    # neovim
     nil
     nixfmt
     nixpkgs-fmt
     nixpkgs-fmt
     nmap
     nnn
-    nodejs
     nodePackages.js-beautify
     nodePackages_latest.bash-language-server
     nodePackages_latest.bash-language-server
@@ -151,28 +120,15 @@
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-    obsidian
+    nodejs
     obs-studio
-    # openrgb
-    # opensnitch-ui
+    obsidian
     openvpn
-    # other things
     pandoc
     pavucontrol
     pciutils
-    # polkit
-    # polkit_gnome
     popeye
     prismlauncher
-    # prismlauncher-qt5
-    # protonmail-bridge
-    # protonmail-bridge
-    # pure-prompt
-    python311
-    python311Packages.bpython
-    python311Packages.diagrams
-    python311Packages.python-lsp-server
-    python311Packages.recipe-scrapers
     radare2
     radeontop
     ranger
@@ -191,49 +147,40 @@
     swappy
     swaybg
     syncthing
+    taplo
     terraform
     terraform-ls
-    texlive.combined.scheme-medium
     texlab
-    # theme
-    #theme
+    texlive.combined.scheme-medium
     tmux
-    # tofi
     traceroute
     tree
     typescript
     typst
     typst-fmt
     typst-lsp
-    # udisks # gnome disks backend
+    ueberzug
+    ueberzugpp
     unrar-wrapper
     unzip
     usbutils
     via # somehow doesnt work, appimage in repo works on arch tho
-    # video 
     virt-manager
     virtualenv
-    # vscode
     vscode.fhs
     websocat
-    # whatsapp-for-linux
-    # window manager tools
     wine
-    # wireshark
     wl-clipboard
-    # wofi
     wtype
     xdg-desktop-portal-hyprland
     xdg-utils
     yamlfmt
     yarn
-    # ydotool
     yt-dlp
+    ytfzf
     yuzu-early-access
     zathura
     zoxide
     zsh-syntax-highlighting
-    ytfzf
-    ueberzugpp
   ];
 }

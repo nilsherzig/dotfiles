@@ -132,6 +132,8 @@ in {
         # (fromGitHub "HEAD" "MunifTanjim/nui.nvim")
         # (fromGitHub "HEAD" "SmiteshP/nvim-navbuddy")
         # (fromGitHub "HEAD" "SmiteshP/nvim-navic")
+        (fromGitHub "HEAD" "Wansmer/symbol-usage.nvim")
+        # (fromGitHub "HEAD" "dccsillag/magma-nvim")
       ];
     };
   };
