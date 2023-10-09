@@ -306,7 +306,8 @@
         # rightalt = "layer(rightalt)";
         rightalt = "layer(altgr)";
         # capslock = "overload(caps, esc)";
-        capslock = "overload(caps, macro(esc :))";
+        # capslock = "overload(caps, macro(esc :))";
+        capslock = "esc";
       };
 
       altgr = {
@@ -315,6 +316,7 @@
         "o" = "G-9";
         "p" = "G-0";
       };
+
       caps = {
         h = "left";
         j = "down";
