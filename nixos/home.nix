@@ -78,15 +78,15 @@ in {
         nvim-tree-lua
         plenary-nvim
         mini-nvim
-        bufferline-nvim
+        # bufferline-nvim
         nvim-web-devicons
         indent-blankline-nvim
-        trouble-nvim
-        null-ls-nvim
-        which-key-nvim
+        # trouble-nvim
+        # null-ls-nvim
+        # which-key-nvim
         nvim-cursorline
         nvim-autopairs
-        neodev-nvim
+        # neodev-nvim
         wilder-nvim
         gitsigns-nvim
         nvim-comment
@@ -109,7 +109,7 @@ in {
         cmp_luasnip
         # neorg
         markdown-preview-nvim
-        nvim-colorizer-lua
+        # nvim-colorizer-lua
         # orgmode
         vim-table-mode
         # gruvbox-nvim
@@ -123,11 +123,11 @@ in {
         # (fromGitHub "HEAD" "davidmh/cspell.nvim")
         (fromGitHub "HEAD" "dgagn/diagflow.nvim")
         # (fromGitHub "HEAD" "toppair/reach.nvim")
-        (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
-        (fromGitHub "HEAD" "Vonr/align.nvim")
+        # (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
+        # (fromGitHub "HEAD" "Vonr/align.nvim")
         (fromGitHub "HEAD" "stevearc/conform.nvim")
         (fromGitHub "HEAD" "github/copilot.vim")
-        (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
+        # (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
         (fromGitHub "HEAD" "stevearc/oil.nvim")
         # (fromGitHub "HEAD" "MunifTanjim/nui.nvim")
         # (fromGitHub "HEAD" "SmiteshP/nvim-navbuddy")

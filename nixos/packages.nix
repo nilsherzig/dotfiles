@@ -25,6 +25,7 @@
     clusterctl
     containerlab
     deja-dup
+    graphviz
     delve
     dig
     direnv
@@ -167,7 +168,7 @@
     via # somehow doesnt work, appimage in repo works on arch tho
     virt-manager
     virtualenv
-    vscode.fhs
+    vscode-fhs
     websocat
     wine
     wl-clipboard

@@ -1,7 +1,46 @@
-# ===== LATEX ===== 
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "javascript"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
 [[language]]
 name = "latex"
-language-servers = [ "texlab", "ltex-ls" ]
+language-servers = ["texlab", "ltex-ls"]
+
+[[language]]
+name = "markdown"
+scope = "source.markdown"
+file-types = ["markdown", "md", "txt"]
+language-servers = ["marksman", "ltex-ls"]
+
+[[language]]
+name = "nix"
+file-types = ["nix"]
+formatter = { command = "nixfmt" }
+
+[[language]]
+name = "yaml"
+file-types = ["yaml", "yml"]
+language-servers = ["yaml-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+
+
+
+
+
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"] 
 
 [language-server.texlab.config.texlab.build]
 onSave = true
@@ -9,26 +48,16 @@ forwardSearchAfter = true
 
 [language-server.texlab.config.texlab.forwardSearch]
 executable = "zathura"
-args = [ "--synctex-forward", "%l:1:%f", "%p" ]
+args = ["--synctex-forward", "%l:1:%f", "%p"]
 
 [language-server.texlab.config.texlab.chktex]
 onEdit = true
-
-[[language]]
-name = "markdown"
-scope = "source.markdown"
-file-types = ["markdown", "md", "txt"]
-language-servers = [ "marksman", "ltex-ls" ]
 
 [language-server.ltex-ls]
 command = "ltex-ls"
 
 [language-server.ltex-ls.config]
-ltex.disabledRules = { "en-US" = [
-  "PROFANITY",
-], "de-DE" = [
-  "PROFANITY",
-] }
+ltex.disabledRules = { "en-US" = ["PROFANITY"], "de-DE" = ["PROFANITY"] }
 
 ltex.dictionary = { "en-US" = [
   "builtin",
@@ -36,19 +65,9 @@ ltex.dictionary = { "en-US" = [
   "builtin",
   "README",
   "TODO",
-]} 
+] }
 
-[[language]]
-name = "yaml"
-file-types = ["yaml", "yml"]
-language-servers = [ "yaml-language-server" ]
-auto-format = true
-formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
 [language-server.yaml-language-server]
-config = {  yaml = {  validate = false, schemas = { kubernetes = "*.yaml", "http://json.schemastore.org/github-workflow" = ".github/workflows/*", "http://json.schemastore.org/github-action" = ".github/action.{yml,yaml}", "https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json" = "azure-pipelines.yml", "http://json.schemastore.org/ansible-stable-2.9" = "roles/tasks/*.{yml,yaml}", "http://json.schemastore.org/prettierrc" = ".prettierrc.{yml,yaml}", "http://json.schemastore.org/kustomization" = "kustomization.{yml,yaml}", "http://json.schemastore.org/ansible-playbook" = "*play*.{yml,yaml}", "http://json.schemastore.org/chart" = "Chart.{yml,yaml}", "https://json.schemastore.org/dependabot-v2" = ".github/dependabot.{yml,yaml}", "https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json" = "*gitlab-ci*.{yml,yaml}", "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json" = "*api*.{yml,yaml}", "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "*docker-compose*.{yml,yaml}", "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" = "*flow*.{yml,yaml}" }, format = {  enable = false  } } } 
+config = { yaml = { validate = false, schemas = { kubernetes = "*.yaml", "http://json.schemastore.org/github-workflow" = ".github/workflows/*", "http://json.schemastore.org/github-action" = ".github/action.{yml,yaml}", "https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json" = "azure-pipelines.yml", "http://json.schemastore.org/ansible-stable-2.9" = "roles/tasks/*.{yml,yaml}", "http://json.schemastore.org/prettierrc" = ".prettierrc.{yml,yaml}", "http://json.schemastore.org/kustomization" = "kustomization.{yml,yaml}", "http://json.schemastore.org/ansible-playbook" = "*play*.{yml,yaml}", "http://json.schemastore.org/chart" = "Chart.{yml,yaml}", "https://json.schemastore.org/dependabot-v2" = ".github/dependabot.{yml,yaml}", "https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json" = "*gitlab-ci*.{yml,yaml}", "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json" = "*api*.{yml,yaml}", "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "*docker-compose*.{yml,yaml}", "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" = "*flow*.{yml,yaml}" }, format = { enable = false } } }
 
-[[language]]
-name = "nix"
-file-types = [ "nix" ]
-formatter = { command = "nixfmt" }

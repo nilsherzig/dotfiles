@@ -49,7 +49,7 @@ vim.opt.updatetime = 0 -- might harm your ssd - something about swap files
 
 require("nils_config.autocommands")
 
-require('colorizer').setup()
+-- require('colorizer').setup()
 -- require('orgmode').setup_ts_grammar()
 --
 -- require('orgmode').setup({

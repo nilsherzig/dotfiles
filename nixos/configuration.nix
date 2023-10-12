@@ -54,6 +54,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   systemd.network.wait-online.timeout = 0;
+  boot.cleanTmpDir = true;
   boot.initrd.systemd.network.wait-online.timeout = 0;
   systemd.network.wait-online.enable = false;
   systemd.services.NetworkManager-wait-online.enable = false;

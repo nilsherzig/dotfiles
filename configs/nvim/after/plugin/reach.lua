@@ -1,19 +1,19 @@
-local bmui = require("buffer_manager.ui")
-
-vim.keymap.set('n', '<leader>r', function() bmui.toggle_quick_menu() end, {})
-vim.keymap.set("n", "<S-h>", function() bmui.nav_prev() end, {})
-vim.keymap.set("n", "<S-l>", function() bmui.nav_next() end, {})
-
-require("buffer_manager").setup({
-  select_menu_item_commands = {
-    v = {
-      key = "<C-v>",
-      command = "vsplit"
-    },
-    h = {
-      key = "|",
-      command = "split"
-    }
-  },
-})
-
+-- local bmui = require("buffer_manager.ui")
+--
+-- vim.keymap.set('n', '<leader>r', function() bmui.toggle_quick_menu() end, {})
+-- vim.keymap.set("n", "<S-h>", function() bmui.nav_prev() end, {})
+-- vim.keymap.set("n", "<S-l>", function() bmui.nav_next() end, {})
+--
+-- require("buffer_manager").setup({
+--   select_menu_item_commands = {
+--     v = {
+--       key = "<C-v>",
+--       command = "vsplit"
+--     },
+--     h = {
+--       key = "|",
+--       command = "split"
+--     }
+--   },
+-- })
+--
