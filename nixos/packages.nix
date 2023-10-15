@@ -71,7 +71,7 @@
     gradience
     grim
     grml-zsh-config
-    helix
+    helix # will be overwritten by nix profile install github:helix-editor/helix to get the current master 
     html-tidy
     hubble
     imlib2Full
