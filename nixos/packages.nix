@@ -12,6 +12,7 @@
       ]))
     act
     adw-gtk3
+    shell_gpt
     ansible
     asciinema
     bat
@@ -33,6 +34,7 @@
     distrobox
     docker
     docker-compose
+    air
     dolphin-emu
     du-dust
     etcd

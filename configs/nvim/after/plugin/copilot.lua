@@ -6,4 +6,7 @@ vim.g.copilot_filetypes = {
     ['markdown'] = true,
     ['yaml'] = true,
     ['go'] = true,
+    ['javascript'] = true,
+    ['html'] = true,
+    ['css'] = true,
 }

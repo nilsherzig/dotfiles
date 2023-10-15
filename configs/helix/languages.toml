@@ -3,6 +3,11 @@ name = "html"
 language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
 
 [[language]]
+name = "svelte"
+file-types = [ "svelte" ]
+language-servers = [ "svelteserver", "tailwindcss-ls" ]
+
+[[language]]
 name = "css"
 language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 
