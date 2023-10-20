@@ -182,15 +182,15 @@
     # '';
 
     interactiveShellInit = ''
-      # source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
+      source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
       # zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
     '';
-    promptInit =
-      "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
+    # promptInit =
+    #   "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
 
     shellInit = ''
       eval "$(direnv hook zsh)"
-      export EDITOR=nvim
+      export EDITOR=hx
       export PATH=~/.npm-packages/bin:$PATH
       export NODE_PATH=~/.npm-packages/lib/node_modules
     '';

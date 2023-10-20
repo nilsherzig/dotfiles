@@ -68,7 +68,7 @@ in {
 
     programs.neovim = {
       enable = true;
-      defaultEditor = true;
+      defaultEditor = false;
       plugins = with pkgs.vimPlugins; [
         vim-fugitive
         lsp-zero-nvim

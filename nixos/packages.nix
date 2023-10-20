@@ -37,6 +37,8 @@
     air
     dolphin-emu
     du-dust
+    openssl
+    cfssl
     etcd
     fd
     feh
@@ -44,6 +46,7 @@
     firefox
     fzf
     gammastep
+    xplr
     gaphor
     gcc
     ginkgo
