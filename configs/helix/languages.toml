@@ -1,18 +1,22 @@
 [[language]]
 name = "html"
+auto-format = true
 language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
 
 [[language]]
 name = "svelte"
+auto-format = true
 file-types = [ "svelte" ]
 language-servers = [ "svelteserver", "tailwindcss-ls" ]
 
 [[language]]
 name = "css"
+auto-format = true
 language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 
 [[language]]
 name = "javascript"
+auto-format = true
 language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 
 [[language]]

@@ -46,8 +46,19 @@ require('mini.comment').setup(
     }
 )
 require('mini.tabline').setup()
-require('mini.cursorword').setup()
+vim.api.nvim_set_hl(0, 'MiniTablineCurrent', {
+    italic = true,
+    bold = true,
+    underline = false,
+})
 
+vim.api.nvim_set_hl(0, 'MiniTablineModifiedCurrent', {
+    default = true,
+    underline = true,
+    fg = "red",
+})
+
+-- require('mini.cursorword').setup()
 local miniclue = require('mini.clue')
 miniclue.setup({
     triggers = {

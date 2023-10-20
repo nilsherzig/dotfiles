@@ -44,11 +44,17 @@ require("catppuccin").setup({
     color_overrides = {},
     custom_highlights = function(colors)
         return {
-            StatusLineNC = { 
+            FloatBorder = {
+                fg = colors.overlay2,
+            },
+            TelescopeBorder = {
+                fg = colors.overlay2,
+            },
+            StatusLineNC = {
                 fg = colors.surface1,
                 bg = colors.base,
             },
-            StatusLine = { 
+            StatusLine = {
                 fg = colors.overlay3,
                 bg = colors.base,
             },
@@ -60,7 +66,7 @@ require("catppuccin").setup({
         nvimtree = true,
         telescope = true,
         notify = false,
-        mini = true,
+        mini = false,
         -- indent_blankline = {
         --     enabled = true
         -- },
