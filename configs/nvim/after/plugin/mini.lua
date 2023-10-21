@@ -58,6 +58,9 @@ vim.api.nvim_set_hl(0, 'MiniTablineModifiedCurrent', {
     fg = "red",
 })
 
+vim.api.nvim_set_hl(0, 'MiniTablineVisible', {
+})
+
 -- require('mini.cursorword').setup()
 local miniclue = require('mini.clue')
 miniclue.setup({

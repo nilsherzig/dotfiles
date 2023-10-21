@@ -45,7 +45,6 @@
   # networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.enableIPv6 = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -54,7 +53,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   systemd.network.wait-online.timeout = 0;
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
   boot.initrd.systemd.network.wait-online.timeout = 0;
   systemd.network.wait-online.enable = false;
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -157,8 +156,8 @@
     enable = true;
     autosuggestions.enable = false;
     ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "git" "fzf" "zoxide" ];
-    syntaxHighlighting.enable = true;
+    ohMyZsh.plugins = [ "fzf" ];
+    syntaxHighlighting.enable = false;
     shellAliases = {
       ip = "ip --color=always"; # ip show colors
       rclone = "rclone -P"; # always show rclone progress
@@ -182,11 +181,10 @@
     # '';
 
     interactiveShellInit = ''
-      # source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
-      # zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
+      source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
+      zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
     '';
-    promptInit =
-      "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
+    # promptInit = "source <(starship init zsh --print-full-init)"; # otherwise it'll override the grml prompt
 
     shellInit = ''
       eval "$(direnv hook zsh)"
@@ -235,8 +233,8 @@
   services.flatpak.enable = false;
   programs.dconf.enable = true;
   programs.adb.enable = true;
-
-  environment.sessionVariables = rec {
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
     XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME = "$HOME/.local/share";
@@ -246,6 +244,7 @@
     XDG_BIN_HOME = "$HOME/.local/bin";
     # PATH = [ "${XDG_BIN_HOME}" ];
   };
+
   nix.settings.auto-optimise-store = true;
   services.joycond.enable = true;
 
@@ -285,4 +284,5 @@
       # };
     };
   };
+  services.netdata.enable = true;
 }

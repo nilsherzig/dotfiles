@@ -42,8 +42,6 @@ lib.mkIf (config.networking.hostName == "desktop") {
     fsType = "ext4";
   };
 
-  services.netdata.enable = false;
-
   # boot.initrd.availableKernelModules = [ "iwlwifi" "r8169" ];
   # # boot.initrd.availableKernelModules = [ "r8169" ];
   # boot.kernelParams = [ "ip=dhcp" ];
@@ -78,5 +76,4 @@ lib.mkIf (config.networking.hostName == "desktop") {
   #   device = "desktop:/bigdata/media/";
   #   fsType = "nfs";
   # };
-
 }

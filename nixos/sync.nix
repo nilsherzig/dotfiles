@@ -27,6 +27,14 @@
           };
         };
         folders = {
+          "dotfiles" = {
+            path = "/home/nils/dotfiles";
+            devices = [ "desktop" "laptop" "server" ];
+            versioning = {
+              type = "trashcan";
+              params.cleanoutDays = "1000";
+            };
+          };
           "Uni" = {
             path = "/home/nils/uni";
             devices = [ "desktop" "laptop" "server" ];
@@ -43,22 +51,22 @@
               params.cleanoutDays = "1000";
             };
           };
-          "Obsidian" = {
-            path = "/home/nils/Notes";
-            devices = [ "desktop" "laptop" "pixel" "server" ];
-            versioning = {
-              type = "trashcan";
-              params.cleanoutDays = "1000";
-            };
-          };
+          # "Obsidian" = {
+          #   path = "/home/nils/Notes";
+          #   devices = [ "desktop" "laptop" "pixel" "server" ];
+          #   versioning = {
+          #     type = "trashcan";
+          #     params.cleanoutDays = "1000";
+          #   };
+          # };
           "Wallpaper" = {
             path = "/home/nils/Pictures/wallpaper";
             devices = [ "desktop" "laptop" "server" ];
           };
-          "Audiobooks" = {
-            path = "/home/nils/Documents/audiobooks";
-            devices = [ "desktop" "laptop" "pixel" "server" ];
-          };
+          # "Audiobooks" = {
+          #   path = "/home/nils/Documents/audiobooks";
+          #   devices = [ "desktop" "laptop" "pixel" "server" ];
+          # };
         };
       };
     };

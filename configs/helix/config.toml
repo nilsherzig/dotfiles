@@ -11,7 +11,6 @@ D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "ins
 "s" = ["move_next_word_end", "move_prev_word_start", "surround_add"]
 "a" = ["select_regex", "align_selections"]
 "m" = ":pipe /home/nils/dotfiles/scripts/helix-align-markdown-table.py"
-"p" = ":sh live-markdown-preview"
 
 [editor]
 true-color = true
