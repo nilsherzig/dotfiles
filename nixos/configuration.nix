@@ -188,7 +188,7 @@
 
     shellInit = ''
       eval "$(direnv hook zsh)"
-      export EDITOR=nvim
+      export EDITOR=hx
       export PATH=~/.npm-packages/bin:$PATH
       export NODE_PATH=~/.npm-packages/lib/node_modules
     '';

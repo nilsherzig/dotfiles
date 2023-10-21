@@ -37,10 +37,10 @@ lib.mkIf (config.networking.hostName == "desktop") {
     fsType = "ext4";
   };
 
-  fileSystems."/bigdata" = {
-    device = "/dev/disk/by-label/hdd12tb";
-    fsType = "ext4";
-  };
+  # fileSystems."/bigdata" = {
+  #   device = "/dev/disk/by-label/hdd12tb";
+  #   fsType = "ext4";
+  # };
 
   # boot.initrd.availableKernelModules = [ "iwlwifi" "r8169" ];
   # # boot.initrd.availableKernelModules = [ "r8169" ];
