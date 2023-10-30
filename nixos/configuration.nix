@@ -3,9 +3,9 @@
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
     ./desktop.nix
     ./laptop.nix
-    ./home.nix
+    # ./home.nix
     ./packages.nix
-    ./sync.nix
+    # ./sync.nix
   ];
 
   # Bootloader.
@@ -162,7 +162,7 @@
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch --upgrade";
       wifi =
         "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
       pixelbuds =
@@ -193,11 +193,7 @@
     '';
   };
 
-  programs.steam = { enable = true; };
-
   programs.hyprland.enable = true;
-
-  environment.systemPackages = with pkgs; [ htop mullvad-vpn starship ];
 
   fonts.packages = with pkgs; [
     cantarell-fonts
@@ -219,7 +215,7 @@
 
   services.udisks2.enable = true;
 
-  services.mullvad-vpn.enable = true;
+  # services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
   system.autoUpgrade.enable = true;
@@ -229,7 +225,7 @@
 
   # services.emacs.enable = true;
   hardware.bluetooth.settings = { General = { Experimental = true; }; };
-  services.flatpak.enable = false;
+  # services.flatpak.enable = false;
   programs.dconf.enable = true;
   programs.adb.enable = true;
   environment.sessionVariables = {
@@ -245,7 +241,7 @@
   };
 
   nix.settings.auto-optimise-store = true;
-  services.joycond.enable = true;
+  # services.joycond.enable = true;
 
   services.keyd = {
     enable = true;
@@ -272,16 +268,7 @@
         k = "up";
         l = "right";
       };
-      # caps = {
-      #   "j" = "kp4";
-      #   "k" = "kp2";
-      #   "l" = "kp6";
-      #   "i" = "kp8";
-      #   "f" = "leftmouse";
-      #   "s" = "rightmouse";
-      #   "d" = "middlemouse";
-      # };
     };
   };
-  services.netdata.enable = true;
+  # services.netdata.enable = true;
 }
