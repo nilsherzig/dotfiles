@@ -2,13 +2,13 @@ require("conform").setup({
     formatters_by_ft = {
         lua = { "stylua" },
         python = { "isort", "black" },
-        javascript = { { "prettierd", "prettier" } },
+        javascript = { "prettier" },
+        yaml = { "prettier" },
         go = { "gofmt" },
         nix = { "nixfmt" }
     },
 
-    format_on_save = {
-        timeout_ms = 500,
+    format_after_save = {
         lsp_fallback = true,
     },
 })

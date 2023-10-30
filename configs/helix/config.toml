@@ -2,10 +2,15 @@ theme = "custom_theme"
 
 [keys.normal]
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
-"C-r" = ":config-reload"
+"C-r" = ":reload-all"
 "H" = ":buffer-previous"
 "L" = ":buffer-next"
 "C-q" = ":bc"
+
+C-h = "select_prev_sibling"
+C-j = "shrink_selection"
+C-k = "expand_selection"
+C-l = "select_next_sibling"
 
 [keys.normal.tab]
 "s" = ["move_next_word_end", "move_prev_word_start", "surround_add"]
