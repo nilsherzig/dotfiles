@@ -23,6 +23,7 @@
     cilium-cli
     clang-tools
     clang-tools
+#    redisinsight
     clusterctl
     containerlab
     deja-dup

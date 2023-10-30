@@ -3,7 +3,6 @@
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
     ./desktop.nix
     ./laptop.nix
-    ./hostname.nix
     ./home.nix
     ./packages.nix
     ./sync.nix
