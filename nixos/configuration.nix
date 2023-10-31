@@ -91,8 +91,6 @@
   # KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   # '';
 
-  services.udev.packages = [ pkgs.dolphinEmu ];
-
   # Configure keymap in X11
   services.xserver = {
     layout = "de";

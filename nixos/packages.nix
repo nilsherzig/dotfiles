@@ -18,11 +18,11 @@
     # shell_gpt
     # ansible
     # asciinema
-    bat
+    # bat
     bluetuith
     # bottles
     # brightnessctl
-    broot
+    # broot
 #     cilium-cli
 #     clang-tools
 #     clang-tools
@@ -127,7 +127,7 @@
     nodePackages_latest.yaml-language-server
 #     nodejs
 #     # obs-studio
-    obsidian
+    # obsidian
     openvpn
 #     # pandoc
     pavucontrol
@@ -150,6 +150,7 @@
 #     sshfs
 #     # steam
 #     # swappy
+    swaybg
 #     syncthing
 #     # taplo
 #     # terraform
