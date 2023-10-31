@@ -106,12 +106,12 @@
 #     ltrace
     # lua-language-server
     # luarocks
-#     mako
+    mako
 #     marksman
 #     masscan
 #     minikube
-#     mpv
-#     nil
+    mpv
+    nil
     nixfmt
     # nixpkgs-fmt
 #     nmap
