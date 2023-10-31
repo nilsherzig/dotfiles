@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-  nixpkgs.config.permittedInsecurePackages = [
-                "electron-24.8.6"
-              ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #               "electron-24.8.6"
+  #             ];
   users.users.nils.packages = with pkgs; [
 #     (python310.withPackages (ps:
 #       with ps; [
@@ -144,12 +144,12 @@
 #     # ryujinx
     shellcheck
     signal-desktop
-#     slurp
+    slurp
     # speedtest-cli
 #     sqlite
 #     sshfs
 #     # steam
-#     # swappy
+    swappy
     swaybg
 #     syncthing
 #     # taplo
@@ -161,9 +161,9 @@
 #     traceroute
 #     tree
 #     typescript
-#     # typst
-#     # typst-fmt
-#     # typst-lsp
+    typst
+    typst-fmt
+    typst-lsp
 #     # ueberzug
 #     # ueberzugpp
 #     unrar-wrapper
@@ -173,7 +173,7 @@
 #     # vscode-fhs
 #     websocat
 #     # wine
-#     wl-clipboard
+    wl-clipboard
 #     wtype
     xdg-desktop-portal-hyprland
 #     xdg-utils
@@ -181,7 +181,7 @@
 #     yarn
 #     yt-dlp
 #     ytfzf
-#     zathura
+    zathura
 #     zoxide
     zsh-syntax-highlighting
     htop

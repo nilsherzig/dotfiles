@@ -159,11 +159,7 @@
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
-      update = "sudo nixos-rebuild switch --upgrade";
-      wifi =
-        "nmcli dev wifi connect $(nmcli dev wifi rescan && nmcli dev wifi list | fzf | awk '{print $2}')";
-      pixelbuds =
-        "bluetoothctl info | grep Battery | awk '{print $4}' | sed -E 's/(//; s/)//'";
+      update = "sudo nixos-rebuild switch --update";
       lg = "lazygit";
       k9s = "k9s --logoless";
       upload = "~/dotfiles/scripts/upload.sh";
