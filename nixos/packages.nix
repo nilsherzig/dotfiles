@@ -106,12 +106,12 @@
 #     ltrace
     # lua-language-server
     # luarocks
-#     mako
+    mako
 #     marksman
 #     masscan
 #     minikube
-#     mpv
-#     nil
+    mpv
+    nil
     nixfmt
     # nixpkgs-fmt
 #     nmap
@@ -144,12 +144,12 @@
 #     # ryujinx
     shellcheck
     signal-desktop
-#     slurp
+    slurp
     # speedtest-cli
 #     sqlite
 #     sshfs
 #     # steam
-#     # swappy
+    swappy
     swaybg
 #     syncthing
 #     # taplo
@@ -161,9 +161,9 @@
 #     traceroute
 #     tree
 #     typescript
-#     # typst
-#     # typst-fmt
-#     # typst-lsp
+    typst
+    typst-fmt
+    typst-lsp
 #     # ueberzug
 #     # ueberzugpp
 #     unrar-wrapper
@@ -173,7 +173,7 @@
 #     # vscode-fhs
 #     websocat
 #     # wine
-#     wl-clipboard
+    wl-clipboard
 #     wtype
     xdg-desktop-portal-hyprland
 #     xdg-utils

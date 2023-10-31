@@ -33,14 +33,14 @@ left = ["mode", "spinner", "version-control"]
 center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+# mode.normal = "NORMAL"
+# mode.insert = "INSERT"
+# mode.select = "SELECT"
 
 [editor.indent-guides]
-render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
-skip-levels = 1
+# render = true
+# character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+# skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
@@ -50,7 +50,7 @@ max-indent-retain = 0
 
 [editor.lsp]
 # display-inlay-hints	= true 
-# display-messages= true
+display-messages = true
 
 [editor.cursor-shape]
 insert = "bar"
