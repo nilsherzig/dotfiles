@@ -15,14 +15,14 @@
 #       ]))
 #     act
 #     adw-gtk3
-#     # shell_gpt
-#     # ansible
-#     # asciinema
-#     bat
+    # shell_gpt
+    # ansible
+    # asciinema
+    bat
     bluetuith
-#     # bottles
-#     brightnessctl
-#     broot
+    # bottles
+    # brightnessctl
+    broot
 #     cilium-cli
 #     clang-tools
 #     clang-tools
@@ -42,7 +42,7 @@
 #     # dolphin-emu
     du-dust
     openssl
-#     cfssl
+    cfssl
 #     etcd
 #     fd
     feh
@@ -145,7 +145,7 @@
     shellcheck
     signal-desktop
 #     slurp
-    speedtest-cli
+    # speedtest-cli
 #     sqlite
 #     sshfs
 #     # steam
@@ -182,6 +182,7 @@
 #     ytfzf
 #     zathura
 #     zoxide
-#     zsh-syntax-highlighting
+    zsh-syntax-highlighting
+    htop
   ];
 }

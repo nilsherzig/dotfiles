@@ -5,7 +5,7 @@
     ./laptop.nix
     # ./home.nix
     ./packages.nix
-    # ./sync.nix
+    ./sync.nix
   ];
 
   # Bootloader.
@@ -124,7 +124,6 @@
   users.mutableUsers = false;
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
@@ -156,7 +155,7 @@
     autosuggestions.enable = false;
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [ "fzf" ];
-    syntaxHighlighting.enable = false;
+    syntaxHighlighting.enable = true;
     shellAliases = {
       ip = "ip --color=always"; # ip show colors
       rclone = "rclone -P"; # always show rclone progress

@@ -1,4 +1,5 @@
-theme = "custom_theme"
+# theme = "github_dark"
+theme = "kanagawa"
 
 [keys.normal]
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
