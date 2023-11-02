@@ -21,7 +21,7 @@
     # bat
     bluetuith
     # bottles
-    # brightnessctl
+    brightnessctl
     # broot
 #     cilium-cli
 #     clang-tools
@@ -67,6 +67,7 @@
     # gnome.simple-scan
     gnumake
     go
+    goreleaser
     # go-tools
     # golangci-lint
 #     gomodifytags
@@ -102,7 +103,7 @@
 #     liquidctl
 #     litecli
     # lm_sensors
-#     ltex-ls
+    ltex-ls
 #     ltrace
     # lua-language-server
     # luarocks

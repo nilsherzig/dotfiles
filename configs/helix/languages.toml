@@ -23,6 +23,10 @@ language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 name = "latex"
 language-servers = ["texlab", "ltex-ls"]
 
+# [[language]]
+# name = "typst"
+# language-servers = ["typst-lsp", "ltex-ls"]
+
 [[language]]
 name = "markdown"
 scope = "source.markdown"
