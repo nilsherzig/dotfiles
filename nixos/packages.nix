@@ -21,7 +21,7 @@
     # bat
     bluetuith
     # bottles
-    # brightnessctl
+    brightnessctl
     # broot
 #     cilium-cli
 #     clang-tools
@@ -102,7 +102,7 @@
 #     liquidctl
 #     litecli
     # lm_sensors
-#     ltex-ls
+    ltex-ls
 #     ltrace
     # lua-language-server
     # luarocks

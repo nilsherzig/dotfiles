@@ -77,10 +77,7 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
   # services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
 
@@ -159,12 +156,13 @@
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
-      update = "sudo nixos-rebuild switch --update";
+      update = "sudo nixos-rebuild switch --upgrade";
       lg = "lazygit";
       k9s = "k9s --logoless";
       upload = "~/dotfiles/scripts/upload.sh";
       vi = "nvim";
       b = "broot";
+      blue = "bluetoothctl connect $(bluetoothctl devices | fzf | awk {'print $2'})";
     };
     # promptInit = ''
     #   # autoload - U promptinit; promptinit
