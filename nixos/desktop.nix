@@ -45,6 +45,7 @@ in lib.mkIf (machineID == desktopMachineID) {
   #   fsType = "ext4";
   # };
 
+  services.netdata.enable = true; 
   # services.nfs.server.enable = true;
   # services.nfs.server.exports = ''
   #   /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)

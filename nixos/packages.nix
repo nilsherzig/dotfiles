@@ -38,7 +38,7 @@
 #     distrobox
 #     docker
 #     docker-compose
-#     air
+    air
 #     # dolphin-emu
     du-dust
     openssl
