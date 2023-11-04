@@ -1,7 +1,9 @@
 { lib, ... }:
 let
   machineID = builtins.readFile "/etc/machine-id";
-  desktopMachineID = "9c2d20d6761e4395861207cef10569e4\n";
+  desktopMachineID = ''
+    9c2d20d6761e4395861207cef10569e4
+  '';
 
 in lib.mkIf (machineID == desktopMachineID) {
   networking.hostName = "desktop";
@@ -45,9 +47,10 @@ in lib.mkIf (machineID == desktopMachineID) {
   #   fsType = "ext4";
   # };
 
-  services.netdata.enable = true; 
+  services.netdata.enable = true;
   # services.nfs.server.enable = true;
   # services.nfs.server.exports = ''
   #   /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
   # '';
+  programs.steam = { enable = true; };
 }
