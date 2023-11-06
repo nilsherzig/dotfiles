@@ -35,14 +35,14 @@
           #     params.cleanoutDays = "1000";
           #   };
           # };
-          "dotfiles" = {
-            path = "/home/nils/dotfiles";
-            devices = [ "desktop" "laptop" "server" ];
-            versioning = {
-              type = "trashcan";
-              params.cleanoutDays = "1000";
-            };
-          };
+          # "dotfiles" = {
+          #   path = "/home/nils/dotfiles";
+          #   devices = [ "desktop" "laptop" "server" ];
+          #   versioning = {
+          #     type = "trashcan";
+          #     params.cleanoutDays = "1000";
+          #   };
+          # };
           "Uni" = {
             path = "/home/nils/uni";
             devices = [ "desktop" "laptop" "server" ];
