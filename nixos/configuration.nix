@@ -162,8 +162,7 @@
       upload = "~/dotfiles/scripts/upload.sh";
       vi = "nvim";
       b = "broot";
-      blue =
-        "bluetoothctl connect $(bluetoothctl devices | fzf | awk {'print $2'})";
+      blue = "bluetoothctl connect $(bluetoothctl devices | fzf | awk {'print $2'})";
     };
     # promptInit = ''
     #   # autoload - U promptinit; promptinit
@@ -236,7 +235,7 @@
   # services.joycond.enable = true;
 
   services.keyd = {
-    enable = true;
+    enable = false;
     keyboards."*".settings = {
       main = {
         # capslock = "layer(caps)";

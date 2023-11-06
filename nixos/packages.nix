@@ -98,7 +98,7 @@
     lazydocker
     lazygit
 #     libnotify
-#     libqalculate
+    libqalculate
 #     libwebp
 #     liquidctl
 #     litecli
