@@ -188,5 +188,7 @@
     #     zoxide
     zsh-syntax-highlighting
     htop
+    nix-output-monitor
+    anki-bin
   ];
 }
