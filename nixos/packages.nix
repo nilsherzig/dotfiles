@@ -179,7 +179,7 @@
     wl-clipboard
     #     wtype
     xdg-desktop-portal-hyprland
-    #     xdg-utils
+    xdg-utils
     #     yamlfmt
     #     yarn
     #     yt-dlp
