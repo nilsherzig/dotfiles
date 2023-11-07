@@ -3,18 +3,20 @@
   #               "electron-24.8.6"
   #             ];
   users.users.nils.packages = with pkgs; [
-#     (python310.withPackages (ps:
-#       with ps; [
-#         python310Packages.bpython
-#         python310Packages.diagrams
-#         python310Packages.jupyter_client
-#         python310Packages.pillow
-#         python310Packages.pynvim
-#         python310Packages.python-lsp-server
-#         python310Packages.recipe-scrapers
-#       ]))
-#     act
-#     adw-gtk3
+    #     (python310.withPackages (ps:
+    #       with ps; [
+    #         python310Packages.bpython
+    #         python310Packages.diagrams
+    #         python310Packages.jupyter_client
+    #         python310Packages.pillow
+    #         python310Packages.pynvim
+    #         python310Packages.python-lsp-server
+    #         python310Packages.recipe-scrapers
+    #       ]))
+    #     act
+    #     adw-gtk3
+    imagemagick
+    ffmpeg
     # shell_gpt
     # ansible
     # asciinema
@@ -23,41 +25,41 @@
     # bottles
     brightnessctl
     # broot
-#     cilium-cli
-#     clang-tools
-#     clang-tools
-#    # redisinsight
-#     clusterctl
-#     # containerlab
-#     # deja-dup
-#     # graphviz
+    #     cilium-cli
+    #     clang-tools
+    #     clang-tools
+    #    # redisinsight
+    #     clusterctl
+    #     # containerlab
+    #     # deja-dup
+    #     # graphviz
     delve
-#     dig
+    #     dig
     direnv
-#     discord
-#     distrobox
-#     docker
-#     docker-compose
+    #     discord
+    #     distrobox
+    #     docker
+    #     docker-compose
     air
-#     # dolphin-emu
+    #     # dolphin-emu
     du-dust
     openssl
     cfssl
-#     etcd
-#     fd
+    #     etcd
+    #     fd
     feh
     ffmpeg
     firefox
     fzf
     gammastep
-#     xplr
-#     gaphor
-#     gcc
+    #     xplr
+    #     gaphor
+    #     gcc
     ginkgo
     git
-#     # gitlab-runner
-#     gitleaks
-#     # glow
+    #     # gitlab-runner
+    #     gitleaks
+    #     # glow
     # gnome.adwaita-icon-theme
     # gnome.eog
     # gnome.gnome-clocks
@@ -70,24 +72,24 @@
     goreleaser
     # go-tools
     # golangci-lint
-#     gomodifytags
+    #     gomodifytags
     gopls
-#     # gore
-#     gotests
-#     gotools
-#     gping
-#     gradience
+    #     # gore
+    #     gotests
+    #     gotools
+    #     gping
+    #     gradience
     grim
     grml-zsh-config
-    helix 
-#     # html-tidy
-#     hubble
-#     imlib2Full
-#     jdt-language-server
+    helix
+    #     # html-tidy
+    #     hubble
+    #     imlib2Full
+    #     jdt-language-server
     jellyfin-media-player
-#     jq
-#     k3d
-#     k3sup
+    #     jq
+    #     k3d
+    #     k3sup
     k9s
     kind
     kitty
@@ -97,26 +99,26 @@
     kubeseal
     lazydocker
     lazygit
-#     libnotify
+    #     libnotify
     libqalculate
-#     libwebp
-#     liquidctl
-#     litecli
+    #     libwebp
+    #     liquidctl
+    #     litecli
     # lm_sensors
     ltex-ls
-#     ltrace
+    #     ltrace
     # lua-language-server
     # luarocks
     mako
-#     marksman
-#     masscan
-#     minikube
+    #     marksman
+    #     masscan
+    #     minikube
     mpv
     nil
     nixfmt
     # nixpkgs-fmt
-#     nmap
-#     nnn
+    #     nmap
+    #     nnn
     nodePackages.js-beautify
     nodePackages_latest.bash-language-server
     nodePackages_latest.prettier
@@ -126,64 +128,64 @@
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-#     nodejs
-#     # obs-studio
+    #     nodejs
+    #     # obs-studio
     # obsidian
     openvpn
-#     # pandoc
+    #     # pandoc
     pavucontrol
-#     pciutils
+    #     pciutils
     popeye
-#     # prismlauncher
-#     radare2
-#     radeontop
+    #     # prismlauncher
+    #     radare2
+    #     radeontop
     ranger
-#     rclone
+    #     rclone
     ripgrep
-#     rsync
-#     # rust-analyzer
-#     # ryujinx
+    #     rsync
+    #     # rust-analyzer
+    #     # ryujinx
     shellcheck
     signal-desktop
     slurp
     # speedtest-cli
-#     sqlite
-#     sshfs
-#     # steam
+    #     sqlite
+    #     sshfs
+    #     # steam
     swappy
     swaybg
-#     syncthing
-#     # taplo
-#     # terraform
-#     # terraform-ls
-#     # texlab
-#     # texlive.combined.scheme-medium
-#     tmux
-#     traceroute
-#     tree
-#     typescript
+    #     syncthing
+    #     # taplo
+    #     # terraform
+    #     # terraform-ls
+    #     # texlab
+    #     # texlive.combined.scheme-medium
+    #     tmux
+    #     traceroute
+    #     tree
+    #     typescript
     typst
     typst-fmt
     typst-lsp
-#     # ueberzug
-#     # ueberzugpp
-#     unrar-wrapper
-#     unzip
-#     usbutils
-#     virtualenv
-#     # vscode-fhs
-#     websocat
-#     # wine
+    #     # ueberzug
+    #     # ueberzugpp
+    #     unrar-wrapper
+    #     unzip
+    #     usbutils
+    #     virtualenv
+    #     # vscode-fhs
+    #     websocat
+    #     # wine
     wl-clipboard
-#     wtype
+    #     wtype
     xdg-desktop-portal-hyprland
-#     xdg-utils
-#     yamlfmt
-#     yarn
-#     yt-dlp
-#     ytfzf
+    #     xdg-utils
+    #     yamlfmt
+    #     yarn
+    #     yt-dlp
+    #     ytfzf
     zathura
-#     zoxide
+    #     zoxide
     zsh-syntax-highlighting
     htop
     nix-output-monitor
