@@ -170,8 +170,8 @@
     typst-lsp
     #     # ueberzug
     #     # ueberzugpp
-    #     unrar-wrapper
-    #     unzip
+        unrar-wrapper
+        unzip
     #     usbutils
     #     virtualenv
     #     # vscode-fhs
@@ -182,6 +182,7 @@
     xdg-desktop-portal-hyprland
     xdg-utils
     #     yamlfmt
+    file
     #     yarn
     #     yt-dlp
     #     ytfzf
