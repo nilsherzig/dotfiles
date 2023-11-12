@@ -64,7 +64,7 @@
     # gnome.eog
     # gnome.gnome-clocks
     # gnome.gnome-disk-utility
-    # gnome.gnome-font-viewer
+    gnome.gnome-font-viewer
     # gnome.nautilus
     # gnome.simple-scan
     gnumake
@@ -145,6 +145,7 @@
     #     rsync
     #     # rust-analyzer
     #     # ryujinx
+    yuzu-early-access
     shellcheck
     signal-desktop
     slurp
