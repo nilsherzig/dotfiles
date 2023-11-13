@@ -64,7 +64,7 @@
     # gnome.eog
     # gnome.gnome-clocks
     # gnome.gnome-disk-utility
-    # gnome.gnome-font-viewer
+    gnome.gnome-font-viewer
     # gnome.nautilus
     # gnome.simple-scan
     gnumake
@@ -145,6 +145,7 @@
     #     rsync
     #     # rust-analyzer
     #     # ryujinx
+    yuzu-early-access
     shellcheck
     signal-desktop
     slurp
@@ -169,8 +170,8 @@
     typst-lsp
     #     # ueberzug
     #     # ueberzugpp
-    #     unrar-wrapper
-    #     unzip
+        unrar-wrapper
+        unzip
     #     usbutils
     #     virtualenv
     #     # vscode-fhs
@@ -179,8 +180,9 @@
     wl-clipboard
     #     wtype
     xdg-desktop-portal-hyprland
-    #     xdg-utils
+    xdg-utils
     #     yamlfmt
+    file
     #     yarn
     #     yt-dlp
     #     ytfzf
