@@ -54,7 +54,7 @@
     gammastep
     #     xplr
     #     gaphor
-    #     gcc
+        gcc
     ginkgo
     git
     #     # gitlab-runner
@@ -128,7 +128,7 @@
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-    #     nodejs
+        nodejs
     #     # obs-studio
     # obsidian
     openvpn
@@ -190,5 +190,6 @@
     htop
     nix-output-monitor
     anki-bin
+    python3
   ];
 }

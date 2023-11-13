@@ -198,7 +198,7 @@
 
   services.udisks2.enable = true;
 
-  # services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
   system.autoUpgrade.enable = true;
