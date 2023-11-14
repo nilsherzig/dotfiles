@@ -51,7 +51,7 @@ max-indent-retain = 0
 
 [editor.lsp]
 # display-inlay-hints	= true 
-display-messages = true
+# display-messages = true
 
 [editor.cursor-shape]
 insert = "bar"

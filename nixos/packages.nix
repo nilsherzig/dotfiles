@@ -1,4 +1,9 @@
 { pkgs, ... }: {
+  nix.settings = {
+    substituters = [ "https://42loco42.cachix.org" ];
+    trusted-public-keys =
+      [ "42loco42.cachix.org-1:6HvWFER3RdTSqEZDznqahkqaoI6QCOiX2gRpMMsThiQ=" ];
+  };
   # nixpkgs.config.permittedInsecurePackages = [
   #               "electron-24.8.6"
   #             ];
@@ -15,6 +20,7 @@
     #       ]))
     #     act
     #     adw-gtk3
+    obs-studio
     imagemagick
     ffmpeg
     # shell_gpt
@@ -22,7 +28,7 @@
     # asciinema
     # bat
     bluetuith
-    # bottles
+    bottles
     brightnessctl
     # broot
     #     cilium-cli
@@ -148,6 +154,7 @@
     yuzu-early-access
     shellcheck
     signal-desktop
+    xdg-desktop-portal-gtk
     slurp
     # speedtest-cli
     #     sqlite
@@ -170,8 +177,8 @@
     typst-lsp
     #     # ueberzug
     #     # ueberzugpp
-        unrar-wrapper
-        unzip
+    unrar-wrapper
+    unzip
     #     usbutils
     #     virtualenv
     #     # vscode-fhs
@@ -191,6 +198,7 @@
     zsh-syntax-highlighting
     htop
     nix-output-monitor
+    jq
     anki-bin
   ];
 }
