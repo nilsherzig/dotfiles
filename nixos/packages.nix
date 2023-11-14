@@ -193,5 +193,6 @@
     nix-output-monitor
     anki-bin
     python3
+    jq
   ];
 }
