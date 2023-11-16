@@ -132,7 +132,7 @@
     #     # obs-studio
     # obsidian
     openvpn
-    #     # pandoc
+        pandoc
     pavucontrol
     #     pciutils
     popeye
@@ -194,5 +194,6 @@
     anki-bin
     python3
     jq
+    poppler_utils
   ];
 }
