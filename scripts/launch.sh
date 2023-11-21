@@ -3,6 +3,7 @@
 options=("$(find /etc/profiles/per-user/nils/bin -printf "%f\n")")
 options+=('firefox https://discord.com/app/')
 options+=('firefox https://web.whatsapp.com')
+options+=('firefox https://collab.boreus.de')
 
 options+=('hyprctl dispatch exit')
 options+=('shutdown now')

@@ -7,6 +7,9 @@
   # nixpkgs.config.permittedInsecurePackages = [
   #               "electron-24.8.6"
   #             ];
+  environment.systemPackages =
+    [ (import (fetchTarball "https://install.devenv.sh/latest")).default ];
+
   users.users.nils.packages = with pkgs; [
     #     (python310.withPackages (ps:
     #       with ps; [
@@ -60,7 +63,7 @@
     gammastep
     #     xplr
     #     gaphor
-        gcc
+    gcc
     ginkgo
     git
     #     # gitlab-runner
@@ -134,9 +137,9 @@
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-        nodejs
+    nodejs
     #     # obs-studio
-    # obsidian
+    obsidian
     openvpn
     #     # pandoc
     pavucontrol
@@ -149,7 +152,7 @@
     #     rclone
     ripgrep
     #     rsync
-    #     # rust-analyzer
+    # rust-analyzer
     #     # ryujinx
     yuzu-early-access
     shellcheck
@@ -201,5 +204,6 @@
     jq
     anki-bin
     python3
+    figlet
   ];
 }
