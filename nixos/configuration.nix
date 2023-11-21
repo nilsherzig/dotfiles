@@ -4,7 +4,7 @@
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
     ./desktop.nix
     ./laptop.nix
-    # ./home.nix
+    ./home.nix
     ./packages.nix
     ./sync.nix
   ];
@@ -164,7 +164,7 @@
       vi = "nvim";
       b = "broot";
       blue =
-        "bluetoothctl connect $(bluetoothctl devices | fzf | awk {'print $2'})";
+        "bluetuith";
     };
     # promptInit = ''
     #   # autoload - U promptinit; promptinit
@@ -229,7 +229,7 @@
   services.joycond.enable = true;
 
   services.keyd = {
-    enable = true;
+    enable = false;
     keyboards."*".settings = {
       main = {
         # capslock = "layer(caps)";
