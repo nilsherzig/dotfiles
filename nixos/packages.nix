@@ -25,6 +25,8 @@
     #     adw-gtk3
     obs-studio
     imagemagick
+    via
+    vial
     ffmpeg
     # shell_gpt
     # ansible
@@ -119,7 +121,7 @@
     # lua-language-server
     # luarocks
     mako
-    #     marksman
+    marksman
     #     masscan
     #     minikube
     mpv
@@ -206,5 +208,6 @@
     python3
     jq
     poppler_utils
+    google-chrome
   ];
 }
