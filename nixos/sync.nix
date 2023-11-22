@@ -59,14 +59,14 @@
               params.cleanoutDays = "1000";
             };
           };
-          # "Obsidian" = {
-          #   path = "/home/nils/Notes";
-          #   devices = [ "desktop" "laptop" "pixel" "server" ];
-          #   versioning = {
-          #     type = "trashcan";
-          #     params.cleanoutDays = "1000";
-          #   };
-          # };
+          "Obsidian" = {
+            path = "/home/nils/Notes";
+            devices = [ "desktop" "laptop" "pixel" "server" ];
+            versioning = {
+              type = "trashcan";
+              params.cleanoutDays = "1000";
+            };
+          };
           "Wallpaper" = {
             path = "/home/nils/Pictures/wallpaper";
             devices = [ "desktop" "laptop" "server" ];
