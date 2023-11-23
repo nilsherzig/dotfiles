@@ -73,9 +73,8 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require('lspconfig').cssls.setup {
     capabilities = capabilities,
 }
---
 
-lsp.nvim_workspace()
+-- lsp.nvim_workspace()
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
