@@ -7,8 +7,8 @@
   # nixpkgs.config.permittedInsecurePackages = [
   #               "electron-24.8.6"
   #             ];
-  environment.systemPackages =
-    [ (import (fetchTarball "https://install.devenv.sh/latest")).default ];
+  # environment.systemPackages =
+  #   [ (import (fetchTarball "https://install.devenv.sh/latest")).default ];
 
   users.users.nils.packages = with pkgs; [
     #     (python310.withPackages (ps:
@@ -143,11 +143,11 @@
     #     # obs-studio
     obsidian
     openvpn
-        pandoc
+    pandoc
     pavucontrol
     #     pciutils
     popeye
-    #     # prismlauncher
+    prismlauncher
     #     radare2
     #     radeontop
     ranger
