@@ -91,7 +91,7 @@ in {
         gitsigns-nvim
         nvim-comment
 
-        catppuccin-nvim
+        # catppuccin-nvim
 
         nvim-dap
         nvim-dap-ui
@@ -113,7 +113,7 @@ in {
         # orgmode
         vim-table-mode
         kanagawa-nvim
-        git-blame-nvim
+        # git-blame-nvim
         # gruvbox-nvim
         # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
         # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
@@ -128,7 +128,9 @@ in {
         # (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
         # (fromGitHub "HEAD" "Vonr/align.nvim")
         (fromGitHub "HEAD" "stevearc/conform.nvim")
-        (fromGitHub "HEAD" "github/copilot.vim")
+        # (fromGitHub "HEAD" "github/copilot.vim")
+        (fromGitHub "HEAD" "zbirenbaum/copilot.lua")
+        (fromGitHub "HEAD" "zbirenbaum/copilot-cmp")
         # (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
         (fromGitHub "HEAD" "stevearc/oil.nvim")
         # (fromGitHub "HEAD" "MunifTanjim/nui.nvim")

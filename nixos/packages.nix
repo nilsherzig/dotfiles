@@ -118,7 +118,7 @@
     # lm_sensors
     ltex-ls
     #     ltrace
-    # lua-language-server
+    lua-language-server
     # luarocks
     mako
     marksman
@@ -186,7 +186,7 @@
     unzip
     #     usbutils
     #     virtualenv
-    #     # vscode-fhs
+    vscode-fhs
     #     websocat
     #     # wine
     wl-clipboard

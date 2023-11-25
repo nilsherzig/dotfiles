@@ -76,20 +76,51 @@ require('lspconfig').cssls.setup {
 
 -- lsp.nvim_workspace()
 
-local cmp = require("cmp")
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings({
-    ["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
-    ["<tab>"] = cmp.mapping.select_next_item(cmp_select),
-    ["<CR>"] = cmp.mapping.confirm({ select = false }),
-    ["<C-Space>"] = cmp.mapping.complete(),
-})
+-- local cmp = require("cmp")
+-- local cmp_select = { behavior = cmp.SelectBehavior.Select }
+-- local cmp_mappings = lsp.defaults.cmp_mappings({
+--     ["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
+--     ["<tab>"] = cmp.mapping.select_next_item(cmp_select),
+--     ["<CR>"] = cmp.mapping.confirm({ select = false }),
+--     ["<C-Space>"] = cmp.mapping.complete(),
+-- })
 
-cmp_mappings["<Tab>"] = nil
-cmp_mappings["<S-Tab>"] = nil
+-- cmp_mappings["<Tab>"] = nil
+-- cmp_mappings["<S-Tab>"] = nil
 
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings,
+-- lsp.setup_nvim_cmp({
+--     mapping = cmp_mappings,
+-- })
+--
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+-- local has_words_before = function()
+--     if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+--     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+--     return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
+-- end
+
+cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
+        ["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<tab>"] = cmp.mapping.select_next_item(cmp_select),
+        -- ["<Tab>"] = vim.schedule_wrap(function(fallback)
+        --     if cmp.visible() and has_words_before() then
+        --         cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+        --     else
+        --         fallback()
+        --     end
+        -- end),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    })
 })
 
 lsp.set_preferences({
@@ -150,8 +181,8 @@ cmp.setup({
     },
 
     completion = {
-        -- completeopt = "menu,menuone,noselect",
-        completeopt = "menu,menuone,noinsert",
+        completeopt = "menu,menuone,noselect",
+        -- completeopt = "menu,menuone,noinsert",
     },
 
     -- view = {
@@ -159,9 +190,8 @@ cmp.setup({
     -- },
 
     experimental = {
-        ghost_text = false,
+        ghost_text = true,
     },
-
 
     -- window = {
     --     documentation = cmp.config.window.bordered(),
@@ -171,9 +201,9 @@ cmp.setup({
     -- },
     window = {
         documentation = {
-            border = nil,
-            -- border = { "x", "─", "╮", "│", "╯", "─", "╰", "│" },
-            -- winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
+            -- border = nil,
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+            winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
         },
         completion = {
             scrollbar = false,
@@ -187,7 +217,8 @@ cmp.setup({
     formatting = {
         fields = { "kind", "abbr" },
         format = function(entry, vim_item)
-            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50, symbol_map = { Copilot = "" }
+            })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = " " .. (strings[1] or "") .. " "
             kind.abbr = (fixStringLength(vim_item.abbr))
@@ -196,6 +227,7 @@ cmp.setup({
     },
 
     sources = {
+        -- { name = "copilot", group_index = 2 },
         { name = "luasnip", keyword_length = 2 },
         { name = "path" },
         { name = "nvim_lsp" },
