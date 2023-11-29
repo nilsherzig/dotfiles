@@ -34,6 +34,9 @@
     # bat
     bluetuith
     bottles
+    glibc
+    jdk21
+    argocd
     brightnessctl
     # broot
     #     cilium-cli
