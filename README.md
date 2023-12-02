@@ -23,3 +23,4 @@ A big thank you to everyone who has ever contributed to a package I use :).
 | window manager / desktop | hyprland                         |
 | bluetooth manager        | bluetuith                        |
 | sync files               | syncthing                        |
+
