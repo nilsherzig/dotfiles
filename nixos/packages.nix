@@ -37,6 +37,7 @@
     glibc
     jdk21
     argocd
+    wine64
     brightnessctl
     # broot
     #     cilium-cli
@@ -116,7 +117,7 @@
     #     libnotify
     libqalculate
     #     libwebp
-    #     liquidctl
+    liquidctl
     #     litecli
     # lm_sensors
     ltex-ls
