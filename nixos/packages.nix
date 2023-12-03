@@ -86,7 +86,7 @@
     go
     goreleaser
     # go-tools
-    # golangci-lint
+    golangci-lint
     #     gomodifytags
     gopls
     #     # gore
@@ -109,6 +109,7 @@
     kind
     kitty
     kubectl
+    kubebuilder
     kubectx
     kubernetes-helm
     kubeseal
@@ -179,7 +180,7 @@
     #     # texlive.combined.scheme-medium
     #     tmux
     #     traceroute
-    #     tree
+    tree
     #     typescript
     typst
     typst-fmt
@@ -200,7 +201,7 @@
     #     yamlfmt
     file
     #     yarn
-    #     yt-dlp
+    yt-dlp
     #     ytfzf
     zathura
     #     zoxide

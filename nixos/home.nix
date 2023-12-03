@@ -113,7 +113,7 @@ in {
         # orgmode
         vim-table-mode
         kanagawa-nvim
-        # git-blame-nvim
+        git-blame-nvim
         # gruvbox-nvim
         # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
         # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
