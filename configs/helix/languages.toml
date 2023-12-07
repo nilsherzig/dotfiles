@@ -8,6 +8,11 @@ auto-format = true
 language-servers = [ "gopls", "copilot" ]
 
 [[language]]
+name = "python"
+auto-format = true
+language-servers = [ "pylsp", "copilot" ]
+
+[[language]]
 name = "bash"
 auto-format = true
 language-servers = [ "bash-language-server", "copilot" ]

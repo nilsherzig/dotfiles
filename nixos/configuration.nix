@@ -79,9 +79,9 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # because via and keyboard configs # doesnt work rn 
   # the via and vial packages already do these in their install scripts, idk why they dont work
@@ -257,5 +257,6 @@
       };
     };
   };
-  # services.netdata.enable = true;
+  security.pam.services.login.googleAuthenticator.enable = true;
+  security.pam.services.gdm-password.googleAuthenticator.enable = true;
 }
