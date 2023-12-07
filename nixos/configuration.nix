@@ -257,6 +257,6 @@
       };
     };
   };
-  security.pam.services.login.googleAuthenticator.enable = true;
-  security.pam.services.gdm-password.googleAuthenticator.enable = true;
+  # security.pam.services.login.googleAuthenticator.enable = true;
+  # security.pam.services.gdm-password.googleAuthenticator.enable = true;
 }
