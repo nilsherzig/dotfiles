@@ -71,10 +71,6 @@
             path = "/home/nils/Pictures/wallpaper";
             devices = [ "desktop" "laptop" "server" ];
           };
-          # "Audiobooks" = {
-          #   path = "/home/nils/Documents/audiobooks";
-          #   devices = [ "desktop" "laptop" "pixel" "server" ];
-          # };
         };
       };
     };

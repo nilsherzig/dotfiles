@@ -16,7 +16,7 @@ if [ "$1" = "off" ]; then
     sudo liquidctl --match Commander set fan5 speed 20
 else
     if [ "$2" = "res" ]; then
-        hyprctl keyword monitor DP-3,2560x1440@144,0x0,1 # change res to 2k, 4k gaming is expensive
+        hyprctl keyword monitor DP-3,2560x1440@144,0x0,1 
     fi
     sudo liquidctl initialize --match H100i --pump-mode balanced
     sudo liquidctl --match H100i set fan1 speed 40

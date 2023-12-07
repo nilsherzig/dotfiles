@@ -32,12 +32,8 @@ in {
     gtk = {
       enable = true;
       theme = {
-        name = "adw-gtk3";
+        name = "adw-gtk3-dark";
         package = pkgs.adw-gtk3;
-      };
-      cursorTheme = {
-        name = "macOS-Monterey";
-        package = pkgs.apple-cursor;
       };
     };
 

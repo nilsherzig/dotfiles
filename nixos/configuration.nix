@@ -1,5 +1,4 @@
-{ pkgs, ... }: 
-{
+{ pkgs, ... }: {
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
     ./desktop.nix
@@ -17,6 +16,7 @@
   boot.kernel.sysctl = {
     "fs.inotify.max_user_watches" = "1048576"; # 128 times the default 8192
     "fs.inotify.max_user_instances" = "8192";
+    "clearcpuid" = "514";
   };
 
   boot.extraModprobeConfig = ''
@@ -24,7 +24,8 @@
     options hid_apple swap_opt_cmd=1
   '';
 
-  boot.kernelParams = [ "amd_iommu=on" ];
+  boot.kernelParams =
+    [ "amd_iommu=on" "clearcpuid=514" "vm.max_map_count=1000000" ];
 
   # virtual 
   virtualisation.docker.enable = true;
@@ -78,15 +79,15 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # because via and keyboard configs # doesnt work rn 
   # the via and vial packages already do these in their install scripts, idk why they dont work
   services.udev.extraRules = ''
-  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   '';
 
   # or just chmod a+rw /dev/hidrawX
@@ -165,8 +166,7 @@
       upload = "~/dotfiles/scripts/upload.sh";
       vi = "nvim";
       b = "broot";
-      blue =
-        "bluetuith";
+      blue = "bluetuith";
     };
     # promptInit = ''
     #   # autoload - U promptinit; promptinit
@@ -258,5 +258,6 @@
       };
     };
   };
-  # services.netdata.enable = true;
+  # security.pam.services.login.googleAuthenticator.enable = true;
+  # security.pam.services.gdm-password.googleAuthenticator.enable = true;
 }

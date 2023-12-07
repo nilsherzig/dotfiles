@@ -37,6 +37,7 @@
     glibc
     jdk21
     argocd
+    wine64
     brightnessctl
     # broot
     #     cilium-cli
@@ -50,6 +51,7 @@
     delve
     #     dig
     direnv
+    python311Packages.python-lsp-server
     #     discord
     #     distrobox
     #     docker
@@ -75,6 +77,10 @@
     #     gitleaks
     #     # glow
     # gnome.adwaita-icon-theme
+    gnomeExtensions.just-perfection
+    gnomeExtensions.tiling-assistant
+    gnomeExtensions.blur-my-shell
+    gnome.gnome-tweaks
     # gnome.eog
     # gnome.gnome-clocks
     # gnome.gnome-disk-utility
@@ -92,7 +98,7 @@
     #     gotests
     #     gotools
     #     gping
-    #     gradience
+    gradience
     grim
     grml-zsh-config
     helix
@@ -117,7 +123,7 @@
     #     libnotify
     libqalculate
     #     libwebp
-    #     liquidctl
+    liquidctl
     #     litecli
     # lm_sensors
     ltex-ls
@@ -177,7 +183,7 @@
     #     # terraform-ls
     #     # texlab
     #     # texlive.combined.scheme-medium
-    #     tmux
+    tmux
     #     traceroute
     tree
     #     typescript
