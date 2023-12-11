@@ -219,6 +219,7 @@
     jq
     poppler_utils
     google-chrome
+    dmg2img
     google-authenticator
     waybar
     discord

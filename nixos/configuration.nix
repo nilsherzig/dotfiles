@@ -229,6 +229,7 @@
 
   nix.settings.auto-optimise-store = true;
   services.joycond.enable = true;
+  security.pam.services.login.googleAuthenticator.enable = true;
 
   services.keyd = {
     enable = false;
