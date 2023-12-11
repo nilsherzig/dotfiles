@@ -221,5 +221,10 @@
     google-chrome
     google-authenticator
     waybar
+    discord
+    jc
+    jq
+    virt-manager
+    ventoy-full
   ];
 }

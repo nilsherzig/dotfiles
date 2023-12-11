@@ -33,6 +33,7 @@ in lib.mkIf (machineID == desktopMachineID) {
     fsType = "ext4";
   };
 
+  virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.vmVariant = {
     virtualisation = {
       memorySize = 5000; # Use 2048MiB memory.
