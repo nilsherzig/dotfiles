@@ -5,7 +5,7 @@ let
 
 in let
   fromGitHub = ref: repo:
-    pkgs.vimUtils.buildVimPluginFrom2Nix {
+    pkgs.vimUtils.buildVimPlugin {
       pname = "${lib.strings.sanitizeDerivationName repo}";
       version = ref;
       src = builtins.fetchGit {
@@ -109,7 +109,8 @@ in {
         # orgmode
         vim-table-mode
         kanagawa-nvim
-        git-blame-nvim
+        nvim-treesitter-textsubjects
+        # git-blame-nvim
         # gruvbox-nvim
         # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
         # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
