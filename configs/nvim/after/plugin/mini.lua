@@ -47,7 +47,7 @@ require('mini.comment').setup(
 )
 require('mini.tabline').setup()
 vim.api.nvim_set_hl(0, 'MiniTablineCurrent', {
-    italic = true,
+    italic = false,
     bold = true,
     underline = false,
 })
