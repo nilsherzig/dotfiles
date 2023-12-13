@@ -11,7 +11,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   boot.kernel.sysctl = {
     "fs.inotify.max_user_watches" = "1048576"; # 128 times the default 8192
@@ -35,7 +34,6 @@
   # '';
   console.keyMap = "de";
   # Setup keyfile
-  boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -203,7 +201,6 @@
   services.udisks2.enable = true;
 
   services.mullvad-vpn.enable = true;
-  system.stateVersion = "22.11";
 
   system.autoUpgrade.enable = true;
   # system.autoUpgrade.allowReboot = false;
@@ -258,6 +255,7 @@
       };
     };
   };
+  # security.pam.services.login.googleAuthenticator.enable = true;
   # security.pam.services.login.googleAuthenticator.enable = true;
   # security.pam.services.gdm-password.googleAuthenticator.enable = true;
 }

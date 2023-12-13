@@ -54,4 +54,7 @@ in lib.mkIf (machineID == desktopMachineID) {
   #   /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
   # '';
   programs.steam = { enable = true; };
+  system.stateVersion = "22.11";
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 }

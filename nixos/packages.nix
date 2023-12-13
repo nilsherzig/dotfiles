@@ -4,6 +4,9 @@
     trusted-public-keys =
       [ "42loco42.cachix.org-1:6HvWFER3RdTSqEZDznqahkqaoI6QCOiX2gRpMMsThiQ=" ];
   };
+
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
+
   # nixpkgs.config.permittedInsecurePackages = [
   #               "electron-24.8.6"
   #             ];
@@ -113,7 +116,7 @@
     #     k3sup
     k9s
     kind
-    kitty
+    wezterm
     kubectl
     kubebuilder
     kubectx
@@ -188,9 +191,9 @@
     #     traceroute
     tree
     #     typescript
-    typst
-    typst-fmt
-    typst-lsp
+    # typst
+    # typst-fmt
+    # typst-lsp
     #     # ueberzug
     #     # ueberzugpp
     unrar-wrapper
