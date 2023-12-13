@@ -6,6 +6,7 @@ if wezterm.config_builder then
 end
 
 config = {
+    enable_wayland = false,
     color_scheme = 'Kanagawa (Gogh)',
     font_size = 18,
     window_decorations = "NONE",

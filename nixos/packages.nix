@@ -116,6 +116,7 @@
     k9s
     kind
     wezterm
+    kitty
     kubectl
     kubebuilder
     kubectx
