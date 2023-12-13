@@ -9,6 +9,7 @@
   #             ];
   # environment.systemPackages =
   #   [ (import (fetchTarball "https://install.devenv.sh/latest")).default ];
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
     #     (python310.withPackages (ps:
