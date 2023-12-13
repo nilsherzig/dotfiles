@@ -1,7 +1,7 @@
 -- vim.keymap.set("i", "<C-c>", "<Esc>")
 -- vim.keymap.set("n", "<C-c>", "<cmd>:bd<CR>")
 vim.g.mapleader = " "
-vim.keymap.set("n", "<C-c>", "<cmd>bd<CR>")
+vim.keymap.set("n", "<C-q>", "<cmd>bd<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
