@@ -16,11 +16,11 @@ REMOTE_URL=$(git remote get-url origin)
 if [[ $REMOTE_URL == *"gitlab.com"* ]]; then
     # GitLab
     BASE_URL=$(echo "$REMOTE_URL" | sed -e 's/git@gitlab.com://' -e 's/.git$//' -e 's/:/\//g')
-    COMPLETE_URL="https://gitlab.com/${BASE_URL}/-/blob/${BRANCH_NAME}/${FILE_PATH}#L${LINE_NUMBER}"
+    COMPLETE_URL="https://gitlab.com/${BASE_URL}/-/blame/${BRANCH_NAME}/${FILE_PATH}#L${LINE_NUMBER}"
 elif [[ $REMOTE_URL == *"github.com"* ]]; then
     # GitHub
     BASE_URL=$(echo "$REMOTE_URL" | sed -e 's/git@github.com://' -e 's/.git$//' -e 's/:/\//g')
-    COMPLETE_URL="https://github.com/${BASE_URL}/blob/${BRANCH_NAME}/${FILE_PATH}#L${LINE_NUMBER}"
+    COMPLETE_URL="https://github.com/${BASE_URL}/blame/${BRANCH_NAME}/${FILE_PATH}#L${LINE_NUMBER}"
 else
     echo "Remote repository is not supported. Only GitLab and GitHub URLs are supported."
     exit 1
