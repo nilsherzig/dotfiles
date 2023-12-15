@@ -7,10 +7,25 @@ args = ["/home/nils/Documents/copilot.vim/dist/agent.js", "--stdio"]
 # auto-format = true
 # language-servers = [ "gopls", "copilot" ]
 
-# [[language]]
-# name = "python"
-# auto-format = true
-# language-servers = [ "pylsp", "copilot" ]
+[[language]]
+name = "templ"
+auto-format = true
+language-servers = [ "templ", "tailwindcss-ls", "typescript-language-server" ]
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [ "pyright", "copilot", "ruff-lsp" ]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
 
 # [[language]]
 # name = "bash"
@@ -34,11 +49,6 @@ auto-format = true
 language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 
 [[language]]
-name = "javascript"
-auto-format = true
-language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
-
-[[language]]
 name = "latex"
 language-servers = ["texlab", "ltex-ls"]
 
@@ -54,6 +64,7 @@ language-servers = ["marksman", "ltex-ls" ]
 
 [[language]]
 name = "nix"
+auto-format = true
 file-types = ["nix"]
 formatter = { command = "nixfmt" }
 
