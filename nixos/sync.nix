@@ -51,7 +51,7 @@
               params.cleanoutDays = "1000";
             };
           };
-          "Kubernetes" = {
+          "kubernetes" = {
             path = "/home/nils/kubernetes";
             devices = [ "desktop" "laptop" "server" ];
             versioning = {

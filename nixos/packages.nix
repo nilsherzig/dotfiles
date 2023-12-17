@@ -1,15 +1,10 @@
 { pkgs, ... }: {
-  nix.settings = {
-    substituters = [ "https://42loco42.cachix.org" ];
-    trusted-public-keys =
-      [ "42loco42.cachix.org-1:6HvWFER3RdTSqEZDznqahkqaoI6QCOiX2gRpMMsThiQ=" ];
-  };
+  # nix.settings = {
+  #   substituters = [ "https://42loco42.cachix.org" ];
+  #   trusted-public-keys =
+  #     [ "42loco42.cachix.org-1:6HvWFER3RdTSqEZDznqahkqaoI6QCOiX2gRpMMsThiQ=" ];
+  # };
 
-  # nixpkgs.config.permittedInsecurePackages = [
-  #               "electron-24.8.6"
-  #             ];
-  # environment.systemPackages =
-  #   [ (import (fetchTarball "https://install.devenv.sh/latest")).default ];
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
@@ -23,125 +18,129 @@
     #         python310Packages.python-lsp-server
     #         python310Packages.recipe-scrapers
     #       ]))
-    #     act
-    #     adw-gtk3
-    obs-studio
-    imagemagick
-    via
-    vial
-    ffmpeg
-    # shell_gpt
+    # act
+    # adw-gtk3
+    air
+    anki-bin
     # ansible
+    argocd
     # asciinema
     # bat
     bluetuith
     bottles
-    glibc
-    jdk21
-    argocd
-    wine64
     brightnessctl
     # broot
-    #     cilium-cli
-    #     clang-tools
-    #     clang-tools
-    #    # redisinsight
-    #     clusterctl
-    #     # containerlab
-    #     # deja-dup
-    #     # graphviz
-    delve
-    #     dig
-    direnv
-    python311Packages.python-lsp-server
-    #     discord
-    #     distrobox
-    #     docker
-    #     docker-compose
-    air
-    #     # dolphin-emu
-    du-dust
-    openssl
     cfssl
-    #     etcd
-    #     fd
+    # cilium-cli
+    # clang-tools
+    # clang-tools
+    # clusterctl
+    # containerlab
+    # deja-dup
+    delve
+    # dig
+    direnv
+    # discord
+    discord
+    # distrobox
+    dmg2img
+    # docker
+    # docker-compose
+    # dolphin-emu
+    du-dust
+    # etcd
+    # fd
     feh
     ffmpeg
+    ffmpeg
+    file
     firefox
     fzf
     gammastep
-    #     xplr
-    #     gaphor
+    # gaphor
     gcc
     ginkgo
     git
-    #     # gitlab-runner
-    #     gitleaks
-    #     # glow
+    # gitlab-runner
+    # gitleaks
+    glibc
+    # glow
     # gnome.adwaita-icon-theme
+    # gnome.eog
+    gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.tiling-assistant
-    gnomeExtensions.blur-my-shell
-    gnome.gnome-tweaks
-    # gnome.eog
     # gnome.gnome-clocks
     # gnome.gnome-disk-utility
     gnome.gnome-font-viewer
+    gnome.gnome-tweaks
     # gnome.nautilus
     # gnome.simple-scan
     gnumake
     go
-    goreleaser
-    # go-tools
     golangci-lint
-    #     gomodifytags
+    # gomodifytags
+    google-authenticator
+    google-chrome
     gopls
-    #     # gore
-    #     gotests
-    #     gotools
-    #     gping
+    # gore
+    goreleaser
+    # gotests
+    # go-tools
+    # gotools
+    # gping
     gradience
+    # graphviz
     grim
     grml-zsh-config
     helix
-    #     # html-tidy
-    #     hubble
-    #     imlib2Full
-    #     jdt-language-server
+    # html-tidy
+    htop
+    # hubble
+    imagemagick
+    # imlib2Full
+    jc
+    jdk21
+    # jdt-language-server
     jellyfin-media-player
-    #     jq
-    #     k3d
-    #     k3sup
+    # jq
+    jq
+    jq
+    jq
+    # k3d
+    # k3sup
     k9s
     kind
-    wezterm
-    kubectl
+    kitty
     kubebuilder
+    kubectl
     kubectx
     kubernetes-helm
     kubeseal
     lazydocker
     lazygit
-    #     libnotify
+    libnotify
     libqalculate
-    #     libwebp
+    # libwebp
     liquidctl
-    #     litecli
+    # litecli
     # lm_sensors
     ltex-ls
-    #     ltrace
+    # ltrace
     lua-language-server
     # luarocks
     mako
     marksman
-    #     masscan
-    #     minikube
+    # masscan
+    # minikube
     mpv
     nil
     nixfmt
+    nix-output-monitor
     # nixpkgs-fmt
-    #     nmap
-    #     nnn
+    # nmap
+    # nnn
+    nodejs
     nodePackages.js-beautify
     nodePackages_latest.bash-language-server
     nodePackages_latest.prettier
@@ -151,83 +150,84 @@
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-    nodejs
-    #     # obs-studio
     obsidian
+    # obs-studio
+    obs-studio
+    openssl
     openvpn
     pandoc
     pavucontrol
-    #     pciutils
+    # pciutils
     popeye
+    poppler_utils
     prismlauncher
-    #     radare2
-    #     radeontop
+    python3
+    python311Packages.python-lsp-server
+    # radare2
+    # radeontop
     ranger
-    #     rclone
+    # rclone
+    # redisinsight
     ripgrep
-    #     rsync
+    # rsync
     # rust-analyzer
-    #     # ryujinx
-    yuzu-early-access
+    # ryujinx
     shellcheck
+    # shell_gpt
     signal-desktop
-    xdg-desktop-portal-gtk
     slurp
     # speedtest-cli
-    #     sqlite
-    #     sshfs
-    #     # steam
+    # sqlite
+    # sshfs
+    # steam
     swappy
     swaybg
-    #     syncthing
-    #     # taplo
-    #     # terraform
-    #     # terraform-ls
-    #     # texlab
-    #     # texlive.combined.scheme-medium
+    # syncthing
+    # taplo
+    # terraform
+    # terraform-ls
+    # texlab
+    # texlive.combined.scheme-medium
     tmux
-    #     traceroute
+    # traceroute
     tree
-    #     typescript
+    # typescript
     # typst
     # typst-fmt
     # typst-lsp
-    #     # ueberzug
-    #     # ueberzugpp
+    # ueberzug
+    # ueberzugpp
     unrar-wrapper
     unzip
-    #     usbutils
-    #     virtualenv
+    # usbutils
+    ventoy-full
+    via
+    vial
+    virt-manager
+    # virtualenv
     vscode-fhs
-    #     websocat
-    #     # wine
+    waybar
+    # websocat
+    wezterm
+    # wine
+    wine64
     wl-clipboard
-    #     wtype
+    # wtype
+    xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xdg-utils
-    #     yamlfmt
-    file
-    #     yarn
+    # xplr
+    # yamlfmt
+    # yarn
     yt-dlp
-    #     ytfzf
+    # ytfzf
+    yuzu-early-access
     zathura
-    #     zoxide
+    # zoxide
     zsh-syntax-highlighting
-    htop
-    nix-output-monitor
-    jq
-    anki-bin
-    python3
-    jq
-    poppler_utils
-    google-chrome
-    dmg2img
-    google-authenticator
-    waybar
-    discord
-    jc
-    jq
-    virt-manager
-    ventoy-full
+    tailwindcss-language-server
+    ruff-lsp
+    tailwindcss
+    choose
   ];
 }

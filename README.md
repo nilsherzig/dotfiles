@@ -8,19 +8,18 @@ A big thank you to everyone who has ever contributed to a package I use :).
 
 ### Current setup
 
-| usecase                  | program(s)                       |
-|--------------------------|----------------------------------|
-| terminal emulator        | kitty                            |
-| shell                    | zsh                              |
-| shell history            | fzf                              |
-| shell navigation         | zoxide                           |
-| shell prompt             | starship                         |
-| docker                   | lazydocker                       |
-| git                      | lazygit                          |
-| Kubernetes               | k9s                              |
-| editor                   | helix + kitty and custom scripts |
-| operating system         | nixos                            |
-| window manager / desktop | hyprland                         |
-| bluetooth manager        | bluetuith                        |
-| sync files               | syncthing                        |
+| usecase                  | program(s)                         |
+|--------------------------|------------------------------------|
+| terminal emulator        | wezterm                            |
+| shell                    | zsh                                |
+| shell history            | fzf                                |
+| shell prompt             | grml zsh config                    |
+| docker                   | lazydocker                         |
+| git                      | lazygit                            |
+| Kubernetes               | k9s                                |
+| editor                   | helix + wezterm and custom scripts |
+| operating system         | nixos                              |
+| window manager / desktop | hyprland and gnome                 |
+| bluetooth manager        | bluetuith                          |
+| sync files               | syncthing                          |
 
