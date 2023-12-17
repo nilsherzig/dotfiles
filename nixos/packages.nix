@@ -5,8 +5,6 @@
       [ "42loco42.cachix.org-1:6HvWFER3RdTSqEZDznqahkqaoI6QCOiX2gRpMMsThiQ=" ];
   };
 
-  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
-
   # nixpkgs.config.permittedInsecurePackages = [
   #               "electron-24.8.6"
   #             ];
