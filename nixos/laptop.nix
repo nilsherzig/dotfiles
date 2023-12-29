@@ -7,7 +7,7 @@ let
 
 in lib.mkIf (machineID == laptopMachineID) {
   networking.hostName = "laptop";
-  networking.firewall.allowedTCPPorts = [ 8080 ];
+  networking.firewall.allowedTCPPorts = [ 8080 5173 ];
   networking.firewall.allowedUDPPorts = [ ];
   # hardware.tuxedo-rs = {
   #   enable = true;

@@ -1,0 +1,8 @@
+-- require("dropbar").setup()
+--
+-- vim.api.nvim_set_keymap(
+-- 	"n",
+-- 	"<leader>w",
+-- 	"<cmd>lua require('dropbar.api').pick()<CR>",
+-- 	{ noremap = true, silent = true }
+-- )

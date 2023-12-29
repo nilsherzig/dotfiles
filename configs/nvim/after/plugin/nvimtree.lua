@@ -5,21 +5,21 @@ require("nvim-tree").setup {
     view = {
         centralize_selection = true,
         adaptive_size = true,
-        side = "right",
+        -- side = "right",
         preserve_window_proportions = true,
         float = {
-            enable = true,
+            enable = false,
             quit_on_focus_loss = true,
-            open_win_config = function()
-                return {
-                    row = 3,
-                    width = 60,
-                    border = "rounded",
-                    relative = "editor",
-                    col = vim.o.columns,
-                    height = vim.o.lines - 15,
-                }
-            end,
+            -- open_win_config = function()
+            --     return {
+            --         row = 3,
+            --         width = 60,
+            --         border = "rounded",
+            --         relative = "editor",
+            --         -- col = vim.o.columns,
+            --         -- height = vim.o.lines - 15,
+            --     }
+            -- end,
         },
     },
 }
