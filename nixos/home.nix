@@ -2,6 +2,8 @@
 let
   home-manager = builtins.fetchTarball
     "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  # inputs.neovim-nightly-overlay.url =
+  #   "github:nix-community/neovim-nightly-overlay";
 
 in let
   fromGitHub = ref: repo:
@@ -13,16 +15,18 @@ in let
         ref = ref;
       };
     };
+  neovim-nightly-overlay = (import (builtins.fetchTarball {
+    url =
+      "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+  }));
+  nixpkgs = import <nixpkgs> { overlays = [ neovim-nightly-overlay ]; };
 
 in {
   home-manager.users.nils = {
     #services.opensnitch-ui.enable = true;
   };
-  # nixpkgs.overlays = [
-  #     (import (builtins.fetchTarball {
-  #              url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-  #              }))
-  # ];
+  # nixpkgs = { overlays = [ inputs.neovim-nightly-overlay.overlay ]; };
+  # home.packages = with pkgs; [ neovim-nightly ];
 
   imports = [ (import "${home-manager}/nixos") ];
 
@@ -63,78 +67,79 @@ in {
     };
 
     programs.neovim = {
+      package = nixpkgs.neovim-nightly;
       enable = true;
       defaultEditor = false;
       plugins = with pkgs.vimPlugins; [
-        vim-fugitive
-        lsp-zero-nvim
-        telescope-nvim
-        nvim-lspconfig
-        nvim-treesitter.withAllGrammars
-        nvim-tree-lua
-        plenary-nvim
-        mini-nvim
         # bufferline-nvim
-        nvim-web-devicons
-        indent-blankline-nvim
-        # trouble-nvim
-        # null-ls-nvim
-        # which-key-nvim
-        nvim-cursorline
-        nvim-autopairs
-        # neodev-nvim
-        wilder-nvim
-        gitsigns-nvim
-        nvim-comment
-
         # catppuccin-nvim
-
-        nvim-dap
-        nvim-dap-ui
-        nvim-dap-go
-
-        luasnip
-
-        nvim-cmp
-        cmp-nvim-lsp
-        cmp-buffer
-        cmp-path
-        cmp-cmdline
-        lspkind-nvim
-        nvim-jdtls
-        cmp_luasnip
-        # neorg
-        markdown-preview-nvim
-        # nvim-colorizer-lua
-        # orgmode
-        vim-table-mode
-        kanagawa-nvim
-        nvim-treesitter-textsubjects
         # git-blame-nvim
         # gruvbox-nvim
+        # neodev-nvim
+        # neorg
+        # null-ls-nvim
+        # nvim-colorizer-lua
+        # orgmode
+        trouble-nvim
+        # which-key-nvim
+        cmp-buffer
+        cmp-cmdline
+        cmp-nvim-lsp
+        cmp-path
+        cmp_luasnip
+        copilot-vim
+        gitsigns-nvim
+        indent-blankline-nvim
+        kanagawa-nvim
+        lsp-zero-nvim
+        lspkind-nvim
+        luasnip
+        markdown-preview-nvim
+        mini-nvim
+        nvim-autopairs
+        nvim-cmp
+        comment-nvim
+        nvim-cursorline
+        # nvim-dap
+        # nvim-dap-go
+        # nvim-dap-ui
+        # nvim-jdtls
+        nvim-lspconfig
+        nvim-tree-lua
+        nvim-treesitter-textsubjects
+        nvim-treesitter.withAllGrammars
+        nvim-web-devicons
+        plenary-nvim
+        telescope-nvim
+        vim-fugitive
+        vim-table-mode
+        wilder-nvim
+        symbols-outline-nvim
+        # vista-vim
+        # dropbar-nvim
         # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
-        # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
-        # (fromGitHub "HEAD" "jmbuhr/otter.nvim")
-        # (fromGitHub "HEAD" "akinsho/org-bullets.nvim")
-        (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
-        # (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
-        # (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
-        # (fromGitHub "HEAD" "davidmh/cspell.nvim")
-        (fromGitHub "HEAD" "dgagn/diagflow.nvim")
-        # (fromGitHub "HEAD" "toppair/reach.nvim")
-        # (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
-        # (fromGitHub "HEAD" "Vonr/align.nvim")
-        (fromGitHub "HEAD" "stevearc/conform.nvim")
-        # (fromGitHub "HEAD" "github/copilot.vim")
-        (fromGitHub "HEAD" "zbirenbaum/copilot.lua")
-        (fromGitHub "HEAD" "zbirenbaum/copilot-cmp")
-        # (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
-        (fromGitHub "HEAD" "stevearc/oil.nvim")
         # (fromGitHub "HEAD" "MunifTanjim/nui.nvim")
         # (fromGitHub "HEAD" "SmiteshP/nvim-navbuddy")
         # (fromGitHub "HEAD" "SmiteshP/nvim-navic")
-        (fromGitHub "HEAD" "Wansmer/symbol-usage.nvim")
+        # (fromGitHub "HEAD" "Vonr/align.nvim")
+        # (fromGitHub "HEAD" "Wansmer/symbol-usage.nvim")
+        # (fromGitHub "HEAD" "akinsho/org-bullets.nvim")
+        # (fromGitHub "HEAD" "davidmh/cspell.nvim")
         # (fromGitHub "HEAD" "dccsillag/magma-nvim")
+        # (fromGitHub "HEAD" "dgagn/diagflow.nvim")
+        # (fromGitHub "HEAD" "github/copilot.vim")
+        # (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
+        # (fromGitHub "HEAD" "jmbuhr/otter.nvim")
+        # (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
+        # (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
+        # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
+        # (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
+        # (fromGitHub "HEAD" "toppair/reach.nvim")
+        # (fromGitHub "HEAD" "zbirenbaum/copilot-cmp")
+        # (fromGitHub "HEAD" "zbirenbaum/copilot.lua")
+        (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
+        (fromGitHub "HEAD" "stevearc/conform.nvim")
+        (fromGitHub "HEAD" "stevearc/oil.nvim")
       ];
     };
   };

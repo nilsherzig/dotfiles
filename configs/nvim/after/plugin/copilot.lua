@@ -1,21 +1,24 @@
--- vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
--- vim.g.copilot_no_tab_map = true
---
--- vim.g.copilot_filetypes = {
---     ['*'] = false,
---     ['markdown'] = true,
---     ['yaml'] = true,
---     ['go'] = true,
---     ['javascript'] = true,
---     ['html'] = true,
---     ['css'] = true,
--- }
+vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.g.copilot_no_tab_map = true
+
+vim.g.copilot_filetypes = {
+    ['*'] = true
+    -- ['markdown'] = true,
+    -- ['yaml'] = true,
+    -- ['go'] = true,
+    -- ['javascript'] = true,
+    -- ['html'] = true,
+    -- ['css'] = true,
+    -- ["svelte"] = true,
+    -- ["ts"] = true,
+    -- ["js"] = true,
+}
 -- require("copilot").setup(options)
 --
-require("copilot").setup({
-    suggestion = { enabled = false },
-    panel = { enabled = false },
-})
+-- require("copilot").setup({
+--     suggestion = { enabled = false },
+--     panel = { enabled = false },
+-- })
 -- require('copilot').setup({
 --     filetypes = {
 --         yaml = true,
@@ -56,4 +59,4 @@ require("copilot").setup({
 --     }
 -- })
 
-require("copilot_cmp").setup()
+-- require("copilot_cmp").setup()

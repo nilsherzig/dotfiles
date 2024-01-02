@@ -5,7 +5,8 @@ require("conform").setup({
         javascript = { "prettier" },
         yaml = { "prettier" },
         go = { "gofmt" },
-        nix = { "nixfmt" }
+        nix = { "nixfmt" },
+        templ = { "templ" }
     },
 
     format_after_save = {

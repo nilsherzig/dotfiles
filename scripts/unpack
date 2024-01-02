@@ -1,0 +1,26 @@
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   mkdir ${1%.*} && tar xvjf $1 -C ${1%.*} ;;
+            *.tar.gz)    mkdir ${1%.*} && tar xvzf $1 -C ${1%.*} ;;
+            *.tar.xz)    mkdir ${1%.*} && tar xvJf $1 -C ${1%.*} ;;
+            *.lzma)      mkdir ${1%.*} && unlzma $1 -C ${1%.*} ;;
+            *.bz2)       mkdir ${1%.*} && bunzip2 $1 -C ${1%.*} ;;
+            *.rar)       mkdir ${1%.*} && unrar x -ad $1 ;;
+            *.gz)        mkdir ${1%.*} && gunzip $1 -C ${1%.*} ;;
+            *.tar)       mkdir ${1%.*} && tar xvf $1 -C ${1%.*} ;;
+            *.tbz2)      mkdir ${1%.*} && tar xvjf $1 -C ${1%.*} ;;
+            *.tgz)       mkdir ${1%.*} && tar xvzf $1 -C ${1%.*} ;;
+            *.zip)       mkdir ${1%.*} && unzip $1 -d ${1%.*} ;;
+            *.Z)         mkdir ${1%.*} && uncompress $1 -C ${1%.*} ;;
+            *.7z)        mkdir ${1%.*} && 7z x $1 -o${1%.*} ;;
+            *)     echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+for file in $*; do
+    extract $file
+done

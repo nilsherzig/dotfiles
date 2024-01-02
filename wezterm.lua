@@ -8,8 +8,12 @@ end
 config = {
     enable_wayland = false,
     color_scheme = 'Kanagawa (Gogh)',
-    font_size = 20,
-    font = wezterm.font 'Iosevka',
+    font_size = 22,
+    -- font = wezterm.font 'Iosevka',
+    font = wezterm.font_with_fallback {
+        'Iosevka',
+        { family = 'Symbols Nerd Font Mono', scale = 0.9 },
+    },
     window_decorations = "NONE",
     -- integrated_title_button_style = "Gnome",
     hide_tab_bar_if_only_one_tab = true,

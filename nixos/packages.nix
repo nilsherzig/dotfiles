@@ -7,7 +7,15 @@
 
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url =
+        "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+    }))
+  ];
+
   users.users.nils.packages = with pkgs; [
+    # neovim-nightly
     #     (python310.withPackages (ps:
     #       with ps; [
     #         python310Packages.bpython
@@ -20,95 +28,146 @@
     #       ]))
     # act
     # adw-gtk3
-    air
-    anki-bin
     # ansible
-    argocd
     # asciinema
     # bat
-    bluetuith
-    bottles
-    brightnessctl
     # broot
-    cfssl
     # cilium-cli
     # clang-tools
     # clang-tools
     # clusterctl
     # containerlab
     # deja-dup
-    delve
     # dig
-    direnv
     # discord
-    discord
     # distrobox
-    dmg2img
     # docker
     # docker-compose
     # dolphin-emu
-    du-dust
     # etcd
     # fd
+    # gaphor
+    # gitlab-runner
+    # gitleaks
+    # glow
+    # gnome.adwaita-icon-theme
+    # gnome.eog
+    # gnome.gnome-clocks
+    # gnome.gnome-disk-utility
+    # gnome.nautilus
+    # gnome.simple-scan
+    # go-tools
+    # gomodifytags
+    # gore
+    # gotests
+    # gotools
+    # gping
+    # graphviz
+    # html-tidy
+    # hubble
+    # imlib2Full
+    # jdt-language-server
+    # jq
+    # k3d
+    # k3sup
+    # libwebp
+    # litecli
+    # lm_sensors
+    # ltrace
+    # luarocks
+    # masscan
+    # minikube
+    # nixpkgs-fmt
+    # nmap
+    # nnn
+    # nodePackages_latest.rollup
+    # obs-studio
+    # pciutils
+    # radare2
+    # radeontop
+    # rclone
+    # redisinsight
+    # rsync
+    # rust-analyzer
+    # ryujinx
+    # shell_gpt
+    # speedtest-cli
+    # sqlite
+    # sshfs
+    # steam
+    # syncthing
+    # taplo
+    # terraform
+    # terraform-ls
+    # texlab
+    # texlive.combined.scheme-medium
+    # traceroute
+    # typescript
+    # typst
+    # typst-fmt
+    # typst-lsp
+    # ueberzug
+    # ueberzugpp
+    # usbutils
+    # virtualenv
+    # websocat
+    # wine
+    # xplr
+    # yamlfmt
+    # yarn
+    # ytfzf
+    # zoxide
+    aichat
+    air
+    anki-bin
+    argocd
+    bluetuith
+    bottles
+    brightnessctl
+    bun
+    cfssl
+    choose
+    delve
+    direnv
+    discord
+    dmg2img
+    du-dust
     feh
     ffmpeg
     ffmpeg
     file
     firefox
+    fx-cast-bridge
     fzf
     gammastep
-    # gaphor
     gcc
     ginkgo
     git
-    # gitlab-runner
-    # gitleaks
     glibc
-    # glow
-    # gnome.adwaita-icon-theme
-    # gnome.eog
+    gnome.gnome-font-viewer
+    gnome.gnome-tweaks
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.tiling-assistant
-    # gnome.gnome-clocks
-    # gnome.gnome-disk-utility
-    gnome.gnome-font-viewer
-    gnome.gnome-tweaks
-    # gnome.nautilus
-    # gnome.simple-scan
     gnumake
     go
     golangci-lint
-    # gomodifytags
     google-authenticator
     google-chrome
     gopls
-    # gore
     goreleaser
-    # gotests
-    # go-tools
-    # gotools
-    # gping
     gradience
-    # graphviz
     grim
     grml-zsh-config
     helix
-    # html-tidy
     htop
-    # hubble
     imagemagick
-    # imlib2Full
     jc
     jdk21
-    # jdt-language-server
     jellyfin-media-player
-    # jq
     jq
     jq
     jq
-    # k3d
-    # k3sup
     k9s
     kind
     kitty
@@ -121,26 +180,15 @@
     lazygit
     libnotify
     libqalculate
-    # libwebp
     liquidctl
-    # litecli
-    # lm_sensors
     ltex-ls
-    # ltrace
     lua-language-server
-    # luarocks
     mako
     marksman
-    # masscan
-    # minikube
     mpv
     nil
-    nixfmt
     nix-output-monitor
-    # nixpkgs-fmt
-    # nmap
-    # nnn
-    nodejs
+    nixfmt
     nodePackages.js-beautify
     nodePackages_latest.bash-language-server
     nodePackages_latest.prettier
@@ -150,84 +198,52 @@
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-    obsidian
-    # obs-studio
+    nodejs
     obs-studio
+    obsidian
     openssl
     openvpn
     pandoc
     pavucontrol
-    # pciutils
     popeye
     poppler_utils
     prismlauncher
+    protobuf
+    protoc-gen-go
     python3
     python311Packages.python-lsp-server
-    # radare2
-    # radeontop
     ranger
-    # rclone
-    # redisinsight
     ripgrep
-    # rsync
-    # rust-analyzer
-    # ryujinx
+    ruff-lsp
+    shell_gpt
     shellcheck
-    # shell_gpt
     signal-desktop
     slurp
-    # speedtest-cli
-    # sqlite
-    # sshfs
-    # steam
+    stylua
     swappy
     swaybg
-    # syncthing
-    # taplo
-    # terraform
-    # terraform-ls
-    # texlab
-    # texlive.combined.scheme-medium
+    tailwindcss
+    tailwindcss-language-server
     tmux
-    # traceroute
     tree
-    # typescript
-    # typst
-    # typst-fmt
-    # typst-lsp
-    # ueberzug
-    # ueberzugpp
     unrar-wrapper
     unzip
-    # usbutils
     ventoy-full
     via
     vial
     virt-manager
-    # virtualenv
     vscode-fhs
     waybar
-    # websocat
     wezterm
-    # wine
     wine64
     wl-clipboard
-    # wtype
+    wtype
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xdg-utils
-    # xplr
-    # yamlfmt
-    # yarn
     yt-dlp
-    # ytfzf
     yuzu-early-access
     zathura
-    # zoxide
     zsh-syntax-highlighting
-    tailwindcss-language-server
-    ruff-lsp
-    tailwindcss
-    choose
   ];
 }
