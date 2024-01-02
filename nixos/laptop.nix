@@ -7,6 +7,9 @@ let
 
 in lib.mkIf (machineID == laptopMachineID) {
   networking.hostName = "laptop";
+  # networking.extraHosts = ''
+  #   172.18.0.1 iceportal.de
+  # '';
   networking.firewall.allowedTCPPorts = [ 8080 5173 ];
   networking.firewall.allowedUDPPorts = [ ];
   # hardware.tuxedo-rs = {

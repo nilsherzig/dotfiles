@@ -2,15 +2,23 @@
 command = "node"
 args = ["/home/nils/Documents/copilot.vim/dist/agent.js", "--stdio"]
 
-# [[language]]
-# name = "go"
-# auto-format = true
-# language-servers = [ "gopls", "copilot" ]
+[[language]]
+name = "go"
+auto-format = true
+language-servers = [ "gopls", "copilot" ]
 
 [[language]]
 name = "templ"
-auto-format = true
-language-servers = [ "templ", "tailwindcss-ls", "typescript-language-server" ]
+scope = "source.templ"
+file-types = ["templ"]
+roots = ["go.work", "go.mod"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "templ", "copilot" ]
+
+[[grammar]]
+name = "templ"
+source = { git = "https://github.com/vrischmann/tree-sitter-templ", rev = "ea56ac0655243490a4929a988f4eaa91dfccc995" }
 
 [[language]]
 name = "python"
@@ -22,6 +30,10 @@ typeCheckingMode = "basic"
 
 [language-server.ruff]
 command = "ruff-lsp"
+
+[language-server.templ]
+command = "templ"
+args = ["lsp"]
 
 [language-server.ruff.config.settings]
 args = ["--ignore", "E501"]

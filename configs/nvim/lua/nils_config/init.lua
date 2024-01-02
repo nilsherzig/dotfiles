@@ -1,4 +1,4 @@
-require("nils_config.remap")
+require("nils_config.rebind")
 require("nils_config.lazy")
 
 vim.wo.fillchars = "eob: "
@@ -14,13 +14,16 @@ vim.filetype.add({
 vim.opt.relativenumber = true
 vim.opt.nu = true
 
+vim.opt.showbreak = "↪ "
+vim.opt.linebreak = true
+vim.opt.wrap = true
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
-vim.opt.wrap = true
 
 -- Enable line wrap for markdown files
 -- vim.cmd([[
