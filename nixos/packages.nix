@@ -137,6 +137,7 @@
     ffmpeg
     file
     firefox
+    brave
     fx-cast-bridge
     fzf
     gammastep
@@ -162,6 +163,7 @@
     helix
     htop
     imagemagick
+    k6
     jc
     jdk21
     jellyfin-media-player
@@ -245,5 +247,6 @@
     yuzu-early-access
     zathura
     zsh-syntax-highlighting
+    faas-cli
   ];
 }

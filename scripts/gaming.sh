@@ -15,7 +15,7 @@ if [ "$1" = "off" ]; then
     sudo liquidctl --match Commander set fan4 speed 20
     sudo liquidctl --match Commander set fan5 speed 20
 else
-    if [ "$2" = "res" ]; then
+    if [ "$1" = "res" ]; then
         hyprctl keyword monitor DP-3,2560x1440@144,0x0,1 
     fi
     sudo liquidctl initialize --match H100i --pump-mode balanced

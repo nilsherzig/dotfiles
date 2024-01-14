@@ -53,7 +53,13 @@ in lib.mkIf (machineID == desktopMachineID) {
   # services.nfs.server.exports = ''
   #   /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
   # '';
-  programs.steam = { enable = true; };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall =
+      true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall =
+      true; # Open ports in the firewall for Source Dedicated Server
+  };
   system.stateVersion = "22.11";
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
