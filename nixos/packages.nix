@@ -247,6 +247,7 @@
     xdg-utils
     yt-dlp
     yuzu-early-access
+    bemenu
     zathura
     zsh-syntax-highlighting
     faas-cli

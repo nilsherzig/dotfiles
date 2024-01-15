@@ -6,6 +6,7 @@
     ./home.nix
     ./packages.nix
     ./sync.nix
+    ./suckless.nix
   ];
 
   # Bootloader.
