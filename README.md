@@ -8,18 +8,17 @@ A big thank you to everyone who has ever contributed to a package I use :).
 
 ### Current setup
 
-| usecase                  | program(s)                         |
-|--------------------------|------------------------------------|
-| terminal emulator        | wezterm                            |
-| shell                    | zsh                                |
-| shell history            | fzf                                |
-| shell prompt             | grml zsh config                    |
-| docker                   | lazydocker                         |
-| git                      | lazygit                            |
-| Kubernetes               | k9s                                |
-| editor                   | helix + wezterm and custom scripts |
-| operating system         | nixos                              |
-| window manager / desktop | hyprland and gnome                 |
-| bluetooth manager        | bluetuith                          |
-| sync files               | syncthing                          |
+| usecase                  | program(s)                          |
+|--------------------------|-------------------------------------|
+| terminal emulator        | kitty & st                          |
+| shell                    | zsh                                 |
+| shell history            | fzf                                 |
+| shell prompt             | grml zsh config                     |
+| nice tuis                | lazydocker, lazygit, bluetuith, k9s |
+| editor                   | helix & neovim                      |
+| operating system         | nixos                               |
+| window manager / desktop | hyprland, dwm / dwl                 |
+| file sync                | syncthing                           |
+| browser                  | firefox                             |
+| homelab                  | k3s with argocd                     |
 
