@@ -242,6 +242,8 @@
     wtype
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    dwl
+    somebar
     xdg-utils
     yt-dlp
     yuzu-early-access

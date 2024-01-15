@@ -229,8 +229,8 @@ cmp.setup({
 		-- { name = "luasnip", keyword_length = 2 },
 		{ name = "path" },
 		{ name = "nvim_lsp" },
-		{ name = "orgmode" },
-		{ name = "buffer", keyword_length = 3 },
+		-- { name = "orgmode" },
+		-- { name = "buffer", keyword_length = 3 },
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
