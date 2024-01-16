@@ -6,7 +6,7 @@
     ./home.nix
     ./packages.nix
     ./sync.nix
-    ./suckless.nix
+    ./keyd.nix
   ];
 
   # Bootloader.
@@ -229,33 +229,6 @@
   services.joycond.enable = true;
   # security.pam.services.login.googleAuthenticator.enable = true;
 
-  services.keyd = {
-    enable = false;
-    keyboards."*".settings = {
-      main = {
-        # capslock = "layer(caps)";
-        # rightalt = "layer(rightalt)";
-        rightalt = "layer(altgr)";
-        # capslock = "overload(caps, esc)";
-        # capslock = "overload(caps, macro(esc :))";
-        capslock = "esc";
-      };
-
-      altgr = {
-        "u" = "G-7";
-        "i" = "G-8";
-        "o" = "G-9";
-        "p" = "G-0";
-      };
-
-      caps = {
-        h = "left";
-        j = "down";
-        k = "up";
-        l = "right";
-      };
-    };
-  };
   # security.pam.services.login.googleAuthenticator.enable = true;
   # security.pam.services.login.googleAuthenticator.enable = true;
   # security.pam.services.gdm-password.googleAuthenticator.enable = true;
