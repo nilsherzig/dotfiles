@@ -41,18 +41,27 @@ in lib.mkIf (machineID == desktopMachineID) {
     };
   };
 
-  # services.k3s.enable = false;
+  services.k3s.enable = true;
 
-  # fileSystems."/bigdata" = {
-  #   device = "/dev/disk/by-label/hdd12tb";
-  #   fsType = "ext4";
-  # };
+  fileSystems."/bigdata" = {
+    device = "/dev/disk/by-label/hdd12tb";
+    fsType = "ext4";
+  };
 
   services.netdata.enable = true;
   # services.nfs.server.enable = true;
   # services.nfs.server.exports = ''
-  #   /bigdata/media/         127.0.0.1/24(rw,insecure,no_subtree_check)
+  #   /bigdata/media/           127.0.0.1/24(rw,insecure,no_subtree_check)
+  #   /data/kubernetes/         127.0.0.1/24(rw,insecure,no_subtree_check)
   # '';
+  systemd.tmpfiles.rules =
+    [ "L+ /usr/local/bin - - - - /run/current-system/sw/bin/" ];
+
+  services.openiscsi = {
+    enable = true;
+    name = "kubernetes";
+  };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall =
@@ -60,6 +69,7 @@ in lib.mkIf (machineID == desktopMachineID) {
     dedicatedServer.openFirewall =
       true; # Open ports in the firewall for Source Dedicated Server
   };
+
   system.stateVersion = "22.11";
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
