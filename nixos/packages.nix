@@ -118,6 +118,7 @@
     # ytfzf
     # zoxide
     aichat
+    haskellPackages.kmonad
     air
     anki-bin
     argocd
@@ -156,6 +157,7 @@
     google-authenticator
     google-chrome
     gopls
+    keyd
     goreleaser
     gradience
     grim
@@ -175,6 +177,9 @@
     kitty
     kubebuilder
     kubectl
+    cilium-cli
+    kubeshark
+    krew
     kubectx
     kubernetes-helm
     kubeseal

@@ -1,49 +1,70 @@
 { ... }: {
+  systemd.services.customKeyd = {
+    description = "custom keyd";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+
+    serviceConfig = {
+      ExecStart = "/home/nils/Documents/keyd/bin/keyd";
+      Restart = "always";
+      User = "root";
+    };
+  };
+
+  environment.etc."keyd/default.conf".text = ''
+    [ids]
+
+    *
+
+    [main]
+
+    # Maps capslock to escape when pressed and control when held.
+    capslock = overload(control, esc)
+
+    j = lettermod(shift, j, 200, 150)
+    f = lettermod(shift, f, 200, 150)
+
+    k = lettermod(control, k, 200, 150)
+    d = lettermod(control, d, 200, 150)
+
+    s = lettermod(altgr, s, 200, 150)
+    l = lettermod(alt, l, 200, 150)
+
+    space = lettermod(layer1, space, 200, 150) 
+
+    alt = return
+    altgr = backspace 
+
+    # [control:C]
+    # e = macro(control + tab)
+
+    [layer1]
+    o = backspace
+    e = tab
+    r = enter
+  '';
+
   services.keyd = {
-    enable = true;
+    enable = false; # disabled until i get the nice new features
     keyboards."*".settings = {
       main = {
-        j = "overloadt(modLayerOne, j, 300)";
-        f = "overloadt(modLayerOne, f, 300)";
+        # capslock = "overload(control, esc)";
 
-        k = "overloadt(control, k, 300)";
-        d = "overloadt(control, d, 300)";
+        # j = "overloadi(j, overloadt2(shift, j, 200), 150)";
+        # f = "overloadi(f, overloadt2(shift, f, 200), 150)";
+        #
+        # k = "overloadi(k, overloadt2(control, k, 200), 150)";
+        # d = "overloadi(d, overloadt2(control, d, 200), 150)";
+        #
+        # s = "overloadi(s, overloadt2(altgr, s, 200), 150)";
+        # l = "overloadi(l, overloadt2(altgr, l, 200), 150)";
 
-        s = "overloadt(altgr, s, 300)";
-        l = "overloadt(altgr, l, 300)";
+        # shift = "oneshot(shift)";
+        # meta = "oneshot(meta)";
+        # control = "oneshot(control)";
 
-        caps = "overload(caps, caps)";
-      };
-
-      modLayerOne = {
-        # chars use position on us layout for some reason
-        "1" = "!";
-        "2" = "@";
-        "3" = "#";
-        "4" = "$";
-        "5" = "%";
-        "6" = "^";
-        "7" = "&";
-        "8" = "*";
-        "9" = "(";
-        "0" = ")";
-        "," = "<";
-        "." = ">";
-        "m" = "backspace";
-      };
-
-      altgr = {
-        "u" = "G-7";
-        "i" = "G-8";
-        "o" = "G-9";
-        "p" = "G-0";
-      };
-
-      caps = {
-        h = "left";
-        j = "down";
-        k = "up";
-        l = "right";
+        # leftalt = "oneshot(alt)";
+        # rightalt = "oneshot(altgr)";
       };
     };
   };
