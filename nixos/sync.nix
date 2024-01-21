@@ -27,21 +27,9 @@
           };
         };
         folders = {
-          # "Documents" = {
-          #   path = "/home/nils/Documents";
-          #   devices = [ "desktop" "laptop" "server" ];
-          #   versioning = {
-          #     type = "trashcan";
-          #     params.cleanoutDays = "1000";
-          #   };
-          # };
-          # "dotfiles" = {
-          #   path = "/home/nils/dotfiles";
-          #   devices = [ "desktop" "laptop" "server" ];
-          #   versioning = {
-          #     type = "trashcan";
-          #     params.cleanoutDays = "1000";
-          #   };
+          # "Audiobooks" = {
+          #   path = "/home/nils/Audiobooks";
+          #   devices = [ "pixel" "laptop" "desktop" ];
           # };
           "Uni" = {
             path = "/home/nils/uni";
