@@ -18,4 +18,16 @@ in lib.mkIf (machineID == laptopMachineID) {
   # };
   # hardware.tuxedo-keyboard.enable = true;
   system.stateVersion = "23.11";
+
+  systemd.services.customKeyd = {
+    description = "custom keyd";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+
+    serviceConfig = {
+      ExecStart = "/home/nils/Documents/keyd/bin/keyd";
+      Restart = "always";
+      User = "root";
+    };
+  };
 }

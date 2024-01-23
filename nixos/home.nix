@@ -126,7 +126,7 @@ in {
         # (fromGitHub "HEAD" "akinsho/org-bullets.nvim")
         # (fromGitHub "HEAD" "davidmh/cspell.nvim")
         # (fromGitHub "HEAD" "dccsillag/magma-nvim")
-        # (fromGitHub "HEAD" "dgagn/diagflow.nvim")
+        (fromGitHub "HEAD" "dgagn/diagflow.nvim")
         # (fromGitHub "HEAD" "github/copilot.vim")
         # (fromGitHub "HEAD" "j-morano/buffer_manager.nvim")
         # (fromGitHub "HEAD" "jmbuhr/otter.nvim")

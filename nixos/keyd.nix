@@ -1,15 +1,4 @@
 { ... }: {
-  systemd.services.customKeyd = {
-    description = "custom keyd";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "network.target" ];
-
-    serviceConfig = {
-      ExecStart = "/home/nils/Documents/keyd/bin/keyd";
-      Restart = "always";
-      User = "root";
-    };
-  };
 
   environment.etc."keyd/default.conf".text = ''
     [ids]

@@ -26,6 +26,7 @@
     #         python310Packages.python-lsp-server
     #         python310Packages.recipe-scrapers
     #       ]))
+    easyeffects
     # act
     # adw-gtk3
     # ansible
@@ -181,6 +182,8 @@
     kubeshark
     krew
     kubectx
+    localsend
+    go-callvis
     kubernetes-helm
     kubeseal
     lazydocker
