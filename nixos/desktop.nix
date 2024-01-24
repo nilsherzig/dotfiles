@@ -13,6 +13,17 @@ in lib.mkIf (machineID == desktopMachineID) {
   boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".keyFile =
     "/crypto_keyfile.bin";
 
+  # boot.initrd.kernelModules = [ "usb_storage" ];
+  # boot.initrd.luks.devices = {
+  #   luksroot = {
+  #     device = "/dev/disk/by-uuid/c9eb19e3-05fa-4057-a251-60d49d38de4c";
+  #     allowDiscards = true;
+  #     keyFileSize = 4096;
+  #     # pinning to /dev/disk/by-id/usbkey works
+  #     keyFile = "/dev/sdc";
+  #   };
+  # };
+
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 22 53 80 443 2049 8123 9090 8096 6443 ];

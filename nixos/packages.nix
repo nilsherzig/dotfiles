@@ -7,15 +7,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url =
-        "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-    }))
-  ];
-
   users.users.nils.packages = with pkgs; [
-    # neovim-nightly
     #     (python310.withPackages (ps:
     #       with ps; [
     #         python310Packages.bpython

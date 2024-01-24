@@ -19,6 +19,11 @@ in lib.mkIf (machineID == laptopMachineID) {
   # hardware.tuxedo-keyboard.enable = true;
   system.stateVersion = "23.11";
 
+  programs.hyprland.enable = true;
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
   systemd.services.customKeyd = {
     description = "custom keyd";
     wantedBy = [ "multi-user.target" ];
