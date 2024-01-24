@@ -24,6 +24,14 @@ in lib.mkIf (machineID == desktopMachineID) {
   #   };
   # };
 
+  services.dnsmasq = {
+    enable = true;
+    # servers = [ "/nilsherzig.com/192.168.1.2" ];  # Replace with the IP address of 'desktop'
+    extraConfig = ''
+      address=/.nilsherzig.com/desktop
+    '';
+  };
+
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 22 53 80 443 2049 8123 9090 8096 6443 ];
