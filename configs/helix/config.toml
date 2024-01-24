@@ -1,10 +1,8 @@
-# theme = "github_dark"
-theme = "kanagawa"
+theme = "github_dark"
+# theme = "kanagawa"
 
 [keys.normal]
 # C-y = "toggle_copilot_auto"
-A-c = [":pipe sgpt --code --temperature 0.3 --no-cache 'Replace this code with a better version and complete it. Write a comment above it describing what you did.'"]
-
 
 C-h = "select_prev_sibling"
 C-j = "shrink_selection"

@@ -149,7 +149,6 @@ lsp.set_preferences({
 		info = "●",
 	},
 })
-
 local opts = { remap = false }
 
 vim.keymap.set("n", "gd", function()

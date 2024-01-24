@@ -2,7 +2,7 @@
 
   environment.etc."keyd/default.conf".text = ''
     [ids]
-    * # keyboard it filter 
+    0001:0001  
 
     [main]
 

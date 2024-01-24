@@ -133,6 +133,8 @@
     firefox
     brave
     fx-cast-bridge
+    phosh
+    phosh-mobile-settings
     fzf
     gammastep
     gcc
