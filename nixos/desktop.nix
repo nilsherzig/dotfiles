@@ -29,6 +29,7 @@ in lib.mkIf (machineID == desktopMachineID) {
     # servers = [ "/nilsherzig.com/192.168.1.2" ];  # Replace with the IP address of 'desktop'
     extraConfig = ''
       address=/.nilsherzig.com/100.116.211.40
+      interface=tailscale0
     '';
   };
 
