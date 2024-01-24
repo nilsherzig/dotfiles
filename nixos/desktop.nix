@@ -39,7 +39,7 @@ in lib.mkIf (machineID == desktopMachineID) {
   users.users.nils.openssh.authorizedKeys.keyFiles =
     [ /home/nils/dotfiles/nilsherzig.keys ];
 
-  fileSystems."/data" = {
+  fileSystems."/var/lib/rancher/k3s/storage/" = {
     device = "/dev/disk/by-label/ssd1tb";
     fsType = "ext4";
   };
