@@ -13,6 +13,9 @@
         "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
     }))
   ];
+  # services.xserver.desktopManager.phosh.enable = true;
+  # services.xserver.desktopManager.phosh.user = "nils";
+  # services.xserver.desktopManager.phosh.group = "users";
 
   users.users.nils.packages = with pkgs; [
     # neovim-nightly
@@ -141,6 +144,8 @@
     firefox
     brave
     fx-cast-bridge
+    phosh
+    phosh-mobile-settings
     fzf
     gammastep
     gcc

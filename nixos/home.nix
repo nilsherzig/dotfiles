@@ -15,11 +15,11 @@ in let
         ref = ref;
       };
     };
-  neovim-nightly-overlay = (import (builtins.fetchTarball {
-    url =
-      "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-  }));
-  nixpkgs = import <nixpkgs> { overlays = [ neovim-nightly-overlay ]; };
+  # neovim-nightly-overlay = (import (builtins.fetchTarball {
+  #   url =
+  #     "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+  # }));
+  # nixpkgs = import <nixpkgs> { overlays = [ neovim-nightly-overlay ]; };
 
 in {
   home-manager.users.nils = {
@@ -67,14 +67,14 @@ in {
     };
 
     programs.neovim = {
-      package = nixpkgs.neovim-nightly;
+      # package = nixpkgs.neovim-nightly;
       enable = true;
       defaultEditor = false;
       plugins = with pkgs.vimPlugins; [
         # bufferline-nvim
-        # catppuccin-nvim
+        catppuccin-nvim
         # git-blame-nvim
-        # gruvbox-nvim
+        gruvbox-nvim
         # neodev-nvim
         # neorg
         # null-ls-nvim
@@ -115,6 +115,8 @@ in {
         vim-table-mode
         wilder-nvim
         symbols-outline-nvim
+        lush-nvim
+        zenbones-nvim
         # vista-vim
         # dropbar-nvim
         # (fromGitHub "HEAD" "Bekaboo/dropbar.nvim")
