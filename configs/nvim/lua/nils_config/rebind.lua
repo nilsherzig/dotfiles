@@ -28,3 +28,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "H", "<cmd>:bprevious<CR>")
 vim.keymap.set("n", "L", "<cmd>:bnext<CR>")
+
+vim.api.nvim_set_keymap("n", "<leader>go", ":G<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>gp", ":G<CR>", { noremap = true, silent = true })
