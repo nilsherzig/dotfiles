@@ -3,6 +3,7 @@
   environment.etc."keyd/default.conf".text = ''
     [ids]
     0001:0001  
+    004c:026c
 
     [main]
 

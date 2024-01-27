@@ -86,15 +86,21 @@
   system.stateVersion = "22.11";
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
+  
+    imports = [
+    (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
+  ];
 
-  services.code-server = {
-    enable = true;
-    host = "desktop.taileb381.ts.net"; # tailscale
-    port = 4444;
-    extraEnvironment = {
-      "TZ" = "Europe/Berlin";
-      "EXTENSIONS_GALLERY" = ''
-        {"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"}'';
-    };
-  };
+  services.vscode-server.enable = true; # thats not the webserver, but the work at remote thing server
+
+  # services.code-server = {
+  #   enable = true;
+  #   host = "desktop.taileb381.ts.net"; # tailscale
+  #   port = 4444;
+  #   extraEnvironment = {
+  #     "TZ" = "Europe/Berlin";
+  #     "EXTENSIONS_GALLERY" = ''
+  #       {"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"}'';
+  #   };
+  # };
 }

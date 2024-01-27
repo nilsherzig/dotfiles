@@ -83,6 +83,7 @@
     mpv
     nil
     nixfmt
+    nixpkgs-fmt
     nodePackages.js-beautify
     nodePackages_latest.bash-language-server
     nodePackages_latest.prettier
