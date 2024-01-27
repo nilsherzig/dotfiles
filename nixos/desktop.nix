@@ -61,19 +61,19 @@
   #   fsType = "ext4";
   # };
 
-  services.netdata.enable = true;
+  # services.netdata.enable = true;
   # services.nfs.server.enable = true;
   # services.nfs.server.exports = ''
   #   /bigdata/media/           127.0.0.1/24(rw,insecure,no_subtree_check)
   #   /data/kubernetes/         127.0.0.1/24(rw,insecure,no_subtree_check)
   # '';
-  systemd.tmpfiles.rules =
-    [ "L+ /usr/local/bin - - - - /run/current-system/sw/bin/" ];
+  # systemd.tmpfiles.rules =
+  #   [ "L+ /usr/local/bin - - - - /run/current-system/sw/bin/" ];
 
-  services.openiscsi = {
-    enable = true;
-    name = "kubernetes";
-  };
+  # services.openiscsi = {
+  #   enable = true;
+  #   name = "kubernetes";
+  # };
 
   # programs.steam = {
   #   enable = true;
@@ -87,12 +87,11 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
   
-  imports = [
-    (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
-  ];
+  # imports = [
+  #   (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
+  # ];
 
   # services.vscode-server.enable = true; # thats not the webserver, but the work at remote thing server
-  services.nsdc.enable = false;
 
   # services.code-server = {
   #   enable = true;
