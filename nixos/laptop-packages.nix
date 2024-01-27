@@ -91,6 +91,7 @@
     nodePackages_latest.svelte-language-server
     nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
+    vscode-fhs
     nodePackages_latest.yaml-language-server
     nodejs
     obs-studio

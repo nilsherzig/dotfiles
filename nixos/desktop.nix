@@ -87,14 +87,14 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
-  # services.code-server = {
-  #   enable = true;
-  #   host = "desktop.taileb381.ts.net"; # tailscale
-  #   port = 4444;
-  #   extraEnvironment = {
-  #     "TZ" = "Europe/Berlin";
-  #     "EXTENSIONS_GALLERY" = ''
-  #       {"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"}'';
-  #   };
-  # };
+  services.code-server = {
+    enable = true;
+    host = "desktop.taileb381.ts.net"; # tailscale
+    port = 4444;
+    extraEnvironment = {
+      "TZ" = "Europe/Berlin";
+      "EXTENSIONS_GALLERY" = ''
+        {"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"}'';
+    };
+  };
 }
