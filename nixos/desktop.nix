@@ -86,4 +86,6 @@
   system.stateVersion = "22.11";
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
+
+  services.code-server = { enable = true; };
 }
