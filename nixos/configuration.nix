@@ -36,6 +36,7 @@ in {
 
   # virtual 
   virtualisation.docker.enable = true;
+  programs.dconf.enable = true;
 
   # virtualisation.docker.extraOptions = ''
   # --default-ulimit nofile=65535:65535

@@ -3,7 +3,6 @@
   # networking.extraHosts = ''
   #   172.18.0.1 iceportal.de
   # '';
-  programs.dconf.enable = true;
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     XDG_CACHE_HOME = "$HOME/.cache";
