@@ -200,7 +200,10 @@
 
   system.autoUpgrade.enable = true;
   # system.autoUpgrade.allowReboot = false;
-  services.tailscale.enable = true;
+  services.tailscale = {
+    enable = true;
+    extraUpFlags = "--ssh";
+  };
   services.passSecretService.enable = true;
 
   # services.emacs.enable = true;

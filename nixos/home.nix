@@ -83,6 +83,7 @@ in {
         trouble-nvim
         # which-key-nvim
         cmp-buffer
+        vim-test
         cmp-cmdline
         cmp-nvim-lsp
         cmp-path

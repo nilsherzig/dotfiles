@@ -164,6 +164,7 @@
     jc
     jdk21
     jellyfin-media-player
+    kodi
     jq
     jq
     jq
