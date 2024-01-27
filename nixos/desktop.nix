@@ -92,7 +92,7 @@
   ];
 
   # services.vscode-server.enable = true; # thats not the webserver, but the work at remote thing server
-  service.nsdc.enable = false;
+  services.nsdc.enable = false;
 
   # services.code-server = {
   #   enable = true;
