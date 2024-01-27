@@ -3,10 +3,6 @@
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
     ./desktop.nix
     ./laptop.nix
-    ./home.nix
-    ./packages.nix
-    ./sync.nix
-    ./keyd.nix
   ];
 
   # Bootloader.
@@ -184,16 +180,6 @@
     '';
   };
 
-  fonts.packages = with pkgs; [
-    cantarell-fonts
-    iosevka
-    fira-code
-    jetbrains-mono
-    comic-mono
-    nerdfonts
-    fantasque-sans-mono
-  ];
-
   services.udisks2.enable = true;
 
   services.mullvad-vpn.enable = true;
@@ -209,26 +195,14 @@
   # services.emacs.enable = true;
   hardware.bluetooth.settings = { General = { Experimental = true; }; };
   # services.flatpak.enable = false;
-  programs.dconf.enable = true;
-  programs.adb.enable = true;
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    XDG_CACHE_HOME = "$HOME/.cache";
-    XDG_CONFIG_HOME = "$HOME/.config";
-    XDG_DATA_HOME = "$HOME/.local/share";
-    XDG_STATE_HOME = "$HOME/.local/state";
-
-    # Not officially in the specification
-    XDG_BIN_HOME = "$HOME/.local/bin";
-    # PATH = [ "${XDG_BIN_HOME}" ];
-  };
+  # programs.adb.enable = true;
 
   nix.settings.auto-optimise-store = true;
-  services.joycond.enable = true;
+  # services.joycond.enable = true;
   # security.pam.services.login.googleAuthenticator.enable = true;
 
   # security.pam.services.login.googleAuthenticator.enable = true;
   # security.pam.services.login.googleAuthenticator.enable = true;
   # security.pam.services.gdm-password.googleAuthenticator.enable = true;
-  services.resolved.enable = true;
+  services.resolved.enable = false;
 }

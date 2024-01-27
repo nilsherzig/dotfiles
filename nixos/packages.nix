@@ -5,6 +5,16 @@
   #     [ "42loco42.cachix.org-1:6HvWFER3RdTSqEZDznqahkqaoI6QCOiX2gRpMMsThiQ=" ];
   # };
 
+  fonts.packages = with pkgs; [
+    cantarell-fonts
+    iosevka
+    fira-code
+    jetbrains-mono
+    comic-mono
+    nerdfonts
+    fantasque-sans-mono
+  ];
+
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
