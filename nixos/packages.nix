@@ -120,8 +120,8 @@
     # yarn
     # ytfzf
     # zoxide
-    aichat
-    haskellPackages.kmonad
+    # aichat
+    # haskellPackages.kmonad
     air
     anki-bin
     argocd
@@ -133,8 +133,8 @@
     choose
     delve
     direnv
-    discord
-    dmg2img
+    # discord
+    # dmg2img
     du-dust
     feh
     ffmpeg
@@ -142,24 +142,22 @@
     file
     firefox
     brave
-    fx-cast-bridge
-    phosh
-    phosh-mobile-settings
     fzf
+    dig
     gammastep
     gcc
     ginkgo
     git
     glibc
-    gnome.gnome-font-viewer
-    gnome.gnome-tweaks
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.just-perfection
-    gnomeExtensions.tiling-assistant
+    # gnome.gnome-font-viewer
+    # gnome.gnome-tweaks
+    # gnomeExtensions.blur-my-shell
+    # gnomeExtensions.just-perfection
+    # gnomeExtensions.tiling-assistant
     gnumake
     go
     golangci-lint
-    google-authenticator
+    # google-authenticator
     google-chrome
     gopls
     keyd
@@ -174,9 +172,7 @@
     jc
     jdk21
     jellyfin-media-player
-    kodi
-    jq
-    jq
+    # kodi
     jq
     k9s
     kind
@@ -202,7 +198,7 @@
     marksman
     mpv
     nil
-    nix-output-monitor
+    # nix-output-monitor
     nixfmt
     nodePackages.js-beautify
     nodePackages_latest.bash-language-server
@@ -222,9 +218,9 @@
     pavucontrol
     popeye
     poppler_utils
-    prismlauncher
-    protobuf
-    protoc-gen-go
+    # prismlauncher
+    # protobuf
+    # protoc-gen-go
     python3
     python311Packages.python-lsp-server
     ranger
@@ -243,14 +239,14 @@
     tree
     unrar-wrapper
     unzip
-    ventoy-full
-    via
+    # ventoy-full
+    # via
     vial
-    virt-manager
-    vscode-fhs
+    # virt-manager
+    # vscode-fhs
     waybar
     wezterm
-    wine64
+    # wine64
     wl-clipboard
     wtype
     xdg-desktop-portal-gtk
@@ -259,10 +255,10 @@
     somebar
     xdg-utils
     yt-dlp
-    yuzu-early-access
-    bemenu
+    # yuzu-early-access
+    # bemenu
     zathura
     zsh-syntax-highlighting
-    faas-cli
+    # faas-cli
   ];
 }
