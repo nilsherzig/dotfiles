@@ -8,14 +8,13 @@ let
     9c2d20d6761e4395861207cef10569e4
   '';
 in {
-  imports = [
-    /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
-    ./sync.nix
-  ] ++ lib.optional (machineID == laptopMachineID) ./home.nix
-    ++ lib.optional (machineID == laptopMachineID) ./packages.nix
+  imports = [ /etc/nixos/hardware-configuration.nix ./sync.nix ]
+    ++ lib.optional (machineID == laptopMachineID) ./home.nix
+    ++ lib.optional (machineID == laptopMachineID) ./laptop-packages.nix
     ++ lib.optional (machineID == laptopMachineID) ./laptop.nix
     ++ lib.optional (machineID == laptopMachineID) ./keyd.nix
-    ++ lib.optional (machineID == desktopMachineID) ./desktop.nix;
+    ++ lib.optional (machineID == desktopMachineID) ./desktop.nix
+    ++ lib.optional (machineID == desktopMachineID) ./server-packages.nix;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -156,9 +155,11 @@ in {
     enable = true;
     autosuggestions.enable = false;
     ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "fzf" ];
+    ohMyZsh.plugins = [ "fzf" "zoxide" ];
     syntaxHighlighting.enable = true;
     shellAliases = {
+      cd = "z";
+      ls = "eza --git --git-repos";
       ip = "ip --color=always"; # ip show colors
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
