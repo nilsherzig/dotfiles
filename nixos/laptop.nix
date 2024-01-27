@@ -1,12 +1,4 @@
-{ lib, ... }:
-let
-  machineID = builtins.readFile "/etc/machine-id";
-  laptopMachineID = ''
-    2c2b13ee31dc4e37b74274aa5608c424
-  '';
-
-in lib.mkIf (machineID == laptopMachineID) {
-  imports = [ ./home.nix ./packages.nix ./sync.nix ./keyd.nix ];
+{ ... }: {
   networking.hostName = "laptop";
   # networking.extraHosts = ''
   #   172.18.0.1 iceportal.de

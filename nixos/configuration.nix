@@ -1,9 +1,21 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+let
+  machineID = builtins.readFile "/etc/machine-id";
+  laptopMachineID = ''
+    2c2b13ee31dc4e37b74274aa5608c424
+  '';
+  desktopMachineID = ''
+    9c2d20d6761e4395861207cef10569e4
+  '';
+in {
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan.
-    ./desktop.nix
-    ./laptop.nix
-  ];
+    ./sync.nix
+  ] ++ lib.optional (machineID == laptopMachineID) ./home.nix
+    ++ lib.optional (machineID == laptopMachineID) ./packages.nix
+    ++ lib.optional (machineID == laptopMachineID) ./laptop.nix
+    ++ lib.optional (machineID == laptopMachineID) ./keyd.nix
+    ++ lib.optional (machineID == desktopMachineID) ./desktop.nix;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

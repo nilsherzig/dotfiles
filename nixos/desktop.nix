@@ -1,11 +1,4 @@
-{ lib, ... }:
-let
-  machineID = builtins.readFile "/etc/machine-id";
-  desktopMachineID = ''
-    9c2d20d6761e4395861207cef10569e4
-  '';
-
-in lib.mkIf (machineID == desktopMachineID) {
+{ ... }: {
   networking.hostName = "desktop";
   # Enable swap on luks
   boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".device =
