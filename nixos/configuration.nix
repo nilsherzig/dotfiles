@@ -176,7 +176,6 @@ in {
 
       shellInit = ''
         eval "$(direnv hook zsh)"
-        export EDITOR=hx
         export NODE_PATH=~/.npm-packages/lib/node_modules
         export PATH=~/.npm-packages/bin:$PATH
         export PATH=~/.krew}/bin:$PATH

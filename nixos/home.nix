@@ -69,7 +69,7 @@ in {
     programs.neovim = {
       # package = nixpkgs.neovim-nightly;
       enable = true;
-      defaultEditor = false;
+      defaultEditor = true;
       plugins = with pkgs.vimPlugins; [
         # bufferline-nvim
         catppuccin-nvim
