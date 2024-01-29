@@ -46,13 +46,13 @@
     fsType = "ext4";
   };
 
-  virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.vmVariant = {
-    virtualisation = {
-      memorySize = 5000; # Use 2048MiB memory.
-      cores = 6;
-    };
-  };
+  # virtualisation.spiceUSBRedirection.enable = true;
+  # virtualisation.vmVariant = {
+  #   virtualisation = {
+  #     memorySize = 5000; # Use 2048MiB memory.
+  #     cores = 6;
+  #   };
+  # };
 
   services.k3s.enable = true;
 
@@ -91,13 +91,13 @@
   #   (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
   # ];
 
-  imports = [
-    (fetchTarball
-      "https://github.com/nix-community/nixos-vscode-server/tarball/master")
-  ];
-
-  services.vscode-server.enable =
-    true; # thats not the webserver, but the work at remote thing server
+  # imports = [
+  #   (fetchTarball
+  #     "https://github.com/nix-community/nixos-vscode-server/tarball/master")
+  # ];
+  #
+  # services.vscode-server.enable =
+  #   true; # thats not the webserver, but the work at remote thing server
 
   # services.code-server = {
   #   enable = true;
