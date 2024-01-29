@@ -1,4 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+let
+  token =
+    lib.strings.removeSuffix "\n" (builtins.readFile /home/nils/factorio-token);
+  factorio = pkgs.factorio.override {
+    username = "nilsdev";
+    token = token;
+  };
+in {
   fonts.packages = with pkgs; [
     cantarell-fonts
     iosevka
@@ -12,6 +20,7 @@
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
+    factorio
     asciinema
     zoxide
     eza
