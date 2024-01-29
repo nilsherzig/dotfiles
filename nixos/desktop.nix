@@ -91,7 +91,11 @@
   #   (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
   # ];
 
-  # services.vscode-server.enable = true; # thats not the webserver, but the work at remote thing server
+  imports = [
+    (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
+  ];
+
+  services.vscode-server.enable = true; # thats not the webserver, but the work at remote thing server
 
   # services.code-server = {
   #   enable = true;

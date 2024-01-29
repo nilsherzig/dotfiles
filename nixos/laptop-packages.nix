@@ -12,8 +12,10 @@
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
+    asciinema
     zoxide
     eza
+    zellij
     air
     anki-bin
     argocd
@@ -51,6 +53,7 @@
     gradience
     grim
     grml-zsh-config
+    kustomize
     helix
     htop
     imagemagick

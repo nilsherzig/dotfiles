@@ -143,6 +143,7 @@ in {
         (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
         (fromGitHub "HEAD" "stevearc/conform.nvim")
         (fromGitHub "HEAD" "stevearc/oil.nvim")
+        (fromGitHub "HEAD" "Mofiqul/vscode.nvim")
       ];
     };
   };

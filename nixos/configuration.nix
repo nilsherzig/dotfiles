@@ -163,15 +163,13 @@ in {
       cd = "z";
       ls = "eza --git --git-repos";
       ip = "ip --color=always"; # ip show colors
-      rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
       k = "kubectl";
       update = "sudo nixos-rebuild switch --upgrade";
       lg = "lazygit";
-      k9s = "k9s --logoless";
+      # k9s = "k9s --logoless";
       upload = "~/dotfiles/scripts/upload.sh";
       vi = "nvim";
-      b = "broot";
       blue = "bluetuith";
     };
     # promptInit = ''
@@ -203,7 +201,7 @@ in {
   # system.autoUpgrade.allowReboot = false;
   services.tailscale = {
     enable = true;
-    extraUpFlags = "--ssh";
+    extraUpFlags = [ "--ssh" ];
   };
   services.passSecretService.enable = true;
 
