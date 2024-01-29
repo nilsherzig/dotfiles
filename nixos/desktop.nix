@@ -27,7 +27,7 @@
   };
 
   networking.firewall = {
-    enable = true;
+    enable = false;
     allowedTCPPorts = [ 22 53 80 443 2049 8123 9090 8096 6443 ];
     allowedUDPPorts = [ 22 53 80 443 8123 9090 8096 ];
   };
