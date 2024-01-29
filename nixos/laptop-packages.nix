@@ -20,7 +20,7 @@ in {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
-    factorio
+    # factorio
     asciinema
     zoxide
     eza
