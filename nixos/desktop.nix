@@ -86,7 +86,7 @@
   system.stateVersion = "22.11";
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
-  
+
   # imports = [
   #   (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
   # ];
