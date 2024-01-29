@@ -112,6 +112,7 @@ in {
         nvim-web-devicons
         plenary-nvim
         telescope-nvim
+        nvim-highlight-colors
         vim-fugitive
         vim-table-mode
         wilder-nvim

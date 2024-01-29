@@ -1,6 +1,8 @@
-@define-color background #1F1F28;
+@define-color background #16161D;
 @define-color foreground #DCD7BA;
 @define-color red #C34043;
+@define-color green #76946A;
+
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -11,7 +13,7 @@
 window#waybar {
     background-color: @background;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: #ffffff;
+    color: @foreground;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -46,7 +48,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @foreground;
 }
 
 #workspaces button:hover {
@@ -60,6 +62,7 @@ button:hover {
 
 #workspaces button.active {
     background-color: #64727D;
+    color: #ffffff;
 }
 
 #workspaces button.urgent {
@@ -87,8 +90,8 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 30px;
-    color: #ffffff;
+    padding: 0 1.2rem;
+    color: @foreground;
 }
 
 #window,
@@ -118,7 +121,7 @@ button:hover {
 #battery.charging,
 #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: @green;
 }
 
 @keyframes blink {
