@@ -15,7 +15,8 @@ in {
     ++ lib.optional (machineID == laptopMachineID) ./keyd.nix
 
     ++ lib.optional (machineID == desktopMachineID) ./desktop.nix
-    ++ lib.optional (machineID == desktopMachineID) ./server-packages.nix;
+    ++ lib.optional (machineID == desktopMachineID) ./server-packages.nix
+    ++ lib.optional (machineID == desktopMachineID) ./laptop-packages.nix;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
