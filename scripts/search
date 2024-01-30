@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -xe
+title=$(hyprctl clients -j | jq '.[].title' | sed 's;";;g' | fzf)
+
+hyprctl dispatch focuswindow title:"$title"
+

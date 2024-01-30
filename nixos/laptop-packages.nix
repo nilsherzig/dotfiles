@@ -52,6 +52,7 @@ in {
     ginkgo
     git
     glibc
+    brotab
     gnumake
     go
     go-callvis
