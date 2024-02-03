@@ -105,8 +105,10 @@ in {
     resolved.enable = false;
     udisks2.enable = true;
     xserver = {
-      layout = "de";
-      xkbVariant = "";
+      xkb = {
+        layout = "de";
+        variant = "nodeadkeys";
+      };
     };
     pipewire = {
       enable = true;

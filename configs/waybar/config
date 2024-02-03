@@ -6,7 +6,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "network" ],
+    // "modules-left": ["hyprland/workspaces", "network" ],
+    "modules-left": ["hyprland/workspaces" ],
     // "modules-center": ["hyprland/window"],
     // "modules-center": ["network"],
     // "modules-right": [ "tray", "pulseaudio", "cpu", "memory", "temperature", "backlight",  "battery", "battery#bat2", "clock"],
