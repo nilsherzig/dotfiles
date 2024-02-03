@@ -21,4 +21,3 @@ A big thank you to everyone who has ever contributed to the packages I use :).
 | file sync                | syncthing                           |
 | browser                  | firefox                             |
 | homelab                  | k3s with argocd                     |
-

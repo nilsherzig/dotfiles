@@ -9,16 +9,21 @@
 
     capslock = escape
 
-    j = lettermod(symbols, j, 100, 150)
-    f = lettermod(symbols, f, 100, 150)
+    j = lettermod(symbols, j, 200, 150)
+    f = lettermod(symbols, f, 200, 150)
+    k = lettermod(control, k, 200, 150)
+    d = lettermod(control, d, 200, 150)
+    m = lettermod(altgr, m, 200, 150)
+    c = lettermod(altgr, c, 200, 150) 
+    space = lettermod(shift, space, 200, 150) 
 
-    k = lettermod(control, k, 100, 150)
-    d = lettermod(control, d, 100, 150)
+    # j = overload(symbols, j)
+    # f = overload(symbols, f)
+    # k = overload(control, k)
+    # d = overload(control, d)
+    # m = overload(altgr, m)
+    # c = overload(altgr, c)
 
-    m = lettermod(altgr, m, 100, 150)
-    c = lettermod(altgr, c, 100, 150) 
-
-    space = lettermod(shift, space, 100, 150) 
 
     altgr = enter 
 
@@ -26,6 +31,10 @@
     backspace = noop 
     control = noop
     enter = noop
+    right = noop
+    left = noop
+    up = noop
+    down = noop
 
     [symbols]
     k = backspace
@@ -35,6 +44,22 @@
     i = G-8 
     o = G-9 
     p = G-0
+
+    h = left
+    j = down
+    k = up
+    l = right
+
+    1 = S-1
+    2 = S-2
+    3 = S-3
+    4 = S-4
+    5 = S-5
+    6 = S-6
+    7 = S-7
+    8 = S-8
+    9 = S-9
+    0 = S-0
   '';
 
   services.keyd = {

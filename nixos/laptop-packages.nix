@@ -20,7 +20,7 @@ in {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
-    # factorio
+    factorio
     asciinema
     zoxide
     eza
@@ -33,6 +33,11 @@ in {
     brave
     brightnessctl
     bun
+    gnomeExtensions.auto-move-windows
+    gnomeExtensions.just-perfection
+    gnomeExtensions.impatience
+    gnome-extension-manager
+    gnome.gnome-tweaks
     cfssl
     choose
     cilium-cli
@@ -50,6 +55,7 @@ in {
     gammastep
     gcc
     ginkgo
+    wmctrl
     git
     glibc
     brotab
@@ -91,7 +97,8 @@ in {
     localsend
     ltex-ls
     lua-language-server
-    mako
+    # mako
+    dunst
     marksman
     mpv
     nil

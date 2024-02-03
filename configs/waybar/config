@@ -9,24 +9,25 @@
     "modules-left": ["hyprland/workspaces", "network" ],
     // "modules-center": ["hyprland/window"],
     // "modules-center": ["network"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "temperature", "backlight",  "battery", "battery#bat2", "clock", "tray"],
+    // "modules-right": [ "tray", "pulseaudio", "cpu", "memory", "temperature", "backlight",  "battery", "battery#bat2", "clock"],
+    "modules-right": [ "pulseaudio", "cpu", "memory", "temperature", "backlight",  "battery", "battery#bat2", "clock"],
     // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    //"hyprland/workspaces": {
+    //    "disable-scroll": true,
+    //    "all-outputs": false,
+    //    "warp-on-scroll": false,
+    //    "format": "{name}: {trueicon}",
+    //    "format-icons": {
+    //        "1": "",
+    //        "2": "",
+    //        "3": "",
+    //        "4": "",
+    //        "5": "",
+    //        "urgent": "",
+    //        "focused": "",
+    //        "default": ""
+    //    }
+    //},
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -126,7 +127,7 @@
         "bat": "BAT2"
     },
     "network": {
-        "interval": 10,
+        "interval": 2,  
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": "{essid} ({signalStrength}%)   {bandwidthUpBytes}    {bandwidthDownBytes} ",
         "format-wifi": "{bandwidthUpBytes}    {bandwidthDownBytes} ",

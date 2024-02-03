@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   networking.hostName = "laptop";
   # networking.extraHosts = ''
   #   172.18.0.1 iceportal.de

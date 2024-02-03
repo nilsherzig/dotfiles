@@ -45,18 +45,18 @@ in {
 
   boot = {
     kernel = {
-      sysctl = {
-        "fs.inotify.max_user_watches" = "1048576"; # 128 times the default 8192
-        "fs.inotify.max_user_instances" = "8192";
-        "clearcpuid" = "514";
-      };
+      # sysctl = {
+      #   "fs.inotify.max_user_watches" = "1048576"; # 128 times the default 8192
+      #   "fs.inotify.max_user_instances" = "8192";
+      #   "clearcpuid" = "514";
+      # };
     };
     extraModprobeConfig = ''
       options hid_apple fnmode=2
       options hid_apple swap_opt_cmd=1
     '';
-    kernelParams =
-      [ "amd_iommu=on" "clearcpuid=514" "vm.max_map_count=1000000" ];
+    # kernelParams =
+    #   [ "amd_iommu=on" "clearcpuid=514" "vm.max_map_count=1000000" ];
     initrd.systemd.network.wait-online.timeout = 0;
     loader = {
       efi.canTouchEfiVariables = true;
@@ -158,7 +158,7 @@ in {
       syntaxHighlighting.enable = true;
       shellAliases = {
         cd = "z";
-        ls = "eza --git --git-repos";
+        # ls = "eza --git --git-repos";
         ip = "ip --color=always";
         ssh = "TERM=xterm ssh";
         k = "kubectl";
@@ -176,6 +176,7 @@ in {
 
       shellInit = ''
         eval "$(direnv hook zsh)"
+        export EDITOR=nvim;
         export NODE_PATH=~/.npm-packages/lib/node_modules
         export PATH=~/.npm-packages/bin:$PATH
         export PATH=~/.krew}/bin:$PATH

@@ -1,7 +1,7 @@
-@define-color background #16161D;
+@define-color background #181818;
 @define-color foreground #DCD7BA;
 @define-color red #C34043;
-@define-color green #76946A;
+@define-color green #608b4e;
 
 
 * {
@@ -56,12 +56,12 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
+    background-color: #608b4e;
     box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.active {
-    background-color: #64727D;
+    background-color: #608b4e;
     color: #ffffff;
 }
 
@@ -70,7 +70,7 @@ button:hover {
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: #608b4e;
     border-bottom: 3px solid #ffffff;
 }
 
