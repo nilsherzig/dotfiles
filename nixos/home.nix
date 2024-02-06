@@ -102,6 +102,7 @@ in {
         comment-nvim
         nvim-cursorline
         # nvim-dap
+        gruvbox-material
         # nvim-dap-go
         # nvim-dap-ui
         # nvim-jdtls

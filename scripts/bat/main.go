@@ -52,7 +52,6 @@ func main() {
 }
 
 func readFileToInt(filepath string) (value float64) {
-
 	content, err := os.ReadFile(filepath)
 	if err != nil {
 		fmt.Println("Error reading the file:", err)

@@ -21,6 +21,7 @@ in {
 
   users.users.nils.packages = with pkgs; [
     factorio
+    ollama
     asciinema
     zoxide
     eza

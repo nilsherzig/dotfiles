@@ -86,6 +86,18 @@ in {
   };
 
   systemd = {
+    services.customKeyd = {
+      description = "custom keyd";
+      wantedBy = [ "multi-user.target" ];
+      after = [ "network.target" ];
+
+      serviceConfig = {
+        ExecStart = "/home/nils/Documents/keyd/bin/keyd";
+        Restart = "always";
+        User = "root";
+      };
+    };
+
     network.wait-online.enable = false;
     network.wait-online.timeout = 0;
     services.NetworkManager-wait-online.enable = false;
@@ -101,6 +113,10 @@ in {
       enable = true;
       extraUpFlags = [ "--ssh" ];
     };
+    xserver.enable = true;
+    xserver.displayManager.gdm.enable = true;
+    xserver.desktopManager.gnome.enable = true;
+    mullvad-vpn.enable = true;
     passSecretService.enable = true;
     resolved.enable = false;
     udisks2.enable = true;
@@ -141,6 +157,7 @@ in {
           "libvirtd"
           "wireshark"
           "adbusers"
+          "input"
         ];
         hashedPassword =
           "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
@@ -150,6 +167,7 @@ in {
   };
 
   programs = {
+    hyprland.enable = true;
     dconf.enable = true;
     # wireshark.enable = true;
     zsh = {
