@@ -11,7 +11,7 @@
         devices = {
           "desktop" = {
             id =
-              "5MJIIGE-3O76BES-QNBNMC7-KJ2HGYP-KTEULD2-TTMETEW-JGT3GTW-BYDN6QE";
+              "WUCOXWM-MSUMNA2-EBANPQU-YVZJJ6K-OCE4M3K-TQH3OCG-KMU6H2I-RQ27IAS";
           };
           "laptop" = {
             id =
