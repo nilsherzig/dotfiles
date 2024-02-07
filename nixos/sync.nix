@@ -26,6 +26,8 @@
           "home" = {
             path = "/home/nils";
             devices = [ "desktop" "laptop" ];
+            rescanIntervalS = 3600;
+            fsWatcherEnabled = true;
             versioning = {
               type = "trashcan";
               params.cleanoutDays = "1024";
