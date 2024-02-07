@@ -15,7 +15,7 @@
           };
           "laptop" = {
             id =
-              "CYGD4VS-FGDQ7KZ-TOKZNDS-LPE4MNB-3VCKOEW-ICA3BDG-PZBAF6R-2FDR7QK";
+              "3RTXHDQ-BFYEPQZ-2XODEVN-C4CSHF6-E6MDV2V-MS7ENDE-RCUV3FC-HMWUVA7";
           };
           "pixel" = {
             id =
