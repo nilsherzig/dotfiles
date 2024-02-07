@@ -41,6 +41,7 @@ in {
     gnome.gnome-tweaks
     cfssl
     choose
+    powertop
     cilium-cli
     delve
     dig
@@ -58,6 +59,7 @@ in {
     ginkgo
     wmctrl
     git
+    tangram
     glibc
     brotab
     gnumake
@@ -94,6 +96,7 @@ in {
     lazygit
     libnotify
     libqalculate
+    qalculate-gtk
     liquidctl
     localsend
     ltex-ls
