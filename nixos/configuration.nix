@@ -9,12 +9,13 @@ let
   '';
 in {
   imports = [ /etc/nixos/hardware-configuration.nix ./sync.nix ]
-    ++ lib.optional (machineID == laptopMachineID) ./home.nix
-    ++ lib.optional (machineID == laptopMachineID) ./laptop-packages.nix
     ++ lib.optional (machineID == laptopMachineID) ./laptop.nix
     ++ lib.optional (machineID == laptopMachineID) ./keyd.nix
+    ++ lib.optional (machineID == laptopMachineID) ./laptop-packages.nix
+    ++ lib.optional (machineID == laptopMachineID) ./home.nix
 
     ++ lib.optional (machineID == desktopMachineID) ./desktop.nix
+    ++ lib.optional (machineID == desktopMachineID) ./home.nix
     ++ lib.optional (machineID == desktopMachineID) ./server-packages.nix
     ++ lib.optional (machineID == desktopMachineID) ./laptop-packages.nix;
 
