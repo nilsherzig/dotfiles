@@ -69,7 +69,7 @@ config = {
 	-- 	selection_fg = "#1e1e1e",
 	-- 	background = "#1e1e1e",
 	-- },
-	enable_wayland = false,
+	enable_wayland = true,
 	-- color_scheme = "Kanagawa (Gogh)",
 	-- color_scheme = "Gruvbox Material (Gogh)",
 	color_scheme = "GruvboxDarkHard",

@@ -4,7 +4,7 @@
       enable = true;
       user = "nils";
       dataDir = "/home/nils/syncthing";
-      configDir = "/home/nils/.config/syncthing";
+      configDir = "/home/nils/syncthing";
       overrideDevices = true;
       overrideFolders = true;
       settings = {
