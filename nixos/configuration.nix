@@ -22,7 +22,16 @@ in
     ++ lib.optional (machineID == desktopMachineID) ./laptop-packages.nix;
 
   console.keyMap = "de";
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    # WAYLAND_DISPLAY = "wayland-1";
+    # GTK_THEME = "adwaita:dark";
+    XDG_CACHE_HOME = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
+    XDG_BIN_HOME = "$HOME/.local/bin";
+  };
   hardware = {
     bluetooth = {
       enable = true;

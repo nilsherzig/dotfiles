@@ -6,7 +6,8 @@ let
     username = "nilsdev";
     token = token;
   };
-in {
+in
+{
   fonts.packages = with pkgs; [
     cantarell-fonts
     iosevka
@@ -29,6 +30,7 @@ in {
     eza
     zellij
     air
+    newsflash
     anki-bin
     argocd
     bluetuith
@@ -36,6 +38,7 @@ in {
     brave
     brightnessctl
     bun
+    gnome.polari
     gnomeExtensions.auto-move-windows
     gnomeExtensions.just-perfection
     gnomeExtensions.impatience
