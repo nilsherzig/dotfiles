@@ -7,7 +7,8 @@
 
     [main]
 
-    capslock = escape
+    capslock = overload(symbols, esc);
+    space = overload(shift, space);
 
     j = lettermod(symbols, j, 200, 140)
     f = lettermod(symbols, f, 200, 140)
@@ -15,24 +16,20 @@
     k = lettermod(control, k, 200, 140)
     d = lettermod(control, d, 200, 140)
 
+    # l = lettermod(symbols, l, 200, 140)
+    # s = lettermod(symbols, s, 200, 140)
+
     n = lettermod(altgr, n, 200, 150)
     v = lettermod(altgr, v, 200, 150) 
-    space = lettermod(shift, space, 200, 150) 
 
     altgr = enter 
 
-    shift = noop 
     backspace = noop 
     control = noop
-    enter = noop
-    # right = noop
-    # left = noop
-    # up = noop
-    # down = noop
 
-    [symbols:S]
-    k = backspace
+    [symbols]
     d = backspace
+    f = enter
 
     # , = S-,  
     # . = S-.
@@ -44,10 +41,10 @@
     n = G-9 
     m = G-0
 
-    h = left
-    j = down
-    k = up
-    l = right
+    # h = left
+    # j = down
+    # k = up
+    # l = right
   '';
 
   services.keyd = {
