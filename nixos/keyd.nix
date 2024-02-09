@@ -12,8 +12,8 @@
     j = lettermod(symbols, j, 200, 140)
     f = lettermod(symbols, f, 200, 140)
 
-    k = lettermod(control, k, 200, 150)
-    d = lettermod(control, d, 200, 150)
+    k = lettermod(control, k, 200, 140)
+    d = lettermod(control, d, 200, 140)
 
     n = lettermod(altgr, n, 200, 150)
     v = lettermod(altgr, v, 200, 150) 
@@ -25,10 +25,10 @@
     backspace = noop 
     control = noop
     enter = noop
-    right = noop
-    left = noop
-    up = noop
-    down = noop
+    # right = noop
+    # left = noop
+    # up = noop
+    # down = noop
 
     [symbols:S]
     k = backspace

@@ -1,9 +1,9 @@
 require("nils_config.rebind")
 require("nils_config.lazy")
 
-vim.wo.fillchars = "eob: "
-
 vim.loader.enable()
+
+vim.wo.fillchars = "eob: "
 
 vim.filetype.add({
 	extension = {
@@ -44,7 +44,8 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.smartcase = true
+-- vim.opt.smartcase = true
+vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
 
