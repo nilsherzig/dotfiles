@@ -1,5 +1,8 @@
 { pkgs, ... }: {
   networking.hostName = "laptop";
+  hardware.tuxedo-rs.enable = true;
+  hardware.tuxedo-rs.tailor-gui.enable = true;
+  hardware.tuxedo-keyboard.enable = true;
   # networking.extraHosts = ''
   #   172.18.0.1 iceportal.de
   # '';

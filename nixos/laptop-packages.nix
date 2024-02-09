@@ -20,6 +20,7 @@ in {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
+    tuxedo-rs
     discord
     factorio
     ollama
@@ -45,6 +46,7 @@ in {
     powertop
     cilium-cli
     delve
+    gnome.dconf-editor
     dig
     direnv
     du-dust
@@ -60,7 +62,7 @@ in {
     ginkgo
     wmctrl
     git
-    tangram
+    # tangram
     glibc
     brotab
     gnumake

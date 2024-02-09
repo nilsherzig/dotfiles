@@ -7,7 +7,8 @@ let
   desktopMachineID = ''
     9c2d20d6761e4395861207cef10569e4
   '';
-in {
+in
+{
   imports = [ /etc/nixos/hardware-configuration.nix ./sync.nix ]
     ++ lib.optional (machineID == laptopMachineID) ./laptop.nix
     ++ lib.optional (machineID == laptopMachineID) ./keyd.nix
@@ -21,6 +22,7 @@ in {
     ++ lib.optional (machineID == desktopMachineID) ./laptop-packages.nix;
 
   console.keyMap = "de";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   hardware = {
     bluetooth = {
       enable = true;

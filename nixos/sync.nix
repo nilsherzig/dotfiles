@@ -22,6 +22,7 @@
               "OLD6HI2-4TEWRD3-JPJVY75-EZ3AJVS-PYD6FSP-LC7JX44-4IKY5YW-RU522AU";
           };
         };
+        options = { relaysEnabled = false; };
         folders = {
           "home" = {
             path = "/home/nils";
