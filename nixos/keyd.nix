@@ -41,10 +41,10 @@
     n = G-9 
     m = G-0
 
-    # h = left
-    # j = down
-    # k = up
-    # l = right
+    h = left
+    j = down
+    k = up
+    l = right
   '';
 
   services.keyd = {

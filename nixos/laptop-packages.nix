@@ -6,8 +6,7 @@ let
     username = "nilsdev";
     token = token;
   };
-in
-{
+in {
   fonts.packages = with pkgs; [
     cantarell-fonts
     iosevka
@@ -103,7 +102,6 @@ in
     libnotify
     libqalculate
     qalculate-gtk
-    liquidctl
     localsend
     ltex-ls
     lua-language-server
