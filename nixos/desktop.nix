@@ -55,6 +55,7 @@
   # };
 
   services.k3s.enable = true;
+  services.joycond.enable = true;
 
   # fileSystems."/bigdata" = {
   #   device = "/dev/disk/by-label/hdd12tb";

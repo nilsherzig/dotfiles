@@ -224,7 +224,7 @@ cmp.setup({
 	},
 
 	sources = {
-		-- { name = "copilot", group_index = 2 },
+		{ name = "copilot", group_index = 2 },
 		-- { name = "luasnip", keyword_length = 2 },
 		{ name = "path" },
 		{ name = "nvim_lsp" },

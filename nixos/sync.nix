@@ -1,7 +1,7 @@
 { ... }: {
   services = {
     syncthing = {
-      enable = true;
+      enable = false;
       user = "nils";
       dataDir = "/home/nils/syncthing";
       configDir = "/home/nils/syncthing";

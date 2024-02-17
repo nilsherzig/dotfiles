@@ -21,6 +21,7 @@ require("telescope").setup({
 		selection_caret = "  ",
 	},
 })
+
 local Path = require("plenary.path")
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")

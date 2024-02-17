@@ -88,7 +88,7 @@ in {
         cmp-nvim-lsp
         cmp-path
         cmp_luasnip
-        copilot-vim
+        # copilot-vim
         gitsigns-nvim
         indent-blankline-nvim
         kanagawa-nvim
@@ -117,6 +117,7 @@ in {
         vim-fugitive
         vim-table-mode
         wilder-nvim
+        rose-pine
         symbols-outline-nvim
         lush-nvim
         zenbones-nvim
@@ -137,11 +138,11 @@ in {
         # (fromGitHub "HEAD" "jmbuhr/otter.nvim")
         # (fromGitHub "HEAD" "luckasRanarison/nvim-devdocs")
         # (fromGitHub "HEAD" "postfen/clipboard-image.nvim")
-        # (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
+        (fromGitHub "HEAD" "projekt0n/github-nvim-theme")
         # (fromGitHub "HEAD" "someone-stole-my-name/yaml-companion.nvim")
         # (fromGitHub "HEAD" "toppair/reach.nvim")
-        # (fromGitHub "HEAD" "zbirenbaum/copilot-cmp")
-        # (fromGitHub "HEAD" "zbirenbaum/copilot.lua")
+        (fromGitHub "HEAD" "zbirenbaum/copilot-cmp")
+        (fromGitHub "HEAD" "zbirenbaum/copilot.lua")
         (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
         (fromGitHub "HEAD" "stevearc/conform.nvim")
         (fromGitHub "HEAD" "stevearc/oil.nvim")

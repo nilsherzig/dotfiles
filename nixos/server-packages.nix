@@ -8,5 +8,6 @@
     dig
     htop
     liquidctl
+    yuzuPackages.early-access
   ];
 }
