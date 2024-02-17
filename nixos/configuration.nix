@@ -7,8 +7,7 @@ let
   desktopMachineID = ''
     9c2d20d6761e4395861207cef10569e4
   '';
-in
-{
+in {
   imports = [ /etc/nixos/hardware-configuration.nix ./sync.nix ]
     ++ lib.optional (machineID == laptopMachineID) ./laptop.nix
     ++ lib.optional (machineID == laptopMachineID) ./keyd.nix
@@ -171,6 +170,7 @@ in
           "wireshark"
           "adbusers"
           "input"
+          "plugdev"
         ];
         hashedPassword =
           "$y$j9T$tXZKvVUEHqVuubteVIh8n0$A0gzkC.T8b6D2ouV6pUnYy2cH5JkcvSKKcjH83Y2vA9";
