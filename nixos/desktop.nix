@@ -57,8 +57,8 @@
   services.k3s.enable = true;
   services.joycond.enable = true;
   services.udev.extraRules = ''
-KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
-''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
+  '';
 
   # fileSystems."/bigdata" = {
   #   device = "/dev/disk/by-label/hdd12tb";
