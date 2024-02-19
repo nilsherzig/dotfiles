@@ -24,6 +24,7 @@ in {
     discord
     factorio
     ollama
+    httpie
     asciinema
     zoxide
     eza
@@ -50,6 +51,7 @@ in {
     delve
     gnome.dconf-editor
     dig
+    stremio
     direnv
     du-dust
     dwl
