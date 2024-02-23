@@ -20,6 +20,7 @@ in {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
+    starship
     tuxedo-rs
     discord
     factorio
@@ -61,9 +62,11 @@ in {
     file
     firefox
     fzf
+    atuin
     gammastep
     gcc
     ginkgo
+    oapi-codegen
     wmctrl
     git
     # tangram

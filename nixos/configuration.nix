@@ -180,6 +180,14 @@ in {
   };
 
   programs = {
+    # tmux = {
+    #   enable = true;
+    #   escapeTime = 0;
+    #   plugins = with pkgs.tmuxPlugins; [ tmux-sensible resurrect ];
+    #   extraConfig = ''
+    #     set -g status-right '%Y-%m-%d %H:%M #{tmux_mode_indicator}'
+    #   '';
+    # };
     steam = {
       enable = true;
       remotePlay.openFirewall =
@@ -192,13 +200,13 @@ in {
     # wireshark.enable = true;
     zsh = {
       enable = true;
+      # ohMyZsh.enable = true;
+      # ohMyZsh.plugins = [ "zoxide" "git" "thefuck" "powerlevel10k" ];
       autosuggestions.enable = false;
-      ohMyZsh.enable = true;
-      ohMyZsh.plugins = [ "fzf" "zoxide" ];
       syntaxHighlighting.enable = true;
       shellAliases = {
+        # cd = "zoxide";
         cd = "z";
-        # ls = "eza --git --git-repos";
         ip = "ip --color=always";
         ssh = "TERM=xterm ssh";
         k = "kubectl";
@@ -209,13 +217,13 @@ in {
         blue = "bluetuith";
       };
 
-      interactiveShellInit = ''
-        source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
-        zstyle ':prompt:grml:left:items:user' pre '%F{blue}%B'
-      '';
+      interactiveShellInit = "";
 
       shellInit = ''
+        eval "$(atuin init zsh)"
+        eval "$(zoxide init zsh)"
         eval "$(direnv hook zsh)"
+        eval "$(starship init zsh)"
         export EDITOR=nvim;
         export NODE_PATH=~/.npm-packages/lib/node_modules
         export PATH=~/.npm-packages/bin:$PATH

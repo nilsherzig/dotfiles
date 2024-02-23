@@ -1,26 +1,25 @@
 format = '''
-$username$hostname$directory $git_status$git_branch $battery$kubernetes
+$username$hostname$directory $git_branch$kubernetes$time
 [>](dimmed blue bold) ''' # there has to be a another way #TODO
 
 [status]
 disabled = false
 
 [kubernetes]
-format = ' [$context](dimmed blue) '
+format = '[$context](dimmed blue) '
 disabled = false
 # detect_files = ['.k8s']
 
 [username]
-style_user = 'dimmed blue bold'
+style_user = 'dimmed blue'
 style_root = 'black bold'
 format = '[$user]($style)'
 disabled = false
 show_always = true
 
 [hostname]
-ssh_only = true
-format = '(bold blue)@[$hostname](bold red)'
-trim_at = '.companyname.com'
+ssh_only = false
+format = '(dimmed blue)@[$hostname](dimmed blue)'
 disabled = false
 
 [directory]
@@ -29,7 +28,10 @@ format = ' [$path]($style)'
 truncation_length = 8
 truncation_symbol = '…/'
 
-[[battery.display]]
-threshold = 50
-style = 'dimmed yellow'
+[time]
+disabled = false
 
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
