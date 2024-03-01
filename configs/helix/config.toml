@@ -1,5 +1,4 @@
 theme = "github_dark"
-# theme = "kanagawa"
 
 [keys.normal]
 # C-y = "toggle_copilot_auto"

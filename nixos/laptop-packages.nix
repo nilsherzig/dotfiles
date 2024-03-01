@@ -20,6 +20,7 @@ in {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
+    helix-gpt
     starship
     tuxedo-rs
     discord
@@ -98,6 +99,7 @@ in {
     krew
     kubebuilder
     kubectl
+    kubetail
     kubectx
     kubernetes-helm
     kubeseal

@@ -10,6 +10,8 @@ import (
 	"time"
 )
 
+// handleErr is a utility function that checks if an error is not nil.
+// If the error is not nil, it will cause the program to panic and print the error to the standard error.
 func handleErr(err error) {
 	if err != nil {
 		log.Panic(err)
