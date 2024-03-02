@@ -18,6 +18,9 @@ func handleErr(err error) {
 	}
 }
 
+// gatherEstimate returns an estimated time in minutes, calculated by
+// dividing the current charge by the current, then multiplying by 60.
+// This provides an estimate of how long it will take to deplete the battery.
 func gatherEstimate() float64 {
 	currentChargeFile := "/sys/class/power_supply/BAT0/charge_now"
 	currentCurrentFile := "/sys/class/power_supply/BAT0/current_now"
@@ -25,7 +28,7 @@ func gatherEstimate() float64 {
 	currentCharge := readFileToInt(currentChargeFile)
 	currentCurrent := readFileToInt(currentCurrentFile)
 
-	result := currentCharge / currentCurrent * 60
+	result := float64(currentCharge) / float64(currentCurrent) * 60
 	return result
 }
 
@@ -53,15 +56,16 @@ func main() {
 	}
 }
 
-func readFileToInt(filepath string) (value float64) {
+func readFileToInt(filepath string) (value float64, err error) {
 	content, err := os.ReadFile(filepath)
 	if err != nil {
 		fmt.Println("Error reading the file:", err)
 		return
 	}
 
-	fileContentInt, err := strconv.ParseFloat(
-		strings.Trim(string(content), "\n"), 64)
-	handleErr(err)
-	return fileContentInt
+	value, err = strconv.ParseFloat(strings.Trim(string(content), "\n"), 64)
+	if err != nil {
+		return
+	}
+	return
 }

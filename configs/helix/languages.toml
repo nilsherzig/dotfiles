@@ -5,7 +5,7 @@
 [language-server.copilot]
 # command = "helix-gpt"
 command = "bun"
-args = ["run", "/home/nils/Documents/helix-gpt/src/app.ts"]
+args = ["run", "/home/nils/Documents/helix-gpt/src/app.ts", "--", "--triggerCharacters", ""]
 
 [[language]]
 name = "go"
