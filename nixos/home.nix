@@ -145,8 +145,10 @@ in {
         (fromGitHub "HEAD" "zbirenbaum/copilot.lua")
         (fromGitHub "HEAD" "jakewvincent/mkdnflow.nvim")
         (fromGitHub "HEAD" "stevearc/conform.nvim")
+        # (fromGitHub "HEAD" "Wansmer/symbol-usage.nvim")
         (fromGitHub "HEAD" "stevearc/oil.nvim")
         (fromGitHub "HEAD" "Mofiqul/vscode.nvim")
+        # (fromGitHub "HEAD" "David-Kunz/gen.nvim")
       ];
     };
   };

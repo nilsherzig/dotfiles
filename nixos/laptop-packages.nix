@@ -20,6 +20,11 @@ in {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   users.users.nils.packages = with pkgs; [
+    nixos-generators
+    lorri
+    niv
+    rustup
+    clang
     helix-gpt
     starship
     tuxedo-rs
@@ -32,6 +37,7 @@ in {
     eza
     zellij
     air
+    android-studio
     newsflash
     anki-bin
     argocd

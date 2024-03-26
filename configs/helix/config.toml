@@ -1,7 +1,8 @@
 theme = "github_dark"
 
 [keys.normal]
-# C-y = "toggle_copilot_auto"
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
 
 C-h = "select_prev_sibling"
 C-j = "shrink_selection"
@@ -14,16 +15,15 @@ D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "ins
 "C-r" = ":reload-all"
 "C-q" = ":bc"
 
-# [keys.insert]
+[keys.insert]
+S-tab = "move_parent_node_start"
 # "C-k" = "show_or_next_copilot_completion"
 # "C-j" = "hide_or_prev_copilot_completion"
 # "C-h" = "apply_copilot_completion"
 
-[keys.normal.tab]
-"s" = ["move_next_word_end", "move_prev_word_start", "surround_add"]
-"a" = ["select_regex", "align_selections"]
-"m" = ":pipe /home/nils/dotfiles/scripts/helix-align-markdown-table.py"
-"b" = ":pipe-to wezterm cli split-pane -- ~/dotfiles/scripts/open-gitweb.sh"
+[keys.select]
+tab = "extend_parent_node_end"
+S-tab = "extend_parent_node_start"
 
 [editor]
 idle-timeout = 0

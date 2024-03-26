@@ -7,6 +7,7 @@ require("conform").setup({
 		go = { "gofmt" },
 		nix = { "nixfmt" },
 		templ = { "templ" },
+		svelte = { "svelte" },
 	},
 
 	format_after_save = {

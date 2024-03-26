@@ -18,7 +18,13 @@ vim.g.copilot_filetypes = {
 require("copilot").setup({
 	suggestion = { enabled = false },
 	panel = { enabled = false },
+	filetypes = {
+		markdown = false,
+		yaml = true,
+		["*"] = true,
+	},
 })
+
 -- require('copilot').setup({
 --     filetypes = {
 --         yaml = true,

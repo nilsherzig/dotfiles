@@ -82,7 +82,7 @@ lspconfig.nil_ls.setup({})
 lspconfig.rust_analyzer.setup({})
 lspconfig.marksman.setup({})
 lspconfig.html.setup({
-	filetypes = { "html", "templ", "svelte" },
+	filetypes = { "html", "templ" },
 })
 lspconfig.tsserver.setup({})
 lspconfig.terraformls.setup({})
