@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if grep "neo" ~/dotfiles/configs/hypr/hyprland.conf; then
+    sed -i 's;kb_variant = neo$;kb_variant =;;' ~/dotfiles/configs/hypr/hyprland.conf
+else
+    sed -i 's;kb_variant =$;kb_variant = neo;;' ~/dotfiles/configs/hypr/hyprland.conf
+fi

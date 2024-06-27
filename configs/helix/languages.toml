@@ -1,0 +1,53 @@
+[[language]]
+name = "html"
+auto-format = true
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "svelte"
+auto-format = true
+file-types = [ "svelte" ]
+language-servers = [ "svelteserver", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+auto-format = true
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "latex"
+language-servers = ["texlab", "ltex-ls"]
+
+[[language]]
+name = "markdown"
+scope = "source.markdown"
+file-types = ["markdown", "md", "txt"]
+language-servers = ["marksman", "ltex-ls" ]
+
+# [[language]]
+# name = "nix"
+# auto-format = true
+# file-types = ["nix"]
+# formatter = { command = "nixfmt" }
+
+[language-server.ltex-ls]
+command = "ltex-ls"
+
+[language-server.ltex-ls.config]
+ltex.disabledRules = { "en-US" = ["PROFANITY"], "de-DE" = ["PROFANITY"] }
+
+ltex.dictionary = { "en-US" = [
+  "builtin",
+  "Boreus",
+], "de-DE" = [
+  "builtin",
+  "README",
+  "TODO",
+  "Boreus",
+] }
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]

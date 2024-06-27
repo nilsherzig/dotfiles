@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# if debug flag is set
+if [ "$1" == "--debug" ]; then
+    set -xe
+fi
+
+# Aufrufen von 'bt list' und Speichern der Ausgabe in einer Variablen
+hyprland_window_list=$(hyprctl clients -j | jq '.[].title' | sed 's/"//g')
+hyprland_window_list=$(echo "$hyprland_window_list" | sed 's/^/(hyprland) /')
+
+firefox_tab_list=$(bt list)
+firefox_tab_list=$(echo "$firefox_tab_list" | sed 's/^/(firefox) /')
+
+launch_binary_list=$(find /etc/profiles/per-user/nils/bin -printf "%f\n")
+launch_binary_list=$(echo "$launch_binary_list" | sed 's/^/(launch) /')
+
+combined="$hyprland_window_list
+$firefox_tab_list
+$launch_binary_list"
+
+selected_entry=$(echo "$combined" | fzf)
+
+if [ -z "$selected_entry" ]; then
+    echo "Keine Auswahl getroffen."
+    exit 1
+fi
+
+prefix=$(echo "$selected_entry" | cut -d' ' -f1)
+
+if [ "$prefix" == "(hyprland)" ]; then
+    selected_entry=$(echo "$selected_entry" | cut -d' ' -f2-)
+    hyprctl dispatch focuswindow title:"$selected_entry"
+    exit 0
+fi
+
+if [ "$prefix" == "(launch)" ]; then
+    selected_entry=$(echo "$selected_entry" | cut -d' ' -f2-)
+    hyprctl dispatch exec "$selected_entry"
+    exit 0
+fi
+
+if [ "$prefix" == "(firefox)" ]; then
+    selected_entry=$(echo "$selected_entry" | cut -d' ' -f2-)
+
+    firefoxTabId=$(echo "$selected_entry" | awk '{print $1}')
+    title=$(echo "$selected_entry" | cut -f2)
+
+    title=$(echo "$title" | sed 's/?/\\?/g')
+    title=$(echo "$title" | sed 's/\[/\\[/g')
+    title=$(echo "$title" | sed 's/\]/\\]/g')
+    title=$(echo "$title" | sed 's/(/\\(/g')
+    title=$(echo "$title" | sed 's/)/\\)/g')
+    title=$(echo "$title" | sed 's/|/\\|/g')
+
+    # Aktivieren des ausgewählten Eintrags mit 'bt activate'
+    bt activate "$firefoxTabId"
+    # sleep 0.1
+
+    hyprctl dispatch focuswindow title:"$title"
+    exit 0
+fi
+

@@ -1,0 +1,68 @@
+# theme = "custom_theme"
+# theme = "jetbrains_dark"
+# theme = "rose_pine"
+# theme = "autumn_night"
+# theme = "amberwood"
+# theme = "dark_plus"
+# theme = "github_dark"
+theme = "kanagawa"
+
+[keys.normal]
+# tab = "move_parent_node_end"
+# S-tab = "move_parent_node_start"
+
+C-h = "select_prev_sibling"
+C-j = "shrink_selection"
+C-k = "expand_selection"
+C-l = "select_next_sibling"
+
+"H" = ":buffer-previous"
+"L" = ":buffer-next"
+# D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
+"C-r" = ":reload-all"
+"C-w" = ":buffer-close"
+
+# [keys.insert]
+# "C-e" = "copilot_show_completion" # show a copilot completion  (if one exists) (only useful if auto-render is false)
+# "C-w" = "copilot_apply_completion"  # technically only this mapping is necessary
+
+[keys.select]
+# tab = "extend_parent_node_end"
+# S-tab = "extend_parent_node_start"
+
+[editor]
+# idle-timeout = 0
+true-color = true
+line-number = "relative"
+bufferline = "multiple"
+rulers = [80]
+text-width = 80
+mouse = false
+scrolloff = 10 
+auto-format = true
+
+# [editor.statusline]
+# left = ["mode", "spinner", "version-control"]
+# center = ["file-name"]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+# separator = "│"
+# mode.normal = "NORMAL"
+# mode.insert = "INSERT"
+# mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+# display-inlay-hints = true 
+# display-messages = true
+ 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"

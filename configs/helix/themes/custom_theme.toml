@@ -1,0 +1,2 @@
+inherits = "dark_plus"
+"ui.statusline" = { bg = "borders" }
