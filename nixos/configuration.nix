@@ -172,6 +172,8 @@
       # other things
       # distrobox
       kubectl
+      pciutils
+      popeye
       # internet
       pandoc
       nixpkgs-fmt
@@ -179,12 +181,14 @@
       rclone
       spaceship-prompt
       gnumake
+      dig
       python311Packages.bpython
       ansible
       rsync
       texlive.combined.scheme-small
       nodePackages_latest.bash-language-server
       syncthing
+      kubernetes-helm
       firefox
       helix
       nodejs
@@ -201,6 +205,7 @@
       python311
       # notes
       ltrace
+      jdk17
       nil
       obsidian
       direnv
@@ -238,6 +243,8 @@
       #games
       steam
       # prismlauncher-qt5
+      k9s
+      kubectx
       wine
       bottles
       #mail 
@@ -263,6 +270,7 @@
       gradle_7
       # images
       gimp
+      lens
       feh
       speedtest-cli
       # gnome shell 
@@ -309,6 +317,7 @@
       wireshark
       distrobox
       libnotify
+      go-tools
       # screenshot stack lel
       grim
       slurp
@@ -318,6 +327,8 @@
       fd
 
       go
+      delve
+      gopls
       gomodifytags
       gotests
       gore
@@ -326,6 +337,7 @@
       nodePackages_latest.stylelint
       html-tidy
       nodePackages.js-beautify
+      prismlauncher
     ];
   };
 
@@ -340,6 +352,7 @@
       ip = "ip --color=always"; # ip show colors 
       rclone = "rclone -P"; # always show rclone progress
       ssh = "TERM=xterm ssh"; # because of kitty
+      k = "kubectl"; 
       # nvim = "docker run -it --env UID=$UID --env GUI=$GID -v $HOME/.nvim-container/cache:/home/nvim/.local/share/nvim -v $HOME/.nvim-container/config:/home/nvim/.config/nvim -v $PWD:/home/nvim/workdir -v $HOME/.gitconfig:/home/nvim/.gitconfig -v $HOME/.ssh/id_rsa:/home/nvim/.ssh/id_rsa -v $HOME/.ssh/known_hosts:/home/nvim/.ssh/known_hosts nilsherzig/nvim-container nvim";
     };
     promptInit = ''
@@ -349,6 +362,7 @@
 
     shellInit = ''
       eval "$(direnv hook zsh)"
+      export EDITOR=nvim
     '';
   };
 
@@ -385,7 +399,7 @@
   };
 
   services.udisks2.enable = true;
-  # services.netdata.enable = true; # broken rn 
+  #services.netdata.enable = true; # broken rn 
   services.mullvad-vpn.enable = true;
   system.stateVersion = "22.11";
 
@@ -393,6 +407,11 @@
   system.autoUpgrade.allowReboot = false;
   services.tailscale.enable = true; 
   services.passSecretService.enable = true;
-    # services.opensnitch.enable = true;
+  services.openssh = {
+      enable = true;
+      passwordAuthentication = false;
+      kbdInteractiveAuthentication = false;
+  };
+
     # services.emacs.enable = true;
 }

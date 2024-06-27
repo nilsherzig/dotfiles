@@ -5,8 +5,8 @@ lib.mkIf (config.networking.hostName == "desktop") {
   boot.initrd.luks.devices."luks-c9eb19e3-05fa-4057-a251-60d49d38de4c".keyFile = "/crypto_keyfile.bin";
 
   # jellyfin and homeassistant ports
-  networking.firewall.allowedTCPPorts = [ 8096 8920 8123 ];
-  networking.firewall.allowedUDPPorts = [ 7359 1900 ];
+  networking.firewall.allowedTCPPorts = [ 8096 8920 8123 43177];
+  networking.firewall.allowedUDPPorts = [ 7359 1900 43177];
 
   # home assistant vm bride
   # networking.bridges = {
