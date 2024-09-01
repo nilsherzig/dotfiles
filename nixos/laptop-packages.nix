@@ -108,6 +108,7 @@
     gci
     ginkgo
     git
+    gitleaks
     glibc
     gnome-tweaks
     gnumake
@@ -229,5 +230,6 @@
     zsh-syntax-highlighting
     zsh-syntax-highlighting
     zsh-you-should-use
+    pre-commit
   ];
 }
