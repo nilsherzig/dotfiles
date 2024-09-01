@@ -1,0 +1,25 @@
+layout {
+    pane
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    // pane size=2 borderless=true {
+    //     plugin location="zellij:status-bar"
+    // }
+    // pane split_direction="vertical" size="60%" {
+    //     pane edit="go.mod" {
+    //         focus true
+    //     }
+    // }
+    // pane split_direction="vertical" size="40%" {
+    //     pane command="go" {
+    //         args "run" "./cmd/"
+    //     }
+    //     pane command="tree" {
+    //     }
+    // }
+    // pane size=2 borderless=true {
+    //     plugin location="zellij:status-bar"
+    // }
+}
+
