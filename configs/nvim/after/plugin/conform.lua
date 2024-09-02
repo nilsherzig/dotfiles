@@ -10,6 +10,7 @@ require("conform").setup({
 		templ = { "templ" },
 		svelte = { "prettier" },
 		typescript = { "prettier" },
+		json = { "jq" },
 		-- ["*"] = { "codespell" },
 	},
 
