@@ -231,5 +231,8 @@
     zsh-syntax-highlighting
     zsh-you-should-use
     pre-commit
+    clusterctl
+    ansible
+    packer
   ];
 }
