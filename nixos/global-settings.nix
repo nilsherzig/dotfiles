@@ -148,6 +148,7 @@
         cd = "z";
         ip = "ip --color=always";
         ssh = "TERM=xterm ssh";
+        sshnostrict = "TERM=xterm ssh -o StrictHostKeyChecking=no";
         k = "kubectl";
         update = "sudo nixos-rebuild switch --upgrade";
         lg = "lazygit";
