@@ -4,7 +4,6 @@
   hardware.tuxedo-rs.tailor-gui.enable = false;
   hardware.tuxedo-keyboard.enable = true;
   networking = {
-    # trustedInterfaces = [ "virbr0" ];
     firewall = {
       enable = true;
       allowedTCPPorts = [ 8080 ];
@@ -20,11 +19,6 @@
       KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
     '';
     power-profiles-daemon.enable = false;
-    # tailscale = {
-    #   enable = true;
-    #   extraUpFlags = [ "--ssh" ];
-    # };
-    # i hate fan noise, while using my laptop on my lap 
     tlp = {
       enable = true;
       settings = {
