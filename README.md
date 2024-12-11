@@ -14,16 +14,13 @@ A big thank you to everyone who has ever contributed to the packages I use :).
 
 | Use case                 | program(s)                          |
 |--------------------------|-------------------------------------|
-| terminal emulator        | kitty & st                          |
+| terminal emulator        | WezTerm                             |
 | shell                    | zsh                                 |
 | shell history            | fzf                                 |
 | shell prompt             | grml zsh config                     |
 | nice tuis                | lazydocker, lazygit, bluetuith, k9s |
-| editor                   | helix & neovim                      |
+| editor                   | neovim                              |
 | operating system         | nixos                               |
-| window manager / desktop | hyprland, dwm / dwl                 |
-| file sync                | syncthing                           |
-| browser                  | firefox                             |
-| homelab                  | k3s with argocd                     |
+| window manager / desktop | hyprland, gnome                     |
 
 # doing api things
