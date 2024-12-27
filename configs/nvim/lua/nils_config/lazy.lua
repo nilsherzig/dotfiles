@@ -209,10 +209,9 @@ require("lazy").setup({
 	},
 	{
 		"mistweaverco/kulala.nvim",
-		config = function()
-			-- Setup is required, even if you don't pass any options
-			require("kulala").setup()
-		end,
+		opts = {
+			debug = true,
+		},
 	},
 	-- {
 	-- 	"CopilotC-Nvim/CopilotChat.nvim",
@@ -282,16 +281,18 @@ require("lazy").setup({
 	-- "mellow-theme/mellow.nvim",
 	-- "RRethy/base16-nvim",
 	"Mofiqul/vscode.nvim",
-	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = false,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("nvim-tree").setup({})
-		end,
-	},
+	"lambdalisue/fern.vim",
+	"lambdalisue/vim-fern-git-status",
+	-- {
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	version = "*",
+	-- 	lazy = false,
+	-- 	dependencies = {
+	-- 		"nvim-tree/nvim-web-devicons",
+	-- 	},
+	-- 	config = function()
+	-- 		require("nvim-tree").setup({})
+	-- 	end,
+	-- },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 })

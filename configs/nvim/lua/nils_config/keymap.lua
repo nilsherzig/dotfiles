@@ -21,6 +21,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "H", "<cmd>BufferPrevious<CR>")
 vim.keymap.set("n", "L", "<cmd>BufferNext<CR>")
+vim.api.nvim_set_keymap("n", "<C-b>", ":Fern . -drawer -reveal=%<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>go", ":G<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>gp", ":G push<CR>", { noremap = true, silent = true })

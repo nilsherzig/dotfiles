@@ -1,0 +1,20 @@
+@base_url = https://api.todoist.com/rest/v2
+@token = 0a532a43fb2795dc4317932eab830abd933f6ecc
+
+###
+GET {{base_url}}/projects HTTP/1.1
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+POST {{base_url}}/tasks HTTP/1.1
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+X-Request-Id: 123
+
+{
+    "content": "Buy milk",
+    "due_string": "tomorrow at 9am",
+    "project_id": "2339885927"
+}
+###

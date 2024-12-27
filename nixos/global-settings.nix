@@ -179,7 +179,7 @@
         ssh = "TERM=xterm ssh";
         sshnostrict = "TERM=xterm ssh -o StrictHostKeyChecking=no";
         k = "kubectl";
-        update = "sudo nixos-rebuild switch --flake .#$(hostname)";
+        update = "sudo nixos-rebuild switch --flake '.#'$(hostname)";
         lg = "lazygit";
         vi = "nvim";
         vim = "nvim";

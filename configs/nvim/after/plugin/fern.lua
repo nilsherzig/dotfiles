@@ -1,0 +1,13 @@
+-- vim.api.nvim_create_autocmd("BufWinEnter", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		-- Check if the buffer is a regular file and not a special window or extension
+-- 		if vim.bo.buftype == "" and vim.bo.filetype ~= "fern" and not vim.b.fern_executed then
+-- 			vim.defer_fn(function()
+-- 				print("Running Fern command")
+-- 				vim.cmd("Fern . -drawer -reveal=% -stay")
+-- 				vim.b.fern_executed = true
+-- 			end, 50)
+-- 		end
+-- 	end,
+-- })

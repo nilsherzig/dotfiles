@@ -5,22 +5,23 @@
   inputs = {
     nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
     ghostty = { url = "github:ghostty-org/ghostty"; };
-    zen-browser = { url = "github:0xc000022070/zen-browser-flake"; };
+    # zen-browser = { url = "github:0xc000022070/zen-browser-flake"; };
   };
 
-  outputs = { self, nixpkgs, ghostty, zen-browser }: {
+  outputs = { self, nixpkgs, ghostty }: {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        system = builtins.currentSystem;
         modules = [
           ./configuration.nix
           {
-            environment.systemPackages =
-              [ ghostty.packages.x86_64-linux.default ];
+            environment.systemPackages = [
+              ghostty.packages.${builtins.currentSystem}.default
+              # zen-browser.packages.${builtins.currentSystem}.default
+            ];
           }
         ];
       };
     };
   };
 }
-
