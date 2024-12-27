@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, ghostty, ... }:
 let
   machineID = builtins.readFile "/etc/machine-id";
   private = ''
@@ -26,4 +26,6 @@ in {
     ++ lib.optional (machineID == work) ./falcon.nix
     ++ lib.optional (machineID == private || machineID == work)
     ./laptop-packages.nix ++ lib.optional (machineID == work) ./laptop-work.nix;
+
+  environment.systemPackages = [ ghostty.packages.x86_64-linux.default ];
 }
