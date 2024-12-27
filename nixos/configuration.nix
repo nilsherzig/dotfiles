@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 let
   machineID = builtins.readFile "/etc/machine-id";
   private = ''
@@ -8,6 +8,13 @@ let
     be0f441f87964e42a3c4d5533cae8214
   '';
 in {
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
   imports = [
     /etc/nixos/hardware-configuration.nix
     ./global-settings.nix

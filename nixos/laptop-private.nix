@@ -2,6 +2,7 @@
   networking.hostName = "laptop";
   # hardware.tuxedo-rs.enable = false;
   # hardware.tuxedo-rs.tailor-gui.enable = false;
+  programs.adb.enable = true;
   i18n.inputMethod = {
     enabled = "ibus";
     ibus.engines = with pkgs.ibus-engines; [ typing-booster ];
@@ -10,7 +11,7 @@
   networking = {
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 8080 8081 ];
+      allowedTCPPorts = [ 8080 8081 3000 ];
       allowedUDPPorts = [ ];
     };
   };

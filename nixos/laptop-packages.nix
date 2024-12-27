@@ -80,7 +80,8 @@
     air
     android-studio
     android-tools
-    anki-bin
+    # anki-bin
+    anki
     ansible
     argocd
     atuin
@@ -261,5 +262,8 @@
     zsh-syntax-highlighting
     zsh-syntax-highlighting
     zsh-you-should-use
+    web-ext
+    xorg.libxshmfence
+    aichat
   ];
 }
