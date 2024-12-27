@@ -1,4 +1,4 @@
-{ lib, pkgs, ghostty, ... }:
+{ lib, ... }:
 let
   machineID = builtins.readFile "/etc/machine-id";
   private = ''
@@ -8,12 +8,12 @@ let
     be0f441f87964e42a3c4d5533cae8214
   '';
 in {
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
+  # nix = {
+  #   package = pkgs.nixFlakes;
+  #   extraOptions = ''
+  #     experimental-features = nix-command flakes
+  #   '';
+  # };
 
   imports = [
     /etc/nixos/hardware-configuration.nix
@@ -27,5 +27,4 @@ in {
     ++ lib.optional (machineID == private || machineID == work)
     ./laptop-packages.nix ++ lib.optional (machineID == work) ./laptop-work.nix;
 
-  environment.systemPackages = [ ghostty.packages.x86_64-linux.default ];
 }

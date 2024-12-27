@@ -10,9 +10,15 @@
 
   outputs = { self, nixpkgs, ghostty, zen-browser }: {
     nixosConfigurations = {
-      yourHostNameGoesHere = nixpkgs.lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./configuration.nix ];
+        modules = [
+          ./configuration.nix
+          {
+            environment.systemPackages =
+              [ ghostty.packages.x86_64-linux.default ];
+          }
+        ];
       };
     };
   };

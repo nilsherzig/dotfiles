@@ -3,10 +3,6 @@
   # hardware.tuxedo-rs.enable = false;
   # hardware.tuxedo-rs.tailor-gui.enable = false;
   programs.adb.enable = true;
-  i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ typing-booster ];
-  };
   # hardware.tuxedo-drivers.enable = true;
   networking = {
     firewall = {
