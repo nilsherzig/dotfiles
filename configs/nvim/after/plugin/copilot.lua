@@ -1,4 +1,4 @@
-vim.g.copilot_filetypes = {
-	["*"] = true,
-	["markdown"] = false,
-}
+-- vim.g.copilot_filetypes = {
+-- 	["*"] = true,
+-- 	["markdown"] = false,
+-- }

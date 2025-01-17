@@ -16,6 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+		"nvim-treesitter/nvim-treesitter",
+		lazy = false,
+	},
+	{
 		"folke/trouble.nvim",
 		cmd = "Trouble",
 		keys = {
@@ -81,9 +85,6 @@ require("lazy").setup({
 		"echasnovski/mini.nvim",
 	},
 	{
-		"nvim-treesitter/nvim-treesitter",
-	},
-	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
@@ -101,15 +102,6 @@ require("lazy").setup({
 	},
 	{
 		"github/copilot.vim",
-	},
-	{
-		"cdmill/neomodern.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("neomodern").setup({})
-			require("neomodern").load()
-		end,
 	},
 	{
 		"someone-stole-my-name/yaml-companion.nvim",
@@ -274,25 +266,37 @@ require("lazy").setup({
 	"dhruvasagar/vim-table-mode",
 	-- "tpope/vim-fugitive",
 	-- THEMES
-	-- "rebelot/kanagawa.nvim",
+	"rebelot/kanagawa.nvim",
 	-- "projekt0n/github-nvim-theme",
-	-- "rktjmp/lush.nvim",
 	-- "ab-dx/ares.nvim",
 	-- "mellow-theme/mellow.nvim",
 	-- "RRethy/base16-nvim",
 	"Mofiqul/vscode.nvim",
 	"lambdalisue/fern.vim",
 	"lambdalisue/vim-fern-git-status",
+	"morhetz/gruvbox",
 	-- {
-	-- 	"nvim-tree/nvim-tree.lua",
-	-- 	version = "*",
+	-- 	"kaarmu/typst.vim",
+	-- 	ft = "typst",
 	-- 	lazy = false,
-	-- 	dependencies = {
-	-- 		"nvim-tree/nvim-web-devicons",
-	-- 	},
-	-- 	config = function()
-	-- 		require("nvim-tree").setup({})
-	-- 	end,
 	-- },
-	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+	-- "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+	-- Custom Parameters (with defaults)
+	{
+		"dgagn/diagflow.nvim",
+		event = "LspAttach",
+		opts = {},
+	},
+	{
+		"rcarriga/nvim-notify",
+		config = function()
+			require("notify").setup({})
+		end,
+	},
+	{
+		"chomosuke/typst-preview.nvim",
+		lazy = false, -- or ft = 'typst'
+		version = "1.*",
+		opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+	},
 })

@@ -4,6 +4,7 @@ vim.filetype.add({
 	},
 })
 
--- require("kulala").setup({
--- 	default_view = "body",
--- })
+require("kulala").setup({
+	default_view = "body",
+	display_mode = "float",
+})

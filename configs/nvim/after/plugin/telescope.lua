@@ -11,6 +11,9 @@ vim.keymap.set("n", "<leader>t", builtin.builtin, {})
 vim.keymap.set("n", "<leader>s", function()
 	builtin.lsp_document_symbols({ symbol_width = 160 })
 end, {})
+vim.keymap.set("n", "<leader>S", function()
+	builtin.lsp_dynamic_workspace_symbols({ symbol_width = 160 })
+end, {})
 
 telescope.setup({
 	defaults = {

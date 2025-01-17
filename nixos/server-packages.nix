@@ -1,13 +1,13 @@
 { pkgs, ... }: {
 
   users.users.nils.packages = with pkgs; [
+    dig
     direnv
-    zoxide
     eza
     git
-    dig
     htop
     liquidctl
     yuzuPackages.early-access
+    zoxide
   ];
 }

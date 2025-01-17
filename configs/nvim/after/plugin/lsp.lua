@@ -1,7 +1,6 @@
 local lsp = require("lsp-zero")
 local lspconfig = require("lspconfig")
 local configs = require("lspconfig/configs")
-
 lsp.preset("recommended")
 
 -- lsp.ensure_installed({
@@ -21,7 +20,7 @@ lsp.preset("recommended")
 --     "gopls"
 -- })
 
-lspconfig.ruff_lsp.setup({})
+lspconfig.ruff.setup({})
 lspconfig.eslint.setup({})
 lspconfig.gleam.setup({})
 lspconfig.bashls.setup({})
@@ -62,7 +61,7 @@ lspconfig.unison.setup({})
 lspconfig.html.setup({
 	filetypes = { "html", "templ" },
 })
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.terraformls.setup({})
 lspconfig.svelte.setup({
 	-- filetypes = { "svelte", "javascript", "typescript" },
@@ -76,7 +75,13 @@ lspconfig.svelte.setup({
 		})
 	end,
 })
-lspconfig.typst_lsp.setup({})
+lspconfig.tinymist.setup({
+	settings = {
+		exportPdf = "onType",
+		outputPath = "$root/target/$dir/$name",
+	},
+})
+
 lspconfig.texlab.setup({})
 lspconfig.tailwindcss.setup({
 	filetypes = { "templ", "html", "css", "javascript", "typescript", "svelte" },
@@ -148,9 +153,9 @@ end, opts)
 
 lsp.setup()
 
-vim.diagnostic.config({
-	virtual_text = true,
-})
+-- vim.diagnostic.config({
+-- 	virtual_text = true,
+-- })
 
 local lspkind = require("lspkind")
 local cmp = require("cmp")

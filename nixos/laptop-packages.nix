@@ -125,6 +125,7 @@
     rclone
     ripgrep
     rnote
+    ruff
     ruff-lsp
     shellcheck
     signal-desktop
@@ -132,6 +133,7 @@
     slurp
     sqlitebrowser
     starship
+    stremio
     stylua
     swappy
     tailwindcss
@@ -139,6 +141,7 @@
     talosctl
     tcpdump
     templ
+    tinymist
     traceroute
     tree
     typst
@@ -148,6 +151,7 @@
     unzip
     usbutils
     vial
+    vscode-fhs
     web-ext
     wezterm
     wireguard-tools
@@ -163,5 +167,12 @@
     zsh-powerlevel10k
     zsh-syntax-highlighting
     zsh-you-should-use
+    argocd
+    # cilium
+    # dmenu
+    helm
+    deno
+    steam-run-free
+    dmenu
   ];
 }
