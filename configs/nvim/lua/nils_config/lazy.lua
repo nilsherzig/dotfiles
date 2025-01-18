@@ -82,6 +82,12 @@ require("lazy").setup({
 		"VonHeikemen/lsp-zero.nvim",
 	},
 	{
+		"williamboman/mason.nvim",
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+	},
+	{
 		"echasnovski/mini.nvim",
 	},
 	{
