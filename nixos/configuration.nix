@@ -2,7 +2,7 @@
 let
   machineID = builtins.readFile "/etc/machine-id";
   private = ''
-    2c2b13ee31dc4e37b74274aa5608c424
+    08420923fa5a478aad4b922dad12fc76
   '';
   work = ''
     be0f441f87964e42a3c4d5533cae8214
