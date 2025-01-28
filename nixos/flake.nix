@@ -1,26 +1,45 @@
-# /etc/nixos/flake.nix
 {
-  description = "laptop";
+  description = "NixOS configurations";
 
   inputs = {
-    nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
-    ghostty = { url = "github:ghostty-org/ghostty"; };
-    # zen-browser = { url = "github:0xc000022070/zen-browser-flake"; };
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  # outputs = { self, nixpkgs, ghostty }: {
-    outputs = { self, nixpkgs, ghostty }: {
+  # self is needed because of flake things (somehow?)
+  # nixos docs fucking suck
+  outputs = { self, nixpkgs, ghostty }: {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
-        system = builtins.currentSystem;
+        system = "x86_64-linux";  # Specify the system explicitly
         modules = [
-          ./configuration.nix
+          ./common.nix           # Shared configuration
+          ./device_laptop.nix           # Laptop-specific configuration
           {
             environment.systemPackages = [
-              ghostty.packages.${builtins.currentSystem}.default
-              # zen-browser.packages.${builtins.currentSystem}.default
+              ghostty.packages.x86_64-linux.default
             ];
           }
+        ];
+      };
+
+      desktop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./common.nix           # Shared configuration
+          ./device_desktop.nix          # Desktop-specific configuration
+          {
+            environment.systemPackages = [
+              ghostty.packages.x86_64-linux.default
+            ];
+          }
+        ];
+      };
+
+      k3s-dev = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./device_server_k3s-dev.nix
         ];
       };
     };

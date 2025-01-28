@@ -1,17 +1,25 @@
 { pkgs, ... }: {
+  imports = [
+    ./packages_common.nix
+    ./keyd.nix
+    ./gnome-keyring.nix
+    ./home.nix
+    /etc/nixos/hardware-configuration.nix
+  ];
+
   console.keyMap = "de";
-  environment.sessionVariables = {
-    # WAYLAND_DISPLAY = "wayland-1";
-    GTK_USE_PORTAL = "1";
-    NIXOS_OZONE_WL = "1";
-    GDK_BACKEND = "wayland,x11";
-    QT_QPA_PLATFORM = "wayland;xcb";
-    # XDG_BIN_HOME = "$HOME/.local/bin";
-    # XDG_CACHE_HOME = "$HOME/.cache";
-    # XDG_CONFIG_HOME = "$HOME/.config";
-    # XDG_DATA_HOME = "$HOME/.local/share";
-    # XDG_STATE_HOME = "$HOME/.local/state";
-  };
+  # environment.sessionVariables = {
+  #   # WAYLAND_DISPLAY = "wayland-1";
+  #   GTK_USE_PORTAL = "1";
+  #   NIXOS_OZONE_WL = "1";
+  #   GDK_BACKEND = "wayland,x11";
+  #   QT_QPA_PLATFORM = "wayland;xcb";
+  #   # XDG_BIN_HOME = "$HOME/.local/bin";
+  #   # XDG_CACHE_HOME = "$HOME/.cache";
+  #   # XDG_CONFIG_HOME = "$HOME/.config";
+  #   # XDG_DATA_HOME = "$HOME/.local/share";
+  #   # XDG_STATE_HOME = "$HOME/.local/state";
+  # };
   hardware = {
     opentabletdriver.enable = true;
     bluetooth = {
@@ -41,7 +49,7 @@
       options hid_apple fnmode=1
       options hid_apple swap_opt_cmd=1
     '';
-    initrd.systemd.network.wait-online.timeout = 0;
+    # initrd.systemd.network.wait-online.timeout = 0;
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot.enable = true;
@@ -94,11 +102,11 @@
     #   };
     # };
 
-    network.wait-online = {
-      enable = false;
-      timeout = 0;
-    };
-    services.NetworkManager-wait-online.enable = false;
+    # network.wait-online = {
+    #   enable = false;
+    #   timeout = 0;
+    # };
+    # services.NetworkManager-wait-online.enable = false;
   };
 
   services = {
@@ -167,7 +175,7 @@
       agent.pinentryPackage = pkgs.pinentry-gnome3;
     };
 
-    hyprland.enable = true;
+    # hyprland.enable = true;
 
     dconf.enable = true;
 
@@ -179,7 +187,6 @@
         ssh = "TERM=xterm ssh";
         sshnostrict = "TERM=xterm ssh -o StrictHostKeyChecking=no";
         k = "kubectl";
-        update = "sudo nixos-rebuild switch --flake '.#'$(hostname)";
         lg = "lazygit";
         vi = "nvim";
         vim = "nvim";

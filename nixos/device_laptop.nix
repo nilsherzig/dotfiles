@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   networking.hostName = "laptop";
   # hardware.tuxedo-rs.enable = false;
   # hardware.tuxedo-rs.tailor-gui.enable = false;

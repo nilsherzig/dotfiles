@@ -10,7 +10,7 @@
 
   users.users.nils.packages = with pkgs; [
     aichat
-    aider-chat
+    # aider-chat
     air
     android-studio
     android-tools
@@ -18,27 +18,24 @@
     atuin
     bluetuith
     brightnessctl
-    cfssl
+    # cfssl
     clang
-    delve
+    # delve
     dig
     direnv
     du-dust
-    dunst
-    dwl
-    feh
     ffmpeg
     file
     firefox
     fzf
-    gammastep
+    # gammastep
     gcc
-    gci
-    ghc
-    ginkgo
+    # gci
+    # ghc
+    # ginkgo
     git
-    glas
-    gleam
+    # glas
+    # gleam
     glibc
     gnome-tweaks
     gnumake
@@ -51,12 +48,11 @@
     google-chrome
     gopls
     gotools
-    gradience
-    grim
+    # grim
     grml-zsh-config
     htop
-    hubble
-    hugo
+    # hubble
+    # hugo
     hunspell
     hunspellDicts.de_DE
     hunspellDicts.en_US
@@ -64,16 +60,16 @@
     jc
     jdk21
     jq
-    k6
+    # k6
     k9s
     keyd
-    kind
-    kubebuilder
-    kubectl
-    kubectx
-    kubeseal
-    kubetail
-    kustomize
+    # kind
+    # kubebuilder
+    # kubectl
+    # kubectx
+    # kubeseal
+    # kubetail
+    # kustomize
     lazydocker
     lazygit
     libbpf
@@ -81,8 +77,8 @@
     libnotify
     libqalculate
     llvm
-    localsend
-    logisim-evolution
+    # localsend
+    # logisim-evolution
     ltex-ls
     lua-language-server
     marksman
@@ -112,7 +108,7 @@
     pandoc
     pavucontrol
     pciutils
-    popeye
+    # popeye
     poppler_utils
     powertop
     pre-commit
@@ -121,16 +117,16 @@
     python3
     python312Packages.python-lsp-server
     qalculate-gtk
-    ranger
+    # ranger
     rclone
     ripgrep
-    rnote
+    # rnote
     ruff
     ruff-lsp
     shellcheck
     signal-desktop
-    skopeo
-    slurp
+    # skopeo
+    # slurp
     sqlitebrowser
     starship
     stremio
@@ -138,7 +134,7 @@
     swappy
     tailwindcss
     tailwindcss-language-server
-    talosctl
+    # talosctl
     tcpdump
     templ
     tinymist
@@ -150,33 +146,35 @@
     unrar-wrapper
     unzip
     usbutils
-    vial
-    vscode-fhs
-    web-ext
-    wezterm
+    # vial
+    # vscode-fhs
+    # web-ext
+    # wezterm
     wireguard-tools
     wl-clipboard
-    wmctrl
+    # wmctrl
     wtype
     xdg-utils
     xorg.libxshmfence
-    zathura
+    # zathura
     zed-editor
     zoxide
     zsh-autosuggestions
     zsh-powerlevel10k
     zsh-syntax-highlighting
     zsh-you-should-use
-    argocd
+    # argocd
     # cilium
     # dmenu
-    helm
-    deno
+    # kubernetes-helm
+    # deno
     steam-run-free
-    dmenu
+    # dmenu
     nixd
     gnomeExtensions.tiling-shell
     gnomeExtensions.bluetooth-battery-meter
+    cowsay
+    jetbrains-toolbox
     # ghostty
   ];
 }
