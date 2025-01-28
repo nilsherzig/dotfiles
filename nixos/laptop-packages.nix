@@ -174,6 +174,9 @@
     deno
     steam-run-free
     dmenu
+    nixd
+    gnomeExtensions.tiling-shell
+    gnomeExtensions.bluetooth-battery-meter
     # ghostty
   ];
 }
