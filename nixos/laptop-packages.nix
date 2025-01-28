@@ -174,6 +174,6 @@
     deno
     steam-run-free
     dmenu
-    ghostty
+    # ghostty
   ];
 }

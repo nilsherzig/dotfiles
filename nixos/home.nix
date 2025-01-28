@@ -58,8 +58,7 @@ in {
         };
         userChrome = ''
           @import "firefox-gnome-theme/userChrome.css";
-          @import "firefox-gnome-theme/theme/colors/dark.css"; 
-          @import "./custom.css";
+          @import "firefox-gnome-theme/theme/colors/dark.css";
         '';
       };
     };
