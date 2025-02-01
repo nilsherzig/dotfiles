@@ -7,8 +7,11 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
+  services.envfs.enable = true;
+
   console.keyMap = "de";
-  # environment.sessionVariables = {
+  environment.sessionVariables = {
+    XDG_CONFIG_HOME = "$HOME/.config";
   #   # WAYLAND_DISPLAY = "wayland-1";
   #   GTK_USE_PORTAL = "1";
   #   NIXOS_OZONE_WL = "1";
@@ -16,10 +19,9 @@
   #   QT_QPA_PLATFORM = "wayland;xcb";
   #   # XDG_BIN_HOME = "$HOME/.local/bin";
   #   # XDG_CACHE_HOME = "$HOME/.cache";
-  #   # XDG_CONFIG_HOME = "$HOME/.config";
   #   # XDG_DATA_HOME = "$HOME/.local/share";
   #   # XDG_STATE_HOME = "$HOME/.local/state";
-  # };
+  };
   hardware = {
     opentabletdriver.enable = true;
     bluetooth = {

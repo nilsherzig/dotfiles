@@ -63,13 +63,13 @@
     # k6
     k9s
     keyd
-    # kind
-    # kubebuilder
-    # kubectl
-    # kubectx
-    # kubeseal
-    # kubetail
-    # kustomize
+    kind
+    kubebuilder
+    kubectl
+    kubectx
+    kubeseal
+    kubetail
+    kustomize
     lazydocker
     lazygit
     libbpf
@@ -175,6 +175,10 @@
     gnomeExtensions.bluetooth-battery-meter
     cowsay
     jetbrains-toolbox
+    vencord
+    kustomize-sops
+    sops
+    btop
     # ghostty
   ];
 }
