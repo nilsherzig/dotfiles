@@ -179,6 +179,7 @@
     kustomize-sops
     sops
     btop
+    deno
     # ghostty
   ];
 }
