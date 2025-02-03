@@ -7,7 +7,7 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  services.envfs.enable = true;
+  # services.envfs.enable = true;
 
   console.keyMap = "de";
   environment.sessionVariables = {

@@ -181,5 +181,6 @@
     btop
     deno
     # ghostty
+    gnome-pomodoro
   ];
 }
