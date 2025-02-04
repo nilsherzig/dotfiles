@@ -2,7 +2,7 @@
   networking.hostName = "desktop";
   networking = {
     firewall = {
-      enable = true;
+      enable = false;
     };
   };
   system.stateVersion = "23.11";
