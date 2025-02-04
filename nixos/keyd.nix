@@ -15,35 +15,36 @@
 
     # v = lettermod(altgr, v, 200, 140)
     d = lettermod(control, d, 200, 140)
-    # f = lettermod(symbols, f, 200, 140)
+    f = lettermod(symbols, f, 200, 140)
 
-    # j = lettermod(symbols, j, 200, 140)
+    j = lettermod(symbols, j, 200, 140)
     k = lettermod(control, k, 200, 140)
     # n = lettermod(altgr, n, 200, 140)
 
     # # altgr = enter
 
-    # backspace = noop
-    # control = noop
+    backspace = noop
+    control = noop
+    shift = noop
 
-    # [symbols]
-    # d = backspace
-    # f = enter
+    [symbols]
+    d = backspace
+    f = enter
 
-    # # , = S-,
-    # # . = S-.
-    # # - = S--
-    # # "<" = S-<
+    # , = S-,
+    # . = S-.
+    # - = S--
+    # "<" = S-<
 
-    # c = G-7
-    # v = G-8
-    # n = G-9
-    # m = G-0
+    c = G-7
+    v = G-8
+    n = G-9
+    m = G-0
 
-    # h = left
-    # j = down
-    # k = up
-    # l = right
+    h = left
+    j = down
+    k = up
+    l = right
   '';
 
   # systemd.services.customKeyd = {
