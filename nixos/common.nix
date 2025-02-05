@@ -147,6 +147,26 @@
   users = {
     mutableUsers = true;
     users = {
+      "nils.herzig" = {
+        shell = pkgs.zsh;
+        isNormalUser = true;
+        description = "Nils Herzig";
+        group = "users";
+        extraGroups = [
+          "keyd"
+          "networkmanager"
+          "wheel"
+          "docker"
+          "dialout"
+          "libvirtd"
+          "wireshark"
+          "adbusers"
+          "input"
+          "plugdev"
+        ];
+        home = "/home/nils.herzig/";
+      };
+
       nils = {
         shell = pkgs.zsh;
         isNormalUser = true;
@@ -171,6 +191,7 @@
 
   programs = {
     nix-ld.enable = true;
+    ladybird.enable = false;
 
     gnupg = {
       agent.enable = true;
@@ -208,18 +229,6 @@
         export NODE_PATH=~/.npm-packages/lib/node_modules
         export PATH=~/.npm-packages/bin:$PATH
       '';
-
-      # promptInit = ''
-      #   PROMPT="%(?:%{$fg_bold[white]%}%1{λ%} :%{$fg_bold[red]%}%1{λ%} )%{$fg[white]%}%c%{$reset_color%}"
-      #   PROMPT+=' $(git_prompt_info)'
-      #
-      #   PROMPT+='%{$fg[blue]%}($(kubectx_prompt_info))%{$reset_color%} '
-      #
-      #   ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}(%{$fg[blue]%}"
-      #   ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%} %{$fg[red]%}%1{*%}%{$fg[blue]%})"
-      #   ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
-      #   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-      # '';
     };
   };
 }
