@@ -1,7 +1,8 @@
 # theme = "Kanagawa Dragon"
 # theme = "Kanagawa Wave"
 # theme = "idea"
-theme = "GruvboxDarkHard"
+# theme = "GruvboxDarkHard"
+theme = "idea"
 
 # adjust-cell-height = +20%
 # adjust-cell-height = +20%
@@ -9,8 +10,8 @@ font-size = 18
 
 # minimum-contrast = 4 
 # font-family = "ComicShannsMono Nerd Font Mono"
-# font-family = "Jetbrains Mono"
-font-family = "Iosevka Nerd Font Mono"
+font-family = "Jetbrains Mono"
+# font-family = "Iosevka Nerd Font Mono"
 
 keybind = alt+h=goto_split:left
 keybind = alt+l=goto_split:right
