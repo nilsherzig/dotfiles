@@ -11,6 +11,18 @@
     8087:0029
 
     [main]
+
+    # removing keys for which i would have to change my hands angles 
+
+    backspace = noop
+    control = noop
+    shift = noop
+    esc = noop
+    tab = noop
+    # enter = noop
+
+    # lettermods
+
     space = overload(shift, space);
 
     # v = lettermod(altgr, v, 200, 140)
@@ -21,15 +33,24 @@
     k = lettermod(control, k, 200, 140)
     # n = lettermod(altgr, n, 200, 140)
 
-    # # altgr = enter
+    l = lettermod(specials, l, 200, 140)
 
-    backspace = noop
-    control = noop
-    shift = noop
+    [specials]
+
+    # trying to remove the left hands tilting to the left 
+
+    k = esc
+    f = tab
+    # s = A-tab
+    d = oneshot(control)
+    s = oneshot(alt)
+
+    # ldf will now send ctrl+tab
+    # lsf will now send alt+tab
 
     [symbols]
+
     d = backspace
-    f = enter
 
     # , = S-,
     # . = S-.
