@@ -12,6 +12,7 @@
     air
     argocd
     atuin
+    liquidctl
     bluetuith
     brightnessctl
     btop
@@ -303,6 +304,7 @@
     yq-go
     openstackclient-full
     ytt
+    liquidctl
     yamllint
   ];
 }

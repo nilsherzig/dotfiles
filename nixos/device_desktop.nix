@@ -10,4 +10,5 @@
   system.stateVersion = "23.11";
 
   services = { mullvad-vpn.enable = true; };
+  programs.steam.enable = true;
 }

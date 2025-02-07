@@ -16,34 +16,30 @@
 
     backspace = noop
     control = noop
-    shift = noop
+    # shift = noop
     esc = noop
     tab = noop
     # enter = noop
 
     # lettermods
 
-    space = overload(shift, space);
-
-    # v = lettermod(altgr, v, 200, 140)
-    d = lettermod(control, d, 200, 140)
-    f = lettermod(symbols, f, 200, 140)
-
-    j = lettermod(symbols, j, 200, 140)
-    k = lettermod(control, k, 200, 140)
-    # n = lettermod(altgr, n, 200, 140)
-
-    l = lettermod(specials, l, 200, 140)
+    space = overload(specials, space);
+    j = lettermod(shift, j, 200, 140)
+    f = lettermod(shift, f, 200, 140)
 
     [specials]
-
     # trying to remove the left hands tilting to the left 
 
-    k = esc
+
+    i = esc
     f = tab
-    # s = A-tab
+    l = backspace
+    ; = enter
+
     d = oneshot(control)
     s = oneshot(alt)
+
+    . = S-.
 
     # ldf will now send ctrl+tab
     # lsf will now send alt+tab
