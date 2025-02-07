@@ -23,26 +23,20 @@
 
     # lettermods
 
-    space = overload(specials, space);
-    j = lettermod(shift, j, 200, 140)
-    f = lettermod(shift, f, 200, 140)
+    space = overload(shift, space);
+    d = lettermod(specials, d, 200, 140)
+    k = lettermod(specials, k, 200, 140)
 
     [specials]
     # trying to remove the left hands tilting to the left 
 
-
-    i = esc
     f = tab
+    i = esc
     l = backspace
     ; = enter
 
     d = oneshot(control)
     s = oneshot(alt)
-
-    . = S-.
-
-    # ldf will now send ctrl+tab
-    # lsf will now send alt+tab
 
     [symbols]
 
