@@ -12,6 +12,7 @@
     air
     argocd
     atuin
+    ginkgo
     liquidctl
     bluetuith
     brightnessctl

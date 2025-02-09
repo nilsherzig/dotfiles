@@ -12,35 +12,41 @@
 
     [main]
 
-    # removing keys for which i would have to change my hands angles 
+    # removing keys for which i would have to change my hadns lbinds
 
-    backspace = noop
-    control = noop
+    # backspace = noop
+    # control = noop
     # shift = noop
-    esc = noop
-    tab = noop
+    # esc = noop
+    # tab = noop
     # enter = noop
 
     # lettermods
 
-    space = overload(shift, space);
-    d = lettermod(specials, d, 200, 140)
-    k = lettermod(specials, k, 200, 140)
+    space = overload(specials, space);
+
+    s = lettermod(alt, s, 200, 140)
+    d = lettermod(control, d, 200, 140)
+    f = lettermod(shift, f, 200, 140)
+        
+    j = lettermod(shift, j, 200, 140)
+    k = lettermod(control, k, 200, 140)
+    l = lettermod(alt, l, 200, 140)
 
     [specials]
+
     # trying to remove the left hands tilting to the left 
 
-    f = tab
-    i = esc
-    l = backspace
-    ; = enter
-
-    d = oneshot(control)
-    s = oneshot(alt)
+    k = esc
+    j = enter
+    f = backspace
+    d = tab
+    s = A-tab
 
     [symbols]
 
-    d = backspace
+    d = C-tab
+    s = A-tab
 
     # , = S-,
     # . = S-.
