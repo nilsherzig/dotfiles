@@ -14,11 +14,11 @@
 
     # removing keys for which i would have to change my hadns lbinds
 
-    # backspace = noop
-    # control = noop
-    # shift = noop
-    # esc = noop
-    # tab = noop
+    backspace = noop
+    control = noop
+    shift = noop
+    esc = noop
+    tab = noop
     # enter = noop
 
     # lettermods
