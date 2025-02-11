@@ -12,7 +12,7 @@
 
     [main]
     capslock = overload(control, esc)
-    esc = capslock
+    # esc = capslock
   '';
 
   services.keyd.enable = true;
