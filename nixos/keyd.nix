@@ -13,6 +13,10 @@
     [main]
     capslock = overload(control, esc)
     # esc = capslock
+    esc = noop
+
+    k = lettermod(control, k, 200, 140)
+    d = lettermod(control, d, 200, 140)
   '';
 
   services.keyd.enable = true;
