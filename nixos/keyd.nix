@@ -11,92 +11,9 @@
     8087:0029
 
     [main]
-
-    # removing keys for which i would have to change my hadns lbinds
-
-    backspace = noop
-    control = noop
-    shift = noop
-    esc = noop
-    tab = noop
-    # enter = noop
-
-    # lettermods
-
-    space = overload(specials, space);
-
-    s = lettermod(alt, s, 200, 140)
-    d = lettermod(control, d, 200, 140)
-    f = lettermod(shift, f, 200, 140)
-        
-    j = lettermod(shift, j, 200, 140)
-    k = lettermod(control, k, 200, 140)
-    l = lettermod(alt, l, 200, 140)
-
-    [specials]
-
-    # trying to remove the left hands tilting to the left 
-
-    k = esc
-    j = enter
-    f = backspace
-    d = tab
-    s = A-tab
-
-    [symbols]
-
-    d = C-tab
-    s = A-tab
-
-    # , = S-,
-    # . = S-.
-    # - = S--
-    # "<" = S-<
-
-    c = G-7
-    v = G-8
-    n = G-9
-    m = G-0
-
-    h = left
-    j = down
-    k = up
-    l = right
+    capslock = overload(control, esc)
+    esc = capslock
   '';
 
-  # systemd.services.customKeyd = {
-  #   description = "custom keyd";
-  #   wantedBy = [ "multi-user.target" ];
-  #   # after = [ "network.target" ];
-
-  #   serviceConfig = {
-  #     ExecStart = "/home/nils/Documents/keyd/bin/keyd";
-  #     Restart = "always";
-  #     User = "root";
-  #   };
-  # };
-  services.keyd = {
-    enable = true; # disabled until upstream gets lettermod
-    # keyboards."*".settings = {
-    #   main = {
-    #     # capslock = "overload(control, esc)";
-
-    #     # j = "overloadi(j, overloadt2(shift, j, 200), 150)";
-    #     # f = "overloadi(f, overloadt2(shift, f, 200), 150)";
-    #     #
-    #     # k = "overloadi(k, overloadt2(control, k, 200), 150)";
-    #     # d = "overloadi(d, overloadt2(control, d, 200), 150)";
-    #     #
-    #     # s = "overloadi(s, overloadt2(altgr, s, 200), 150)";
-    #     # l = "overloadi(l, overloadt2(altgr, l, 200), 150)";
-
-    #     # shift = "oneshot(shift)";
-    #     # meta = "oneshot(meta)";
-    #     # control = "oneshot(control)";
-
-    #     # leftalt = "oneshot(alt)";
-    #     # rightalt = "oneshot(altgr)";
-    #   };
-    # };
-  };
+  services.keyd.enable = true;
 }
