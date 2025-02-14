@@ -10,6 +10,7 @@
 
   users.users."nils.herzig".packages = with pkgs; [
     air
+    pika-backup
     argocd
     atuin
     ginkgo
@@ -306,6 +307,7 @@
     openstackclient-full
     ytt
     liquidctl
+    pika-backup
     yamllint
   ];
 }

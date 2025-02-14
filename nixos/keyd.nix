@@ -11,7 +11,7 @@
     8087:0029
 
     [main]
-    capslock = overload(control, esc)
+    capslock = esc 
     # esc = capslock
     esc = noop
 
