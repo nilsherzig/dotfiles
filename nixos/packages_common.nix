@@ -7,17 +7,7 @@
     nerd-fonts.iosevka
   ];
 
-  nixpkgs.overlays = [
-    # (self: super: { utillinux = super.util-linux; })
-    # (import ./overlays/zed-overlay.nix)
-    (self: super: {
-      zed-editor = super.zed-editor.overrideAttrs (oldAttrs: {
-        # Replace the attributes with your custom package definition
-        inherit (import ./overlays/zed-editor-package.nix self)
-          pname version src patches;
-      });
-    })
-  ];
+  nixpkgs.overlays = [ (self: super: { utillinux = super.util-linux; }) ];
 
   users.users."nils.herzig".packages = with pkgs; [
     air
