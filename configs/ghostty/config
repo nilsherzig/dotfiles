@@ -6,7 +6,7 @@ theme = "idea"
 
 # adjust-cell-height = +20%
 # adjust-cell-height = +20%
-font-size = 18
+font-size = 16
 
 # minimum-contrast = 4 
 # font-family = "ComicShannsMono Nerd Font Mono"
