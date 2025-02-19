@@ -8,4 +8,4 @@ switch-desktop:
 
 switch-laptop:
 	cowsay "please fix home manager tarball pull so we can use pure mode" || echo "no cow :("
-	sudo nixos-rebuild switch --flake '.#desktop' --impure
+	sudo nixos-rebuild switch --flake '.#laptop' --impure
