@@ -8,11 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
-  "show_edit_predictions": true,
-  "edit_predictions": {
-    "disabled_globs": [".env"]
+  "outline_panel": {
+    "dock": "right"
   },
   "assistant": {
     "default_model": {
@@ -21,10 +20,12 @@
     },
     "version": "2"
   },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
   "vim_mode": true,
-  "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 80,
-  "ui_font_size": 16,
+  "ui_font_size": 20,
   "buffer_font_size": 16,
   "preferred_line_length": 65,
   "soft_wrap": "preferred_line_length",
@@ -33,7 +34,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark Pro"
+    "dark": "Xcode Default Darker"
   },
   // "lsp_highlight_debounce": 9999999999,
   "experimental.theme_overrides": {

@@ -22,5 +22,42 @@
       "shift-k": "vim::PreviousMethodStart",
       "shift-j": "vim::NextMethodStart"
     }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      // Here we also allow `alt-enter` to accept the prediction
+      "space k": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "space k": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "tab": "editor::Tab"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ComposeCompletion"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || vim_mode == replace || vim_mode == waiting",
+    "bindings": {
+      "tab": "vim::Tab"
+    }
+  },
+  {
+    "context": "vim_mode == literal",
+    "bindings": {
+      "tab": ["vim::Literal", ["tab", "\u0009"]]
+    }
   }
 ]
