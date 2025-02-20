@@ -16,6 +16,7 @@
     distrobox
     atuin
     ginkgo
+    gnomeExtensions.day-progress
     liquidctl
     bluetuith
     brightnessctl
@@ -312,7 +313,6 @@
     liquidctl
     pika-backup
     yamllint
-    sticky-notes
-    distrobox
+    gnomeExtensions.day-progress
   ];
 }
