@@ -13,6 +13,7 @@
     air
     pika-backup
     argocd
+    distrobox
     atuin
     ginkgo
     liquidctl
@@ -312,5 +313,6 @@
     pika-backup
     yamllint
     sticky-notes
+    distrobox
   ];
 }
