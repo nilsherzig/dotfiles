@@ -18,9 +18,9 @@
       // "j k": ["workspace::SendKeystrokes", "escape"]
       // "C-u": ""
       "ctrl-k": "editor::SelectLargerSyntaxNode",
-      "ctrl-j": "editor::SelectSmallerSyntaxNode",
-      "shift-k": "vim::PreviousMethodStart",
-      "shift-j": "vim::NextMethodStart"
+      "ctrl-j": "editor::SelectSmallerSyntaxNode"
+      // "shift-k": "vim::PreviousMethodStart",
+      // "shift-j": "vim::NextMethodStart"
     }
   },
   {
