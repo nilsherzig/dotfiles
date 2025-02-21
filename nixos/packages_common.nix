@@ -312,6 +312,7 @@
     liquidctl
     pika-backup
     yamllint
+    distrobox
     gnomeExtensions.day-progress
     ghostty
     distrobox
