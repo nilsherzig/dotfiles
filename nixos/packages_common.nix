@@ -119,7 +119,6 @@
     traceroute
     tree
     typst
-    typst-lsp
     typstyle
     unrar-wrapper
     unzip
@@ -272,7 +271,6 @@
     traceroute
     tree
     typst
-    typst-lsp
     typstyle
     unrar-wrapper
     unzip
