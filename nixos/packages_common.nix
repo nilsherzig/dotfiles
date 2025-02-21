@@ -11,6 +11,7 @@
 
   users.users."nils.herzig".packages = with pkgs; [
     air
+    ghostty
     pika-backup
     argocd
     distrobox
@@ -312,5 +313,6 @@
     pika-backup
     yamllint
     gnomeExtensions.day-progress
+    ghostty
   ];
 }

@@ -1,24 +1,17 @@
 {
   description = "NixOS configurations";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    ghostty.url = "github:ghostty-org/ghostty";
-  };
+  inputs = { nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; };
 
   # self is needed because of flake things (somehow?)
   # nixos docs fucking suck
-  outputs = { self, nixpkgs, ghostty }: {
+  outputs = { self, nixpkgs }: {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux"; # Specify the system explicitly
         modules = [
           ./common.nix # Shared configuration
           ./device_laptop.nix # Laptop-specific configuration
-          {
-            environment.systemPackages =
-              [ ghostty.packages.x86_64-linux.default ];
-          }
         ];
       };
 
@@ -27,10 +20,6 @@
         modules = [
           ./common.nix # Shared configuration
           ./device_desktop.nix # Desktop-specific configuration
-          {
-            environment.systemPackages =
-              [ ghostty.packages.x86_64-linux.default ];
-          }
         ];
       };
 
