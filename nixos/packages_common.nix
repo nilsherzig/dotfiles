@@ -11,10 +11,12 @@
 
   users.users."nils.herzig".packages = with pkgs; [
     air
+    nil
     distrobox
     ghostty
     pika-backup
     argocd
+    anki
     atuin
     ginkgo
     gnomeExtensions.day-progress

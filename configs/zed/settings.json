@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Zed (Default)",
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -34,7 +35,7 @@
   "theme": {
     "mode": "system",
     "light": "Solarized Light",
-    "dark": "One Dark Pro"
+    "dark": "JetBrains New Dark"
   },
   // "lsp_highlight_debounce": 9999999999,
   "experimental.theme_overrides": {

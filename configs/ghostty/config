@@ -1,8 +1,9 @@
 # theme = "Kanagawa Dragon"
-theme = "Kanagawa Wave"
+# theme = "Kanagawa Wave"
 # theme = "idea"
 # theme = "GruvboxDarkHard"
 # theme = "idea"
+theme = "OneHalfDark"
 
 # adjust-cell-height = +20%
 # adjust-cell-height = +20%
