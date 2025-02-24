@@ -6,12 +6,12 @@
     0001:0001
     004c:026c
     05ac:026c
-    4b42:6071
+    # 4b42:6071
     046d:c52b
     8087:0029
 
     [main]
-    capslock = esc 
+    capslock = esc
     # esc = capslock
     esc = noop
 
