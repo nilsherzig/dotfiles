@@ -25,9 +25,12 @@
     "show": true,
     "show_nav_history_buttons": false
   },
+  "vim": {
+    "use_system_clipboard": "on_yank"
+  },
   "vim_mode": true,
   "ui_font_size": 20,
-  "buffer_font_size": 20.0,
+  "buffer_font_size": 19.0,
   "preferred_line_length": 65,
   "soft_wrap": "preferred_line_length",
   // "buffer_font_family": "Iosevka Nerd Font Mono",
