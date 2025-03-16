@@ -7,43 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Zed (Default)",
+  "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "outline_panel": {
-    "dock": "right"
-  },
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "o3-mini"
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
-  },
-  "vim": {
-    "use_system_clipboard": "on_yank"
-  },
   "vim_mode": true,
-  "ui_font_size": 20,
-  "buffer_font_size": 19.0,
-  "preferred_line_length": 65,
-  "soft_wrap": "preferred_line_length",
+  "ui_font_size": 16,
+  "buffer_font_size": 20.0,
   // "buffer_font_family": "Iosevka Nerd Font Mono",
   "buffer_font_family": "JetBrains Mono",
   "theme": {
     "mode": "system",
-    "light": "Solarized Light",
+    "light": "One Light",
     "dark": "JetBrains New Dark"
   },
   // "lsp_highlight_debounce": 9999999999,
   "experimental.theme_overrides": {
-    // "editor.document_highlight.read_background": "#00000000",
-    // "editor.document_highlight.write_background": "#00000000"
+    "editor.document_highlight.read_background": "#00000000",
+    "editor.document_highlight.write_background": "#00000000"
   },
   "lsp": {
     "golangci-lint": {
@@ -60,12 +48,28 @@
     }
   },
   "languages": {
-    "Markdown": {
-      "show_edit_predictions": false
-    },
     "Go": {
-      "show_edit_predictions": true,
       "language_servers": ["gopls", "golangci-lint"]
     }
+  },
+  "file_types": {
+    "HTML": ["*.html", "*.tmpl"]
   }
+  // "language_overrides": {
+  //   "Python": {
+  //     "format_on_save": {
+  //       "external": {
+  //         "command": "ruff",
+  //         "arguments": [
+  //           "check",
+  //           "--exit-zero",
+  //           "--fix",
+  //           "--stdin-filename",
+  //           "{buffer_path}",
+  //           "-"
+  //         ]
+  //       }
+  //     }
+  //   }
+  // }
 }

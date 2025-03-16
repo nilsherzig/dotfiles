@@ -318,5 +318,8 @@
     gnomeExtensions.day-progress
     ghostty
     distrobox
+    pyright
+    ruff
+    calibre
   ];
 }
