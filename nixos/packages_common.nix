@@ -105,7 +105,6 @@
     poppler_utils
     powertop
     pre-commit
-    pyright
     python3
     python312Packages.python-lsp-server
     qalculate-gtk
@@ -246,7 +245,6 @@
     powertop
     pre-commit
     prismlauncher
-    pyright
     python3
     python312Packages.python-lsp-server
     qalculate-gtk
@@ -318,7 +316,6 @@
     gnomeExtensions.day-progress
     ghostty
     distrobox
-    pyright
     ruff
     calibre
   ];
