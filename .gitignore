@@ -7,3 +7,4 @@ hostname.nix
 .env
 configs/nvim/lazy-lock.json
 lazy-lock.json
+configs/btop/btop.log
