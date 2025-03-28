@@ -317,6 +317,7 @@
     ghostty
     distrobox
     ruff
+    pomodoro-gtk
     calibre
   ];
 }

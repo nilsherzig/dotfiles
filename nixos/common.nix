@@ -12,15 +12,15 @@
   console.keyMap = "de";
   environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
-  #   # WAYLAND_DISPLAY = "wayland-1";
-  #   GTK_USE_PORTAL = "1";
-  #   NIXOS_OZONE_WL = "1";
-  #   GDK_BACKEND = "wayland,x11";
-  #   QT_QPA_PLATFORM = "wayland;xcb";
-  #   # XDG_BIN_HOME = "$HOME/.local/bin";
-  #   # XDG_CACHE_HOME = "$HOME/.cache";
-  #   # XDG_DATA_HOME = "$HOME/.local/share";
-  #   # XDG_STATE_HOME = "$HOME/.local/state";
+    #   # WAYLAND_DISPLAY = "wayland-1";
+    #   GTK_USE_PORTAL = "1";
+    #   NIXOS_OZONE_WL = "1";
+    #   GDK_BACKEND = "wayland,x11";
+    #   QT_QPA_PLATFORM = "wayland;xcb";
+    #   # XDG_BIN_HOME = "$HOME/.local/bin";
+    #   # XDG_CACHE_HOME = "$HOME/.cache";
+    #   # XDG_DATA_HOME = "$HOME/.local/share";
+    #   # XDG_STATE_HOME = "$HOME/.local/state";
   };
   hardware = {
     opentabletdriver.enable = true;
@@ -38,6 +38,18 @@
   };
 
   security.rtkit.enable = true;
+  security.pam.u2f = {
+    enable = true;
+    # control = "required";
+    # interactive = true;
+    cue = true;
+  };
+
+  security.pam.services = {
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
+  };
+
   system.autoUpgrade.enable = true;
   time.timeZone = "Europe/Berlin";
 
