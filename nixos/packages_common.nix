@@ -14,7 +14,11 @@
     nil
     distrobox
     ghostty
+    obsidian
+    helix
+    clusterctl
     pika-backup
+    google-chrome
     argocd
     anki
     atuin

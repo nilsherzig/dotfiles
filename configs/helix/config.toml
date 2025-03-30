@@ -1,11 +1,10 @@
 # theme = "custom_theme"
-# theme = "jetbrains_dark"
 # theme = "rose_pine"
 # theme = "autumn_night"
 # theme = "amberwood"
 # theme = "dark_plus"
-# theme = "github_dark"
-theme = "kanagawa"
+# theme = "kanagawa"
+theme = "jetbrains_dark"
 
 [keys.normal]
 # tab = "move_parent_node_end"
@@ -40,6 +39,7 @@ text-width = 80
 mouse = false
 scrolloff = 10 
 auto-format = true
+end-of-line-diagnostics = "hint"
 
 # [editor.statusline]
 # left = ["mode", "spinner", "version-control"]
@@ -54,6 +54,11 @@ auto-format = true
 render = true
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
+
+# [editor.inline-diagnostics]
+# cursor-line = "error"
+# other-lines = "error"
+
 
 [editor.soft-wrap]
 enable = true
