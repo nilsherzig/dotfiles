@@ -105,8 +105,9 @@
     poppler_utils
     powertop
     pre-commit
-    python3
-    python312Packages.python-lsp-server
+    # pyright
+    # python3
+    # python312Packages.python-lsp-server
     qalculate-gtk
     rclone
     ripgrep
@@ -245,8 +246,9 @@
     powertop
     pre-commit
     prismlauncher
-    python3
-    python312Packages.python-lsp-server
+    # pyright
+    # python3
+    # python312Packages.python-lsp-server
     qalculate-gtk
     # ranger
     rclone
@@ -316,8 +318,9 @@
     gnomeExtensions.day-progress
     ghostty
     distrobox
-    ruff
-    pomodoro-gtk
+    # pyright
+    # ruff
     calibre
+    # python313
   ];
 }
