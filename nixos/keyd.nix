@@ -29,6 +29,11 @@
     k = lettermod(symbols, k, 200, 140)
     d = lettermod(symbols, d, 200, 140)
 
+    # \ = oneshot(control) 
+    #
+    # [mods]
+    # k = oneshot(control)
+
     [symbols]
     j = macro(C-backspace)
     s = macro(A-tab)
