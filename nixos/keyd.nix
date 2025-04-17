@@ -19,16 +19,25 @@
     esc = noop
     shift = noop
     control = noop
+    backspace = noop
+    tab = noop
+    enter = noop
 
-    k = lettermod(control, k, 200, 140)
-    d = lettermod(control, d, 200, 140)
+    j = lettermod(control, j, 200, 140)
+    f = lettermod(control, f, 200, 140)
 
-    f = lettermod(symbols, f, 200, 140)
-    j = lettermod(symbols, j, 200, 140)
+    k = lettermod(symbols, k, 200, 140)
+    d = lettermod(symbols, d, 200, 140)
 
     [symbols]
-    d = backspace
+    j = macro(C-backspace)
+    s = macro(A-tab)
+    d = macro(A-tab)
+    l = macro(A-tab)
+
     f = enter
+
+    a = tab
 
     # , = S-,
     # . = S-.
@@ -40,10 +49,11 @@
     n = G-9
     m = G-0
 
-    h = left
-    j = down
-    k = up
-    l = right
+
+    # h = left
+    # j = down
+    # k = up
+    # l = right
   '';
 
   services.keyd.enable = true;
