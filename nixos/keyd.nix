@@ -13,21 +13,48 @@
     [main]
     space = overload(shift, space);
 
-    capslock = esc
+    f+j = oneshot(actions)
+    d+f = oneshot(actions) 
+    w+e = enter
+
+    j+k = esc
+    i+o = backspace
+
+    # capslock = esc
+    # capslock = overload(control, esc)
+    # i = overload(macro(i), esc)
     # esc = capslock
 
     esc = noop
+    capslock = noop
     shift = noop
     control = noop
     backspace = noop
-    tab = noop
     enter = noop
+    tab = noop
+    alt = noop
 
-    j = lettermod(control, j, 200, 140)
-    f = lettermod(control, f, 200, 140)
+    # j = lettermod(control, j, 200, 140)
+    # f = lettermod(control, f, 200, 140)
 
-    k = lettermod(symbols, k, 200, 140)
-    d = lettermod(symbols, d, 200, 140)
+    # d = lettermod(altgr, d, 200, 140)
+    # k = lettermod(alt, k, 200, 140)
+
+    [actions]
+    d = oneshot(alt)
+    k = oneshot(control)
+    1 = M-1
+    2 = M-2
+    3 = M-3
+
+    [altgr]
+    j = G-7
+    k = G-8
+    l = G-9
+    # ö = G-0
+
+    # k = lettermod(symbols, k, 200, 140)
+    # d = lettermod(symbols, d, 200, 140)
 
     # \ = oneshot(control) 
     #
@@ -35,10 +62,10 @@
     # k = oneshot(control)
 
     [symbols]
-    j = macro(C-backspace)
-    s = macro(A-tab)
-    d = macro(A-tab)
-    l = macro(A-tab)
+    # j = macro(C-backspace)
+    # s = macro(A-tab)
+    # d = macro(A-tab)
+    # l = macro(A-tab)
 
     f = enter
 
