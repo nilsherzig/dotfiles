@@ -321,6 +321,8 @@
     # pyright
     # ruff
     calibre
+    ollama-rocm
+    radeontop
     # python313
   ];
 }
