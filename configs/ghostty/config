@@ -20,3 +20,5 @@ keybind = alt+n=new_split:right
 keybind = alt+m=new_split:down
 keybind = alt+k=jump_to_prompt:-1
 keybind = alt+j=jump_to_prompt:1
+keybind = alt+shift+h=previous_tab
+keybind = alt+shift+l=next_tab
