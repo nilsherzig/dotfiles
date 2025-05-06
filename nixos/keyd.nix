@@ -15,7 +15,7 @@
 
     f+j = oneshot(actions)
     d+f = oneshot(actions) 
-    w+e = enter
+    h+j = enter
 
     j+k = esc
     i+o = backspace

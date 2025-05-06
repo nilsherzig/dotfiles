@@ -125,12 +125,12 @@
 
   services = {
     cron = {
-          enable = true;
-          systemCronJobs = [
-            "*/5 * * * * nils notify-send 'Posture Check' 'Remember to sit up straight!'"
-            "*/20 * * * * nils notify-send 'Position Change' 'Time to switch between standing and sitting!'"
-          ];
-        };
+      enable = true;
+      systemCronJobs = [
+        "*/5 * * * * nils notify-send 'Posture Check' 'Remember to sit up straight!'"
+        "*/20 * * * * nils notify-send 'Position Change' 'Time to switch between standing and sitting!'"
+      ];
+    };
 
     udev.extraRules = ''
       KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="4b42", ATTRS{idProduct}=="6071", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
@@ -209,7 +209,6 @@
     };
   };
 
-
   programs = {
     nix-ld.enable = true;
     ladybird.enable = false;
@@ -219,7 +218,7 @@
       agent.pinentryPackage = pkgs.pinentry-gnome3;
     };
 
-    # hyprland.enable = true;
+    hyprland.enable = true;
 
     dconf.enable = true;
 

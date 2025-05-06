@@ -18,3 +18,7 @@ sudo liquidctl --match H100i set fan2 speed "$1"
 sudo liquidctl --match Commander set fan3 speed "$1"
 sudo liquidctl --match Commander set fan4 speed "$1"
 sudo liquidctl --match Commander set fan5 speed "$1"
+
+sudo liquidctl --match Commander set fan3 speed 20
+sudo liquidctl --match Commander set fan4 speed 20
+sudo liquidctl --match Commander set fan5 speed 20

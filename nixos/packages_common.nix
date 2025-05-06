@@ -115,8 +115,6 @@
     qalculate-gtk
     rclone
     ripgrep
-    ruff
-    ruff-lsp
     shellcheck
     sops
     stylua
@@ -258,8 +256,6 @@
     rclone
     ripgrep
     # rnote
-    ruff
-    ruff-lsp
     shellcheck
     signal-desktop
     # skopeo
@@ -323,10 +319,10 @@
     ghostty
     distrobox
     # pyright
-    # ruff
     calibre
     ollama-rocm
     radeontop
-    # python313
+    jellyfin-media-player
+    vial
   ];
 }
