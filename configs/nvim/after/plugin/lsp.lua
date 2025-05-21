@@ -95,23 +95,35 @@ lspconfig.tailwindcss.setup({
 if not configs.golangcilsp then
 	configs.golangcilsp = {
 		default_config = {
-			cmd = { "golangci-lint-langserver" },
+			cmd = { "./bin/golangci-kube-api-linter" },
 			root_dir = lspconfig.util.root_pattern(".git", "go.mod"),
 			init_options = {
 				command = {
-					"golangci-lint",
+					-- "golangci-lint",
+					"./bin/golangci-kube-api-linter",
 					"run",
-					"--out-format",
-					"json",
+					"--output.json.path",
+					"stdout",
+					"--show-stats=false",
 					"--issues-exit-code=1",
 				},
 			},
 		},
 	}
 end
-
 lspconfig.golangci_lint_ls.setup({
 	filetypes = { "go", "gomod" },
+	init_options = {
+		command = {
+			-- "golangci-lint",
+			"./bin/golangci-kube-api-linter",
+			"run",
+			"--output.json.path",
+			"stdout",
+			"--show-stats=false",
+			"--issues-exit-code=1",
+		},
+	},
 })
 
 lspconfig.gopls.setup({})

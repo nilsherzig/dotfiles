@@ -10,12 +10,17 @@
   nixpkgs.overlays = [ (self: super: { utillinux = super.util-linux; }) ];
 
   users.users."nils.herzig".packages = with pkgs; [
+    dmenu-rs
+    hyprpaper
+    waybar
+    ranger
     air
+    python312Packages.pillow
+    feh
     nil
     distrobox
     ghostty
     obsidian
-    helix
     clusterctl
     pika-backup
     google-chrome
@@ -262,7 +267,6 @@
     # slurp
     sqlitebrowser
     starship
-    stremio
     stylua
     swappy
     tailwindcss
@@ -322,7 +326,12 @@
     calibre
     ollama-rocm
     radeontop
-    jellyfin-media-player
-    vial
+    # python313
+    ranger
+    feh
+    python312Packages.pillow
+    hyprpaper
+    waybar
+    dmenu-rs
   ];
 }

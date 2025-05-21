@@ -217,12 +217,12 @@ require("lazy").setup({
 			server_opts = nil,
 		},
 	},
-	{
-		"mistweaverco/kulala.nvim",
-		opts = {
-			debug = true,
-		},
-	},
+	-- {
+	-- 	"mistweaverco/kulala.nvim",
+	-- 	opts = {
+	-- 		debug = true,
+	-- 	},
+	-- },
 	-- {
 	-- 	"CopilotC-Nvim/CopilotChat.nvim",
 	-- 	branch = "canary",
