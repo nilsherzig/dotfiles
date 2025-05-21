@@ -12,6 +12,7 @@
   users.users."nils.herzig".packages = with pkgs; [
     dmenu-rs
     hyprpaper
+    polkit_gnome
     lm_sensors
     waybar
     ranger
@@ -334,6 +335,7 @@
     hyprpaper
     waybar
     lm_sensors
+    polkit_gnome
     dmenu-rs
   ];
 }
