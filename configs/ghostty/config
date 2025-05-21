@@ -2,7 +2,7 @@
 # theme = "Kanagawa Wave"
 # theme = "idea"
 # theme = "GruvboxDarkHard"
-# theme = "idea"
+theme = "idea"
 # theme = "OneHalfDark"
 
 term = kitty
@@ -14,7 +14,7 @@ window-padding-x = 10
 window-padding-y = 10
 
 window-decoration = false
-background-opacity = 0.8
+# background-opacity = 1
 
 # minimum-contrast = 4 
 # font-family = "ComicShannsMono Nerd Font Mono"
