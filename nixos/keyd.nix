@@ -13,9 +13,9 @@
     [main]
     space = overload(shift, space);
 
-    f+j = oneshot(actions)
-    d+f = oneshot(actions) 
-    h+j = enter
+    # f+j = oneshot(actions)
+    # d+f = oneshot(actions) 
+    # h+j = enter
 
     j+k = esc
     i+o = backspace
@@ -25,14 +25,14 @@
     # i = overload(macro(i), esc)
     # esc = capslock
 
-    esc = noop
-    capslock = noop
+    # esc = noop
+    # capslock = noop
     shift = noop
-    control = noop
-    backspace = noop
-    enter = noop
-    tab = noop
-    alt = noop
+    # control = noop
+    # backspace = noop
+    # enter = noop
+    # tab = noop
+    # alt = noop
 
     # j = lettermod(control, j, 200, 140)
     # f = lettermod(control, f, 200, 140)
