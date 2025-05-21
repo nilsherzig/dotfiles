@@ -23,6 +23,7 @@
     #   # XDG_STATE_HOME = "$HOME/.local/state";
   };
   hardware = {
+    i2c.enable = true;
     opentabletdriver.enable = true;
     bluetooth = {
       enable = true;
@@ -218,7 +219,10 @@
       agent.pinentryPackage = pkgs.pinentry-gnome3;
     };
 
-    hyprland.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+    };
 
     dconf.enable = true;
 

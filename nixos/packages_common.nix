@@ -12,9 +12,11 @@
   users.users."nils.herzig".packages = with pkgs; [
     dmenu-rs
     hyprpaper
-    polkit_gnome
+    hyprsunset
+    hyprpolkitagent
     lm_sensors
     waybar
+    ddcutil
     ranger
     air
     python312Packages.pillow
@@ -335,8 +337,10 @@
     hyprpaper
     waybar
     lm_sensors
-    polkit_gnome
     dmenu-rs
+    hyprpolkitagent
+    hyprsunset
+    ddcutil
     jellyfin-media-player
   ];
 }
