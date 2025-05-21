@@ -337,5 +337,6 @@
     lm_sensors
     polkit_gnome
     dmenu-rs
+    jellyfin-media-player
   ];
 }

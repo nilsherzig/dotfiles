@@ -1,9 +1,9 @@
-@define-color foreground #eeeeee;
+@define-color foreground #cccccc;
 @define-color foreground-inactive #aaaaaa;
 @define-color background #000000;
 
 * {
-    font-family: JetBrainsMono Nerd Font;
+    font-family: JetBrains Mono;
     font-size: 18px;
     padding: 1;
     margin: 0;

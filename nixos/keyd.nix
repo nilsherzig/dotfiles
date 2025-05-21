@@ -34,8 +34,8 @@
     # tab = noop
     # alt = noop
 
-    # j = lettermod(control, j, 200, 140)
-    # f = lettermod(control, f, 200, 140)
+    j = lettermod(control, j, 200, 140)
+    f = lettermod(control, f, 200, 140)
 
     # d = lettermod(altgr, d, 200, 140)
     # k = lettermod(alt, k, 200, 140)
