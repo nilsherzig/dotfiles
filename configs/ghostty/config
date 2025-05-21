@@ -1,8 +1,8 @@
-# theme = "Kanagawa Dragon"
+theme = "Kanagawa Dragon"
 # theme = "Kanagawa Wave"
 # theme = "idea"
 # theme = "GruvboxDarkHard"
-theme = "idea"
+# theme = "idea"
 # theme = "OneHalfDark"
 
 term = kitty

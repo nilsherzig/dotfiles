@@ -42,8 +42,8 @@ vim.g.background = "dark"
 -- })
 
 -- setup must be called before loading
--- vim.cmd("colorscheme kanagawa-dragon")
-vim.cmd("colorscheme vscode")
+vim.cmd("colorscheme kanagawa-dragon")
+-- vim.cmd("colorscheme vscode")
 -- g:gruvbox_contrast_dark
 -- vim.g.gruvbox_contrast_dark = "hard"
 -- vim.cmd("colorscheme gruvbox")
