@@ -12,6 +12,7 @@
   users.users."nils.herzig".packages = with pkgs; [
     dmenu-rs
     hyprpaper
+    lm_sensors
     waybar
     ranger
     air
@@ -332,6 +333,7 @@
     python312Packages.pillow
     hyprpaper
     waybar
+    lm_sensors
     dmenu-rs
   ];
 }
