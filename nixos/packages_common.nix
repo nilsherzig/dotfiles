@@ -10,6 +10,7 @@
   nixpkgs.overlays = [ (self: super: { utillinux = super.util-linux; }) ];
 
   users.users."nils.herzig".packages = with pkgs; [
+    bemenu
     dmenu-rs
     hyprpaper
     hyprsunset
@@ -344,5 +345,6 @@
     ddcutil
     vial
     jellyfin-media-player
+    bemenu
   ];
 }
