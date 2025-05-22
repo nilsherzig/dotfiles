@@ -139,7 +139,7 @@
     xserver.enable = true;
     xserver.displayManager.gdm.enable = true;
     xserver.desktopManager.gnome.enable = true;
-    gnome.gnome-keyring.enable = true;
+    # gnome.gnome-keyring.enable = true;
 
     passSecretService.enable = true;
     resolved.enable = false;
