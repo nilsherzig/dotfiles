@@ -12,6 +12,7 @@
   console.keyMap = "de";
   environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
+    SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
     #   # WAYLAND_DISPLAY = "wayland-1";
     #   GTK_USE_PORTAL = "1";
     #   NIXOS_OZONE_WL = "1";
@@ -221,7 +222,7 @@
 
     hyprland = {
       enable = true;
-      withUWSM = true;
+      # withUWSM = true;
     };
 
     dconf.enable = true;
