@@ -126,6 +126,7 @@
   };
 
   services = {
+    hypridle.enable = true;
     cron = {
       enable = true;
       systemCronJobs = [
@@ -212,13 +213,15 @@
   };
 
   programs = {
+    noisetorch.enable = true;
     nix-ld.enable = true;
-    ladybird.enable = false;
-
+    # ladybird.enable = false;
     gnupg = {
       agent.enable = true;
       agent.pinentryPackage = pkgs.pinentry-gnome3;
     };
+
+    hyprlock.enable = true;
 
     hyprland = {
       enable = true;
