@@ -16,6 +16,7 @@
     hyprpolkitagent
     lm_sensors
     waybar
+    vial
     ddcutil
     ranger
     air
@@ -341,6 +342,7 @@
     hyprpolkitagent
     hyprsunset
     ddcutil
+    vial
     jellyfin-media-player
   ];
 }
