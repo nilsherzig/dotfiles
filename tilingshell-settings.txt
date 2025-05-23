@@ -1,0 +1,18 @@
+[/]
+enable-autotiling=true
+enable-smart-window-border-radius=true
+enable-tiling-system-windows-suggestions=true
+enable-window-border=true
+focus-window-down=['<Alt>j']
+focus-window-left=['<Alt>h']
+focus-window-right=['<Alt>l']
+focus-window-up=['<Alt>k']
+move-window-down=['<Shift><Alt>j']
+move-window-left=['<Shift><Alt>h']
+move-window-right=['<Shift><Alt>l']
+move-window-up=['<Shift><Alt>k']
+quarter-tiling-threshold=uint32 40
+selected-layouts=[['Layout 3'], ['Layout 3']]
+snap-assistant-animation-time=uint32 179
+tile-preview-animation-time=uint32 99
+top-edge-maximize=true
