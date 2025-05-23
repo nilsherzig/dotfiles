@@ -5,7 +5,7 @@ theme = "Kanagawa Wave"
 # theme = "idea"
 # theme = "OneHalfDark"
 
-term = kitty
+# term = kitty
 
 # adjust-cell-height = +20%
 # adjust-cell-height = +20%
@@ -13,7 +13,7 @@ font-size = 16
 window-padding-x = 10
 window-padding-y = 10
 
-window-decoration = false
+# window-decoration = false
 # background-opacity = 1
 
 # minimum-contrast = 4 
