@@ -1,12 +1,13 @@
 {
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "height": 24,
     "spacing": 5,
 
     // "modules-left": ["hyprland/workspaces", "memory", "temperature"],
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "systemd-failed-units"],
+    // "modules-right": ["wireplumber", "battery", "backlight", "network", "bluetooth", "tray"],
     "modules-right": ["wireplumber", "battery", "backlight", "network", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
@@ -65,6 +66,14 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
+    },
+
+    "systemd-failed-units": {
+        "hide-on-ok": false, // Do not hide if there is zero failed units.
+        "format": "✗ {nr_failed}",
+        "format-ok": "✓",
+        "system": true, // Monitor failed systemwide units.
+        "user": false // Ignore failed user units.
     },
 
     "bluetooth": {
