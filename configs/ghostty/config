@@ -21,11 +21,11 @@ window-padding-y = 10
 # font-family = "Jetbrains Mono"
 font-family = "Iosevka Nerd Font Mono"
 
-keybind = alt+h=goto_split:left
-keybind = alt+l=goto_split:right
-keybind = alt+n=new_split:right
-keybind = alt+m=new_split:down
-keybind = alt+k=jump_to_prompt:-1
-keybind = alt+j=jump_to_prompt:1
-keybind = alt+shift+h=previous_tab
-keybind = alt+shift+l=next_tab
+# keybind = alt+h=goto_split:left
+# keybind = alt+l=goto_split:right
+# keybind = alt+n=new_split:right
+# keybind = alt+m=new_split:down
+# keybind = alt+k=jump_to_prompt:-1
+# keybind = alt+j=jump_to_prompt:1
+# keybind = alt+shift+h=previous_tab
+# keybind = alt+shift+l=next_tab

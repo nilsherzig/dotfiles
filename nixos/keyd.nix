@@ -3,12 +3,6 @@
     [ids]
     # logitech ergo
     046d:4088
-    0001:0001
-    004c:026c
-    05ac:026c
-    046d:c52b
-
-    8087:0029
 
     [main]
     space = overload(shift, space);

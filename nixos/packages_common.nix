@@ -15,6 +15,7 @@
     hyprpaper
     hyprsunset
     hyprpolkitagent
+    zellij
     lm_sensors
     waybar
     vial
@@ -345,6 +346,7 @@
     ddcutil
     vial
     jellyfin-media-player
+    zellij
     bemenu
   ];
 }
