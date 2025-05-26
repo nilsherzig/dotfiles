@@ -69,8 +69,8 @@
     },
 
     "systemd-failed-units": {
-        "hide-on-ok": false, // Do not hide if there is zero failed units.
-        "format": "✗ {nr_failed}",
+        "hide-on-ok": true, // Do not hide if there is zero failed units.
+        "format": "✗ {nr_failed} faild systemd services",
         "format-ok": "✓",
         "system": true, // Monitor failed systemwide units.
         "user": false // Ignore failed user units.

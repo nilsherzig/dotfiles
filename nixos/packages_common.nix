@@ -11,7 +11,9 @@
 
   users.users."nils.herzig".packages = with pkgs; [
     bemenu
+    qemu
     dmenu-rs
+    wget
     hyprpaper
     hyprsunset
     hyprpolkitagent
@@ -347,6 +349,8 @@
     vial
     jellyfin-media-player
     zellij
+    wget
     bemenu
+    qemu
   ];
 }
