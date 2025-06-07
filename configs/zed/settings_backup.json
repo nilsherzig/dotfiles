@@ -7,12 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "show_inline_completions": true,
-  "edit_predictions": {
-    "mode": "eager_preview"
-  },
-  "inline_completions": {
-    "disabled_globs": [".env"]
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "zed"
   },
   "assistant": {
     "default_model": {
@@ -22,12 +19,10 @@
     "version": "2"
   },
   "vim_mode": true,
-  "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 60,
   "ui_font_size": 16,
-  "buffer_font_size": 21.0,
+  "buffer_font_size": 20.0,
   // "buffer_font_family": "Iosevka Nerd Font Mono",
-  // "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrains Mono",
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -42,11 +37,9 @@
     "golangci-lint": {
       "initialization_options": {
         "command": [
-          "golangci-lint",
+          "./bin/golangci-kube-api-linter",
           "run",
           "--enable-all",
-          "--disable",
-          "lll",
           "--out-format",
           "json",
           "--issues-exit-code=1"
@@ -54,10 +47,32 @@
       }
     }
   },
+  "inlay_hints": {
+    "enabled": false
+  },
   "languages": {
     "Go": {
-      "show_inline_completions": true,
       "language_servers": ["gopls", "golangci-lint"]
     }
+  },
+  "file_types": {
+    "HTML": ["*.html", "*.tmpl"]
   }
+  // "language_overrides": {
+  //   "Python": {
+  //     "format_on_save": {
+  //       "external": {
+  //         "command": "ruff",
+  //         "arguments": [
+  //           "check",
+  //           "--exit-zero",
+  //           "--fix",
+  //           "--stdin-filename",
+  //           "{buffer_path}",
+  //           "-"
+  //         ]
+  //       }
+  //     }
+  //   }
+  // }
 }

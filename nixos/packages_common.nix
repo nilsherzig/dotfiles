@@ -46,7 +46,6 @@
     cowsay
     deno
     dig
-    direnv
     du-dust
     sticky-notes
     ffmpeg
@@ -171,7 +170,6 @@
     clang
     # delve
     dig
-    direnv
     du-dust
     ffmpeg
     file
@@ -239,15 +237,15 @@
     nixfmt-classic
     nixpkgs-fmt
     nmap
-    nodePackages.js-beautify
-    nodePackages_latest.bash-language-server
-    nodePackages_latest.prettier
-    nodePackages_latest.stylelint
-    nodePackages_latest.svelte-language-server
-    nodePackages_latest.typescript-language-server
-    nodePackages_latest.vscode-langservers-extracted
-    nodePackages_latest.yaml-language-server
-    nodejs
+    # nodePackages.js-beautify
+    # nodePackages_latest.bash-language-server
+    # nodePackages_latest.prettier
+    # nodePackages_latest.stylelint
+    # nodePackages_latest.svelte-language-server
+    # nodePackages_latest.typescript-language-server
+    # nodePackages_latest.vscode-langservers-extracted
+    # nodePackages_latest.yaml-language-server
+    # nodejs
     oapi-codegen
     obsidian
     openapi-generator-cli
@@ -352,5 +350,7 @@
     wget
     bemenu
     qemu
+    ghostscript_headless
+    koreader
   ];
 }

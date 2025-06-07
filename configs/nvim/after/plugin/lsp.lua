@@ -24,6 +24,7 @@ lspconfig.eslint.setup({})
 lspconfig.gleam.setup({})
 lspconfig.bashls.setup({})
 lspconfig.hls.setup({})
+lspconfig.pyright.setup({})
 -- lspconfig.ltex.setup({
 -- 	filetypes = { "markdown" },
 -- })

@@ -25,7 +25,7 @@
   };
   hardware = {
     i2c.enable = true;
-    opentabletdriver.enable = true;
+    # opentabletdriver.enable = true;
     bluetooth = {
       enable = true;
       settings = { General = { Experimental = true; }; };
@@ -141,7 +141,7 @@
     xserver.enable = true;
     xserver.displayManager.gdm.enable = true;
     xserver.desktopManager.gnome.enable = true;
-    # gnome.gnome-keyring.enable = true;
+    gnome.gnome-keyring.enable = true;
 
     passSecretService.enable = true;
     resolved.enable = false;
@@ -213,6 +213,7 @@
   };
 
   programs = {
+    direnv.enable = true;
     noisetorch.enable = true;
     nix-ld.enable = true;
     # ladybird.enable = false;
@@ -254,8 +255,6 @@
         eval "$(direnv hook zsh)"
 
         export EDITOR=nvim;
-        export NODE_PATH=~/.npm-packages/lib/node_modules
-        export PATH=~/.npm-packages/bin:$PATH
       '';
     };
   };
