@@ -89,7 +89,7 @@
   };
 
   networking = {
-    enableIPv6 = false;
+    enableIPv6 = true;
     networkmanager.enable = true;
   };
 
