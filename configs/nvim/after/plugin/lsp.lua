@@ -100,8 +100,8 @@ if not configs.golangcilsp then
 			root_dir = lspconfig.util.root_pattern(".git", "go.mod"),
 			init_options = {
 				command = {
-					-- "golangci-lint",
-					"./bin/golangci-kube-api-linter",
+					"golangci-lint",
+					-- "./bin/golangci-kube-api-linter",
 					"run",
 					"--output.json.path",
 					"stdout",
@@ -116,8 +116,8 @@ lspconfig.golangci_lint_ls.setup({
 	filetypes = { "go", "gomod" },
 	init_options = {
 		command = {
-			-- "golangci-lint",
-			"./bin/golangci-kube-api-linter",
+			"golangci-lint",
+			-- "./bin/golangci-kube-api-linter",
 			"run",
 			"--output.json.path",
 			"stdout",
