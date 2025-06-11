@@ -126,7 +126,7 @@
   };
 
   services = {
-    hypridle.enable = true;
+    # hypridle.enable = true;
     cron = {
       enable = true;
       systemCronJobs = [
@@ -222,12 +222,12 @@
       agent.pinentryPackage = pkgs.pinentry-gnome3;
     };
 
-    hyprlock.enable = true;
+    # hyprlock.enable = true;
 
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-    };
+    # hyprland = {
+    #   enable = true;
+    #   withUWSM = true;
+    # };
 
     dconf.enable = true;
 
