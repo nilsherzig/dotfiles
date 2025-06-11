@@ -38,7 +38,8 @@
     "golangci-lint": {
       "initialization_options": {
         "command": [
-          "./bin/golangci-kube-api-linter",
+          // "./bin/golangci-kube-api-linter",
+          "golangci-lint",
           "run",
           "--enable-all",
           "--out-format",
