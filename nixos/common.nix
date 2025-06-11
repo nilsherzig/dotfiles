@@ -61,6 +61,7 @@
   };
 
   boot = {
+    kernelParams = [ "amdgpu.ppfeaturemask=0xfffd3fff" ];
     extraModprobeConfig = ''
       options hid_apple fnmode=1
       options hid_apple swap_opt_cmd=1
