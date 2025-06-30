@@ -1,0 +1,21 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = '''
+$kubernetes$directory$git_state$git_status
+$character'''
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[character] 
+success_symbol = '[λ](bold green)' 
+error_symbol = '[λ](bold red)' 
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[kubernetes]
+disabled = false
+symbol = '☸  '

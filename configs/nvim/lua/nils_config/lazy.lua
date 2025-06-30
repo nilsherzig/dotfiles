@@ -99,10 +99,10 @@ require("lazy").setup({
 			"onsails/lspkind.nvim",
 		},
 	},
-	{
-		"L3MON4D3/LuaSnip",
-		build = "LUA_LDLIBS=-lluajit5.1 make install_jsregexp",
-	},
+	-- {
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	build = "LUA_LDLIBS=-lluajit5.1 make install_jsregexp",
+	-- },
 	{
 		"nvim-tree/nvim-web-devicons",
 	},
