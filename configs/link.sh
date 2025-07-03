@@ -5,3 +5,5 @@ set -xe
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 ln -sf "$SCRIPT_DIR"/* "$HOME/.config"
+
+ln -sf "$SCRIPT_DIR/.zshrc" "$HOME"
