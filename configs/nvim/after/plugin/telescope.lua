@@ -9,24 +9,29 @@ vim.keymap.set("n", "<leader>gs", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>t", builtin.builtin, {})
 
 vim.keymap.set("n", "<leader>s", function()
-	builtin.lsp_document_symbols({ symbol_width = 160 })
+    builtin.lsp_document_symbols({ symbol_width = 160 })
 end, {})
 vim.keymap.set("n", "<leader>S", function()
-	builtin.lsp_dynamic_workspace_symbols({ symbol_width = 160 })
+    builtin.lsp_dynamic_workspace_symbols({ symbol_width = 160 })
 end, {})
 
 telescope.setup({
-	defaults = {
-		mappings = {
-			i = {
-				["<esc>"] = actions.close,
-			},
-		},
-		layout_strategy = "flex",
-		borderchars = { "━", "┃", "━", "┃", "┏", "┓", "┛", "┗" },
-		results_title = false,
-		prompt_title = false,
-		preview_title = false,
-		selection_caret = "  ",
-	},
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    },
+    defaults = {
+        mappings = {
+            i = {
+                ["<esc>"] = actions.close,
+            },
+        },
+        layout_strategy = "flex",
+        borderchars = { "━", "┃", "━", "┃", "┏", "┓", "┛", "┗" },
+        results_title = false,
+        prompt_title = false,
+        preview_title = false,
+        selection_caret = "  ",
+    },
 })
