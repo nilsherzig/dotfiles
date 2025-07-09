@@ -9,6 +9,7 @@ export KUSTOMIZE_PLUGIN_HOME=/opt/kustomize/
 
 
 eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
 source <(fzf --zsh)
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -21,6 +22,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias lg="lazygit"
 alias k="kubectl"
+alias la="ls -al"
 
 
 # if [ -x /usr/bin/dircolors ]; then

@@ -1,6 +1,11 @@
 require("nils_config.keymap")
 require("nils_config.lazy")
 
+-- set nosi noai
+-- set formatoptions-=c
+-- set formatoptions-=r
+-- set formatoptions-=o
+
 vim.opt.laststatus = 3
 
 vim.loader.enable()
@@ -8,9 +13,9 @@ vim.loader.enable()
 vim.wo.fillchars = "eob: "
 
 vim.filetype.add({
-	extension = {
-		templ = "templ",
-	},
+    extension = {
+        templ = "templ",
+    },
 })
 
 -- vim.opt.relativenumber = true
@@ -57,7 +62,7 @@ vim.opt.isfname:append("@-@")
 -- vim.lsp.inlay_hint.enable(bufnr)
 --
 vim.filetype.add({
-	extension = {
-		["http"] = "http",
-	},
+    extension = {
+        ["http"] = "http",
+    },
 })
