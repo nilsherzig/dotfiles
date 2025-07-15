@@ -23,6 +23,7 @@ alias vi="nvim"
 alias lg="lazygit"
 alias k="kubectl"
 alias la="ls -al"
+alias ks="k9s"
 
 
 # if [ -x /usr/bin/dircolors ]; then
