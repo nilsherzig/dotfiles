@@ -2,6 +2,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias lg="lazygit"
 alias ai="aichat -r default"
+alias cd="z"
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
