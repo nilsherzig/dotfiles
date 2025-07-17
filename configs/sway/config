@@ -233,4 +233,13 @@ bar {
     }
 }
 
+client.focused  #5c5c5c #5c5c5c #FFFFFF
+client.unfocused  #000000 #000000 #5c5c5c
+
+# client.focused_inactive  $base02  $base00  $base06  $base08  $base02
+# client.unfocused   $base01  $base00  $base06  $base08  $base02
+# client.urgent   $base07  $base00  $base08  $base0B  $base02
+# client.placeholder       $base02  $base00  $base06  $base03  $base04
+# client.background        $base00
+
 include /etc/sway/config.d/*
