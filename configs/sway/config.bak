@@ -1,0 +1,12 @@
+# input * {
+#     xkb_layout "de"
+#     # xkb_variant "colemak,,typewriter"
+#     # xkb_options "grp:win_space_toggle"
+# }
+
+# set $mod Mod4
+# set $altmod Mod1
+
+# set $mod Mod4
+# output eDP-1 res 2560x1440
+
