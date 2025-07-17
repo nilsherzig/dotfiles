@@ -7,7 +7,7 @@ require("nils_config.lazy")
 -- set formatoptions-=o
 
 vim.opt.laststatus = 3
-
+vim.g.mkpd_auto_start = 1
 vim.loader.enable()
 
 vim.wo.fillchars = "eob: "
