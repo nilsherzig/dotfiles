@@ -1,47 +1,42 @@
-eval "$(starship init zsh)"
+alias vi="nvim"
+alias vim="nvim"
+alias lg="lazygit"
+alias ai="aichat -r default"
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt SHARE_HISTORY
-
-export KUSTOMIZE_PLUGIN_HOME=/opt/kustomize/
-
-
-eval "$(zoxide init zsh)"
-eval "$(direnv hook zsh)"
-source <(fzf --zsh)
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# eval "$(bw completion --shell zsh); compdef _bw bw;"
+########## SHELL ENV THINGS ##########
+# rest lives in ~/.config/environment.d/
 
 export EDITOR="nvim"
 
-alias cd="z"
-alias vim="nvim"
-alias vi="nvim"
-alias lg="lazygit"
-alias k="kubectl"
-alias la="ls -al"
-alias ks="k9s"
+########## GRML PROMPT MODS ##########
+# needs kube-ps1 installed
+
+# --- KUBERNETES CONTEXT ---
+KUBE_PS1_SYMBOL_CUSTOM="img"
+KUBE_PS1_SYMBOL_ENABLE=false
+KUBE_PS1_SEPARATOR=""
+KUBE_PS1_PREFIX=""
+KUBE_PS1_SUFFIX=" "
+KUBE_PS1_SYMBOL_PADDING=true
+source '/opt/kube-ps1/kube-ps1.sh'
+function prompt_kube_ps1() {
+  REPLY=$(kube_ps1)
+}
+grml_theme_add_token kube-context -f prompt_kube_ps1 '%F{cyan}' '%f'
 
 
-# if [ -x /usr/bin/dircolors ]; then
-#   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# --- vcs config ---
+zstyle ':vcs_info:*' formats '%F{magenta}[%F{green}%b%F{magenta}]%f ' 'zsh: %r'
+
+# --- final prompt layout ---
+zstyle ':prompt:grml:left:setup' items change-root path vcs kube-context time newline rc percent 
 
 
-zstyle ':autocomplete:async' enabled no
-# zstyle ':autocomplete:*' delay 1.0  # seconds (float)
-# zstyle ':autocomplete:*' min-input 3
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-bindkey              '^I' menu-select
-bindkey "$terminfo[kcbt]" menu-select
+########## EXTENSIONS ##########
 
-bindkey              '^I'         menu-complete
-bindkey "$terminfo[kcbt]" reverse-menu-complete
+source /usr/share/wikiman/widgets/widget.zsh
+
+########## GIT THINGS ##########
+
+alias gcm="git commit -am"
+alias gs="git status"
