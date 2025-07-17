@@ -3,6 +3,10 @@ alias vim="nvim"
 alias lg="lazygit"
 alias ai="aichat -r default"
 
+eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
+source <(fzf --zsh)
+
 ########## SHELL ENV THINGS ##########
 # rest lives in ~/.config/environment.d/
 
