@@ -10,6 +10,7 @@ source <(fzf --zsh)
 
 ########## SHELL ENV THINGS ##########
 # rest lives in ~/.config/environment.d/
+eval `keychain --eval`
 
 export EDITOR="nvim"
 
