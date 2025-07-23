@@ -1,18 +1,20 @@
+
+########## SHELL ENV THINGS ##########
+# rest lives in ~/.config/environment.d/
+eval `keychain -q --eval work`
+export EDITOR="nvim"
+export KUSTOMIZE_PLUGIN_HOME=/opt/kustomize/
+
 alias vi="nvim"
 alias vim="nvim"
 alias lg="lazygit"
+alias k="kubectl"
 alias ai="aichat -r default"
 alias cd="z"
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 source <(fzf --zsh)
-
-########## SHELL ENV THINGS ##########
-# rest lives in ~/.config/environment.d/
-eval `keychain -q --eval`
-
-export EDITOR="nvim"
 
 ########## GRML PROMPT MODS ##########
 # needs kube-ps1 installed

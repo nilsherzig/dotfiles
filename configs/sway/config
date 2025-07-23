@@ -222,8 +222,8 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    # status_command while date +'%d-%m-%Y %X'; cat /sys/class/power_supply/BAT0/capacity; do sleep 1; done
-    status_command while date +'%d-%m-%Y %X'; do sleep 1; done
+    # status_command while date +'%d-%m-%Y %X'; do sleep 1; done
+    status_command while true; do echo "$(date +'%d-%m-%Y %X') - $(cat /sys/class/power_supply/BAT0/capacity)%"; sleep 1; done
 
     colors {
         statusline #ffffff
