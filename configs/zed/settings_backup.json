@@ -7,14 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "JetBrains New UI Icons (Dark)",
   "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "assistant": {
+  "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "google",
+      "model": "gemini-2.5-flash"
     },
     "version": "2"
   },
@@ -22,10 +24,11 @@
   "ui_font_size": 16,
   "buffer_font_size": 20.0,
   // "buffer_font_family": "Iosevka Nerd Font Mono",
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "One Dark",
     "dark": "JetBrains New Dark"
   },
   // "lsp_highlight_debounce": 9999999999,
@@ -37,7 +40,8 @@
     "golangci-lint": {
       "initialization_options": {
         "command": [
-          "./bin/golangci-kube-api-linter",
+          // "./bin/golangci-kube-api-linter",
+          "golangci-lint",
           "run",
           "--enable-all",
           "--out-format",
