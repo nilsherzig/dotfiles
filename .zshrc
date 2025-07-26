@@ -1,10 +1,3 @@
-# export ANTHROPIC_API_KEY="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"
-# export ANTHROPIC_BASE_URL="https://openrouter.ai/api/v1"
-# export ANTHROPIC_MODEL="moonshot-ai/kimi-k2"
-
-# alias claude-or='ANTHROPIC_BASE_URL="https://openrouter.ai/api/v1" ANTHROPIC_API_KEY="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" claude'
-# alias kimi='ANTHROPIC_MODEL="moonshot-ai/kimi-k2" claude-or'
-
 ########## SHELL ENV THINGS ##########
 # rest lives in ~/.config/environment.d/
 eval `keychain -q --eval work`
