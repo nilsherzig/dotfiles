@@ -24,6 +24,8 @@ set $menu wmenu-run
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/Downloads/background.jpg fill
 output DP-3 resolution 3840x2160@143Hz
+# output DP-3 resolution 3840x2160@60Hz
+# output DP-3 resolution 3840x2160@119.880Hz
 #
 # Example configuration:
 #
