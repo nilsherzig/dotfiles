@@ -1,7 +1,13 @@
 
 ########## SHELL ENV THINGS ##########
 # rest lives in ~/.config/environment.d/
-eval `keychain -q --eval work`
+if test -f $HOME/.ssh/desktop; then
+    eval `keychain -q --eval desktop`
+fi
+if test -f $HOME/.ssh/work; then
+    eval `keychain -q --eval work`
+fi
+
 export EDITOR="nvim"
 export KUSTOMIZE_PLUGIN_HOME=/opt/kustomize/
 
