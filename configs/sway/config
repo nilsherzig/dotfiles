@@ -238,8 +238,10 @@ bar {
     }
 }
 
-client.focused  #5c5c5c #5c5c5c #FFFFFF
+client.focused  #488c51 #488c51 #FFFFFF
 client.unfocused  #000000 #000000 #5c5c5c
+client.focused_inactive  #000000 #000000 #5c5c5c
+client.background  #000000 
 
 # client.focused_inactive  $base02  $base00  $base06  $base08  $base02
 # client.unfocused   $base01  $base00  $base06  $base08  $base02

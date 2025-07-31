@@ -112,10 +112,10 @@ require("lazy").setup({
     {
         "CopilotC-Nvim/CopilotChat.nvim",
         dependencies = {
-            { "github/copilot.vim" },              -- or zbirenbaum/copilot.lua
+            { "github/copilot.vim" },                       -- or zbirenbaum/copilot.lua
             { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
         },
-        build = "make tiktoken",                   -- Only on MacOS or Linux
+        build = "make tiktoken",                            -- Only on MacOS or Linux
         opts = {
             -- See Configuration section for options
         },
@@ -154,7 +154,7 @@ require("lazy").setup({
     {
         "romgrk/barbar.nvim",
         dependencies = {
-            "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+            "lewis6991/gitsigns.nvim",     -- OPTIONAL: for git status
             "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
         },
         init = function()
@@ -317,6 +317,6 @@ require("lazy").setup({
         "chomosuke/typst-preview.nvim",
         lazy = false, -- or ft = 'typst'
         version = "1.*",
-        opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+        opts = {},    -- lazy.nvim will implicitly calls `setup {}`
     },
 })
