@@ -8,6 +8,8 @@ if test -f $HOME/.ssh/work; then
     eval `keychain -q --eval work`
 fi
 
+eval "$(atuin init zsh)"
+
 export EDITOR="nvim"
 export KUSTOMIZE_PLUGIN_HOME=/opt/kustomize/
 
@@ -20,7 +22,7 @@ alias cd="z"
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
-source <(fzf --zsh)
+# source <(fzf --zsh)
 
 ########## GRML PROMPT MODS ##########
 # needs kube-ps1 installed
