@@ -295,6 +295,7 @@ require("lazy").setup({
     "lambdalisue/fern.vim",
     "lambdalisue/vim-fern-git-status",
     "morhetz/gruvbox",
+    "nvim-tree/nvim-tree.lua",
     -- {
     -- 	"kaarmu/typst.vim",
     -- 	ft = "typst",

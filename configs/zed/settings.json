@@ -11,7 +11,7 @@
     "hide_gitignore": false
   },
   "icon_theme": "Zed (Default)",
-  "show_edit_predictions": true,
+  "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "copilot"
   },
