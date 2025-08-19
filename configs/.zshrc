@@ -12,7 +12,7 @@ eval "$(atuin init zsh)"
 
 export EDITOR="nvim"
 export KUSTOMIZE_PLUGIN_HOME=/opt/kustomize/
-
+alias ssh="TERM=xterm-256color ssh"
 alias vi="nvim"
 alias vim="nvim"
 alias lg="lazygit"
