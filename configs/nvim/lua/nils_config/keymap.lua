@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.keymap.set("n", "<C-CR>", "<cmd>CopilotChat<CR>")
+vim.keymap.set("v", "<C-CR>", "<cmd>CopilotChat<CR>")
 vim.keymap.set("n", "<C-c>", "<cmd>BufferClose<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

@@ -130,9 +130,6 @@ require("lazy").setup({
         "nvim-tree/nvim-web-devicons",
     },
     {
-        "github/copilot.vim",
-    },
-    {
         "CopilotC-Nvim/CopilotChat.nvim",
         dependencies = {
             { "github/copilot.vim" },                       -- or zbirenbaum/copilot.lua
@@ -140,9 +137,13 @@ require("lazy").setup({
         },
         build = "make tiktoken",                            -- Only on MacOS or Linux
         opts = {
-            -- See Configuration section for options
+            model = "claude-sonnet-4",
+            window = {
+                layout = "float",
+                width = 0.6,
+                height = 0.6,
+            },
         },
-        -- See Commands section for default commands if you want to lazy load on them
     },
     {
         "someone-stole-my-name/yaml-companion.nvim",
