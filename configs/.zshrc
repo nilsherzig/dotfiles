@@ -22,6 +22,7 @@ alias cd="z"
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"
 # source <(fzf --zsh)
 
 ########## GRML PROMPT MODS ##########
