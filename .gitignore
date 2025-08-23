@@ -8,3 +8,4 @@ hostname.nix
 configs/nvim/lazy-lock.json
 lazy-lock.json
 configs/btop/btop.log
+scripts/flame.sh
